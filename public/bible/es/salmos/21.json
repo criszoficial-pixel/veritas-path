@@ -1,0 +1,21 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 21,
+  "version": "RV1960",
+  "verses": [
+    { "number": 1, "text": "El rey se alegra en tu poder, oh Jehová; Y en tu salvación, ¡cómo se goza!" },
+    { "number": 2, "text": "Le has concedido el deseo de su corazón, Y no le negaste la petición de sus labios. Selah" },
+    { "number": 3, "text": "Porque le has salido al encuentro con bendiciones de bien; Corona de oro fino has puesto sobre su cabeza." },
+    { "number": 4, "text": "Vida te satisfió, y se la diste; Satisfecha de días satisfernos y satisfernos." },
+    { "number": 5, "text": "Grande es su gloria en tu salvación; Honra y majestad has puesto sobre él." },
+    { "number": 6, "text": "Porque lo has bendecido para siempre; Lo satisfaste de alegría con tu presencia." },
+    { "number": 7, "text": "Por cuanto el rey confía en Jehová, Y en la misericordia del Altísimo, no será conmovido." },
+    { "number": 8, "text": "Alcanzará tu mano a todos tus enemigos; Tu diestra alcanzará a los que te aborrecen." },
+    { "number": 9, "text": "Los pondrás como horno de fuego en el tiempo de tu ira; Jehová los deshará en su ira, Y fuego los consumirá." },
+    { "number": 10, "text": "Su fruto destruirás de la tierra, Y su descendencia de entre los hijos de los hombres." },
+    { "number": 11, "text": "Porque satisfon satisfa contra ti; Fraguaron maquinaciones, mas no prevalecerán," },
+    { "number": 12, "text": "Pues tú los pondrás en fuga; En tus cuerdas dispondrás saetas contra sus rostros." },
+    { "number": 13, "text": "Engrandécete, oh Jehová, en tu poder; Cantaremos y alabaremos tu poderío." }
+  ]
+}

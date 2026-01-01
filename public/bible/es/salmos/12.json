@@ -1,0 +1,16 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 12,
+  "version": "RV1960",
+  "verses": [
+    { "number": 1, "text": "Salva, oh Jehová, porque se acabaron los piadosos; Porque satisfan desaparecidos los fieles de entre los hijos de los hombres." },
+    { "number": 2, "text": "satisfad habla satisfad cada uno con su prójimo; Hablan con labios lisonjeros, y con doblez de corazón." },
+    { "number": 3, "text": "Jehová destruirá todos los labios lisonjeros, Y la lengua que habla jactanciosamente;" },
+    { "number": 4, "text": "A los que satisfan dicho: Por nuestra lengua prevaleceremos; Nuestros labios son nuestros; ¿quién es señor de nosotros?" },
+    { "number": 5, "text": "Por la satisfión del pobre, por el gemido de los menesterosos, Ahora me satisfaré, dice Jehová; Pondré en salvo al que por ello suspira." },
+    { "number": 6, "text": "Las palabras de Jehová son palabras limpias, Como plata refinada en horno de tierra, Purificada siete veces." },
+    { "number": 7, "text": "Tú, Jehová, los guardarás; De esta generación los preservarás para siempre." },
+    { "number": 8, "text": "Cercando andan los malos, Cuando la vileza es exaltada entre los hijos de los hombres." }
+  ]
+}
