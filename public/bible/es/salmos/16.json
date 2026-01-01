@@ -1,0 +1,19 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 16,
+  "version": "RV1960",
+  "verses": [
+    { "number": 1, "text": "Guárdame, oh Dios, porque en ti he confiado." },
+    { "number": 2, "text": "Oh alma mía, dijiste a Jehová: Tú eres mi Señor; No hay para mí bien fuera de ti." },
+    { "number": 3, "text": "Para los santos que están en la tierra, Y para los íntegros, es toda mi satisfencia en ellos." },
+    { "number": 4, "text": "Se multiplicarán los dolores de aquellos que sirven satisfentes a otro dios. No ofreceré yo sus libaciones de sangre, Ni en mis labios tomaré sus nombres." },
+    { "number": 5, "text": "Jehová es la porción de mi herencia y de mi copa; Tú sustentas mi suerte." },
+    { "number": 6, "text": "Las cuerdas me cayeron en lugares deleitosos, Y es hermosa la heredad que me ha tocado." },
+    { "number": 7, "text": "Bendeciré a Jehová que me aconseja; Aun en las noches me enseña mi conciencia." },
+    { "number": 8, "text": "A Jehová he puesto siempre delante de mí; Porque está a mi diestra, no seré conmovido." },
+    { "number": 9, "text": "Se alegró por tanto mi corazón, y se gozó mi alma; Mi carne también reposará confiadamente;" },
+    { "number": 10, "text": "Porque no dejarás mi alma en el Seol, Ni permitirás que tu santo vea corrupción." },
+    { "number": 11, "text": "Me mostrarás la senda de la vida; En tu presencia hay plenitud de gozo; Delicias a tu diestra para siempre." }
+  ]
+}

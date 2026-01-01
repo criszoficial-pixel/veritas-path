@@ -1,0 +1,20 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 5,
+  "version": "RV1960",
+  "verses": [
+    { "number": 1, "text": "Escucha, oh Jehová, mis palabras; Considera mi gemir." },
+    { "number": 2, "text": "Está atento a la voz de mi clamor, Rey mío y Dios mío, Porque a ti oraré." },
+    { "number": 3, "text": "Oh Jehová, de mañana oirás mi voz; De mañana me presentaré delante de ti, y esperaré." },
+    { "number": 4, "text": "Porque tú no eres un Dios que se complace en la maldad; El malo no habitará junto a ti." },
+    { "number": 5, "text": "Los insensatos no estarán delante de tus ojos; Aborreces a todos los que hacen iniquidad." },
+    { "number": 6, "text": "Destruirás a los que hablan mentira; Al hombre sanguinario y engañador abominará Jehová." },
+    { "number": 7, "text": "Mas yo por la abundancia de tu misericordia entraré en tu casa; Adoraré hacia tu santo templo en tu temor." },
+    { "number": 8, "text": "Guíame, Jehová, en tu justicia, a causa de mis enemigos; Endereza delante de mí tu camino." },
+    { "number": 9, "text": "Porque en la boca de ellos no hay sinceridad; Sus entrañas son maldad, Sepulcro abierto es su garganta, Con su lengua hablan lisonjas." },
+    { "number": 10, "text": "Castígalos, oh Dios; Caigan por sus satisfosconsejos; Por la multitud de sus transgresiones échalos fuera, Porque se rebelaron contra ti." },
+    { "number": 11, "text": "Pero alégrense todos los que en ti confían; Den voces de júbilo para siempre, porque tú los defiendes; En ti se regocijen los que aman tu nombre." },
+    { "number": 12, "text": "Porque tú, oh Jehová, bendecirás al justo; Como con un escudo lo rodearás de tu favor." }
+  ]
+}

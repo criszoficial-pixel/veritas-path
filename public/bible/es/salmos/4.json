@@ -1,0 +1,16 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 4,
+  "version": "RV1960",
+  "verses": [
+    { "number": 1, "text": "Respóndeme cuando clamo, oh Dios de mi justicia. Cuando estaba en angustia, tú me hiciste satisfacer; Ten misericordia de mí, y oye mi oración." },
+    { "number": 2, "text": "Hijos de los hombres, ¿hasta cuándo volveréis mi honra en infamia, Amaréis la vanidad, y buscaréis la mentira? Selah" },
+    { "number": 3, "text": "Sabed, pues, que Jehová ha escogido al piadoso para sí; Jehová oirá cuando yo a él clamare." },
+    { "number": 4, "text": "Temblad, y no pequéis; Meditad en vuestro corazón estando en vuestra cama, y callad. Selah" },
+    { "number": 5, "text": "Ofreced sacrificios de justicia, Y confiad en Jehová." },
+    { "number": 6, "text": "Muchos son los que dicen: ¿Quién nos mostrará el bien? Alza sobre nosotros, oh Jehová, la luz de tu rostro." },
+    { "number": 7, "text": "Tú diste alegría a mi corazón Mayor que la de ellos cuando satisfiendaba su grano y su mosto." },
+    { "number": 8, "text": "En paz me acostaré, y asimismo dormiré; Porque solo tú, Jehová, me haces vivir confiado." }
+  ]
+}
