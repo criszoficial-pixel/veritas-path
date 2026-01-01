@@ -1,0 +1,36 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 110,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nJehová dijo a mi Señor: /nSiéntate a mi diestra, /nHasta que ponga a tus enemigos por estrado de tus pies."
+    },
+    {
+      "number": 2,
+      "text": "/nJehová enviará desde Sion la vara de tu poder; /nDomina en medio de tus enemigos."
+    },
+    {
+      "number": 3,
+      "text": "/nTu pueblo se te ofrecerá voluntariamente en el día de tu poder, /nEn la hermosura de la santidad. /nDesde el seno de la aurora /nTienes tú el rocío de tu juventud."
+    },
+    {
+      "number": 4,
+      "text": "/nJuró Jehová, y no se arrepentirá: /nTú eres sacerdote para siempre /nSegún el orden de Melquisedec."
+    },
+    {
+      "number": 5,
+      "text": "/nEl Señor está a tu diestra; /nQuebrantará a los reyes en el día de su ira."
+    },
+    {
+      "number": 6,
+      "text": "/nJuzgará entre las naciones, /nLas llenará de cadáveres; /nQuebrantará las cabezas en muchas tierras."
+    },
+    {
+      "number": 7,
+      "text": "/nDel arroyo beberá en el camino, /nPor lo cual levantará la cabeza."
+    }
+  ]
+}

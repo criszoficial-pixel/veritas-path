@@ -1,0 +1,224 @@
+{
+  "book": "1 Crónicas",
+  "bookSlug": "1-cronicas",
+  "chapter": 1,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "Adán, Set, Enós,"
+    },
+    {
+      "number": 2,
+      "text": "Cainán, Mahalaleel, Jared,"
+    },
+    {
+      "number": 3,
+      "text": "Enoc, Matusalén, Lamec,"
+    },
+    {
+      "number": 4,
+      "text": "Noé, Sem, Cam y Jafet."
+    },
+    {
+      "number": 5,
+      "text": "Los hijos de Jafet: Gomer, Magog, Madai, Javán, Tubal, Mesec y Tiras."
+    },
+    {
+      "number": 6,
+      "text": "Los hijos de Gomer: Askenaz, Rifat y Togarma."
+    },
+    {
+      "number": 7,
+      "text": "Los hijos de Javán: Elisa, Tarsis, Quitim y Dodanim."
+    },
+    {
+      "number": 8,
+      "text": "Los hijos de Cam: Cus, Mizraim, Fut y Canaán."
+    },
+    {
+      "number": 9,
+      "text": "Los hijos de Cus: Seba, Havila, Sabta, Raama y Sabteca. Y los hijos de Raama: Seba y Dedán."
+    },
+    {
+      "number": 10,
+      "text": "Cus engendró a Nimrod; éste llegó a ser poderoso en la tierra."
+    },
+    {
+      "number": 11,
+      "text": "Mizraim engendró a Ludim, Anamim, Lehabim, Naftuhim,"
+    },
+    {
+      "number": 12,
+      "text": "Patrusim y Casluhim; de éstos salieron los filisteos y los caftoreos."
+    },
+    {
+      "number": 13,
+      "text": "Canaán engendró a Sidón su primogénito, y a Het,"
+    },
+    {
+      "number": 14,
+      "text": "al jebuseo, al amorreo, al gergeseo,"
+    },
+    {
+      "number": 15,
+      "text": "al heveo, al araceo, al sineo,"
+    },
+    {
+      "number": 16,
+      "text": "al arvadeo, al zemareo y al hamateo."
+    },
+    {
+      "number": 17,
+      "text": "Los hijos de Sem: Elam, Asur, Arfaxad, Lud, Aram, Uz, Hul, Geter y Mesec."
+    },
+    {
+      "number": 18,
+      "text": "Arfaxad engendró a Sela, y Sela engendró a Heber."
+    },
+    {
+      "number": 19,
+      "text": "Y a Heber nacieron dos hijos; el nombre del uno fue Peleg, por cuanto en sus días fue dividida la tierra; y el nombre de su hermano fue Joctán."
+    },
+    {
+      "number": 20,
+      "text": "Joctán engendró a Almodad, Selef, Hazar-mavet y Jera."
+    },
+    {
+      "number": 21,
+      "text": "A Adoram también, a Uzal, Dicla,"
+    },
+    {
+      "number": 22,
+      "text": "Ebal, Abimael, Seba,"
+    },
+    {
+      "number": 23,
+      "text": "Ofir, Havila y Jobab; todos hijos de Joctán."
+    },
+    {
+      "number": 24,
+      "text": "Sem, Arfaxad, Sela,"
+    },
+    {
+      "number": 25,
+      "text": "Heber, Peleg, Reu,"
+    },
+    {
+      "number": 26,
+      "text": "Serug, Nacor, Taré,"
+    },
+    {
+      "number": 27,
+      "text": "y Abram, el cual es Abraham."
+    },
+    {
+      "number": 28,
+      "text": "Los hijos de Abraham: Isaac e Ismael."
+    },
+    {
+      "number": 29,
+      "text": "Y estas son sus descendencias: el primogénito de Ismael, Nebaiot; después Cedar, Adbeel, Mibsam,"
+    },
+    {
+      "number": 30,
+      "text": "Misma, Duma, Massa, Hadad, Tema,"
+    },
+    {
+      "number": 31,
+      "text": "Jetur, Nafis y Cedema; éstos son los hijos de Ismael."
+    },
+    {
+      "number": 32,
+      "text": "Y Cetura, concubina de Abraham, dio a luz a Zimram, Jocsán, Medán, Madián, Isbac y Súa. Los hijos de Jocsán: Seba y Dedán."
+    },
+    {
+      "number": 33,
+      "text": "Los hijos de Madián: Efa, Efer, Hanoc, Abida y Elda; todos éstos fueron hijos de Cetura."
+    },
+    {
+      "number": 34,
+      "text": "Abraham engendró a Isaac, y los hijos de Isaac fueron Esaú e Israel."
+    },
+    {
+      "number": 35,
+      "text": "Los hijos de Esaú: Elifaz, Reuel, Jeús, Jaalam y Coré."
+    },
+    {
+      "number": 36,
+      "text": "Los hijos de Elifaz: Temán, Omar, Zefo, Gatam, Cenaz, Timna y Amalec."
+    },
+    {
+      "number": 37,
+      "text": "Los hijos de Reuel: Nahat, Zera, Sama y Miza."
+    },
+    {
+      "number": 38,
+      "text": "Los hijos de Seir: Lotán, Sobal, Zibeón, Aná, Disón, Ezer y Disán."
+    },
+    {
+      "number": 39,
+      "text": "Los hijos de Lotán: Hori y Homam; y Timna fue hermana de Lotán."
+    },
+    {
+      "number": 40,
+      "text": "Los hijos de Sobal: Alván, Manahat, Ebal, Sefo y Onam. Los hijos de Zibeón: Aja y Aná."
+    },
+    {
+      "number": 41,
+      "text": "Disón fue hijo de Aná; y los hijos de Disón: Amram, Esbán, Itrán y Querán."
+    },
+    {
+      "number": 42,
+      "text": "Los hijos de Ezer: Bilhán, Zaaván y Jaacán. Los hijos de Disán: Uz y Arán."
+    },
+    {
+      "number": 43,
+      "text": "Y estos son los reyes que reinaron en la tierra de Edom, antes que reinase rey sobre los hijos de Israel: Bela hijo de Beor; y el nombre de su ciudad fue Dinaba."
+    },
+    {
+      "number": 44,
+      "text": "Muerto Bela, reinó en su lugar Jobab hijo de Zera, de Bosra."
+    },
+    {
+      "number": 45,
+      "text": "Y muerto Jobab, reinó en su lugar Husam, de la tierra de los temanitas."
+    },
+    {
+      "number": 46,
+      "text": "Muerto Husam, reinó en su lugar Hadad hijo de Bedad, el que derrotó a Madián en el campo de Moab; y el nombre de su ciudad fue Avit."
+    },
+    {
+      "number": 47,
+      "text": "Muerto Hadad, reinó en su lugar Samla de Masreca."
+    },
+    {
+      "number": 48,
+      "text": "Muerto también Samla, reinó en su lugar Saúl de Rehobot, que está junto al Eufrates."
+    },
+    {
+      "number": 49,
+      "text": "Y muerto Saúl, reinó en su lugar Baal-hanán hijo de Acbor."
+    },
+    {
+      "number": 50,
+      "text": "Muerto Baal-hanán, reinó en su lugar Hadad, el nombre de cuya ciudad fue Pai; y el nombre de su mujer, Mehetabel hija de Matred, hija de Mezaab."
+    },
+    {
+      "number": 51,
+      "text": "Muerto Hadad, sucedieron en Edom los jefes Timna, Alva, Jetet,"
+    },
+    {
+      "number": 52,
+      "text": "Aholibama, Ela, Pinón,"
+    },
+    {
+      "number": 53,
+      "text": "Cenaz, Temán, Mibzar,"
+    },
+    {
+      "number": 54,
+      "text": "Magdiel e Iram. Estos fueron los jefes de Edom."
+    }
+  ]
+}

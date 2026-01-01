@@ -1,0 +1,32 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 150,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nAlabad a Dios en su santuario; /nAlabadle en la magnificencia de su firmamento."
+    },
+    {
+      "number": 2,
+      "text": "/nAlabadle por sus proezas; /nAlabadle conforme a la muchedumbre de su grandeza."
+    },
+    {
+      "number": 3,
+      "text": "/nAlabadle a son de bocina; /nAlabadle con salterio y arpa."
+    },
+    {
+      "number": 4,
+      "text": "/nAlabadle con pandero y danza; /nAlabadle con cuerdas y flautas."
+    },
+    {
+      "number": 5,
+      "text": "/nAlabadle con címbalos resonantes; /nAlabadle con címbalos de júbilo."
+    },
+    {
+      "number": 6,
+      "text": "/nTodo lo que respira alabe a JAH. /nAleluya"
+    }
+  ]
+}

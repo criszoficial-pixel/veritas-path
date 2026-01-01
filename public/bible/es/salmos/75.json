@@ -1,0 +1,48 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 75,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nGracias te damos, oh Dios, gracias te damos, /nPues cercano está tu nombre; /nLos hombres cuentan tus maravillas."
+    },
+    {
+      "number": 2,
+      "text": "/nAl tiempo que señalaré /nYo juzgaré rectamente."
+    },
+    {
+      "number": 3,
+      "text": "/nSe arruinaban la tierra y sus moradores; /nYo sostengo sus columnas. Selah"
+    },
+    {
+      "number": 4,
+      "text": "/nDije a los insensatos: No os infatuéis; /nY a los impíos: No os enorgullezcáis;"
+    },
+    {
+      "number": 5,
+      "text": "/nNo hagáis alarde de vuestro poder; /nNo habléis con cerviz erguida."
+    },
+    {
+      "number": 6,
+      "text": "/nPorque ni de oriente ni de occidente, /nNi del desierto viene el enaltecimiento."
+    },
+    {
+      "number": 7,
+      "text": "/nMas Dios es el juez; /nA éste humilla, y a aquél enaltece."
+    },
+    {
+      "number": 8,
+      "text": "/nPorque el cáliz está en la mano de Jehová, y el vino está fermentado, /nLleno de mistura; y él derrama del mismo; /nHasta el fondo lo apurarán, y lo beberán todos los impíos de la tierra."
+    },
+    {
+      "number": 9,
+      "text": "/nPero yo siempre anunciaré /nY cantaré alabanzas al Dios de Jacob."
+    },
+    {
+      "number": 10,
+      "text": "/nQuebrantaré todo el poderío de los pecadores, /nPero el poder del justo será exaltado."
+    }
+  ]
+}

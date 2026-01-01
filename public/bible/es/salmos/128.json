@@ -1,0 +1,32 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 128,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nBienaventurado todo aquel que teme a Jehová, /nQue anda en sus caminos."
+    },
+    {
+      "number": 2,
+      "text": "/nCuando comieres el trabajo de tus manos, /nBienaventurado serás, y te irá bien."
+    },
+    {
+      "number": 3,
+      "text": "/nTu mujer será como vid que lleva fruto a los lados de tu casa; /nTus hijos como plantas de olivo alrededor de tu mesa."
+    },
+    {
+      "number": 4,
+      "text": "/nHe aquí que así será bendecido el hombre /nQue teme a Jehová."
+    },
+    {
+      "number": 5,
+      "text": "/nBendígate Jehová desde Sion, /nY veas el bien de Jerusalén todos los días de tu vida,"
+    },
+    {
+      "number": 6,
+      "text": "/nY veas a los hijos de tus hijos. /nPaz sea sobre Israel."
+    }
+  ]
+}

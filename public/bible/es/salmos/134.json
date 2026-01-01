@@ -1,0 +1,20 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 134,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nMirad, bendecid a Jehová, /nVosotros todos los siervos de Jehová, /nLos que en la casa de Jehová estáis por las noches."
+    },
+    {
+      "number": 2,
+      "text": "/nAlzad vuestras manos al santuario, /nY bendecid a Jehová."
+    },
+    {
+      "number": 3,
+      "text": "/nDesde Sion te bendiga Jehová, /nEl cual ha hecho los cielos y la tierra."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 20,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nJehová te oiga en el día de conflicto; /nEl nombre del Dios de Jacob te defienda."
+    },
+    {
+      "number": 2,
+      "text": "/nTe envíe ayuda desde el santuario, /nY desde Sion te sostenga."
+    },
+    {
+      "number": 3,
+      "text": "/nHaga memoria de todas tus ofrendas, /nY acepte tu holocausto. Selah"
+    },
+    {
+      "number": 4,
+      "text": "/nTe dé conforme al deseo de tu corazón, /nY cumpla todo tu consejo."
+    },
+    {
+      "number": 5,
+      "text": "/nNosotros nos alegraremos en tu salvación, /nY alzaremos pendón en el nombre de nuestro Dios; /nConceda Jehová todas tus peticiones."
+    },
+    {
+      "number": 6,
+      "text": "/nAhora conozco que Jehová salva a su ungido; /nLo oirá desde sus santos cielos /nCon la potencia salvadora de su diestra."
+    },
+    {
+      "number": 7,
+      "text": "/nEstos confían en carros, y aquéllos en caballos; /nMas nosotros del nombre de Jehová nuestro Dios tendremos memoria."
+    },
+    {
+      "number": 8,
+      "text": "/nEllos flaquean y caen, /nMas nosotros nos levantamos, y estamos en pie."
+    },
+    {
+      "number": 9,
+      "text": "/nSalva, Jehová; /nQue el Rey nos oiga en el día que lo invoquemos."
+    }
+  ]
+}

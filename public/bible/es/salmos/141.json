@@ -1,0 +1,48 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 141,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nJehová, a ti he clamado; apresúrate a mí; /nEscucha mi voz cuando te invocare."
+    },
+    {
+      "number": 2,
+      "text": "/nSuba mi oración delante de ti como el incienso, /nEl don de mis manos como la ofrenda de la tarde."
+    },
+    {
+      "number": 3,
+      "text": "/nPon guarda a mi boca, oh Jehová; /nGuarda la puerta de mis labios."
+    },
+    {
+      "number": 4,
+      "text": "/nNo dejes que se incline mi corazón a cosa mala, /nA hacer obras impías /nCon los que hacen iniquidad; /nY no coma yo de sus deleites."
+    },
+    {
+      "number": 5,
+      "text": "/nQue el justo me castigue, será un favor, /nY que me reprenda será un excelente bálsamo /nQue no me herirá la cabeza; /nPero mi oración será continuamente contra las maldades de aquéllos."
+    },
+    {
+      "number": 6,
+      "text": "/nSerán despeñados sus jueces, /nY oirán mis palabras, que son verdaderas."
+    },
+    {
+      "number": 7,
+      "text": "/nComo quien hiende y rompe la tierra, /nSon esparcidos nuestros huesos a la boca del Seol."
+    },
+    {
+      "number": 8,
+      "text": "/nPor tanto, a ti, oh Jehová, Señor, miran mis ojos; /nEn ti he confiado; no desampares mi alma."
+    },
+    {
+      "number": 9,
+      "text": "/nGuárdame de los lazos que me han tendido, /nY de las trampas de los que hacen iniquidad."
+    },
+    {
+      "number": 10,
+      "text": "/nCaigan los impíos a una en sus redes, /nMientras yo pasaré adelante."
+    }
+  ]
+}

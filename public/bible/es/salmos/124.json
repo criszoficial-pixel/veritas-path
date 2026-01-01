@@ -1,0 +1,40 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 124,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nA no haber estado Jehová por nosotros, /nDiga ahora Israel;"
+    },
+    {
+      "number": 2,
+      "text": "/nA no haber estado Jehová por nosotros, /nCuando se levantaron contra nosotros los hombres,"
+    },
+    {
+      "number": 3,
+      "text": "/nVivos nos habrían tragado entonces, /nCuando se encendió su furor contra nosotros."
+    },
+    {
+      "number": 4,
+      "text": "/nEntonces nos habrían inundado las aguas; /nSobre nuestra alma hubiera pasado el torrente;"
+    },
+    {
+      "number": 5,
+      "text": "/nHubieran entonces pasado sobre nuestra alma las aguas impetuosas."
+    },
+    {
+      "number": 6,
+      "text": "/nBendito sea Jehová, /nQue no nos dio por presa a los dientes de ellos."
+    },
+    {
+      "number": 7,
+      "text": "/nNuestra alma escapó cual ave del lazo de los cazadores; /nSe rompió el lazo, y escapamos nosotros."
+    },
+    {
+      "number": 8,
+      "text": "/nNuestro socorro está en el nombre de Jehová, /nQue hizo el cielo y la tierra."
+    }
+  ]
+}

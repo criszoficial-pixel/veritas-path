@@ -1,0 +1,28 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 127,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nSi Jehová no edificare la casa, /nEn vano trabajan los que la edifican; /nSi Jehová no guardare la ciudad, /nEn vano vela la guardia."
+    },
+    {
+      "number": 2,
+      "text": "/nPor demás es que os levantéis de madrugada, y vayáis tarde a reposar, /nY que comáis pan de dolores; /nPues que a su amado dará Dios el sueño."
+    },
+    {
+      "number": 3,
+      "text": "/nHe aquí, herencia de Jehová son los hijos; /nCosa de estima el fruto del vientre."
+    },
+    {
+      "number": 4,
+      "text": "/nComo saetas en mano del valiente, /nAsí son los hijos habidos en la juventud."
+    },
+    {
+      "number": 5,
+      "text": "/nBienaventurado el hombre que llenó su aljaba de ellos; /nNo será avergonzado /nCuando hablare con los enemigos en la puerta."
+    }
+  ]
+}

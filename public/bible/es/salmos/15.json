@@ -1,0 +1,28 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 15,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nJehová, ¿quién habitará en tu tabernáculo? /n¿Quién morará en tu monte santo?"
+    },
+    {
+      "number": 2,
+      "text": "/nEl que anda en integridad y hace justicia, /nY habla verdad en su corazón."
+    },
+    {
+      "number": 3,
+      "text": "/nEl que no calumnia con su lengua, /nNi hace mal a su prójimo, /nNi admite reproche alguno contra su vecino."
+    },
+    {
+      "number": 4,
+      "text": "/nAquel a cuyos ojos el vil es menospreciado, /nPero honra a los que temen a Jehová. /nEl que aun jurando en daño suyo, no por eso cambia;"
+    },
+    {
+      "number": 5,
+      "text": "/nQuien su dinero no dio a usura, /nNi contra el inocente admitió cohecho. /nEl que hace estas cosas, no resbalará jamás."
+    }
+  ]
+}

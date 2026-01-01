@@ -1,0 +1,60 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 96,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nCantad a Jehová cántico nuevo; /nCantad a Jehová, toda la tierra."
+    },
+    {
+      "number": 2,
+      "text": "/nCantad a Jehová, bendecid su nombre; /nAnunciad de día en día su salvación."
+    },
+    {
+      "number": 3,
+      "text": "/nProclamad entre las naciones su gloria, /nEn todos los pueblos sus maravillas."
+    },
+    {
+      "number": 4,
+      "text": "/nPorque grande es Jehová, y digno de suprema alabanza; /nTemible sobre todos los dioses."
+    },
+    {
+      "number": 5,
+      "text": "/nPorque todos los dioses de los pueblos son ídolos; /nPero Jehová hizo los cielos."
+    },
+    {
+      "number": 6,
+      "text": "/nAlabanza y magnificencia delante de él; /nPoder y gloria en su santuario."
+    },
+    {
+      "number": 7,
+      "text": "/nTributad a Jehová, oh familias de los pueblos, /nDad a Jehová la gloria y el poder."
+    },
+    {
+      "number": 8,
+      "text": "/nDad a Jehová la honra debida a su nombre; /nTraed ofrendas, y venid a sus atrios."
+    },
+    {
+      "number": 9,
+      "text": "/nAdorad a Jehová en la hermosura de la santidad; /nTemed delante de él, toda la tierra."
+    },
+    {
+      "number": 10,
+      "text": "/nDecid entre las naciones: Jehová reina. /nTambién afirmó el mundo, no será conmovido; /nJuzgará a los pueblos en justicia."
+    },
+    {
+      "number": 11,
+      "text": "/nAlégrense los cielos, y gócese la tierra; /nBrame el mar y su plenitud."
+    },
+    {
+      "number": 12,
+      "text": "/nRegocíjese el campo, y todo lo que en él está; /nEntonces todos los árboles del bosque rebosarán de contento,"
+    },
+    {
+      "number": 13,
+      "text": "/nDelante de Jehová que vino; /nPorque vino a juzgar la tierra. /nJuzgará al mundo con justicia, /nY a los pueblos con su verdad."
+    }
+  ]
+}

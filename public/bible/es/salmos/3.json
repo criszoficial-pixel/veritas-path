@@ -1,0 +1,40 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 3,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/n¡Oh Jehová, cuánto se han multiplicado mis adversarios! /nMuchos son los que se levantan contra mí."
+    },
+    {
+      "number": 2,
+      "text": "/nMuchos son los que dicen de mí: /nNo hay para él salvación en Dios. Selah"
+    },
+    {
+      "number": 3,
+      "text": "/nMas tú, Jehová, eres escudo alrededor de mí; /nMi gloria, y el que levanta mi cabeza."
+    },
+    {
+      "number": 4,
+      "text": "/nCon mi voz clamé a Jehová, /nY él me respondió desde su monte santo. Selah"
+    },
+    {
+      "number": 5,
+      "text": "/nYo me acosté y dormí, /nY desperté, porque Jehová me sustentaba."
+    },
+    {
+      "number": 6,
+      "text": "/nNo temeré a diez millares de gente, /nQue pusieren sitio contra mí."
+    },
+    {
+      "number": 7,
+      "text": "/nLevántate, Jehová; sálvame, Dios mío; /nPorque tú heriste a todos mis enemigos en la mejilla; /nLos dientes de los perversos quebrantaste."
+    },
+    {
+      "number": 8,
+      "text": "/nLa salvación es de Jehová; /nSobre tu pueblo sea tu bendición. Selah"
+    }
+  ]
+}

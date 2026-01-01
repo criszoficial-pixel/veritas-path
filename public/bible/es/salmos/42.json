@@ -1,0 +1,52 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 42,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nComo el ciervo brama por las corrientes de las aguas, /nAsí clama por ti, oh Dios, el alma mía."
+    },
+    {
+      "number": 2,
+      "text": "/nMi alma tiene sed de Dios, del Dios vivo; /n¿Cuándo vendré, y me presentaré delante de Dios?"
+    },
+    {
+      "number": 3,
+      "text": "/nFueron mis lágrimas mi pan de día y de noche, /nMientras me dicen todos los días: ¿Dónde está tu Dios?"
+    },
+    {
+      "number": 4,
+      "text": "/nMe acuerdo de estas cosas, y derramo mi alma dentro de mí; /nDe cómo yo fui con la multitud, y la conduje hasta la casa de Dios, /nEntre voces de alegría y de alabanza del pueblo en fiesta."
+    },
+    {
+      "number": 5,
+      "text": "/n¿Por qué te abates, oh alma mía, /nY te turbas dentro de mí? /nEspera en Dios; porque aún he de alabarle, /nSalvación mía y Dios mío."
+    },
+    {
+      "number": 6,
+      "text": "/nDios mío, mi alma está abatida en mí; /nMe acordaré, por tanto, de ti desde la tierra del Jordán, /nY de los hermonitas, desde el monte de Mizar."
+    },
+    {
+      "number": 7,
+      "text": "/nUn abismo llama a otro a la voz de tus cascadas; /nTodas tus ondas y tus olas han pasado sobre mí."
+    },
+    {
+      "number": 8,
+      "text": "/nPero de día mandará Jehová su misericordia, /nY de noche su cántico estará conmigo, /nY mi oración al Dios de mi vida."
+    },
+    {
+      "number": 9,
+      "text": "/nDiré a Dios: Roca mía, ¿por qué te has olvidado de mí? /n¿Por qué andaré yo enlutado por la opresión del enemigo?"
+    },
+    {
+      "number": 10,
+      "text": "/nComo quien hiere mis huesos, mis enemigos me afrentan, /nDiciéndome cada día: ¿Dónde está tu Dios?"
+    },
+    {
+      "number": 11,
+      "text": "/n¿Por qué te abates, oh alma mía, /nY por qué te turbas dentro de mí? /nEspera en Dios; porque aún he de alabarle, /nSalvación mía y Dios mío."
+    }
+  ]
+}

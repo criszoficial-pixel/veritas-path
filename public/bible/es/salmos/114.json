@@ -1,0 +1,40 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 114,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nCuando salió Israel de Egipto, /nLa casa de Jacob del pueblo extranjero,"
+    },
+    {
+      "number": 2,
+      "text": "/nJudá vino a ser su santuario, /nE Israel su señorío."
+    },
+    {
+      "number": 3,
+      "text": "/nEl mar lo vio, y huyó; /nEl Jordán se volvió atrás."
+    },
+    {
+      "number": 4,
+      "text": "/nLos montes saltaron como carneros, /nLos collados como corderitos."
+    },
+    {
+      "number": 5,
+      "text": "/n¿Qué tuviste, oh mar, que huiste? /n¿Y tú, oh Jordán, que te volviste atrás?"
+    },
+    {
+      "number": 6,
+      "text": "/nOh montes, ¿por qué saltasteis como carneros, /nY vosotros, collados, como corderitos?"
+    },
+    {
+      "number": 7,
+      "text": "/nA la presencia de Jehová tiembla la tierra, /nA la presencia del Dios de Jacob,"
+    },
+    {
+      "number": 8,
+      "text": "/nEl cual cambió la peña en estanque de aguas, /nY en fuente de aguas la roca."
+    }
+  ]
+}

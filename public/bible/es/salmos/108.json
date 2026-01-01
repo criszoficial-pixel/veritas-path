@@ -1,0 +1,60 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 108,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nMi corazón está dispuesto, oh Dios; /nCantaré y entonaré salmos; esta es mi gloria."
+    },
+    {
+      "number": 2,
+      "text": "/nDespiértate, salterio y arpa; /nDespertaré al alba."
+    },
+    {
+      "number": 3,
+      "text": "/nTe alabaré, oh Jehová, entre los pueblos; /nA ti cantaré salmos entre las naciones."
+    },
+    {
+      "number": 4,
+      "text": "/nPorque más grande que los cielos es tu misericordia, /nY hasta los cielos tu verdad."
+    },
+    {
+      "number": 5,
+      "text": "/nExaltado seas sobre los cielos, oh Dios, /nY sobre toda la tierra sea enaltecida tu gloria."
+    },
+    {
+      "number": 6,
+      "text": "/nPara que sean librados tus amados, /nSalva con tu diestra y respóndeme."
+    },
+    {
+      "number": 7,
+      "text": "/nDios ha dicho en su santuario: Yo me alegraré; /nRepartiré a Siquem, y mediré el valle de Sucot."
+    },
+    {
+      "number": 8,
+      "text": "/nMío es Galaad, mío es Manasés, /nY Efraín es la fortaleza de mi cabeza; /nJudá es mi legislador."
+    },
+    {
+      "number": 9,
+      "text": "/nMoab, la vasija para lavarme; /nSobre Edom echaré mi calzado; /nMe regocijaré sobre Filistea."
+    },
+    {
+      "number": 10,
+      "text": "/n¿Quién me guiará a la ciudad fortificada? /n¿Quién me guiará hasta Edom?"
+    },
+    {
+      "number": 11,
+      "text": "/n¿No serás tú, oh Dios, que nos habías desechado, /nY no salías, oh Dios, con nuestros ejércitos?"
+    },
+    {
+      "number": 12,
+      "text": "/nDanos socorro contra el adversario, /nPorque vana es la ayuda del hombre."
+    },
+    {
+      "number": 13,
+      "text": "/nEn Dios haremos proezas, /nY él hollará a nuestros enemigos."
+    }
+  ]
+}

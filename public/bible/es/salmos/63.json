@@ -1,0 +1,52 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 63,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nDios, Dios mío eres tú; /nDe madrugada te buscaré; /nMi alma tiene sed de ti, mi carne te anhela, /nEn tierra seca y árida donde no hay aguas,"
+    },
+    {
+      "number": 2,
+      "text": "/nPara ver tu poder y tu gloria, /nAsí como te he mirado en el santuario."
+    },
+    {
+      "number": 3,
+      "text": "/nPorque mejor es tu misericordia que la vida; /nMis labios te alabarán."
+    },
+    {
+      "number": 4,
+      "text": "/nAsí te bendeciré en mi vida; /nEn tu nombre alzaré mis manos."
+    },
+    {
+      "number": 5,
+      "text": "/nComo de meollo y de grosura será saciada mi alma, /nY con labios de júbilo te alabará mi boca,"
+    },
+    {
+      "number": 6,
+      "text": "/nCuando me acuerde de ti en mi lecho, /nCuando medite en ti en las vigilias de la noche."
+    },
+    {
+      "number": 7,
+      "text": "/nPorque has sido mi socorro, /nY así en la sombra de tus alas me regocijaré."
+    },
+    {
+      "number": 8,
+      "text": "/nEstá mi alma apegada a ti; /nTu diestra me ha sostenido."
+    },
+    {
+      "number": 9,
+      "text": "/nPero los que para destrucción buscaron mi alma /nCaerán en los sitios bajos de la tierra."
+    },
+    {
+      "number": 10,
+      "text": "/nLos destruirán a filo de espada; /nSerán porción de los chacales."
+    },
+    {
+      "number": 11,
+      "text": "/nPero el rey se alegrará en Dios; /nSerá alabado cualquiera que jura por él; /nPorque la boca de los que hablan mentira será cerrada."
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 25,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nA ti, oh Jehová, levantaré mi alma."
+    },
+    {
+      "number": 2,
+      "text": "/nDios mío, en ti confío; /nNo sea yo avergonzado, /nNo se alegren de mí mis enemigos."
+    },
+    {
+      "number": 3,
+      "text": "/nCiertamente ninguno de cuantos esperan en ti será confundido; /nSerán avergonzados los que se rebelan sin causa."
+    },
+    {
+      "number": 4,
+      "text": "/nMuéstrame, oh Jehová, tus caminos; /nEnséñame tus sendas."
+    },
+    {
+      "number": 5,
+      "text": "/nEncamíname en tu verdad, y enséñame, /nPorque tú eres el Dios de mi salvación; /nEn ti he esperado todo el día."
+    },
+    {
+      "number": 6,
+      "text": "/nAcuérdate, oh Jehová, de tus piedades y de tus misericordias, /nQue son perpetuas."
+    },
+    {
+      "number": 7,
+      "text": "/nDe los pecados de mi juventud, y de mis rebeliones, no te acuerdes; /nConforme a tu misericordia acuérdate de mí, /nPor tu bondad, oh Jehová."
+    },
+    {
+      "number": 8,
+      "text": "/nBueno y recto es Jehová; /nPor tanto, él enseñará a los pecadores el camino."
+    },
+    {
+      "number": 9,
+      "text": "/nEncaminará a los humildes por el juicio, /nY enseñará a los mansos su carrera."
+    },
+    {
+      "number": 10,
+      "text": "/nTodas las sendas de Jehová son misericordia y verdad, /nPara los que guardan su pacto y sus testimonios."
+    },
+    {
+      "number": 11,
+      "text": "/nPor amor de tu nombre, oh Jehová, /nPerdonarás también mi pecado, que es grande."
+    },
+    {
+      "number": 12,
+      "text": "/n¿Quién es el hombre que teme a Jehová? /nEl le enseñará el camino que ha de escoger."
+    },
+    {
+      "number": 13,
+      "text": "/nGozará él de bienestar, /nY su descendencia heredará la tierra."
+    },
+    {
+      "number": 14,
+      "text": "/nLa comunión íntima de Jehová es con los que le temen, /nY a ellos hará conocer su pacto."
+    },
+    {
+      "number": 15,
+      "text": "/nMis ojos están siempre hacia Jehová, /nPorque él sacará mis pies de la red."
+    },
+    {
+      "number": 16,
+      "text": "/nMírame, y ten misericordia de mí, /nPorque estoy solo y afligido."
+    },
+    {
+      "number": 17,
+      "text": "/nLas angustias de mi corazón se han aumentado; /nSácame de mis congojas."
+    },
+    {
+      "number": 18,
+      "text": "/nMira mi aflicción y mi trabajo, /nY perdona todos mis pecados."
+    },
+    {
+      "number": 19,
+      "text": "/nMira mis enemigos, cómo se han multiplicado, /nY con odio violento me aborrecen."
+    },
+    {
+      "number": 20,
+      "text": "/nGuarda mi alma, y líbrame; /nNo sea yo avergonzado, porque en ti confié."
+    },
+    {
+      "number": 21,
+      "text": "/nIntegridad y rectitud me guarden, /nPorque en ti he esperado."
+    },
+    {
+      "number": 22,
+      "text": "/nRedime, oh Dios, a Israel /nDe todas sus angustias."
+    }
+  ]
+}

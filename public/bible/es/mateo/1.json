@@ -1,0 +1,108 @@
+{
+  "book": "Mateo",
+  "bookSlug": "mateo",
+  "chapter": 1,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "Libro de la genealogía de Jesucristo, hijo de David, hijo de Abraham."
+    },
+    {
+      "number": 2,
+      "text": "Abraham engendró a Isaac, Isaac a Jacob, y Jacob a Judá y a sus hermanos."
+    },
+    {
+      "number": 3,
+      "text": "Judá engendró de Tamar a Fares y a Zara, Fares a Esrom, y Esrom a Aram."
+    },
+    {
+      "number": 4,
+      "text": "Aram engendró a Aminadab, Aminadab a Naasón, y Naasón a Salmón."
+    },
+    {
+      "number": 5,
+      "text": "Salmón engendró de Rahab a Booz, Booz engendró de Rut a Obed, y Obed a Isa."
+    },
+    {
+      "number": 6,
+      "text": "Isaí engendró al rey David, y el rey David engendró a Salomón de la que fue mujer de Urías."
+    },
+    {
+      "number": 7,
+      "text": "Salomón engendró a Roboam, Roboam a Abías, y Abías a Asa."
+    },
+    {
+      "number": 8,
+      "text": "Asa engendró a Josafat, Josafat a Joram, y Joram a Uzías."
+    },
+    {
+      "number": 9,
+      "text": "Uzías engendró a Jotam, Jotam a Acaz, y Acaz a Ezequías."
+    },
+    {
+      "number": 10,
+      "text": "Ezequías engendró a Manasés, Manasés a Amón, y Amón a Josías."
+    },
+    {
+      "number": 11,
+      "text": "Josías engendró a Jeconías y a sus hermanos, en el tiempo de la deportación a Babilonia."
+    },
+    {
+      "number": 12,
+      "text": "Después de la deportación a Babilonia, Jeconías engendró a Salatiel, y Salatiel a Zorobabel."
+    },
+    {
+      "number": 13,
+      "text": "Zorobabel engendró a Abiud, Abiud a Eliaquim, y Eliaquim a Azor."
+    },
+    {
+      "number": 14,
+      "text": "Azor engendró a Sadoc, Sadoc a Aquim, y Aquim a Eliud."
+    },
+    {
+      "number": 15,
+      "text": "Eliud engendró a Eleazar, Eleazar a Matán, Matán a Jacob;"
+    },
+    {
+      "number": 16,
+      "text": "y Jacob engendró a José, marido de María, de la cual nació Jesús, llamado el Cristo."
+    },
+    {
+      "number": 17,
+      "text": "De manera que todas las generaciones desde Abraham hasta David son catorce; desde David hasta la deportación a Babilonia, catorce; y desde la deportación a Babilonia hasta Cristo, catorce."
+    },
+    {
+      "number": 18,
+      "text": "El nacimiento de Jesucristo fue así: Estando desposada María su madre con José, antes que se juntasen, se halló que había concebido del Espíritu Santo."
+    },
+    {
+      "number": 19,
+      "text": "José su marido, como era justo, y no quería infamarla, quiso dejarla secretamente."
+    },
+    {
+      "number": 20,
+      "text": "Y pensando él en esto, he aquí un ángel del Señor le apareció en sueños y le dijo: José, hijo de David, no temas recibir a María tu mujer, porque lo que en ella es engendrado, del Espíritu Santo es."
+    },
+    {
+      "number": 21,
+      "text": "Y dará a luz un hijo, y llamarás su nombre JESÚS, porque él salvará a su pueblo de sus pecados."
+    },
+    {
+      "number": 22,
+      "text": "Todo esto aconteció para que se cumpliese lo dicho por el Señor por medio del profeta, cuando dijo:"
+    },
+    {
+      "number": 23,
+      "text": "/nHe aquí, una virgen concebirá y dará a luz un hijo, /n/nY llamarás su nombre Emanuel, /nque traducido es: Dios con nosotros."
+    },
+    {
+      "number": 24,
+      "text": "Y despertando José del sueño, hizo como el ángel del Señor le había mandado, y recibió a su mujer."
+    },
+    {
+      "number": 25,
+      "text": "Pero no la conoció hasta que dio a luz a su hijo primogénito; y le puso por nombre JESÚS."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 61,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nOye, oh Dios, mi clamor; /nA mi oración atiende."
+    },
+    {
+      "number": 2,
+      "text": "/nDesde el cabo de la tierra clamaré a ti, cuando mi corazón desmayare. /nLlévame a la roca que es más alta que yo,"
+    },
+    {
+      "number": 3,
+      "text": "/nPorque tú has sido mi refugio, /nY torre fuerte delante del enemigo."
+    },
+    {
+      "number": 4,
+      "text": "/nYo habitaré en tu tabernáculo para siempre; /nEstaré seguro bajo la cubierta de tus alas. Selah"
+    },
+    {
+      "number": 5,
+      "text": "/nPorque tú, oh Dios, has oído mis votos; /nMe has dado la heredad de los que temen tu nombre."
+    },
+    {
+      "number": 6,
+      "text": "/nDías sobre días añadirás al rey; /nSus años serán como generación y generación."
+    },
+    {
+      "number": 7,
+      "text": "/nEstará para siempre delante de Dios; /nPrepara misericordia y verdad para que lo conserven."
+    },
+    {
+      "number": 8,
+      "text": "/nAsí cantaré tu nombre para siempre, /nPagando mis votos cada día."
+    }
+  ]
+}

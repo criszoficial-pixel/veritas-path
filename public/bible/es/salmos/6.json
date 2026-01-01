@@ -1,0 +1,48 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 6,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nJehová, no me reprendas en tu enojo, /nNi me castigues con tu ira."
+    },
+    {
+      "number": 2,
+      "text": "/nTen misericordia de mí, oh Jehová, porque estoy enfermo; /nSáname, oh Jehová, porque mis huesos se estremecen."
+    },
+    {
+      "number": 3,
+      "text": "/nMi alma también está muy turbada; /nY tú, Jehová, ¿hasta cuándo?"
+    },
+    {
+      "number": 4,
+      "text": "/nVuélvete, oh Jehová, libra mi alma; /nSálvame por tu misericordia."
+    },
+    {
+      "number": 5,
+      "text": "/nPorque en la muerte no hay memoria de ti; /nEn el Seol, ¿quién te alabará?"
+    },
+    {
+      "number": 6,
+      "text": "/nMe he consumido a fuerza de gemir; /nTodas las noches inundo de llanto mi lecho, /nRiego mi cama con mis lágrimas."
+    },
+    {
+      "number": 7,
+      "text": "/nMis ojos están gastados de sufrir; /nSe han envejecido a causa de todos mis angustiadores."
+    },
+    {
+      "number": 8,
+      "text": "/nApartaos de mí, todos los hacedores de iniquidad; /nPorque Jehová ha oído la voz de mi lloro."
+    },
+    {
+      "number": 9,
+      "text": "/nJehová ha oído mi ruego; /nHa recibido Jehová mi oración."
+    },
+    {
+      "number": 10,
+      "text": "/nSe avergonzarán y se turbarán mucho todos mis enemigos; /nSe volverán y serán avergonzados de repente."
+    }
+  ]
+}

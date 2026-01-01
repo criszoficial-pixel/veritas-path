@@ -1,0 +1,60 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 65,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nTuya es la alabanza en Sion, oh Dios, /nY a ti se pagarán los votos."
+    },
+    {
+      "number": 2,
+      "text": "/nTú oyes la oración; /nA ti vendrá toda carne."
+    },
+    {
+      "number": 3,
+      "text": "/nLas iniquidades prevalecen contra mí; /nMas nuestras rebeliones tú las perdonarás."
+    },
+    {
+      "number": 4,
+      "text": "/nBienaventurado el que tú escogieres y atrajeres a ti, /nPara que habite en tus atrios; /nSeremos saciados del bien de tu casa, /nDe tu santo templo."
+    },
+    {
+      "number": 5,
+      "text": "/nCon tremendas cosas nos responderás tú en justicia, /nOh Dios de nuestra salvación, /nEsperanza de todos los términos de la tierra, /nY de los más remotos confines del mar."
+    },
+    {
+      "number": 6,
+      "text": "/nTú, el que afirma los montes con su poder, /nCeñido de valentía;"
+    },
+    {
+      "number": 7,
+      "text": "/nEl que sosiega el estruendo de los mares, el estruendo de sus ondas, /nY el alboroto de las naciones."
+    },
+    {
+      "number": 8,
+      "text": "/nPor tanto, los habitantes de los fines de la tierra temen de tus maravillas. /nTú haces alegrar las salidas de la mañana y de la tarde."
+    },
+    {
+      "number": 9,
+      "text": "/nVisitas la tierra, y la riegas; /nEn gran manera la enriqueces; /nCon el río de Dios, lleno de aguas, /nPreparas el grano de ellos, cuando así la dispones."
+    },
+    {
+      "number": 10,
+      "text": "/nHaces que se empapen sus surcos, /nHaces descender sus canales; /nLa ablandas con lluvias, /nBendices sus renuevos."
+    },
+    {
+      "number": 11,
+      "text": "/nTú coronas el año con tus bienes, /nY tus nubes destilan grosura."
+    },
+    {
+      "number": 12,
+      "text": "/nDestilan sobre los pastizales del desierto, /nY los collados se ciñen de alegría."
+    },
+    {
+      "number": 13,
+      "text": "/nSe visten de manadas los llanos, /nY los valles se cubren de grano; /nDan voces de júbilo, y aun cantan."
+    }
+  ]
+}

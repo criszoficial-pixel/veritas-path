@@ -1,0 +1,60 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 85,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nFuiste propicio a tu tierra, oh Jehová; /nVolviste la cautividad de Jacob."
+    },
+    {
+      "number": 2,
+      "text": "/nPerdonaste la iniquidad de tu pueblo; /nTodos los pecados de ellos cubriste. Selah"
+    },
+    {
+      "number": 3,
+      "text": "/nReprimiste todo tu enojo; /nTe apartaste del ardor de tu ira."
+    },
+    {
+      "number": 4,
+      "text": "/nRestáuranos, oh Dios de nuestra salvación, /nY haz cesar tu ira de sobre nosotros."
+    },
+    {
+      "number": 5,
+      "text": "/n¿Estarás enojado contra nosotros para siempre? /n¿Extenderás tu ira de generación en generación?"
+    },
+    {
+      "number": 6,
+      "text": "/n¿No volverás a darnos vida, /nPara que tu pueblo se regocije en ti?"
+    },
+    {
+      "number": 7,
+      "text": "/nMuéstranos, oh Jehová, tu misericordia, /nY danos tu salvación."
+    },
+    {
+      "number": 8,
+      "text": "/nEscucharé lo que hablará Jehová Dios; /nPorque hablará paz a su pueblo y a sus santos, /nPara que no se vuelvan a la locura."
+    },
+    {
+      "number": 9,
+      "text": "/nCiertamente cercana está su salvación a los que le temen, /nPara que habite la gloria en nuestra tierra."
+    },
+    {
+      "number": 10,
+      "text": "/nLa misericordia y la verdad se encontraron; /nLa justicia y la paz se besaron."
+    },
+    {
+      "number": 11,
+      "text": "/nLa verdad brotará de la tierra, /nY la justicia mirará desde los cielos."
+    },
+    {
+      "number": 12,
+      "text": "/nJehová dará también el bien, /nY nuestra tierra dará su fruto."
+    },
+    {
+      "number": 13,
+      "text": "/nLa justicia irá delante de él, /nY sus pasos nos pondrá por camino."
+    }
+  ]
+}

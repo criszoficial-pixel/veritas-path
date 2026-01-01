@@ -1,0 +1,44 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 122,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nYo me alegré con los que me decían: /nA la casa de Jehová iremos."
+    },
+    {
+      "number": 2,
+      "text": "/nNuestros pies estuvieron /nDentro de tus puertas, oh Jerusalén."
+    },
+    {
+      "number": 3,
+      "text": "/nJerusalén, que se ha edificado /nComo una ciudad que está bien unida entre sí."
+    },
+    {
+      "number": 4,
+      "text": "/nY allá subieron las tribus, las tribus de JAH, /nConforme al testimonio dado a Israel, /nPara alabar el nombre de Jehová."
+    },
+    {
+      "number": 5,
+      "text": "/nPorque allá están las sillas del juicio, /nLos tronos de la casa de David."
+    },
+    {
+      "number": 6,
+      "text": "/nPedid por la paz de Jerusalén; /nSean prosperados los que te aman."
+    },
+    {
+      "number": 7,
+      "text": "/nSea la paz dentro de tus muros, /nY el descanso dentro de tus palacios."
+    },
+    {
+      "number": 8,
+      "text": "/nPor amor de mis hermanos y mis compañeros /nDiré yo: La paz sea contigo."
+    },
+    {
+      "number": 9,
+      "text": "/nPor amor a la casa de Jehová nuestro Dios /nBuscaré tu bien."
+    }
+  ]
+}

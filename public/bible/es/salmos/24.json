@@ -1,0 +1,48 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 24,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nDe Jehová es la tierra y su plenitud; /nEl mundo, y los que en él habitan."
+    },
+    {
+      "number": 2,
+      "text": "/nPorque él la fundó sobre los mares, /nY la afirmó sobre los ríos."
+    },
+    {
+      "number": 3,
+      "text": "/n¿Quién subirá al monte de Jehová? /n¿Y quién estará en su lugar santo?"
+    },
+    {
+      "number": 4,
+      "text": "/nEl limpio de manos y puro de corazón; /nEl que no ha elevado su alma a cosas vanas, /nNi jurado con engaño."
+    },
+    {
+      "number": 5,
+      "text": "/nEl recibirá bendición de Jehová, /nY justicia del Dios de salvación."
+    },
+    {
+      "number": 6,
+      "text": "/nTal es la generación de los que le buscan, /nDe los que buscan tu rostro, oh Dios de Jacob. Selah"
+    },
+    {
+      "number": 7,
+      "text": "/nAlzad, oh puertas, vuestras cabezas, /nY alzaos vosotras, puertas eternas, /nY entrará el Rey de gloria."
+    },
+    {
+      "number": 8,
+      "text": "/n¿Quién es este Rey de gloria? /nJehová el fuerte y valiente, /nJehová el poderoso en batalla."
+    },
+    {
+      "number": 9,
+      "text": "/nAlzad, oh puertas, vuestras cabezas, /nY alzaos vosotras, puertas eternas, /nY entrará el Rey de gloria."
+    },
+    {
+      "number": 10,
+      "text": "/n¿Quién es este Rey de gloria? /nJehová de los ejércitos, /nEl es el Rey de la gloria. Selah"
+    }
+  ]
+}

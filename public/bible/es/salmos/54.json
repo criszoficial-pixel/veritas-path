@@ -1,0 +1,36 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 54,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nOh Dios, sálvame por tu nombre, /nY con tu poder defiéndeme."
+    },
+    {
+      "number": 2,
+      "text": "/nOh Dios, oye mi oración; /nEscucha las razones de mi boca."
+    },
+    {
+      "number": 3,
+      "text": "/nPorque extraños se han levantado contra mí, /nY hombres violentos buscan mi vida; /nNo han puesto a Dios delante de sí. Selah"
+    },
+    {
+      "number": 4,
+      "text": "/nHe aquí, Dios es el que me ayuda; /nEl Señor está con los que sostienen mi vida."
+    },
+    {
+      "number": 5,
+      "text": "/nEl devolverá el mal a mis enemigos; /nCórtalos por tu verdad."
+    },
+    {
+      "number": 6,
+      "text": "/nVoluntariamente sacrificaré a ti; /nAlabaré tu nombre, oh Jehová, porque es bueno."
+    },
+    {
+      "number": 7,
+      "text": "/nPorque él me ha librado de toda angustia, /nY mis ojos han visto la ruina de mis enemigos."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 137,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nJunto a los ríos de Babilonia, /nAllí nos sentábamos, y aun llorábamos, /nAcordándonos de Sion."
+    },
+    {
+      "number": 2,
+      "text": "/nSobre los sauces en medio de ella /nColgamos nuestras arpas."
+    },
+    {
+      "number": 3,
+      "text": "/nY los que nos habían llevado cautivos nos pedían que cantásemos, /nY los que nos habían desolado nos pedían alegría, diciendo: /nCantadnos algunos de los cánticos de Sion."
+    },
+    {
+      "number": 4,
+      "text": "/n¿Cómo cantaremos cántico de Jehová /nEn tierra de extraños?"
+    },
+    {
+      "number": 5,
+      "text": "/nSi me olvidare de ti, oh Jerusalén, /nPierda mi diestra su destreza."
+    },
+    {
+      "number": 6,
+      "text": "/nMi lengua se pegue a mi paladar, /nSi de ti no me acordare; /nSi no enalteciere a Jerusalén /nComo preferente asunto de mi alegría."
+    },
+    {
+      "number": 7,
+      "text": "/nOh Jehová, recuerda contra los hijos de Edom el día de Jerusalén, /nCuando decían: Arrasadla, arrasadla /nHasta los cimientos."
+    },
+    {
+      "number": 8,
+      "text": "/nHija de Babilonia la desolada, /nBienaventurado el que te diere el pago /nDe lo que tú nos hiciste."
+    },
+    {
+      "number": 9,
+      "text": "/nDichoso el que tomare y estrellare tus niños /nContra la peña."
+    }
+  ]
+}

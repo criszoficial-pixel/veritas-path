@@ -1,0 +1,260 @@
+{
+  "book": "Josué",
+  "bookSlug": "josue",
+  "chapter": 15,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "La parte que tocó en suerte a la tribu de los hijos de Judá, conforme a sus familias, llegaba hasta la frontera de Edom, teniendo el desierto de Zin al sur como extremo meridional."
+    },
+    {
+      "number": 2,
+      "text": "Y su límite por el lado del sur fue desde la costa del Mar Salado, desde la bahía que mira hacia el sur;"
+    },
+    {
+      "number": 3,
+      "text": "y salía hacia el sur de la subida de Acrabim, pasando hasta Zin; y subiendo por el sur hasta Cades-barnea, pasaba a Hezrón, y subiendo por Adar daba vuelta a Carca."
+    },
+    {
+      "number": 4,
+      "text": "De allí pasaba a Asmón, y salía al arroyo de Egipto, y terminaba en el mar. Este, pues, os será el límite del sur."
+    },
+    {
+      "number": 5,
+      "text": "El límite oriental es el Mar Salado hasta la desembocadura del Jordán. Y el límite del lado del norte, desde la bahía del mar en la desembocadura del Jordán;"
+    },
+    {
+      "number": 6,
+      "text": "y sube este límite por Bet-hogla, y pasa al norte de Bet-arabá, y de aquí sube a la piedra de Bohán hijo de Rubén."
+    },
+    {
+      "number": 7,
+      "text": "Luego sube a Debir desde el valle de Acor; y al norte mira sobre Gilgal, que está enfrente de la subida de Adumín, que está al sur del arroyo; y pasa hasta las aguas de En-semes, y sale a la fuente de Rogel."
+    },
+    {
+      "number": 8,
+      "text": "Y sube este límite por el valle del hijo de Hinom al lado sur del jebuseo, que es Jerusalén. Luego sube por la cumbre del monte que está enfrente del valle de Hinom hacia el occidente, el cual está al extremo del valle de Refaim, por el lado del norte."
+    },
+    {
+      "number": 9,
+      "text": "Y rodea este límite desde la cumbre del monte hasta la fuente de las aguas de Neftoa, y sale a las ciudades del monte de Efrón, rodeando luego a Baala, que es Quiriat-jearim."
+    },
+    {
+      "number": 10,
+      "text": "Después gira este límite desde Baala hacia el occidente al monte de Seir; y pasa al lado del monte de Jearim hacia el norte, el cual es Quesalón, y desciende a Bet-semes, y pasa a Timna."
+    },
+    {
+      "number": 11,
+      "text": "Sale luego al lado de Ecrón hacia el norte; y rodea a Sicrón, y pasa por el monte de Baala, y sale a Jabneel y termina en el mar."
+    },
+    {
+      "number": 12,
+      "text": "El límite del occidente es el Mar Grande. Este fue el límite de los hijos de Judá, por todo el contorno, conforme a sus familias."
+    },
+    {
+      "number": 13,
+      "text": "Mas a Caleb hijo de Jefone dio su parte entre los hijos de Judá, conforme al mandamiento de Jehová a Josué; la ciudad de Quiriat-arba padre de Anac, que es Hebrón."
+    },
+    {
+      "number": 14,
+      "text": "Y Caleb echó de allí a los tres hijos de Anac, a Sesai, Ahimán y Talmai, hijos de Anac."
+    },
+    {
+      "number": 15,
+      "text": "De aquí subió contra los que moraban en Debir; y el nombre de Debir era antes Quiriat-sefer."
+    },
+    {
+      "number": 16,
+      "text": "Y dijo Caleb: Al que atacare a Quiriat-sefer, y la tomare, yo le daré mi hija Acsa por mujer."
+    },
+    {
+      "number": 17,
+      "text": "Y la tomó Otoniel, hijo de Cenaz hermano de Caleb; y él le dio su hija Acsa por mujer."
+    },
+    {
+      "number": 18,
+      "text": "Y aconteció que cuando la llevaba, él la persuadió que pidiese a su padre tierras para labrar. Ella entonces se bajó del asno. Y Caleb le dijo: ¿Qué tienes?"
+    },
+    {
+      "number": 19,
+      "text": "Y ella respondió: Concédeme un don; puesto que me has dado tierra del Neguev, dame también fuentes de aguas. El entonces le dio las fuentes de arriba, y las de abajo."
+    },
+    {
+      "number": 20,
+      "text": "Esta, pues, es la heredad de la tribu de los hijos de Judá por sus familias."
+    },
+    {
+      "number": 21,
+      "text": "Y fueron las ciudades de la tribu de los hijos de Judá en el extremo sur, hacia la frontera de Edom: Cabseel, Edar, Jagur,"
+    },
+    {
+      "number": 22,
+      "text": "Cina, Dimona, Adada,"
+    },
+    {
+      "number": 23,
+      "text": "Cedes, Hazor, Itnán,"
+    },
+    {
+      "number": 24,
+      "text": "Zif, Telem, Bealot,"
+    },
+    {
+      "number": 25,
+      "text": "Hazor-hadata, Queriot, Hezrón (que es Hazor),"
+    },
+    {
+      "number": 26,
+      "text": "Amam, Sema, Molada,"
+    },
+    {
+      "number": 27,
+      "text": "Hazar-gada, Hesmón, Bet-pelet,"
+    },
+    {
+      "number": 28,
+      "text": "Hazar-sual, Beerseba, Bizotia,"
+    },
+    {
+      "number": 29,
+      "text": "Baala, Iim, Esem,"
+    },
+    {
+      "number": 30,
+      "text": "Eltolad, Quesil, Horma,"
+    },
+    {
+      "number": 31,
+      "text": "Siclag, Madmana, Sansana,"
+    },
+    {
+      "number": 32,
+      "text": "Lebaot, Silhim, Aín y Rimón; por todas veintinueve ciudades con sus aldeas."
+    },
+    {
+      "number": 33,
+      "text": "En las llanuras, Estaol, Zora, Asena,"
+    },
+    {
+      "number": 34,
+      "text": "Zanoa, En-ganim, Tapúa, Enam,"
+    },
+    {
+      "number": 35,
+      "text": "Jarmut, Adulam, Soco, Azeca,"
+    },
+    {
+      "number": 36,
+      "text": "Saaraim, Aditaim, Gedera y Gederotaim; catorce ciudades con sus aldeas."
+    },
+    {
+      "number": 37,
+      "text": "Zenán, Hadasa, Migdal-gad,"
+    },
+    {
+      "number": 38,
+      "text": "Dileán, Mizpa, Jocteel,"
+    },
+    {
+      "number": 39,
+      "text": "Laquis, Boscat, Eglón,"
+    },
+    {
+      "number": 40,
+      "text": "Cabón, Lahmam, Quitlis,"
+    },
+    {
+      "number": 41,
+      "text": "Gederot, Bet-dagón, Naama y Maceda; dieciséis ciudades con sus aldeas."
+    },
+    {
+      "number": 42,
+      "text": "Libna, Eter, Asán,"
+    },
+    {
+      "number": 43,
+      "text": "Jifta, Asena, Nezib,"
+    },
+    {
+      "number": 44,
+      "text": "Keila, Aczib y Maresa; nueve ciudades con sus aldeas."
+    },
+    {
+      "number": 45,
+      "text": "Ecrón con sus villas y sus aldeas."
+    },
+    {
+      "number": 46,
+      "text": "Desde Ecrón hasta el mar, todas las que están cerca de Asdod con sus aldeas."
+    },
+    {
+      "number": 47,
+      "text": "Asdod con sus villas y sus aldeas; Gaza con sus villas y sus aldeas hasta el río de Egipto, y el Mar Grande con sus costas."
+    },
+    {
+      "number": 48,
+      "text": "Y en las montañas, Samir, Jatir, Soco,"
+    },
+    {
+      "number": 49,
+      "text": "Dana, Quiriat-sana (que es Debir);"
+    },
+    {
+      "number": 50,
+      "text": "Anab, Estemoa, Anim,"
+    },
+    {
+      "number": 51,
+      "text": "Gosén, Holón y Gilo; once ciudades con sus aldeas."
+    },
+    {
+      "number": 52,
+      "text": "Arab, Duma, Esán,"
+    },
+    {
+      "number": 53,
+      "text": "Janum, Bet-tapúa, Afeca,"
+    },
+    {
+      "number": 54,
+      "text": "Humta, Quiriat-arba (la cual es Hebrón) y Sior; nueve ciudades con sus aldeas."
+    },
+    {
+      "number": 55,
+      "text": "Maón, Carmel, Zif, Juta,"
+    },
+    {
+      "number": 56,
+      "text": "Jezreel, Jocdeam, Zanoa,"
+    },
+    {
+      "number": 57,
+      "text": "Caín, Gabaa y Timna; diez ciudades con sus aldeas."
+    },
+    {
+      "number": 58,
+      "text": "Halhul, Bet-sur, Gedor,"
+    },
+    {
+      "number": 59,
+      "text": "Maarat, Bet-anot y Eltecón; seis ciudades con sus aldeas."
+    },
+    {
+      "number": 60,
+      "text": "Quiriat-baal (que es Quiriat-jearim) y Rabá; dos ciudades con sus aldeas."
+    },
+    {
+      "number": 61,
+      "text": "En el desierto, Bet-arabá, Midín, Secaca,"
+    },
+    {
+      "number": 62,
+      "text": "Nibsán, la Ciudad de la Sal y Engadi; seis ciudades con sus aldeas."
+    },
+    {
+      "number": 63,
+      "text": "Mas a los jebuseos que habitaban en Jerusalén, los hijos de Judá no pudieron arrojarlos; y ha quedado el jebuseo en Jerusalén con los hijos de Judá hasta hoy."
+    }
+  ]
+}

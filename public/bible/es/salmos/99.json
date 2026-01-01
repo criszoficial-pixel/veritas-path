@@ -1,0 +1,44 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 99,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nJehová reina; temblarán los pueblos. /nEl está sentado sobre los querubines, se conmoverá la tierra."
+    },
+    {
+      "number": 2,
+      "text": "/nJehová en Sion es grande, /nY exaltado sobre todos los pueblos."
+    },
+    {
+      "number": 3,
+      "text": "/nAlaben tu nombre grande y temible; /nEl es santo."
+    },
+    {
+      "number": 4,
+      "text": "/nY la gloria del rey ama el juicio; /nTú confirmas la rectitud; /nTú has hecho en Jacob juicio y justicia."
+    },
+    {
+      "number": 5,
+      "text": "/nExaltad a Jehová nuestro Dios, /nY postraos ante el estrado de sus pies; /nEl es santo."
+    },
+    {
+      "number": 6,
+      "text": "/nMoisés y Aarón entre sus sacerdotes, /nY Samuel entre los que invocaron su nombre; /nInvocaban a Jehová, y él les respondía."
+    },
+    {
+      "number": 7,
+      "text": "/nEn columna de nube hablaba con ellos; /nGuardaban sus testimonios, y el estatuto que les había dado."
+    },
+    {
+      "number": 8,
+      "text": "/nJehová Dios nuestro, tú les respondías; /nLes fuiste un Dios perdonador, /nY retribuidor de sus obras."
+    },
+    {
+      "number": 9,
+      "text": "/nExaltad a Jehová nuestro Dios, /nY postraos ante su santo monte, /nPorque Jehová nuestro Dios es santo."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 26,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nJúzgame, oh Jehová, porque yo en mi integridad he andado; /nHe confiado asimismo en Jehová sin titubear."
+    },
+    {
+      "number": 2,
+      "text": "/nEscudríñame, oh Jehová, y pruébame; /nExamina mis íntimos pensamientos y mi corazón."
+    },
+    {
+      "number": 3,
+      "text": "/nPorque tu misericordia está delante de mis ojos, /nY ando en tu verdad."
+    },
+    {
+      "number": 4,
+      "text": "/nNo me he sentado con hombres hipócritas, /nNi entré con los que andan simuladamente."
+    },
+    {
+      "number": 5,
+      "text": "/nAborrecí la reunión de los malignos, /nY con los impíos nunca me senté."
+    },
+    {
+      "number": 6,
+      "text": "/nLavaré en inocencia mis manos, /nY así andaré alrededor de tu altar, oh Jehová,"
+    },
+    {
+      "number": 7,
+      "text": "/nPara exclamar con voz de acción de gracias, /nY para contar todas tus maravillas."
+    },
+    {
+      "number": 8,
+      "text": "/nJehová, la habitación de tu casa he amado, /nY el lugar de la morada de tu gloria."
+    },
+    {
+      "number": 9,
+      "text": "/nNo arrebates con los pecadores mi alma, /nNi mi vida con hombres sanguinarios,"
+    },
+    {
+      "number": 10,
+      "text": "/nEn cuyas manos está el mal, /nY su diestra está llena de sobornos."
+    },
+    {
+      "number": 11,
+      "text": "/nMas yo andaré en mi integridad; /nRedímeme, y ten misericordia de mí."
+    },
+    {
+      "number": 12,
+      "text": "/nMi pie ha estado en rectitud; /nEn las congregaciones bendeciré a Jehová."
+    }
+  ]
+}

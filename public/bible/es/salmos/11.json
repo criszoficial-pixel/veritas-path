@@ -1,0 +1,36 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 11,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nEn Jehová he confiado; /n¿Cómo decís a mi alma, /nQue escape al monte cual ave?"
+    },
+    {
+      "number": 2,
+      "text": "/nPorque he aquí, los malos tienden el arco, /nDisponen sus saetas sobre la cuerda, /nPara asaetear en oculto a los rectos de corazón."
+    },
+    {
+      "number": 3,
+      "text": "/nSi fueren destruidos los fundamentos, /n¿Qué ha de hacer el justo?"
+    },
+    {
+      "number": 4,
+      "text": "/nJehová está en su santo templo; /nJehová tiene en el cielo su trono; /nSus ojos ven, sus párpados examinan a los hijos de los hombres."
+    },
+    {
+      "number": 5,
+      "text": "/nJehová prueba al justo; /nPero al malo y al que ama la violencia, su alma los aborrece."
+    },
+    {
+      "number": 6,
+      "text": "/nSobre los malos hará llover calamidades; /nFuego, azufre y viento abrasador será la porción del cáliz de ellos."
+    },
+    {
+      "number": 7,
+      "text": "/nPorque Jehová es justo, y ama la justicia; /nEl hombre recto mirará su rostro."
+    }
+  ]
+}

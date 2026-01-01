@@ -1,0 +1,40 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 101,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nMisericordia y juicio cantaré; /nA ti cantaré yo, oh Jehová."
+    },
+    {
+      "number": 2,
+      "text": "/nEntenderé el camino de la perfección /nCuando vengas a mí. /nEn la integridad de mi corazón andaré en medio de mi casa."
+    },
+    {
+      "number": 3,
+      "text": "/nNo pondré delante de mis ojos cosa injusta. /nAborrezco la obra de los que se desvían; /nNinguno de ellos se acercará a mí."
+    },
+    {
+      "number": 4,
+      "text": "/nCorazón perverso se apartará de mí; /nNo conoceré al malvado."
+    },
+    {
+      "number": 5,
+      "text": "/nAl que solapadamente infama a su prójimo, yo lo destruiré; /nNo sufriré al de ojos altaneros y de corazón vanidoso."
+    },
+    {
+      "number": 6,
+      "text": "/nMis ojos pondré en los fieles de la tierra, para que estén conmigo; /nEl que ande en el camino de la perfección, éste me servirá."
+    },
+    {
+      "number": 7,
+      "text": "/nNo habitará dentro de mi casa el que hace fraude; /nEl que habla mentiras no se afirmará delante de mis ojos."
+    },
+    {
+      "number": 8,
+      "text": "/nDe mañana destruiré a todos los impíos de la tierra, /nPara exterminar de la ciudad de Jehová a todos los que hagan iniquidad."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 5,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nEscucha, oh Jehová, mis palabras; /nConsidera mi gemir."
+    },
+    {
+      "number": 2,
+      "text": "/nEstá atento a la voz de mi clamor, Rey mío y Dios mío, /nPorque a ti oraré."
+    },
+    {
+      "number": 3,
+      "text": "/nOh Jehová, de mañana oirás mi voz; /nDe mañana me presentaré delante de ti, y esperaré."
+    },
+    {
+      "number": 4,
+      "text": "/nPorque tú no eres un Dios que se complace en la maldad; /nEl malo no habitará junto a ti."
+    },
+    {
+      "number": 5,
+      "text": "/nLos insensatos no estarán delante de tus ojos; /nAborreces a todos los que hacen iniquidad."
+    },
+    {
+      "number": 6,
+      "text": "/nDestruirás a los que hablan mentira; /nAl hombre sanguinario y engañador abominará Jehová."
+    },
+    {
+      "number": 7,
+      "text": "/nMas yo por la abundancia de tu misericordia entraré en tu casa; /nAdoraré hacia tu santo templo en tu temor."
+    },
+    {
+      "number": 8,
+      "text": "/nGuíame, Jehová, en tu justicia, a causa de mis enemigos; /nEndereza delante de mí tu camino."
+    },
+    {
+      "number": 9,
+      "text": "/nPorque en la boca de ellos no hay sinceridad; /nSus entrañas son maldad, /nSepulcro abierto es su garganta, /nCon su lengua hablan lisonjas."
+    },
+    {
+      "number": 10,
+      "text": "/nCastígalos, oh Dios; /nCaigan por sus mismos consejos; /nPor la multitud de sus transgresiones échalos fuera, /nPorque se rebelaron contra ti."
+    },
+    {
+      "number": 11,
+      "text": "/nPero alégrense todos los que en ti confían; /nDen voces de júbilo para siempre, porque tú los defiendes; /nEn ti se regocijen los que aman tu nombre."
+    },
+    {
+      "number": 12,
+      "text": "/nPorque tú, oh Jehová, bendecirás al justo; /nComo con un escudo lo rodearás de tu favor."
+    }
+  ]
+}

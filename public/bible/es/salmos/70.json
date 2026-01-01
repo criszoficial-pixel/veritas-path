@@ -1,0 +1,28 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 70,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nOh Dios, acude a librarme; /nApresúrate, oh Dios, a socorrerme."
+    },
+    {
+      "number": 2,
+      "text": "/nSean avergonzados y confundidos /nLos que buscan mi vida; /nSean vueltos atrás y avergonzados /nLos que mi mal desean."
+    },
+    {
+      "number": 3,
+      "text": "/nSean vueltos atrás, en pago de su afrenta hecha, /nLos que dicen: ¡Ah! ¡Ah!"
+    },
+    {
+      "number": 4,
+      "text": "/nGócense y alégrense en ti todos los que te buscan, /nY digan siempre los que aman tu salvación: /nEngrandecido sea Dios."
+    },
+    {
+      "number": 5,
+      "text": "/nYo estoy afligido y menesteroso; /nApresúrate a mí, oh Dios. /nAyuda mía y mi libertador eres tú; /nOh Jehová, no te detengas."
+    }
+  ]
+}

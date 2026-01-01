@@ -1,0 +1,32 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 126,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nCuando Jehová hiciere volver la cautividad de Sion, /nSeremos como los que sueñan."
+    },
+    {
+      "number": 2,
+      "text": "/nEntonces nuestra boca se llenará de risa, /nY nuestra lengua de alabanza; /nEntonces dirán entre las naciones: /nGrandes cosas ha hecho Jehová con éstos."
+    },
+    {
+      "number": 3,
+      "text": "/nGrandes cosas ha hecho Jehová con nosotros; /nEstaremos alegres."
+    },
+    {
+      "number": 4,
+      "text": "/nHaz volver nuestra cautividad, oh Jehová, /nComo los arroyos del Neguev."
+    },
+    {
+      "number": 5,
+      "text": "/nLos que sembraron con lágrimas, con regocijo segarán."
+    },
+    {
+      "number": 6,
+      "text": "/nIrá andando y llorando el que lleva la preciosa semilla; /nMas volverá a venir con regocijo, trayendo sus gavillas."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 133,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/n¡Mirad cuán bueno y cuán delicioso es /nHabitar los hermanos juntos en armonía!"
+    },
+    {
+      "number": 2,
+      "text": "/nEs como el buen óleo sobre la cabeza, /nEl cual desciende sobre la barba, /nLa barba de Aarón, /nY baja hasta el borde de sus vestiduras;"
+    },
+    {
+      "number": 3,
+      "text": "/nComo el rocío de Hermón, /nQue desciende sobre los montes de Sion; /nPorque allí envía Jehová bendición, /nY vida eterna."
+    }
+  ]
+}

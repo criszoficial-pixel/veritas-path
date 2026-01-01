@@ -1,0 +1,40 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 82,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nDios está en la reunión de los dioses; /nEn medio de los dioses juzga."
+    },
+    {
+      "number": 2,
+      "text": "/n¿Hasta cuándo juzgaréis injustamente, /nY aceptaréis las personas de los impíos? Selah"
+    },
+    {
+      "number": 3,
+      "text": "/nDefended al débil y al huérfano; /nHaced justicia al afligido y al menesteroso."
+    },
+    {
+      "number": 4,
+      "text": "/nLibrad al afligido y al necesitado; /nLibradlo de mano de los impíos."
+    },
+    {
+      "number": 5,
+      "text": "/nNo saben, no entienden, /nAndan en tinieblas; /nTiemblan todos los cimientos de la tierra."
+    },
+    {
+      "number": 6,
+      "text": "/nYo dije: Vosotros sois dioses, /nY todos vosotros hijos del Altísimo;"
+    },
+    {
+      "number": 7,
+      "text": "/nPero como hombres moriréis, /nY como cualquiera de los príncipes caeréis."
+    },
+    {
+      "number": 8,
+      "text": "/nLevántate, oh Dios, juzga la tierra; /nPorque tú heredarás todas las naciones."
+    }
+  ]
+}

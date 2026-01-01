@@ -1,0 +1,44 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 113,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nAlabad, siervos de Jehová, /nAlabad el nombre de Jehová."
+    },
+    {
+      "number": 2,
+      "text": "/nSea el nombre de Jehová bendito /nDesde ahora y para siempre."
+    },
+    {
+      "number": 3,
+      "text": "/nDesde el nacimiento del sol hasta donde se pone, /nSea alabado el nombre de Jehová."
+    },
+    {
+      "number": 4,
+      "text": "/nExcelso sobre todas las naciones es Jehová, /nSobre los cielos su gloria."
+    },
+    {
+      "number": 5,
+      "text": "/n¿Quién como Jehová nuestro Dios, /nQue se sienta en las alturas,"
+    },
+    {
+      "number": 6,
+      "text": "/nQue se humilla a mirar /nEn el cielo y en la tierra?"
+    },
+    {
+      "number": 7,
+      "text": "/nEl levanta del polvo al pobre, /nY al menesteroso alza del muladar,"
+    },
+    {
+      "number": 8,
+      "text": "/nPara hacerlos sentar con los príncipes, /nCon los príncipes de su pueblo."
+    },
+    {
+      "number": 9,
+      "text": "/nEl hace habitar en familia a la estéril, /nQue se goza en ser madre de hijos. /nAleluya."
+    }
+  ]
+}

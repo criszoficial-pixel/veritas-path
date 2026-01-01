@@ -1,0 +1,52 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 46,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nDios es nuestro amparo y fortaleza, /nNuestro pronto auxilio en las tribulaciones."
+    },
+    {
+      "number": 2,
+      "text": "/nPor tanto, no temeremos, aunque la tierra sea removida, /nY se traspasen los montes al corazón del mar;"
+    },
+    {
+      "number": 3,
+      "text": "/nAunque bramen y se turben sus aguas, /nY tiemblen los montes a causa de su braveza. Selah"
+    },
+    {
+      "number": 4,
+      "text": "/nDel río sus corrientes alegran la ciudad de Dios, /nEl santuario de las moradas del Altísimo."
+    },
+    {
+      "number": 5,
+      "text": "/nDios está en medio de ella; no será conmovida. /nDios la ayudará al clarear la mañana."
+    },
+    {
+      "number": 6,
+      "text": "/nBramaron las naciones, titubearon los reinos; /nDio él su voz, se derritió la tierra."
+    },
+    {
+      "number": 7,
+      "text": "/nJehová de los ejércitos está con nosotros; /nNuestro refugio es el Dios de Jacob. Selah"
+    },
+    {
+      "number": 8,
+      "text": "/nVenid, ved las obras de Jehová, /nQue ha puesto asolamientos en la tierra."
+    },
+    {
+      "number": 9,
+      "text": "/nQue hace cesar las guerras hasta los fines de la tierra. /nQue quiebra el arco, corta la lanza, /nY quema los carros en el fuego."
+    },
+    {
+      "number": 10,
+      "text": "/nEstad quietos, y conoced que yo soy Dios; /nSeré exaltado entre las naciones; enaltecido seré en la tierra."
+    },
+    {
+      "number": 11,
+      "text": "/nJehová de los ejércitos está con nosotros; /nNuestro refugio es el Dios de Jacob. Selah"
+    }
+  ]
+}

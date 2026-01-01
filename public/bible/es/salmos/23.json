@@ -1,0 +1,32 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 23,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nJehová es mi pastor; nada me faltará."
+    },
+    {
+      "number": 2,
+      "text": "/nEn lugares de delicados pastos me hará descansar; /nJunto a aguas de reposo me pastoreará."
+    },
+    {
+      "number": 3,
+      "text": "/nConfortará mi alma; /nMe guiará por sendas de justicia por amor de su nombre."
+    },
+    {
+      "number": 4,
+      "text": "/nAunque ande en valle de sombra de muerte, /nNo temeré mal alguno, porque tú estarás conmigo; /nTu vara y tu cayado me infundirán aliento."
+    },
+    {
+      "number": 5,
+      "text": "/nAderezas mesa delante de mí en presencia de mis angustiadores; /nUnges mi cabeza con aceite; mi copa está rebosando."
+    },
+    {
+      "number": 6,
+      "text": "/nCiertamente el bien y la misericordia me seguirán todos los días de mi vida, /nY en la casa de Jehová moraré por largos días."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "book": "Cantares",
+  "bookSlug": "cantares",
+  "chapter": 2,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nYo soy la rosa de Sarón, /nY el lirio de los valles."
+    },
+    {
+      "number": 2,
+      "text": "/nComo el lirio entre los espinos, /nAsí es mi amiga entre las doncellas."
+    },
+    {
+      "number": 3,
+      "text": "/nComo el manzano entre los árboles silvestres, /nAsí es mi amado entre los jóvenes; /nBajo la sombra del deseado me senté, /nY su fruto fue dulce a mi paladar."
+    },
+    {
+      "number": 4,
+      "text": "/nMe llevó a la casa del banquete, /nY su bandera sobre mí fue amor."
+    },
+    {
+      "number": 5,
+      "text": "/nSustentadme con pasas, confortadme con manzanas; /nPorque estoy enferma de amor."
+    },
+    {
+      "number": 6,
+      "text": "/nSu izquierda esté debajo de mi cabeza, /nY su derecha me abrace."
+    },
+    {
+      "number": 7,
+      "text": "/nYo os conjuro, oh doncellas de Jerusalén, /nPor los corzos y por las ciervas del campo, /nQue no despertéis ni hagáis velar al amor, /nHasta que quiera."
+    },
+    {
+      "number": 8,
+      "text": "/n¡La voz de mi amado! He aquí él viene /nSaltando sobre los montes, /nBrincando sobre los collados."
+    },
+    {
+      "number": 9,
+      "text": "/nMi amado es semejante al corzo, /nO al cervatillo. /nHelo aquí, está tras nuestra pared, /nMirando por las ventanas, /nAtisbando por las celosías."
+    },
+    {
+      "number": 10,
+      "text": "/nMi amado habló, y me dijo: /nLevántate, oh amiga mía, hermosa mía, y ven."
+    },
+    {
+      "number": 11,
+      "text": "/nPorque he aquí ha pasado el invierno, /nSe ha mudado, la lluvia se fue;"
+    },
+    {
+      "number": 12,
+      "text": "/nSe han mostrado las flores en la tierra, /nEl tiempo de la canción ha venido, /nY en nuestro país se ha oído la voz de la tórtola."
+    },
+    {
+      "number": 13,
+      "text": "/nLa higuera ha echado sus higos, /nY las vides en cierne dieron olor; /nLevántate, oh amiga mía, hermosa mía, y ven."
+    },
+    {
+      "number": 14,
+      "text": "/nPaloma mía, que estás en los agujeros de la peña, en lo escondido de escarpados parajes, /nMuéstrame tu rostro, hazme oír tu voz; /nPorque dulce es la voz tuya, y hermoso tu aspecto."
+    },
+    {
+      "number": 15,
+      "text": "/nCazadnos las zorras, las zorras pequeñas, que echan a perder las viñas; /nPorque nuestras viñas están en cierne."
+    },
+    {
+      "number": 16,
+      "text": "/nMi amado es mío, y yo suya; /nEl apacienta entre lirios."
+    },
+    {
+      "number": 17,
+      "text": "/nHasta que apunte el día, y huyan las sombras, /nVuélvete, amado mío; sé semejante al corzo, o como el cervatillo /nSobre los montes de Beter."
+    }
+  ]
+}

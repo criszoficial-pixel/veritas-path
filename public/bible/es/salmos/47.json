@@ -1,0 +1,48 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 47,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nPueblos todos, batid las manos; /nAclamad a Dios con voz de júbilo."
+    },
+    {
+      "number": 2,
+      "text": "/nPorque Jehová el Altísimo es temible; /nRey grande sobre toda la tierra."
+    },
+    {
+      "number": 3,
+      "text": "/nEl someterá a los pueblos debajo de nosotros, /nY a las naciones debajo de nuestros pies."
+    },
+    {
+      "number": 4,
+      "text": "/nEl nos elegirá nuestras heredades; /nLa hermosura de Jacob, al cual amó. Selah"
+    },
+    {
+      "number": 5,
+      "text": "/nSubió Dios con júbilo, /nJehová con sonido de trompeta."
+    },
+    {
+      "number": 6,
+      "text": "/nCantad a Dios, cantad; /nCantad a nuestro Rey, cantad;"
+    },
+    {
+      "number": 7,
+      "text": "/nPorque Dios es el Rey de toda la tierra; /nCantad con inteligencia."
+    },
+    {
+      "number": 8,
+      "text": "/nReinó Dios sobre las naciones; /nSe sentó Dios sobre su santo trono."
+    },
+    {
+      "number": 9,
+      "text": "/nLos príncipes de los pueblos se reunieron /nComo pueblo del Dios de Abraham;"
+    },
+    {
+      "number": 10,
+      "text": "/nPorque de Dios son los escudos de la tierra; /nEl es muy exaltado."
+    }
+  ]
+}

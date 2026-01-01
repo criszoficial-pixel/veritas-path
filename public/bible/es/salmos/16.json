@@ -1,0 +1,52 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 16,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nGuárdame, oh Dios, porque en ti he confiado."
+    },
+    {
+      "number": 2,
+      "text": "/nOh alma mía, dijiste a Jehová: /nTú eres mi Señor; /nNo hay para mí bien fuera de ti."
+    },
+    {
+      "number": 3,
+      "text": "/nPara los santos que están en la tierra, /nY para los íntegros, es toda mi complacencia."
+    },
+    {
+      "number": 4,
+      "text": "/nSe multiplicarán los dolores de aquellos que sirven diligentes a otro dios. /nNo ofreceré yo sus libaciones de sangre, /nNi en mis labios tomaré sus nombres."
+    },
+    {
+      "number": 5,
+      "text": "/nJehová es la porción de mi herencia y de mi copa; /nTú sustentas mi suerte."
+    },
+    {
+      "number": 6,
+      "text": "/nLas cuerdas me cayeron en lugares deleitosos, /nY es hermosa la heredad que me ha tocado."
+    },
+    {
+      "number": 7,
+      "text": "/nBendeciré a Jehová que me aconseja; /nAun en las noches me enseña mi conciencia."
+    },
+    {
+      "number": 8,
+      "text": "/nA Jehová he puesto siempre delante de mí; /nPorque está a mi diestra, no seré conmovido."
+    },
+    {
+      "number": 9,
+      "text": "/nSe alegró por tanto mi corazón, y se gozó mi alma; /nMi carne también reposará confiadamente;"
+    },
+    {
+      "number": 10,
+      "text": "/nPorque no dejarás mi alma en el Seol, /nNi permitirás que tu santo vea corrupción."
+    },
+    {
+      "number": 11,
+      "text": "/nMe mostrarás la senda de la vida; /nEn tu presencia hay plenitud de gozo; /nDelicias a tu diestra para siempre."
+    }
+  ]
+}

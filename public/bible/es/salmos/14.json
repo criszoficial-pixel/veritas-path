@@ -1,0 +1,36 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 14,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nDice el necio en su corazón: /nNo hay Dios. /nSe han corrompido, hacen obras abominables; /nNo hay quien haga el bien."
+    },
+    {
+      "number": 2,
+      "text": "/nJehová miró desde los cielos sobre los hijos de los hombres, /nPara ver si había algún entendido, /nQue buscara a Dios."
+    },
+    {
+      "number": 3,
+      "text": "/nTodos se desviaron, a una se han corrompido; /nNo hay quien haga lo bueno, no hay ni siquiera uno."
+    },
+    {
+      "number": 4,
+      "text": "/n¿No tienen discernimiento todos los que hacen iniquidad, /nQue devoran a mi pueblo como si comiesen pan, /nY a Jehová no invocan?"
+    },
+    {
+      "number": 5,
+      "text": "/nEllos temblaron de espanto; /nPorque Dios está con la generación de los justos."
+    },
+    {
+      "number": 6,
+      "text": "/nDel consejo del pobre se han burlado, /nPero Jehová es su esperanza."
+    },
+    {
+      "number": 7,
+      "text": "/n¡Oh, que de Sion saliera la salvación de Israel! /nCuando Jehová hiciere volver a los cautivos de su pueblo, /nSe gozará Jacob, y se alegrará Israel."
+    }
+  ]
+}

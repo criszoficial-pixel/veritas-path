@@ -1,0 +1,36 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 87,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nSu cimiento está en el monte santo."
+    },
+    {
+      "number": 2,
+      "text": "/nAma Jehová las puertas de Sion /nMás que todas las moradas de Jacob."
+    },
+    {
+      "number": 3,
+      "text": "/nCosas gloriosas se han dicho de ti, /nCiudad de Dios. Selah"
+    },
+    {
+      "number": 4,
+      "text": "/nYo me acordaré de Rahab y de Babilonia entre los que me conocen; /nHe aquí Filistea y Tiro, con Etiopía; /nEste nació allá."
+    },
+    {
+      "number": 5,
+      "text": "/nY de Sion se dirá: Este y aquél han nacido en ella, /nY el Altísimo mismo la establecerá."
+    },
+    {
+      "number": 6,
+      "text": "/nJehová contará al inscribir a los pueblos: /nEste nació allí. Selah"
+    },
+    {
+      "number": 7,
+      "text": "/nY cantores y tañedores en ella dirán: /nTodas mis fuentes están en ti."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 12,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nSalva, oh Jehová, porque se acabaron los piadosos; /nPorque han desaparecido los fieles de entre los hijos de los hombres."
+    },
+    {
+      "number": 2,
+      "text": "/nHabla mentira cada uno con su prójimo; /nHablan con labios lisonjeros, y con doblez de corazón."
+    },
+    {
+      "number": 3,
+      "text": "/nJehová destruirá todos los labios lisonjeros, /nY la lengua que habla jactanciosamente;"
+    },
+    {
+      "number": 4,
+      "text": "/nA los que han dicho: Por nuestra lengua prevaleceremos; /nNuestros labios son nuestros; ¿quién es señor de nosotros?"
+    },
+    {
+      "number": 5,
+      "text": "/nPor la opresión de los pobres, por el gemido de los menesterosos, /nAhora me levantaré, dice Jehová; /nPondré en salvo al que por ello suspira."
+    },
+    {
+      "number": 6,
+      "text": "/nLas palabras de Jehová son palabras limpias, /nComo plata refinada en horno de tierra, /nPurificada siete veces."
+    },
+    {
+      "number": 7,
+      "text": "/nTú, Jehová, los guardarás; /nDe esta generación los preservarás para siempre."
+    },
+    {
+      "number": 8,
+      "text": "/nCercando andan los malos, /nCuando la vileza es exaltada entre los hijos de los hombres."
+    }
+  ]
+}

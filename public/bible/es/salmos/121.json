@@ -1,0 +1,40 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 121,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nAlzaré mis ojos a los montes; /n¿De dónde vendrá mi socorro?"
+    },
+    {
+      "number": 2,
+      "text": "/nMi socorro viene de Jehová, /nQue hizo los cielos y la tierra."
+    },
+    {
+      "number": 3,
+      "text": "/nNo dará tu pie al resbaladero, /nNi se dormirá el que te guarda."
+    },
+    {
+      "number": 4,
+      "text": "/nHe aquí, no se adormecerá ni dormirá /nEl que guarda a Israel."
+    },
+    {
+      "number": 5,
+      "text": "/nJehová es tu guardador; /nJehová es tu sombra a tu mano derecha."
+    },
+    {
+      "number": 6,
+      "text": "/nEl sol no te fatigará de día, /nNi la luna de noche."
+    },
+    {
+      "number": 7,
+      "text": "/nJehová te guardará de todo mal; /nEl guardará tu alma."
+    },
+    {
+      "number": 8,
+      "text": "/nJehová guardará tu salida y tu entrada /nDesde ahora y para siempre."
+    }
+  ]
+}

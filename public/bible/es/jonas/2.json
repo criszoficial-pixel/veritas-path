@@ -1,0 +1,48 @@
+{
+  "book": "Jonás",
+  "bookSlug": "jonas",
+  "chapter": 2,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "Entonces oró Jonás a Jehová su Dios desde el vientre del pez,"
+    },
+    {
+      "number": 2,
+      "text": "y dijo: /nInvoqué en mi angustia a Jehová, y él me oyó; /nDesde el seno del Seol clamé, /nY mi voz oíste."
+    },
+    {
+      "number": 3,
+      "text": "/nMe echaste a lo profundo, en medio de los mares, /nY me rodeó la corriente; /nTodas tus ondas y tus olas pasaron sobre mí."
+    },
+    {
+      "number": 4,
+      "text": "/nEntonces dije: Desechado soy de delante de tus ojos; /nMas aún veré tu santo templo."
+    },
+    {
+      "number": 5,
+      "text": "/nLas aguas me rodearon hasta el alma, /nRodeóme el abismo; /nEl alga se enredó a mi cabeza."
+    },
+    {
+      "number": 6,
+      "text": "/nDescendí a los cimientos de los montes; /nLa tierra echó sus cerrojos sobre mí para siempre; /nMas tú sacaste mi vida de la sepultura, oh Jehová Dios mío."
+    },
+    {
+      "number": 7,
+      "text": "/nCuando mi alma desfallecía en mí, me acordé de Jehová, /nY mi oración llegó hasta ti en tu santo templo."
+    },
+    {
+      "number": 8,
+      "text": "/nLos que siguen vanidades ilusorias, /nSu misericordia abandonan."
+    },
+    {
+      "number": 9,
+      "text": "/nMas yo con voz de alabanza te ofreceré sacrificios; /nPagaré lo que prometí. /nLa salvación es de Jehová."
+    },
+    {
+      "number": 10,
+      "text": "Y mandó Jehová al pez, y vomitó a Jonás en tierra."
+    }
+  ]
+}

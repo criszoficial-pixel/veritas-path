@@ -1,0 +1,36 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 67,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nDios tenga misericordia de nosotros, y nos bendiga; /nHaga resplandecer su rostro sobre nosotros; Selah"
+    },
+    {
+      "number": 2,
+      "text": "/nPara que sea conocido en la tierra tu camino, /nEn todas las naciones tu salvación."
+    },
+    {
+      "number": 3,
+      "text": "/nTe alaben los pueblos, oh Dios; /nTodos los pueblos te alaben."
+    },
+    {
+      "number": 4,
+      "text": "/nAlégrense y gócense las naciones, /nPorque juzgarás los pueblos con equidad, /nY pastorearás las naciones en la tierra. Selah"
+    },
+    {
+      "number": 5,
+      "text": "/nTe alaben los pueblos, oh Dios; /nTodos los pueblos te alaben."
+    },
+    {
+      "number": 6,
+      "text": "/nLa tierra dará su fruto; /nNos bendecirá Dios, el Dios nuestro."
+    },
+    {
+      "number": 7,
+      "text": "/nBendíganos Dios, /nY témanlo todos los términos de la tierra."
+    }
+  ]
+}

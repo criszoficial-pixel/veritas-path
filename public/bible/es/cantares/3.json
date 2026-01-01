@@ -1,0 +1,52 @@
+{
+  "book": "Cantares",
+  "bookSlug": "cantares",
+  "chapter": 3,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nPor las noches busqué en mi lecho al que ama mi alma; /nLo busqué, y no lo hallé."
+    },
+    {
+      "number": 2,
+      "text": "/nY dije: Me levantaré ahora, y rodearé por la ciudad; /nPor las calles y por las plazas /nBuscaré al que ama mi alma; /nLo busqué, y no lo hallé."
+    },
+    {
+      "number": 3,
+      "text": "/nMe hallaron los guardas que rondan la ciudad, /nY les dije: ¿Habéis visto al que ama mi alma?"
+    },
+    {
+      "number": 4,
+      "text": "/nApenas hube pasado de ellos un poco, /nHallé luego al que ama mi alma; /nLo así, y no lo dejé, /nHasta que lo metí en casa de mi madre, /nY en la cámara de la que me dio a luz."
+    },
+    {
+      "number": 5,
+      "text": "/nYo os conjuro, oh doncellas de Jerusalén, /nPor los corzos y por las ciervas del campo, /nQue no despertéis ni hagáis velar al amor, /nHasta que quiera."
+    },
+    {
+      "number": 6,
+      "text": "/n¿Quién es ésta que sube del desierto como columna de humo, /nSahumada de mirra y de incienso /nY de todo polvo aromático?"
+    },
+    {
+      "number": 7,
+      "text": "/nHe aquí es la litera de Salomón; /nSesenta valientes la rodean, /nDe los fuertes de Israel."
+    },
+    {
+      "number": 8,
+      "text": "/nTodos ellos tienen espadas, diestros en la guerra; /nCada uno su espada sobre su muslo, /nPor los temores de la noche."
+    },
+    {
+      "number": 9,
+      "text": "/nEl rey Salomón se hizo una carroza /nDe madera del Líbano."
+    },
+    {
+      "number": 10,
+      "text": "/nHizo sus columnas de plata, /nSu respaldo de oro, /nSu asiento de grana, /nSu interior recamado de amor /nPor las doncellas de Jerusalén."
+    },
+    {
+      "number": 11,
+      "text": "/nSalid, oh doncellas de Sion, y ved al rey Salomón /nCon la corona con que le coronó su madre en el día de su desposorio, /nY el día del gozo de su corazón."
+    }
+  ]
+}

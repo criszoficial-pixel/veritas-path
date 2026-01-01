@@ -1,0 +1,48 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 146,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nAlaba, oh alma mía, a Jehová."
+    },
+    {
+      "number": 2,
+      "text": "/nAlabaré a Jehová en mi vida; /nCantaré salmos a mi Dios mientras viva."
+    },
+    {
+      "number": 3,
+      "text": "/nNo confiéis en los príncipes, /nNi en hijo de hombre, porque no hay en él salvación."
+    },
+    {
+      "number": 4,
+      "text": "/nPues sale su aliento, y vuelve a la tierra; /nEn ese mismo día perecen sus pensamientos."
+    },
+    {
+      "number": 5,
+      "text": "/nBienaventurado aquel cuyo ayudador es el Dios de Jacob, /nCuya esperanza está en Jehová su Dios,"
+    },
+    {
+      "number": 6,
+      "text": "/nEl cual hizo los cielos y la tierra, /nEl mar, y todo lo que en ellos hay; /nQue guarda verdad para siempre,"
+    },
+    {
+      "number": 7,
+      "text": "/nQue hace justicia a los agraviados, /nQue da pan a los hambrientos. /nJehová liberta a los cautivos;"
+    },
+    {
+      "number": 8,
+      "text": "/nJehová abre los ojos a los ciegos; /nJehová levanta a los caídos; /nJehová ama a los justos."
+    },
+    {
+      "number": 9,
+      "text": "/nJehová guarda a los extranjeros; /nAl huérfano y a la viuda sostiene, /nY el camino de los impíos trastorna."
+    },
+    {
+      "number": 10,
+      "text": "/nReinará Jehová para siempre; /nTu Dios, oh Sion, de generación en generación. /nAleluya."
+    }
+  ]
+}

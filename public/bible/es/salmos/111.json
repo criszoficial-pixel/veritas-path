@@ -1,0 +1,48 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 111,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nAlabaré a Jehová con todo el corazón /nEn la compañía y congregación de los rectos."
+    },
+    {
+      "number": 2,
+      "text": "/nGrandes son las obras de Jehová, /nBuscadas de todos los que las quieren."
+    },
+    {
+      "number": 3,
+      "text": "/nGloria y hermosura es su obra, /nY su justicia permanece para siempre."
+    },
+    {
+      "number": 4,
+      "text": "/nHa hecho memorables sus maravillas; /nClemente y misericordioso es Jehová."
+    },
+    {
+      "number": 5,
+      "text": "/nHa dado alimento a los que le temen; /nPara siempre se acordará de su pacto."
+    },
+    {
+      "number": 6,
+      "text": "/nEl poder de sus obras manifestó a su pueblo, /nDándole la heredad de las naciones."
+    },
+    {
+      "number": 7,
+      "text": "/nLas obras de sus manos son verdad y juicio; /nFieles son todos sus mandamientos,"
+    },
+    {
+      "number": 8,
+      "text": "/nAfirmados eternamente y para siempre, /nHechos en verdad y en rectitud."
+    },
+    {
+      "number": 9,
+      "text": "/nRedención ha enviado a su pueblo; /nPara siempre ha ordenado su pacto; /nSanto y temible es su nombre."
+    },
+    {
+      "number": 10,
+      "text": "/nEl principio de la sabiduría es el temor de Jehová; /nBuen entendimiento tienen todos los /nque practican sus mandamientos; /nSu loor permanece para siempre."
+    }
+  ]
+}

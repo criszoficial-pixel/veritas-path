@@ -1,0 +1,48 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 112,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nBienaventurado el hombre que teme a Jehová, /nY en sus mandamientos se deleita en gran manera."
+    },
+    {
+      "number": 2,
+      "text": "/nSu descendencia será poderosa en la tierra; /nLa generación de los rectos será bendita."
+    },
+    {
+      "number": 3,
+      "text": "/nBienes y riquezas hay en su casa, /nY su justicia permanece para siempre."
+    },
+    {
+      "number": 4,
+      "text": "/nResplandeció en las tinieblas luz a los rectos; /nEs clemente, misericordioso y justo."
+    },
+    {
+      "number": 5,
+      "text": "/nEl hombre de bien tiene misericordia, y presta; /nGobierna sus asuntos con juicio,"
+    },
+    {
+      "number": 6,
+      "text": "/nPor lo cual no resbalará jamás; /nEn memoria eterna será el justo."
+    },
+    {
+      "number": 7,
+      "text": "/nNo tendrá temor de malas noticias; /nSu corazón está firme, confiado en Jehová."
+    },
+    {
+      "number": 8,
+      "text": "/nAsegurado está su corazón; no temerá, /nHasta que vea en sus enemigos su deseo."
+    },
+    {
+      "number": 9,
+      "text": "/nReparte, da a los pobres; /nSu justicia permanece para siempre; /nSu poder será exaltado en gloria."
+    },
+    {
+      "number": 10,
+      "text": "/nLo verá el impío y se irritará; /nCrujirá los dientes, y se consumirá. /nEl deseo de los impíos perecerá."
+    }
+  ]
+}

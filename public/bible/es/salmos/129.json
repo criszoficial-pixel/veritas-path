@@ -1,0 +1,40 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 129,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nMucho me han angustiado desde mi juventud, /nPuede decir ahora Israel;"
+    },
+    {
+      "number": 2,
+      "text": "/nMucho me han angustiado desde mi juventud; /nMas no prevalecieron contra mí."
+    },
+    {
+      "number": 3,
+      "text": "/nSobre mis espaldas araron los aradores; /nHicieron largos surcos."
+    },
+    {
+      "number": 4,
+      "text": "/nJehová es justo; /nCortó las coyundas de los impíos."
+    },
+    {
+      "number": 5,
+      "text": "/nSerán avergonzados y vueltos atrás /nTodos los que aborrecen a Sion."
+    },
+    {
+      "number": 6,
+      "text": "/nSerán como la hierba de los tejados, /nQue se seca antes que crezca;"
+    },
+    {
+      "number": 7,
+      "text": "/nDe la cual no llenó el segador su mano, /nNi sus brazos el que hace gavillas."
+    },
+    {
+      "number": 8,
+      "text": "/nNi dijeron los que pasaban: /nBendición de Jehová sea sobre vosotros; /nOs bendecimos en el nombre de Jehová."
+    }
+  ]
+}

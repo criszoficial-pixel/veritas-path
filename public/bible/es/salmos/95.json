@@ -1,0 +1,52 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 95,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nVenid, aclamemos alegremente a Jehová; /nCantemos con júbilo a la roca de nuestra salvación."
+    },
+    {
+      "number": 2,
+      "text": "/nLleguemos ante su presencia con alabanza; /nAclamémosle con cánticos."
+    },
+    {
+      "number": 3,
+      "text": "/nPorque Jehová es Dios grande, /nY Rey grande sobre todos los dioses."
+    },
+    {
+      "number": 4,
+      "text": "/nPorque en su mano están las profundidades de la tierra, /nY las alturas de los montes son suyas."
+    },
+    {
+      "number": 5,
+      "text": "/nSuyo también el mar, pues él lo hizo; /nY sus manos formaron la tierra seca."
+    },
+    {
+      "number": 6,
+      "text": "/nVenid, adoremos y postrémonos; /nArrodillémonos delante de Jehová nuestro Hacedor."
+    },
+    {
+      "number": 7,
+      "text": "/nPorque él es nuestro Dios; /nNosotros el pueblo de su prado, y ovejas de su mano. /nSi oyereis hoy su voz,"
+    },
+    {
+      "number": 8,
+      "text": "/nNo endurezcáis vuestro corazón, como en Meriba, /nComo en el día de Masah en el desierto,"
+    },
+    {
+      "number": 9,
+      "text": "/nDonde me tentaron vuestros padres, /nMe probaron, y vieron mis obras."
+    },
+    {
+      "number": 10,
+      "text": "/nCuarenta años estuve disgustado con la nación, /nY dije: Pueblo es que divaga de corazón, /nY no han conocido mis caminos."
+    },
+    {
+      "number": 11,
+      "text": "/nPor tanto, juré en mi furor /nQue no entrarían en mi reposo."
+    }
+  ]
+}

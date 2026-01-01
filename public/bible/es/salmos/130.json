@@ -1,0 +1,40 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 130,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nDe lo profundo, oh Jehová, a ti clamo."
+    },
+    {
+      "number": 2,
+      "text": "/nSeñor, oye mi voz; /nEstén atentos tus oídos /nA la voz de mi súplica."
+    },
+    {
+      "number": 3,
+      "text": "/nJAH, si mirares a los pecados, /n¿Quién, oh Señor, podrá mantenerse?"
+    },
+    {
+      "number": 4,
+      "text": "/nPero en ti hay perdón, /nPara que seas reverenciado."
+    },
+    {
+      "number": 5,
+      "text": "/nEsperé yo a Jehová, esperó mi alma; /nEn su palabra he esperado."
+    },
+    {
+      "number": 6,
+      "text": "/nMi alma espera a Jehová /nMás que los centinelas a la mañana, /nMás que los vigilantes a la mañana."
+    },
+    {
+      "number": 7,
+      "text": "/nEspere Israel a Jehová, /nPorque en Jehová hay misericordia, /nY abundante redención con él;"
+    },
+    {
+      "number": 8,
+      "text": "/nY él redimirá a Israel /nDe todos sus pecados."
+    }
+  ]
+}

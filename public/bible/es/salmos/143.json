@@ -1,0 +1,56 @@
+{
+  "book": "Salmos",
+  "bookSlug": "salmos",
+  "chapter": 143,
+  "version": "RV1960",
+  "verses": [
+    {
+      "number": 1,
+      "text": "/nOh Jehová, oye mi oración, escucha mis ruegos; /nRespóndeme por tu verdad, por tu justicia."
+    },
+    {
+      "number": 2,
+      "text": "/nY no entres en juicio con tu siervo; /nPorque no se justificará delante de ti ningún ser humano."
+    },
+    {
+      "number": 3,
+      "text": "/nPorque ha perseguido el enemigo mi alma; /nHa postrado en tierra mi vida; /nMe ha hecho habitar en tinieblas como los ya muertos."
+    },
+    {
+      "number": 4,
+      "text": "/nY mi espíritu se angustió dentro de mí; /nEstá desolado mi corazón."
+    },
+    {
+      "number": 5,
+      "text": "/nMe acordé de los días antiguos; /nMeditaba en todas tus obras; /nReflexionaba en las obras de tus manos."
+    },
+    {
+      "number": 6,
+      "text": "/nExtendí mis manos a ti, /nMi alma a ti como la tierra sedienta. Selah"
+    },
+    {
+      "number": 7,
+      "text": "/nRespóndeme pronto, oh Jehová, porque desmaya mi espíritu; /nNo escondas de mí tu rostro, /nNo venga yo a ser semejante a los que descienden a la sepultura."
+    },
+    {
+      "number": 8,
+      "text": "/nHazme oír por la mañana tu misericordia, /nPorque en ti he confiado; /nHazme saber el camino por donde ande, /nPorque a ti he elevado mi alma."
+    },
+    {
+      "number": 9,
+      "text": "/nLíbrame de mis enemigos, oh Jehová; /nEn ti me refugio."
+    },
+    {
+      "number": 10,
+      "text": "/nEnséñame a hacer tu voluntad, porque tú eres mi Dios; /nTu buen espíritu me guíe a tierra de rectitud."
+    },
+    {
+      "number": 11,
+      "text": "/nPor tu nombre, oh Jehová, me vivificarás; /nPor tu justicia sacarás mi alma de angustia."
+    },
+    {
+      "number": 12,
+      "text": "/nY por tu misericordia disiparás a mis enemigos, /nY destruirás a todos los adversarios de mi alma, /nPorque yo soy tu siervo."
+    }
+  ]
+}
