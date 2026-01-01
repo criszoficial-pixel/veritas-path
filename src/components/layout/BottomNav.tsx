@@ -1,22 +1,24 @@
 import { Link, useLocation } from 'react-router-dom';
 import { BookOpen, Map, Brain, Heart, User } from 'lucide-react';
 import { cn } from '@/lib/utils';
-
-const navItems = [
-  { path: '/leer', icon: BookOpen, label: 'Leer' },
-  { path: '/aprender', icon: Map, label: 'Aprender' },
-  { path: '/quizzes', icon: Brain, label: 'Quizzes' },
-  { path: '/guia', icon: Heart, label: 'Guía' },
-  { path: '/perfil', icon: User, label: 'Perfil' },
-];
+import { useTranslation } from '@/hooks/useTranslation';
 
 export const BottomNav = () => {
   const location = useLocation();
+  const { t } = useTranslation();
+
+  const navItems = [
+    { path: '/leer', icon: BookOpen, labelKey: 'nav.read' as const },
+    { path: '/aprender', icon: Map, labelKey: 'nav.learn' as const },
+    { path: '/quizzes', icon: Brain, labelKey: 'nav.quizzes' as const },
+    { path: '/guia', icon: Heart, labelKey: 'nav.guide' as const },
+    { path: '/perfil', icon: User, labelKey: 'nav.profile' as const },
+  ];
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50 border-t border-border bg-background/95 backdrop-blur-lg safe-area-inset-bottom">
       <div className="flex items-center justify-around px-2 py-2">
-        {navItems.map(({ path, icon: Icon, label }) => {
+        {navItems.map(({ path, icon: Icon, labelKey }) => {
           const isActive = location.pathname === path || (path === '/leer' && location.pathname === '/');
           return (
             <Link
@@ -30,7 +32,7 @@ export const BottomNav = () => {
               )}
             >
               <Icon className={cn('h-5 w-5', isActive && 'animate-fade-in')} strokeWidth={isActive ? 2.5 : 2} />
-              <span className={cn('text-xs font-medium', isActive && 'font-semibold')}>{label}</span>
+              <span className={cn('text-xs font-medium', isActive && 'font-semibold')}>{t(labelKey)}</span>
             </Link>
           );
         })}

@@ -1,5 +1,6 @@
-import { Search, Bell, Menu } from 'lucide-react';
+import { Search, Bell } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { LanguageSelector } from '@/components/settings/LanguageSelector';
 
 interface HeaderProps {
   title?: string;
@@ -20,7 +21,8 @@ export const Header = ({ title = 'Palabra Viva', showSearch = true, showNotifica
           </div>
         </div>
         
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1">
+          <LanguageSelector />
           {showSearch && (
             <Button variant="ghost" size="icon" className="text-muted-foreground">
               <Search className="h-5 w-5" />

@@ -1,12 +1,17 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { books } from '@/data/bibleData';
+import { getBooks } from '@/data/bibleData';
 import { cn } from '@/lib/utils';
 import { ChevronRight } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { useTranslation } from '@/hooks/useTranslation';
 
 export const BookSelector = () => {
   const [activeTestament, setActiveTestament] = useState<'AT' | 'NT'>('AT');
-
+  const { languageCode } = useLanguage();
+  const { t } = useTranslation();
+  
+  const books = getBooks(languageCode);
   const filteredBooks = books.filter((book) => book.testament === activeTestament);
 
   return (
@@ -22,7 +27,7 @@ export const BookSelector = () => {
               : 'text-muted-foreground hover:text-foreground'
           )}
         >
-          Antiguo Testamento
+          {t('books.oldTestament')}
         </button>
         <button
           onClick={() => setActiveTestament('NT')}
@@ -33,7 +38,7 @@ export const BookSelector = () => {
               : 'text-muted-foreground hover:text-foreground'
           )}
         >
-          Nuevo Testamento
+          {t('books.newTestament')}
         </button>
       </div>
 
@@ -51,7 +56,7 @@ export const BookSelector = () => {
               </div>
               <div>
                 <h3 className="font-medium text-foreground">{book.name}</h3>
-                <p className="text-xs text-muted-foreground">{book.chapters} capítulos</p>
+                <p className="text-xs text-muted-foreground">{book.chapters} {t('reader.chapter').toLowerCase()}s</p>
               </div>
             </div>
             <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
