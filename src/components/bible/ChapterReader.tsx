@@ -1,8 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight, Bookmark, Settings2, Volume2, VolumeX } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Bookmark, Settings2, Volume2, VolumeX, Loader2, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { getBooks, getVerses, type Verse } from '@/data/bibleData';
 import { getChapterAudioData, hasAudioData } from '@/data/audioSyncData';
 import { useAudioPlayer } from '@/hooks/useAudioPlayer';
 import { useAudioSync } from '@/hooks/useAudioSync';
@@ -11,21 +10,27 @@ import { useTranslation } from '@/hooks/useTranslation';
 import { SyncedVerse } from './SyncedVerse';
 import { AudioPlayerBar } from '@/components/audio/AudioPlayerBar';
 import { cn } from '@/lib/utils';
+import { fetchBibleMetadata, fetchChapter, findBookByName, bookNameToSlug } from '@/services/bibleDataService';
 import type { ChapterAudioData, VerseSyncData } from '@/types/audio';
+import type { BibleMetadata, ChapterData, VerseData, BookInfo } from '@/types/bible';
 
 export const ChapterReader = () => {
   const { bookName, chapter } = useParams();
   const navigate = useNavigate();
   const { languageCode } = useLanguage();
   const { t } = useTranslation();
-  const [verses, setVerses] = useState<Verse[]>([]);
+  
+  const [metadata, setMetadata] = useState<BibleMetadata | null>(null);
+  const [chapterData, setChapterData] = useState<ChapterData | null>(null);
+  const [currentBook, setCurrentBook] = useState<BookInfo | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [chapterNotAvailable, setChapterNotAvailable] = useState(false);
+  
   const [fontSize, setFontSize] = useState<'sm' | 'base' | 'lg' | 'xl'>('lg');
   const [audioData, setAudioData] = useState<ChapterAudioData | null>(null);
   const [showAudioPlayer, setShowAudioPlayer] = useState(false);
   const verseRefs = useRef<Map<number, HTMLDivElement>>(new Map());
 
-  const books = getBooks(languageCode);
-  const currentBook = books.find((b) => b.name === bookName);
   const currentChapter = parseInt(chapter || '1');
 
   const audioPlayer = useAudioPlayer({
@@ -38,26 +43,48 @@ export const ChapterReader = () => {
 
   const { activePosition, seekToWord } = useAudioSync(audioData, audioPlayer.currentTime);
 
+  // Load metadata and chapter data
   useEffect(() => {
-    if (bookName && chapter) {
-      const chapterVerses = getVerses(bookName, parseInt(chapter), languageCode);
-      if (chapterVerses.length > 0) {
-        setVerses(chapterVerses);
-      } else {
-        const sampleVerses: Verse[] = Array.from({ length: 10 }, (_, i) => ({
-          number: i + 1,
-          text: `${t('reader.chapter')} ${chapter}, ${t('common.loading')}`,
-        }));
-        setVerses(sampleVerses);
+    const loadData = async () => {
+      setIsLoading(true);
+      setChapterNotAvailable(false);
+      
+      // Load metadata first
+      const meta = await fetchBibleMetadata(languageCode);
+      setMetadata(meta);
+      
+      if (meta && bookName) {
+        // Find the book in metadata
+        const book = findBookByName(meta, bookName);
+        setCurrentBook(book || null);
+        
+        if (book) {
+          // Load the chapter using the book's slug
+          const chapter = await fetchChapter(languageCode, book.slug, currentChapter);
+          if (chapter) {
+            setChapterData(chapter);
+            setChapterNotAvailable(false);
+          } else {
+            setChapterData(null);
+            setChapterNotAvailable(true);
+          }
+        }
       }
-
-      const audio = getChapterAudioData(bookName, parseInt(chapter), languageCode);
-      setAudioData(audio);
-      if (audio) {
-        audioPlayer.loadAudio(audio.audioUrl);
+      
+      // Load audio data (from existing system)
+      if (bookName) {
+        const audio = getChapterAudioData(bookName, currentChapter, languageCode);
+        setAudioData(audio);
+        if (audio) {
+          audioPlayer.loadAudio(audio.audioUrl);
+        }
       }
-    }
-  }, [bookName, chapter, languageCode]);
+      
+      setIsLoading(false);
+    };
+    
+    loadData();
+  }, [bookName, chapter, languageCode, currentChapter]);
 
   useEffect(() => {
     if (activePosition.verseNumber && audioPlayer.isPlaying) {
@@ -98,12 +125,52 @@ export const ChapterReader = () => {
 
   const fontSizeClasses = { sm: 'text-base', base: 'text-lg', lg: 'text-xl', xl: 'text-2xl' };
 
-  const getSyncedVerseData = (verse: Verse): VerseSyncData | null => {
+  const getSyncedVerseData = (verse: VerseData): VerseSyncData | null => {
     if (!audioData) return null;
     return audioData.verses.find((v) => v.number === verse.number) || null;
   };
 
   const hasAudio = hasAudioData(bookName || '', currentChapter, languageCode);
+
+  // Loading state
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      </div>
+    );
+  }
+
+  // Chapter not available state
+  if (chapterNotAvailable || !chapterData) {
+    return (
+      <div className="min-h-screen bg-background pb-48">
+        <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur-lg">
+          <div className="container flex h-14 items-center justify-between px-4">
+            <Link to="/leer" className="flex items-center gap-2 text-muted-foreground hover:text-foreground">
+              <ChevronLeft className="h-5 w-5" />
+              <span className="text-sm font-medium">{t('nav.read')}</span>
+            </Link>
+          </div>
+        </header>
+        
+        <div className="container px-4 py-12">
+          <div className="max-w-md mx-auto text-center space-y-4">
+          <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+              <BookOpen className="h-8 w-8 text-primary" />
+            </div>
+            <h2 className="text-xl font-semibold text-foreground">Próximamente</h2>
+            <p className="text-muted-foreground">
+              Este capítulo estará disponible próximamente. Estamos trabajando para agregar más contenido.
+            </p>
+            <Button variant="outline" onClick={() => navigate('/leer')}>
+              Volver a libros
+            </Button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background pb-48">
@@ -127,13 +194,18 @@ export const ChapterReader = () => {
 
       <div className="container px-4 py-6">
         <div className="text-center mb-8">
-          <h1 className="text-2xl font-bold text-foreground mb-1">{bookName}</h1>
+          <h1 className="text-2xl font-bold text-foreground mb-1">{chapterData.book}</h1>
           <p className="text-muted-foreground">{t('reader.chapter')} {currentChapter}</p>
+          {metadata && (
+            <span className="inline-flex items-center mt-2 px-2 py-0.5 rounded-full bg-muted text-muted-foreground text-xs">
+              {metadata.versionShort}
+            </span>
+          )}
         </div>
 
         <article className="max-w-2xl mx-auto">
           <div className={cn('font-scripture leading-relaxed space-y-4', fontSizeClasses[fontSize])}>
-            {verses.map((verse) => {
+            {chapterData.verses.map((verse) => {
               const syncedData = getSyncedVerseData(verse);
               const isActiveVerse = activePosition.verseNumber === verse.number;
               const activeWordIdx = isActiveVerse ? activePosition.wordIndex : null;
@@ -143,7 +215,7 @@ export const ChapterReader = () => {
                   {syncedData ? (
                     <SyncedVerse verse={syncedData} activeWordIndex={activeWordIdx} isActiveVerse={isActiveVerse && audioPlayer.isPlaying} onWordClick={(wordIdx) => handleWordClick(verse.number, wordIdx)} />
                   ) : (
-                    <p className="text-foreground"><sup className="verse-number">{verse.number}</sup>{verse.text}</p>
+                    <p className="text-foreground"><sup className="verse-number">{verse.number}</sup> {verse.text}</p>
                   )}
                 </div>
               );

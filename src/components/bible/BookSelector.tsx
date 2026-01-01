@@ -1,21 +1,50 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { getBooks } from '@/data/bibleData';
 import { cn } from '@/lib/utils';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Loader2 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/hooks/useTranslation';
+import { fetchBibleMetadata } from '@/services/bibleDataService';
+import type { BibleMetadata, BookInfo } from '@/types/bible';
 
 export const BookSelector = () => {
   const [activeTestament, setActiveTestament] = useState<'AT' | 'NT'>('AT');
+  const [metadata, setMetadata] = useState<BibleMetadata | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
   const { languageCode } = useLanguage();
   const { t } = useTranslation();
-  
-  const books = getBooks(languageCode);
-  const filteredBooks = books.filter((book) => book.testament === activeTestament);
+
+  useEffect(() => {
+    const loadMetadata = async () => {
+      setIsLoading(true);
+      const data = await fetchBibleMetadata(languageCode);
+      setMetadata(data);
+      setIsLoading(false);
+    };
+    loadMetadata();
+  }, [languageCode]);
+
+  const filteredBooks = metadata?.books.filter((book) => book.testament === activeTestament) ?? [];
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center py-12">
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-4">
+      {/* Version Badge */}
+      {metadata && (
+        <div className="text-center">
+          <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
+            {metadata.versionShort}
+          </span>
+        </div>
+      )}
+
       {/* Testament Toggle */}
       <div className="flex gap-2 p-1 bg-secondary rounded-xl">
         <button
