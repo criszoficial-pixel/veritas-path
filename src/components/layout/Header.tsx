@@ -8,7 +8,7 @@ interface HeaderProps {
   showNotifications?: boolean;
 }
 
-export const Header = ({ title = 'Palabra Viva', showSearch = true, showNotifications = true }: HeaderProps) => {
+export const Header = ({ title = 'Shalom', showSearch = true, showNotifications = true }: HeaderProps) => {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur-lg">
       <div className="container flex h-16 items-center justify-between px-4">
