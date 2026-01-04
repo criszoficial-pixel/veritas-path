@@ -11,6 +11,7 @@ import { SyncedVerse } from './SyncedVerse';
 import { AudioPlayerBar } from '@/components/audio/AudioPlayerBar';
 import { cn } from '@/lib/utils';
 import { fetchBibleMetadata, fetchChapter, findBookByName, bookNameToSlug } from '@/services/bibleDataService';
+import { trackChapterRead } from '@/services/userDataService';
 import type { ChapterAudioData, VerseSyncData } from '@/types/audio';
 import type { BibleMetadata, ChapterData, VerseData, BookInfo } from '@/types/bible';
 
@@ -85,6 +86,16 @@ export const ChapterReader = () => {
     
     loadData();
   }, [bookName, chapter, languageCode, currentChapter]);
+
+  // Track chapter reading when chapter data loads
+  useEffect(() => {
+    if (chapterData && currentBook) {
+      const timer = setTimeout(() => {
+        trackChapterRead(currentBook.slug, chapterData.book, currentChapter);
+      }, 5000); // Track after 5 seconds of reading
+      return () => clearTimeout(timer);
+    }
+  }, [chapterData, currentBook, currentChapter]);
 
   useEffect(() => {
     if (activePosition.verseNumber && audioPlayer.isPlaying) {

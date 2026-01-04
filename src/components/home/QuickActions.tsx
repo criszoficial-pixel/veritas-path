@@ -1,43 +1,58 @@
 import { Link } from 'react-router-dom';
-import { BookOpen, Map, Brain, Heart, TrendingUp, Clock } from 'lucide-react';
+import { BookOpen, Map, Brain, Heart } from 'lucide-react';
 import { cn } from '@/lib/utils';
-
-const actions = [
-  {
-    icon: BookOpen,
-    label: 'Continuar Leyendo',
-    description: 'Salmos 23',
-    to: '/leer/Salmos/23',
-    color: 'bg-primary/10 text-primary',
-    iconBg: 'bg-primary',
-  },
-  {
-    icon: Map,
-    label: 'Ruta Activa',
-    description: 'Fundamentos de la Fe',
-    to: '/aprender',
-    color: 'bg-spirit/10 text-spirit',
-    iconBg: 'bg-spirit',
-  },
-  {
-    icon: Brain,
-    label: 'Quiz Diario',
-    description: '10 preguntas',
-    to: '/quizzes',
-    color: 'bg-accent/10 text-accent',
-    iconBg: 'bg-accent',
-  },
-  {
-    icon: Heart,
-    label: 'Necesito Ayuda',
-    description: 'Guía espiritual',
-    to: '/guia',
-    color: 'bg-destructive/10 text-destructive',
-    iconBg: 'bg-destructive',
-  },
-];
+import { useUserProgress } from '@/hooks/useUserProgress';
 
 export const QuickActions = () => {
+  const { lastReading } = useUserProgress();
+
+  // Dynamic continue reading action
+  const continueReadingAction = lastReading
+    ? {
+        icon: BookOpen,
+        label: 'Continuar Leyendo',
+        description: `${lastReading.bookName} ${lastReading.chapter}`,
+        to: `/leer/${encodeURIComponent(lastReading.bookName)}/${lastReading.chapter}`,
+        color: 'bg-primary/10 text-primary',
+        iconBg: 'bg-primary',
+      }
+    : {
+        icon: BookOpen,
+        label: 'Comenzar a Leer',
+        description: 'Explora la Biblia',
+        to: '/leer',
+        color: 'bg-primary/10 text-primary',
+        iconBg: 'bg-primary',
+      };
+
+  const actions = [
+    continueReadingAction,
+    {
+      icon: Map,
+      label: 'Historial',
+      description: 'Lecturas recientes',
+      to: '/historial',
+      color: 'bg-spirit/10 text-spirit',
+      iconBg: 'bg-spirit',
+    },
+    {
+      icon: Brain,
+      label: 'Marcadores',
+      description: 'Versículos guardados',
+      to: '/marcadores',
+      color: 'bg-accent/10 text-accent',
+      iconBg: 'bg-accent',
+    },
+    {
+      icon: Heart,
+      label: 'Necesito Ayuda',
+      description: 'Guía espiritual',
+      to: '/guia',
+      color: 'bg-destructive/10 text-destructive',
+      iconBg: 'bg-destructive',
+    },
+  ];
+
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-semibold text-foreground px-1">Acceso Rápido</h2>
