@@ -8,9 +8,11 @@ import Index from "./pages/Index";
 import Leer from "./pages/Leer";
 import LeerCapitulo from "./pages/LeerCapitulo";
 import Aprender from "./pages/Aprender";
-import Quizzes from "./pages/Quizzes";
 import Guia from "./pages/Guia";
+import GuiaTema from "./pages/GuiaTema";
 import Perfil from "./pages/Perfil";
+import Marcadores from "./pages/Marcadores";
+import Historial from "./pages/Historial";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,9 +29,11 @@ const App = () => (
             <Route path="/leer" element={<Leer />} />
             <Route path="/leer/:bookName/:chapter" element={<LeerCapitulo />} />
             <Route path="/aprender" element={<Aprender />} />
-            <Route path="/quizzes" element={<Quizzes />} />
             <Route path="/guia" element={<Guia />} />
+            <Route path="/guia/:topicId" element={<GuiaTema />} />
             <Route path="/perfil" element={<Perfil />} />
+            <Route path="/marcadores" element={<Marcadores />} />
+            <Route path="/historial" element={<Historial />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
