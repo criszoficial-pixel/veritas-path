@@ -201,6 +201,62 @@ export const quizCategories: QuizCategory[] = [
     color: 'hsl(280, 87%, 38%)',
     type: 'versiculo',
     questionCount: 15
+  },
+  // Nuevas categorías temáticas
+  {
+    id: 'mandamientos',
+    title: 'Los 10 Mandamientos',
+    description: 'La ley de Dios dada en el monte Sinaí',
+    icon: '📋',
+    color: 'hsl(45, 93%, 47%)',
+    type: 'tema',
+    questionCount: 15
+  },
+  {
+    id: 'apostoles',
+    title: 'Los 12 Apóstoles',
+    description: 'Los discípulos elegidos por Jesús',
+    icon: '👥',
+    color: 'hsl(200, 75%, 45%)',
+    type: 'personaje',
+    questionCount: 15
+  },
+  // Nuevos libros
+  {
+    id: 'proverbios',
+    title: 'Proverbios',
+    description: 'Sabiduría y consejos del rey Salomón',
+    icon: '💡',
+    color: 'hsl(35, 92%, 50%)',
+    type: 'libro',
+    questionCount: 15
+  },
+  {
+    id: 'apocalipsis',
+    title: 'Apocalipsis',
+    description: 'Visiones del fin, las 7 iglesias y la Nueva Jerusalén',
+    icon: '🔮',
+    color: 'hsl(280, 70%, 50%)',
+    type: 'libro',
+    questionCount: 15
+  },
+  {
+    id: 'hechos',
+    title: 'Hechos',
+    description: 'La iglesia primitiva, Pentecostés y los viajes de Pablo',
+    icon: '🔥',
+    color: 'hsl(15, 85%, 50%)',
+    type: 'libro',
+    questionCount: 15
+  },
+  {
+    id: 'romanos',
+    title: 'Romanos',
+    description: 'Justificación por fe y doctrina de la salvación',
+    icon: '⚖️',
+    color: 'hsl(220, 70%, 50%)',
+    type: 'libro',
+    questionCount: 12
   }
 ];
 
@@ -268,6 +324,55 @@ export const achievements: Achievement[] = [
     icon: '🏆',
     condition: (stats) => stats.totalPoints >= 1000,
     points: 500
+  },
+  // Nuevos logros para nuevas categorías
+  {
+    id: 'conocedor-ley',
+    title: 'Conocedor de la Ley',
+    description: 'Domina los 10 mandamientos',
+    icon: '📋',
+    condition: (stats) => stats.quizzesByCategory['mandamientos'] >= 1,
+    points: 100
+  },
+  {
+    id: 'seguidor-apostoles',
+    title: 'Seguidor de los Apóstoles',
+    description: 'Conoce a los 12 discípulos',
+    icon: '👥',
+    condition: (stats) => stats.quizzesByCategory['apostoles'] >= 1,
+    points: 100
+  },
+  {
+    id: 'sabio-salomon',
+    title: 'Sabio como Salomón',
+    description: 'Domina el libro de Proverbios',
+    icon: '💡',
+    condition: (stats) => stats.quizzesByCategory['proverbios'] >= 1,
+    points: 100
+  },
+  {
+    id: 'vidente',
+    title: 'Vidente del Apocalipsis',
+    description: 'Conoce las profecías de Juan',
+    icon: '🔮',
+    condition: (stats) => stats.quizzesByCategory['apocalipsis'] >= 1,
+    points: 100
+  },
+  {
+    id: 'historiador-iglesia',
+    title: 'Historiador de la Iglesia',
+    description: 'Domina el libro de Hechos',
+    icon: '🔥',
+    condition: (stats) => stats.quizzesByCategory['hechos'] >= 1,
+    points: 100
+  },
+  {
+    id: 'teologo',
+    title: 'Teólogo',
+    description: 'Comprende la doctrina de Romanos',
+    icon: '⚖️',
+    condition: (stats) => stats.quizzesByCategory['romanos'] >= 1,
+    points: 100
   }
 ];
 
