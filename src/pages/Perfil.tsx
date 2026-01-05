@@ -2,17 +2,19 @@ import { useNavigate } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
 import { BottomNav } from '@/components/layout/BottomNav';
 import { Button } from '@/components/ui/button';
-import { User, BookOpen, Trophy, Flame, Clock, Settings, Heart, Bookmark, History, ChevronRight, StickyNote } from 'lucide-react';
+import { User, BookOpen, Trophy, Flame, Clock, Settings, Heart, Bookmark, History, ChevronRight, StickyNote, Brain } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useUserProgress } from '@/hooks/useUserProgress';
 import { useBookmarks } from '@/hooks/useBookmarks';
 import { getNotesCount } from '@/services/userDataService';
+import { getUserStats } from '@/services/quizService';
 
 const Perfil = () => {
   const navigate = useNavigate();
   const { stats, readingTime, uniqueBooks, getWeeklyActivity } = useUserProgress();
   const { count: bookmarkCount } = useBookmarks();
   const notesCount = getNotesCount();
+  const quizStats = getUserStats();
   
   const weeklyActivity = getWeeklyActivity();
   const dayLabels = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
@@ -27,6 +29,7 @@ const Perfil = () => {
   ];
 
   const menuItems = [
+    { label: 'Quizzes Bíblicos', icon: Brain, badge: quizStats.totalQuizzes > 0 ? quizStats.totalQuizzes.toString() : undefined, to: '/quizzes' },
     { label: 'Mis Marcadores', icon: Bookmark, badge: bookmarkCount > 0 ? bookmarkCount.toString() : undefined, to: '/marcadores' },
     { label: 'Mis Notas', icon: StickyNote, badge: notesCount > 0 ? notesCount.toString() : undefined, to: '/mis-notas' },
     { label: 'Historial de Lectura', icon: History, to: '/historial' },
