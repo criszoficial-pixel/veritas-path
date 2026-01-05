@@ -21,11 +21,18 @@ import { trackChapterRead, getPreferences, updatePreferences } from '@/services/
 import type { ChapterAudioData, VerseSyncData } from '@/types/audio';
 import type { BibleMetadata, ChapterData, VerseData, BookInfo } from '@/types/bible';
 
-export const ChapterReader = () => {
-  const { collectionSlug, bookName, chapter } = useParams();
+interface ChapterReaderProps {
+  collectionSlug?: string;
+}
+
+export const ChapterReader = ({ collectionSlug: propCollectionSlug }: ChapterReaderProps) => {
+  const { collectionSlug: urlCollectionSlug, bookName, chapter } = useParams();
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const { languageCode } = useLanguage();
+  
+  // Use prop collectionSlug if provided, otherwise use URL param, or default to 'santa-biblia'
+  const collectionSlug = propCollectionSlug || urlCollectionSlug || 'santa-biblia';
   const { t } = useTranslation();
   
   const [metadata, setMetadata] = useState<BibleMetadata | null>(null);
@@ -50,7 +57,7 @@ export const ChapterReader = () => {
   const audioPlayer = useAudioPlayer({
     onEnded: () => {
       if (currentBook && currentChapter < currentBook.chapters) {
-        navigate(`/leer/${bookName}/${currentChapter + 1}`);
+        navigate(`/leer/${collectionSlug}/${bookName}/${currentChapter + 1}`);
       }
     },
   });
