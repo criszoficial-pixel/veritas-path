@@ -1,14 +1,14 @@
 import { Header } from '@/components/layout/Header';
 import { BottomNav } from '@/components/layout/BottomNav';
-import { BibleGallery } from '@/components/bible/BibleGallery';
+import { CoverGallery } from '@/components/bible/CoverGallery';
 
 const Leer = () => {
   return (
     <div className="min-h-screen bg-background pb-24">
-      <Header title="Biblioteca Bíblica" />
+      <Header title="Biblioteca Sagrada" />
       
       <main className="container px-4 py-6">
-        <BibleGallery />
+        <CoverGallery />
       </main>
 
       <BottomNav />

@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Index from "./pages/Index";
 import Leer from "./pages/Leer";
+import LeerColeccion from "./pages/LeerColeccion";
 import LeerCapitulo from "./pages/LeerCapitulo";
 import Aprender from "./pages/Aprender";
 import Guia from "./pages/Guia";
@@ -29,7 +30,8 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/leer" element={<Leer />} />
-            <Route path="/leer/:bookName/:chapter" element={<LeerCapitulo />} />
+            <Route path="/leer/:collectionSlug" element={<LeerColeccion />} />
+            <Route path="/leer/:collectionSlug/:bookName/:chapter" element={<LeerCapitulo />} />
             <Route path="/aprender" element={<Aprender />} />
             <Route path="/guia" element={<Guia />} />
             <Route path="/guia/:topicId" element={<GuiaTema />} />
