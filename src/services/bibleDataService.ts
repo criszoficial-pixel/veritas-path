@@ -26,6 +26,14 @@ export async function fetchBibleMetadata(): Promise<BibleMetadata | null> {
 }
 
 /**
+ * Cleans verse text by removing /n characters
+ */
+function cleanVerseText(text: string): string {
+  // Remove /n from the start and replace internal /n with spaces
+  return text.replace(/^\/n/, '').replace(/\/n/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+/**
  * Fetches a specific chapter (Spanish only)
  */
 export async function fetchChapter(bookSlug: string, chapter: number): Promise<ChapterData | null> {
@@ -35,7 +43,15 @@ export async function fetchChapter(bookSlug: string, chapter: number): Promise<C
       console.error(`Chapter not found: ${bookSlug}/${chapter}`);
       return null;
     }
-    return await response.json();
+    const data: ChapterData = await response.json();
+    
+    // Clean verse text (remove /n characters)
+    data.verses = data.verses.map(verse => ({
+      ...verse,
+      text: cleanVerseText(verse.text)
+    }));
+    
+    return data;
   } catch (error) {
     console.error(`Error loading chapter ${bookSlug}/${chapter}:`, error);
     return null;

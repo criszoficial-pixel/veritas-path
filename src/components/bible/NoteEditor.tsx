@@ -11,7 +11,8 @@ interface NoteEditorProps {
   onClose: () => void;
   reference: string;
   verseText: string;
-  verseNumber: number;
+  verseStart: number;
+  verseEnd: number;
   existingNote: VerseNote | null;
   onSave: (noteContent: string) => void;
   onDelete: () => void;
@@ -22,7 +23,8 @@ export const NoteEditor = ({
   onClose,
   reference,
   verseText,
-  verseNumber,
+  verseStart,
+  verseEnd,
   existingNote,
   onSave,
   onDelete,
@@ -52,6 +54,8 @@ export const NoteEditor = ({
     onClose();
   };
 
+  const verseLabel = verseStart === verseEnd ? verseStart : `${verseStart}-${verseEnd}`;
+
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
       <SheetContent side="bottom" className="h-[85vh] rounded-t-3xl">
@@ -65,8 +69,8 @@ export const NoteEditor = ({
           {/* Verse reference and text */}
           <div className="rounded-xl bg-muted/50 p-4 space-y-2">
             <p className="text-sm font-semibold text-primary">{reference}</p>
-            <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
-              <sup className="text-xs font-bold mr-1">{verseNumber}</sup>
+            <p className="text-sm text-muted-foreground leading-relaxed line-clamp-4">
+              <sup className="text-xs font-bold mr-1">{verseLabel}</sup>
               {verseText}
             </p>
           </div>

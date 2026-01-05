@@ -12,11 +12,12 @@ import { AudioPlayerBar } from '@/components/audio/AudioPlayerBar';
 import { BookmarkButton } from './BookmarkButton';
 import { ReaderSettings } from './ReaderSettings';
 import { NoteEditor } from './NoteEditor';
-import { VerseNoteIndicator } from './VerseNoteIndicator';
+import { VerseSelectionBar } from './VerseSelectionBar';
 import { QuizSuggestion } from '@/components/quiz/QuizSuggestion';
 import { cn } from '@/lib/utils';
 import { fetchBibleMetadata, fetchChapter, findBookByName, findBookBySlug, bookNameToSlug } from '@/services/bibleDataService';
 import { trackChapterRead, getPreferences, updatePreferences } from '@/services/userDataService';
+import { toast } from 'sonner';
 import type { ChapterAudioData, VerseSyncData } from '@/types/audio';
 import type { BibleMetadata, ChapterData, VerseData, BookInfo } from '@/types/bible';
 
@@ -45,9 +46,12 @@ export const ChapterReader = ({ collectionSlug: propCollectionSlug }: ChapterRea
   const verseRefs = useRef<Map<number, HTMLDivElement>>(new Map());
   const [highlightedVerse, setHighlightedVerse] = useState<number | null>(null);
   
+  // Verse selection state
+  const [selectionStart, setSelectionStart] = useState<number | null>(null);
+  const [selectionEnd, setSelectionEnd] = useState<number | null>(null);
+  
   // Note editor state
   const [noteEditorOpen, setNoteEditorOpen] = useState(false);
-  const [selectedVerse, setSelectedVerse] = useState<VerseData | null>(null);
 
   const currentChapter = parseInt(chapter || '1');
   const targetVerse = searchParams.get('v');
@@ -63,28 +67,94 @@ export const ChapterReader = ({ collectionSlug: propCollectionSlug }: ChapterRea
   const { activePosition, seekToWord } = useAudioSync(audioData, audioPlayer.currentTime);
   
   // Verse notes hook
-  const { hasNote, getNote, saveNote, removeNote } = useVerseNotes(
+  const { hasNote, getNote, getNoteForRange, saveNote, removeNote } = useVerseNotes(
     currentBook?.slug || '',
     currentChapter
   );
   
-  // Handle opening note editor
-  const handleOpenNoteEditor = (verse: VerseData) => {
-    setSelectedVerse(verse);
+  // Get selected verse range
+  const selectedRange = selectionStart !== null ? {
+    start: Math.min(selectionStart, selectionEnd ?? selectionStart),
+    end: Math.max(selectionStart, selectionEnd ?? selectionStart),
+  } : null;
+  
+  // Check if a verse is in the selected range
+  const isVerseSelected = (verseNumber: number): boolean => {
+    if (!selectedRange) return false;
+    return verseNumber >= selectedRange.start && verseNumber <= selectedRange.end;
+  };
+  
+  // Handle verse number click for selection
+  const handleVerseClick = (verseNumber: number) => {
+    if (selectionStart === null) {
+      // Start selection
+      setSelectionStart(verseNumber);
+      setSelectionEnd(null);
+    } else if (selectionEnd === null) {
+      // Complete selection
+      setSelectionEnd(verseNumber);
+    } else {
+      // Start new selection
+      setSelectionStart(verseNumber);
+      setSelectionEnd(null);
+    }
+  };
+  
+  // Clear selection
+  const clearSelection = () => {
+    setSelectionStart(null);
+    setSelectionEnd(null);
+  };
+  
+  // Get text for selected verses
+  const getSelectedVersesText = (): string => {
+    if (!selectedRange || !chapterData) return '';
+    return chapterData.verses
+      .filter(v => v.number >= selectedRange.start && v.number <= selectedRange.end)
+      .map(v => `${v.number} ${v.text}`)
+      .join(' ');
+  };
+  
+  // Handle opening note editor for selection
+  const handleOpenNoteEditor = () => {
+    if (!selectedRange) return;
     setNoteEditorOpen(true);
   };
   
   // Handle saving note
   const handleSaveNote = (noteContent: string) => {
-    if (selectedVerse && chapterData && currentBook) {
-      saveNote(selectedVerse.number, noteContent, chapterData.book, selectedVerse.text);
+    if (selectedRange && chapterData && currentBook) {
+      const verseText = getSelectedVersesText();
+      saveNote(selectedRange.start, selectedRange.end, noteContent, chapterData.book, verseText);
+      clearSelection();
     }
   };
   
   // Handle deleting note
   const handleDeleteNote = () => {
-    if (selectedVerse) {
-      removeNote(selectedVerse.number);
+    if (selectedRange) {
+      const existingNote = getNoteForRange(selectedRange.start, selectedRange.end);
+      if (existingNote) {
+        removeNote(existingNote.id);
+      }
+      clearSelection();
+    }
+  };
+  
+  // Handle copy
+  const handleCopy = async () => {
+    if (!selectedRange || !chapterData) return;
+    const text = getSelectedVersesText();
+    const reference = selectedRange.start === selectedRange.end 
+      ? `${chapterData.book} ${currentChapter}:${selectedRange.start}`
+      : `${chapterData.book} ${currentChapter}:${selectedRange.start}-${selectedRange.end}`;
+    
+    try {
+      await navigator.clipboard.writeText(`${text}\n— ${reference}`);
+      toast.success('Copiado al portapapeles');
+      clearSelection();
+    } catch (err) {
+      toast.error('Error al copiar');
     }
   };
 
@@ -93,6 +163,7 @@ export const ChapterReader = ({ collectionSlug: propCollectionSlug }: ChapterRea
     const loadData = async () => {
       setIsLoading(true);
       setChapterNotAvailable(false);
+      clearSelection();
       
       // Load Spanish metadata
       const meta = await fetchBibleMetadata();
@@ -304,43 +375,37 @@ export const ChapterReader = ({ collectionSlug: propCollectionSlug }: ChapterRea
               const syncedData = getSyncedVerseData(verse);
               const isActiveVerse = activePosition.verseNumber === verse.number;
               const activeWordIdx = isActiveVerse ? activePosition.wordIndex : null;
+              const isSelected = isVerseSelected(verse.number);
+              const verseHasNote = hasNote(verse.number);
 
               return (
                 <div 
                   key={verse.number} 
                   ref={(el) => { if (el) verseRefs.current.set(verse.number, el); }} 
                   className={cn(
-                    "group transition-all duration-500",
-                    highlightedVerse === verse.number && "bg-primary/15 rounded-lg px-3 py-2 -mx-3 ring-2 ring-primary/30"
+                    "transition-all duration-300 rounded-lg",
+                    highlightedVerse === verse.number && "bg-primary/15 px-3 py-2 -mx-3 ring-2 ring-primary/30",
+                    isSelected && "bg-primary/10 px-3 py-2 -mx-3",
+                    verseHasNote && !isSelected && "border-l-2 border-primary/40 pl-3"
                   )}
                 >
                   {syncedData ? (
-                    <div className="flex items-start gap-1">
-                      <VerseNoteIndicator 
-                        hasNote={hasNote(verse.number)} 
-                        onClick={() => handleOpenNoteEditor(verse)}
-                        className="mt-1 opacity-0 group-hover:opacity-100 transition-opacity"
-                      />
-                      <div className="flex-1">
-                        <SyncedVerse verse={syncedData} activeWordIndex={activeWordIdx} isActiveVerse={isActiveVerse && audioPlayer.isPlaying} onWordClick={(wordIdx) => handleWordClick(verse.number, wordIdx)} />
-                      </div>
+                    <div className="flex-1">
+                      <SyncedVerse verse={syncedData} activeWordIndex={activeWordIdx} isActiveVerse={isActiveVerse && audioPlayer.isPlaying} onWordClick={(wordIdx) => handleWordClick(verse.number, wordIdx)} />
                     </div>
                   ) : (
                     <p className="text-foreground">
-                      <span className="inline-flex items-center gap-1">
-                        <VerseNoteIndicator 
-                          hasNote={hasNote(verse.number)} 
-                          onClick={() => handleOpenNoteEditor(verse)}
-                          className="opacity-40 group-hover:opacity-100 transition-opacity"
-                        />
-                        <sup 
-                          className="verse-number cursor-pointer hover:text-primary transition-colors"
-                          onClick={() => handleOpenNoteEditor(verse)}
-                        >
-                          {verse.number}
-                        </sup>
-                      </span>
-                      {' '}{verse.text}
+                      <sup 
+                        className={cn(
+                          "verse-number cursor-pointer transition-colors font-bold mr-1",
+                          isSelected ? "text-primary" : "hover:text-primary",
+                          verseHasNote && "text-primary"
+                        )}
+                        onClick={() => handleVerseClick(verse.number)}
+                      >
+                        {verse.number}
+                      </sup>
+                      {verse.text}
                     </p>
                   )}
                 </div>
@@ -358,6 +423,19 @@ export const ChapterReader = ({ collectionSlug: propCollectionSlug }: ChapterRea
           )}
         </article>
       </div>
+
+      {/* Verse Selection Bar */}
+      {selectedRange && chapterData && (
+        <VerseSelectionBar
+          verseStart={selectedRange.start}
+          verseEnd={selectedRange.end}
+          bookName={chapterData.book}
+          chapter={currentChapter}
+          onAddNote={handleOpenNoteEditor}
+          onCopy={handleCopy}
+          onCancel={clearSelection}
+        />
+      )}
 
       {hasAudio && showAudioPlayer && (
         <div className="fixed bottom-36 left-0 right-0 z-30 animate-fade-in">
@@ -382,14 +460,18 @@ export const ChapterReader = ({ collectionSlug: propCollectionSlug }: ChapterRea
       </div>
 
       {/* Note Editor */}
-      {selectedVerse && chapterData && (
+      {selectedRange && chapterData && (
         <NoteEditor
           isOpen={noteEditorOpen}
           onClose={() => setNoteEditorOpen(false)}
-          reference={`${chapterData.book} ${currentChapter}:${selectedVerse.number}`}
-          verseText={selectedVerse.text}
-          verseNumber={selectedVerse.number}
-          existingNote={getNote(selectedVerse.number)}
+          reference={selectedRange.start === selectedRange.end 
+            ? `${chapterData.book} ${currentChapter}:${selectedRange.start}`
+            : `${chapterData.book} ${currentChapter}:${selectedRange.start}-${selectedRange.end}`
+          }
+          verseText={getSelectedVersesText()}
+          verseStart={selectedRange.start}
+          verseEnd={selectedRange.end}
+          existingNote={getNoteForRange(selectedRange.start, selectedRange.end)}
           onSave={handleSaveNote}
           onDelete={handleDeleteNote}
         />
