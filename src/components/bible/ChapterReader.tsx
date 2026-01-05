@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight, Bookmark, Settings2, Volume2, VolumeX, Loader2, BookOpen } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Volume2, VolumeX, Loader2, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { getChapterAudioData, hasAudioData } from '@/data/audioSyncData';
 import { useAudioPlayer } from '@/hooks/useAudioPlayer';
@@ -9,9 +9,11 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/hooks/useTranslation';
 import { SyncedVerse } from './SyncedVerse';
 import { AudioPlayerBar } from '@/components/audio/AudioPlayerBar';
+import { BookmarkButton } from './BookmarkButton';
+import { ReaderSettings } from './ReaderSettings';
 import { cn } from '@/lib/utils';
 import { fetchBibleMetadata, fetchChapter, findBookByName, bookNameToSlug } from '@/services/bibleDataService';
-import { trackChapterRead } from '@/services/userDataService';
+import { trackChapterRead, getPreferences, updatePreferences } from '@/services/userDataService';
 import type { ChapterAudioData, VerseSyncData } from '@/types/audio';
 import type { BibleMetadata, ChapterData, VerseData, BookInfo } from '@/types/bible';
 
@@ -27,7 +29,7 @@ export const ChapterReader = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [chapterNotAvailable, setChapterNotAvailable] = useState(false);
   
-  const [fontSize, setFontSize] = useState<'sm' | 'base' | 'lg' | 'xl'>('lg');
+  const [fontSize, setFontSize] = useState<'sm' | 'base' | 'lg' | 'xl'>(() => getPreferences().fontSize);
   const [audioData, setAudioData] = useState<ChapterAudioData | null>(null);
   const [showAudioPlayer, setShowAudioPlayer] = useState(false);
   const verseRefs = useRef<Map<number, HTMLDivElement>>(new Map());
@@ -197,8 +199,20 @@ export const ChapterReader = () => {
                 {showAudioPlayer ? <Volume2 className="h-4 w-4" /> : <VolumeX className="h-4 w-4" />}
               </Button>
             )}
-            <Button variant="ghost" size="icon" className="h-9 w-9"><Bookmark className="h-4 w-4" /></Button>
-            <Button variant="ghost" size="icon" className="h-9 w-9"><Settings2 className="h-4 w-4" /></Button>
+            {currentBook && chapterData && (
+              <BookmarkButton 
+                bookSlug={currentBook.slug} 
+                bookName={chapterData.book} 
+                chapter={currentChapter} 
+              />
+            )}
+            <ReaderSettings 
+              fontSize={fontSize} 
+              onFontSizeChange={(size) => {
+                setFontSize(size);
+                updatePreferences({ fontSize: size });
+              }} 
+            />
           </div>
         </div>
       </header>

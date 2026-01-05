@@ -1,30 +1,43 @@
-import { Search, Bell } from 'lucide-react';
+import { Search, Bell, ChevronLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { LanguageSelector } from '@/components/settings/LanguageSelector';
+import { useNavigate } from 'react-router-dom';
 
 interface HeaderProps {
   title?: string;
   showSearch?: boolean;
   showNotifications?: boolean;
+  showBack?: boolean;
 }
 
-export const Header = ({ title = 'Shalom', showSearch = true, showNotifications = true }: HeaderProps) => {
+export const Header = ({ 
+  title = 'Shalom', 
+  showSearch = true, 
+  showNotifications = true,
+  showBack = false 
+}: HeaderProps) => {
+  const navigate = useNavigate();
+
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur-lg">
       <div className="container flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-3">
-          <div className="flex items-center gap-2">
+          {showBack ? (
+            <Button variant="ghost" size="icon" onClick={() => navigate(-1)}>
+              <ChevronLeft className="h-5 w-5" />
+            </Button>
+          ) : (
             <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
               <span className="text-primary-foreground font-scripture text-lg font-bold">✝</span>
             </div>
-            <h1 className="text-xl font-semibold text-foreground">{title}</h1>
-          </div>
+          )}
+          <h1 className="text-xl font-semibold text-foreground">{title}</h1>
         </div>
         
         <div className="flex items-center gap-1">
           <LanguageSelector />
           {showSearch && (
-            <Button variant="ghost" size="icon" className="text-muted-foreground">
+            <Button variant="ghost" size="icon" className="text-muted-foreground" onClick={() => navigate('/buscar')}>
               <Search className="h-5 w-5" />
             </Button>
           )}

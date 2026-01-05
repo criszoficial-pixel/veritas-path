@@ -2,9 +2,9 @@ import type { LanguageCode } from '@/types/language';
 
 type TranslationKeys = {
   nav: {
+    home: string;
     read: string;
     learn: string;
-    quizzes: string;
     guide: string;
     profile: string;
   };
@@ -49,9 +49,9 @@ type TranslationKeys = {
 export const translations: Record<LanguageCode, TranslationKeys> = {
   es: {
     nav: {
+      home: 'Inicio',
       read: 'Leer',
       learn: 'Aprender',
-      quizzes: 'Quizzes',
       guide: 'Guía',
       profile: 'Perfil',
     },
@@ -94,9 +94,9 @@ export const translations: Record<LanguageCode, TranslationKeys> = {
   },
   en: {
     nav: {
+      home: 'Home',
       read: 'Read',
       learn: 'Learn',
-      quizzes: 'Quizzes',
       guide: 'Guide',
       profile: 'Profile',
     },
@@ -138,7 +138,7 @@ export const translations: Record<LanguageCode, TranslationKeys> = {
     },
   },
   ar: {
-    nav: { read: 'اقرأ', learn: 'تعلم', quizzes: 'اختبارات', guide: 'دليل', profile: 'الملف الشخصي' },
+    nav: { home: 'الرئيسية', read: 'اقرأ', learn: 'تعلم', guide: 'دليل', profile: 'الملف الشخصي' },
     reader: { chapter: 'الفصل', previous: 'السابق', next: 'التالي', noAudio: 'الصوت غير متوفر', loading: 'جار التحميل...' },
     audio: { play: 'تشغيل', pause: 'إيقاف', speed: 'السرعة', sleepTimer: 'مؤقت النوم', off: 'إيقاف', minutes: 'دقائق' },
     books: { oldTestament: 'العهد القديم', newTestament: 'العهد الجديد' },
@@ -147,7 +147,7 @@ export const translations: Record<LanguageCode, TranslationKeys> = {
     common: { loading: 'جار التحميل...', error: 'خطأ', retry: 'إعادة المحاولة' },
   },
   da: {
-    nav: { read: 'Læs', learn: 'Lær', quizzes: 'Quizzer', guide: 'Guide', profile: 'Profil' },
+    nav: { home: 'Hjem', read: 'Læs', learn: 'Lær', guide: 'Guide', profile: 'Profil' },
     reader: { chapter: 'Kapitel', previous: 'Forrige', next: 'Næste', noAudio: 'Lyd ikke tilgængelig', loading: 'Indlæser...' },
     audio: { play: 'Afspil', pause: 'Pause', speed: 'Hastighed', sleepTimer: 'Sleep Timer', off: 'Fra', minutes: 'minutter' },
     books: { oldTestament: 'Det Gamle Testamente', newTestament: 'Det Nye Testamente' },
@@ -156,7 +156,7 @@ export const translations: Record<LanguageCode, TranslationKeys> = {
     common: { loading: 'Indlæser...', error: 'Fejl', retry: 'Prøv igen' },
   },
   de: {
-    nav: { read: 'Lesen', learn: 'Lernen', quizzes: 'Quiz', guide: 'Anleitung', profile: 'Profil' },
+    nav: { home: 'Start', read: 'Lesen', learn: 'Lernen', guide: 'Anleitung', profile: 'Profil' },
     reader: { chapter: 'Kapitel', previous: 'Zurück', next: 'Weiter', noAudio: 'Audio nicht verfügbar', loading: 'Laden...' },
     audio: { play: 'Abspielen', pause: 'Pause', speed: 'Geschwindigkeit', sleepTimer: 'Schlaftimer', off: 'Aus', minutes: 'Minuten' },
     books: { oldTestament: 'Altes Testament', newTestament: 'Neues Testament' },
@@ -165,7 +165,7 @@ export const translations: Record<LanguageCode, TranslationKeys> = {
     common: { loading: 'Laden...', error: 'Fehler', retry: 'Erneut versuchen' },
   },
   el: {
-    nav: { read: 'Διαβάστε', learn: 'Μάθετε', quizzes: 'Κουίζ', guide: 'Οδηγός', profile: 'Προφίλ' },
+    nav: { home: 'Αρχική', read: 'Διαβάστε', learn: 'Μάθετε', guide: 'Οδηγός', profile: 'Προφίλ' },
     reader: { chapter: 'Κεφάλαιο', previous: 'Προηγούμενο', next: 'Επόμενο', noAudio: 'Ήχος μη διαθέσιμος', loading: 'Φόρτωση...' },
     audio: { play: 'Αναπαραγωγή', pause: 'Παύση', speed: 'Ταχύτητα', sleepTimer: 'Χρονοδιακόπτης', off: 'Κλειστό', minutes: 'λεπτά' },
     books: { oldTestament: 'Παλαιά Διαθήκη', newTestament: 'Καινή Διαθήκη' },
@@ -174,7 +174,7 @@ export const translations: Record<LanguageCode, TranslationKeys> = {
     common: { loading: 'Φόρτωση...', error: 'Σφάλμα', retry: 'Επανάληψη' },
   },
   fi: {
-    nav: { read: 'Lue', learn: 'Opi', quizzes: 'Tietovisat', guide: 'Opas', profile: 'Profiili' },
+    nav: { home: 'Koti', read: 'Lue', learn: 'Opi', guide: 'Opas', profile: 'Profiili' },
     reader: { chapter: 'Luku', previous: 'Edellinen', next: 'Seuraava', noAudio: 'Ääni ei saatavilla', loading: 'Ladataan...' },
     audio: { play: 'Toista', pause: 'Tauko', speed: 'Nopeus', sleepTimer: 'Uniajastin', off: 'Pois', minutes: 'minuuttia' },
     books: { oldTestament: 'Vanha Testamentti', newTestament: 'Uusi Testamentti' },
@@ -183,7 +183,7 @@ export const translations: Record<LanguageCode, TranslationKeys> = {
     common: { loading: 'Ladataan...', error: 'Virhe', retry: 'Yritä uudelleen' },
   },
   fr: {
-    nav: { read: 'Lire', learn: 'Apprendre', quizzes: 'Quiz', guide: 'Guide', profile: 'Profil' },
+    nav: { home: 'Accueil', read: 'Lire', learn: 'Apprendre', guide: 'Guide', profile: 'Profil' },
     reader: { chapter: 'Chapitre', previous: 'Précédent', next: 'Suivant', noAudio: 'Audio non disponible', loading: 'Chargement...' },
     audio: { play: 'Lecture', pause: 'Pause', speed: 'Vitesse', sleepTimer: 'Minuterie', off: 'Désactivé', minutes: 'minutes' },
     books: { oldTestament: 'Ancien Testament', newTestament: 'Nouveau Testament' },
@@ -192,7 +192,7 @@ export const translations: Record<LanguageCode, TranslationKeys> = {
     common: { loading: 'Chargement...', error: 'Erreur', retry: 'Réessayer' },
   },
   he: {
-    nav: { read: 'קרא', learn: 'למד', quizzes: 'חידונים', guide: 'מדריך', profile: 'פרופיל' },
+    nav: { home: 'בית', read: 'קרא', learn: 'למד', guide: 'מדריך', profile: 'פרופיל' },
     reader: { chapter: 'פרק', previous: 'הקודם', next: 'הבא', noAudio: 'אודיו לא זמין', loading: 'טוען...' },
     audio: { play: 'נגן', pause: 'השהה', speed: 'מהירות', sleepTimer: 'טיימר שינה', off: 'כבוי', minutes: 'דקות' },
     books: { oldTestament: 'הברית הישנה', newTestament: 'הברית החדשה' },
@@ -201,7 +201,7 @@ export const translations: Record<LanguageCode, TranslationKeys> = {
     common: { loading: 'טוען...', error: 'שגיאה', retry: 'נסה שוב' },
   },
   hi: {
-    nav: { read: 'पढ़ें', learn: 'सीखें', quizzes: 'प्रश्नोत्तरी', guide: 'मार्गदर्शिका', profile: 'प्रोफ़ाइल' },
+    nav: { home: 'होम', read: 'पढ़ें', learn: 'सीखें', guide: 'मार्गदर्शिका', profile: 'प्रोफ़ाइल' },
     reader: { chapter: 'अध्याय', previous: 'पिछला', next: 'अगला', noAudio: 'ऑडियो उपलब्ध नहीं', loading: 'लोड हो रहा है...' },
     audio: { play: 'चलाएं', pause: 'रोकें', speed: 'गति', sleepTimer: 'स्लीप टाइमर', off: 'बंद', minutes: 'मिनट' },
     books: { oldTestament: 'पुराना नियम', newTestament: 'नया नियम' },
@@ -210,7 +210,7 @@ export const translations: Record<LanguageCode, TranslationKeys> = {
     common: { loading: 'लोड हो रहा है...', error: 'त्रुटि', retry: 'पुनः प्रयास करें' },
   },
   it: {
-    nav: { read: 'Leggi', learn: 'Impara', quizzes: 'Quiz', guide: 'Guida', profile: 'Profilo' },
+    nav: { home: 'Home', read: 'Leggi', learn: 'Impara', guide: 'Guida', profile: 'Profilo' },
     reader: { chapter: 'Capitolo', previous: 'Precedente', next: 'Successivo', noAudio: 'Audio non disponibile', loading: 'Caricamento...' },
     audio: { play: 'Riproduci', pause: 'Pausa', speed: 'Velocità', sleepTimer: 'Timer sonno', off: 'Spento', minutes: 'minuti' },
     books: { oldTestament: 'Antico Testamento', newTestament: 'Nuovo Testamento' },
@@ -219,7 +219,7 @@ export const translations: Record<LanguageCode, TranslationKeys> = {
     common: { loading: 'Caricamento...', error: 'Errore', retry: 'Riprova' },
   },
   ja: {
-    nav: { read: '読む', learn: '学ぶ', quizzes: 'クイズ', guide: 'ガイド', profile: 'プロフィール' },
+    nav: { home: 'ホーム', read: '読む', learn: '学ぶ', guide: 'ガイド', profile: 'プロフィール' },
     reader: { chapter: '章', previous: '前へ', next: '次へ', noAudio: '音声なし', loading: '読み込み中...' },
     audio: { play: '再生', pause: '一時停止', speed: '速度', sleepTimer: 'スリープタイマー', off: 'オフ', minutes: '分' },
     books: { oldTestament: '旧約聖書', newTestament: '新約聖書' },
@@ -228,7 +228,7 @@ export const translations: Record<LanguageCode, TranslationKeys> = {
     common: { loading: '読み込み中...', error: 'エラー', retry: '再試行' },
   },
   ko: {
-    nav: { read: '읽기', learn: '배우기', quizzes: '퀴즈', guide: '가이드', profile: '프로필' },
+    nav: { home: '홈', read: '읽기', learn: '배우기', guide: '가이드', profile: '프로필' },
     reader: { chapter: '장', previous: '이전', next: '다음', noAudio: '오디오 없음', loading: '로딩 중...' },
     audio: { play: '재생', pause: '일시정지', speed: '속도', sleepTimer: '취침 타이머', off: '끄기', minutes: '분' },
     books: { oldTestament: '구약성경', newTestament: '신약성경' },
@@ -237,7 +237,7 @@ export const translations: Record<LanguageCode, TranslationKeys> = {
     common: { loading: '로딩 중...', error: '오류', retry: '다시 시도' },
   },
   ms: {
-    nav: { read: 'Baca', learn: 'Belajar', quizzes: 'Kuiz', guide: 'Panduan', profile: 'Profil' },
+    nav: { home: 'Utama', read: 'Baca', learn: 'Belajar', guide: 'Panduan', profile: 'Profil' },
     reader: { chapter: 'Bab', previous: 'Sebelum', next: 'Seterusnya', noAudio: 'Audio tidak tersedia', loading: 'Memuatkan...' },
     audio: { play: 'Main', pause: 'Jeda', speed: 'Kelajuan', sleepTimer: 'Pemasa Tidur', off: 'Mati', minutes: 'minit' },
     books: { oldTestament: 'Perjanjian Lama', newTestament: 'Perjanjian Baru' },
@@ -246,7 +246,7 @@ export const translations: Record<LanguageCode, TranslationKeys> = {
     common: { loading: 'Memuatkan...', error: 'Ralat', retry: 'Cuba lagi' },
   },
   nl: {
-    nav: { read: 'Lezen', learn: 'Leren', quizzes: 'Quiz', guide: 'Gids', profile: 'Profiel' },
+    nav: { home: 'Home', read: 'Lezen', learn: 'Leren', guide: 'Gids', profile: 'Profiel' },
     reader: { chapter: 'Hoofdstuk', previous: 'Vorige', next: 'Volgende', noAudio: 'Audio niet beschikbaar', loading: 'Laden...' },
     audio: { play: 'Afspelen', pause: 'Pauze', speed: 'Snelheid', sleepTimer: 'Slaaptimer', off: 'Uit', minutes: 'minuten' },
     books: { oldTestament: 'Oude Testament', newTestament: 'Nieuwe Testament' },
@@ -255,7 +255,7 @@ export const translations: Record<LanguageCode, TranslationKeys> = {
     common: { loading: 'Laden...', error: 'Fout', retry: 'Opnieuw proberen' },
   },
   no: {
-    nav: { read: 'Les', learn: 'Lær', quizzes: 'Quiz', guide: 'Guide', profile: 'Profil' },
+    nav: { home: 'Hjem', read: 'Les', learn: 'Lær', guide: 'Guide', profile: 'Profil' },
     reader: { chapter: 'Kapittel', previous: 'Forrige', next: 'Neste', noAudio: 'Lyd ikke tilgjengelig', loading: 'Laster...' },
     audio: { play: 'Spill', pause: 'Pause', speed: 'Hastighet', sleepTimer: 'Søvntimer', off: 'Av', minutes: 'minutter' },
     books: { oldTestament: 'Det Gamle Testamente', newTestament: 'Det Nye Testamente' },
@@ -264,7 +264,7 @@ export const translations: Record<LanguageCode, TranslationKeys> = {
     common: { loading: 'Laster...', error: 'Feil', retry: 'Prøv igjen' },
   },
   pl: {
-    nav: { read: 'Czytaj', learn: 'Ucz się', quizzes: 'Quizy', guide: 'Przewodnik', profile: 'Profil' },
+    nav: { home: 'Start', read: 'Czytaj', learn: 'Ucz się', guide: 'Przewodnik', profile: 'Profil' },
     reader: { chapter: 'Rozdział', previous: 'Poprzedni', next: 'Następny', noAudio: 'Audio niedostępne', loading: 'Ładowanie...' },
     audio: { play: 'Odtwórz', pause: 'Pauza', speed: 'Prędkość', sleepTimer: 'Wyłącznik czasowy', off: 'Wyłączony', minutes: 'minut' },
     books: { oldTestament: 'Stary Testament', newTestament: 'Nowy Testament' },
@@ -273,7 +273,7 @@ export const translations: Record<LanguageCode, TranslationKeys> = {
     common: { loading: 'Ładowanie...', error: 'Błąd', retry: 'Ponów' },
   },
   pt: {
-    nav: { read: 'Ler', learn: 'Aprender', quizzes: 'Quizzes', guide: 'Guia', profile: 'Perfil' },
+    nav: { home: 'Início', read: 'Ler', learn: 'Aprender', guide: 'Guia', profile: 'Perfil' },
     reader: { chapter: 'Capítulo', previous: 'Anterior', next: 'Próximo', noAudio: 'Áudio não disponível', loading: 'Carregando...' },
     audio: { play: 'Reproduzir', pause: 'Pausar', speed: 'Velocidade', sleepTimer: 'Temporizador', off: 'Desligado', minutes: 'minutos' },
     books: { oldTestament: 'Antigo Testamento', newTestament: 'Novo Testamento' },
@@ -282,7 +282,7 @@ export const translations: Record<LanguageCode, TranslationKeys> = {
     common: { loading: 'Carregando...', error: 'Erro', retry: 'Tentar novamente' },
   },
   ru: {
-    nav: { read: 'Читать', learn: 'Учиться', quizzes: 'Викторины', guide: 'Руководство', profile: 'Профиль' },
+    nav: { home: 'Главная', read: 'Читать', learn: 'Учиться', guide: 'Руководство', profile: 'Профиль' },
     reader: { chapter: 'Глава', previous: 'Предыдущая', next: 'Следующая', noAudio: 'Аудио недоступно', loading: 'Загрузка...' },
     audio: { play: 'Воспроизвести', pause: 'Пауза', speed: 'Скорость', sleepTimer: 'Таймер сна', off: 'Выкл', minutes: 'минут' },
     books: { oldTestament: 'Ветхий Завет', newTestament: 'Новый Завет' },
@@ -291,7 +291,7 @@ export const translations: Record<LanguageCode, TranslationKeys> = {
     common: { loading: 'Загрузка...', error: 'Ошибка', retry: 'Повторить' },
   },
   sv: {
-    nav: { read: 'Läs', learn: 'Lär', quizzes: 'Quiz', guide: 'Guide', profile: 'Profil' },
+    nav: { home: 'Hem', read: 'Läs', learn: 'Lär', guide: 'Guide', profile: 'Profil' },
     reader: { chapter: 'Kapitel', previous: 'Föregående', next: 'Nästa', noAudio: 'Ljud ej tillgängligt', loading: 'Laddar...' },
     audio: { play: 'Spela', pause: 'Paus', speed: 'Hastighet', sleepTimer: 'Sovtimer', off: 'Av', minutes: 'minuter' },
     books: { oldTestament: 'Gamla Testamentet', newTestament: 'Nya Testamentet' },
@@ -300,7 +300,7 @@ export const translations: Record<LanguageCode, TranslationKeys> = {
     common: { loading: 'Laddar...', error: 'Fel', retry: 'Försök igen' },
   },
   sw: {
-    nav: { read: 'Soma', learn: 'Jifunze', quizzes: 'Maswali', guide: 'Mwongozo', profile: 'Wasifu' },
+    nav: { home: 'Nyumbani', read: 'Soma', learn: 'Jifunze', guide: 'Mwongozo', profile: 'Wasifu' },
     reader: { chapter: 'Sura', previous: 'Iliyotangulia', next: 'Inayofuata', noAudio: 'Sauti haipatikani', loading: 'Inapakia...' },
     audio: { play: 'Cheza', pause: 'Simamisha', speed: 'Kasi', sleepTimer: 'Kipima Usingizi', off: 'Zima', minutes: 'dakika' },
     books: { oldTestament: 'Agano la Kale', newTestament: 'Agano Jipya' },
@@ -309,7 +309,7 @@ export const translations: Record<LanguageCode, TranslationKeys> = {
     common: { loading: 'Inapakia...', error: 'Hitilafu', retry: 'Jaribu tena' },
   },
   tr: {
-    nav: { read: 'Oku', learn: 'Öğren', quizzes: 'Sınavlar', guide: 'Rehber', profile: 'Profil' },
+    nav: { home: 'Ana Sayfa', read: 'Oku', learn: 'Öğren', guide: 'Rehber', profile: 'Profil' },
     reader: { chapter: 'Bölüm', previous: 'Önceki', next: 'Sonraki', noAudio: 'Ses mevcut değil', loading: 'Yükleniyor...' },
     audio: { play: 'Oynat', pause: 'Duraklat', speed: 'Hız', sleepTimer: 'Uyku Zamanlayıcı', off: 'Kapalı', minutes: 'dakika' },
     books: { oldTestament: 'Eski Ahit', newTestament: 'Yeni Ahit' },
@@ -318,7 +318,7 @@ export const translations: Record<LanguageCode, TranslationKeys> = {
     common: { loading: 'Yükleniyor...', error: 'Hata', retry: 'Tekrar dene' },
   },
   zh: {
-    nav: { read: '阅读', learn: '学习', quizzes: '测验', guide: '指南', profile: '个人资料' },
+    nav: { home: '首页', read: '阅读', learn: '学习', guide: '指南', profile: '个人资料' },
     reader: { chapter: '章', previous: '上一章', next: '下一章', noAudio: '音频不可用', loading: '加载中...' },
     audio: { play: '播放', pause: '暂停', speed: '速度', sleepTimer: '睡眠定时器', off: '关闭', minutes: '分钟' },
     books: { oldTestament: '旧约', newTestament: '新约' },

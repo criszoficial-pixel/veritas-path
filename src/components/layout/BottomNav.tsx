@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { BookOpen, Map, Brain, Heart, User } from 'lucide-react';
+import { Home, BookOpen, Map, Heart, User } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useTranslation } from '@/hooks/useTranslation';
 
@@ -8,9 +8,9 @@ export const BottomNav = () => {
   const { t } = useTranslation();
 
   const navItems = [
+    { path: '/', icon: Home, labelKey: 'nav.home' as const },
     { path: '/leer', icon: BookOpen, labelKey: 'nav.read' as const },
     { path: '/aprender', icon: Map, labelKey: 'nav.learn' as const },
-    { path: '/quizzes', icon: Brain, labelKey: 'nav.quizzes' as const },
     { path: '/guia', icon: Heart, labelKey: 'nav.guide' as const },
     { path: '/perfil', icon: User, labelKey: 'nav.profile' as const },
   ];
@@ -19,7 +19,7 @@ export const BottomNav = () => {
     <nav className="fixed bottom-0 left-0 right-0 z-50 border-t border-border bg-background/95 backdrop-blur-lg safe-area-inset-bottom">
       <div className="flex items-center justify-around px-2 py-2">
         {navItems.map(({ path, icon: Icon, labelKey }) => {
-          const isActive = location.pathname === path || (path === '/leer' && location.pathname === '/');
+          const isActive = location.pathname === path;
           return (
             <Link
               key={path}
