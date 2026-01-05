@@ -1,6 +1,6 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, ReactNode } from 'react';
 import type { Language, LanguageCode } from '@/types/language';
-import { languages, defaultLanguage, isRtlLanguage } from '@/data/languages';
+import { languages } from '@/data/languages';
 
 interface LanguageContextType {
   language: Language;
@@ -11,41 +11,24 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-const STORAGE_KEY = 'palabra-viva-language';
-
-function detectBrowserLanguage(): LanguageCode {
-  const browserLang = navigator.language.split('-')[0];
-  if (browserLang in languages) {
-    return browserLang as LanguageCode;
-  }
-  return defaultLanguage;
-}
+// Fixed to Spanish for v1
+const FIXED_LANGUAGE: LanguageCode = 'es';
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [languageCode, setLanguageCodeState] = useState<LanguageCode>(() => {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored && stored in languages) {
-      return stored as LanguageCode;
-    }
-    return detectBrowserLanguage();
-  });
+  const language = languages[FIXED_LANGUAGE];
 
-  const setLanguageCode = (code: LanguageCode) => {
-    setLanguageCodeState(code);
-    localStorage.setItem(STORAGE_KEY, code);
+  // No-op setter for v1 (maintains interface for future multi-language support)
+  const setLanguageCode = (_code: LanguageCode) => {
+    // Reserved for future implementation
   };
 
-  const language = languages[languageCode];
-  const isRtl = isRtlLanguage(languageCode);
-
-  // Update document direction for RTL languages
-  useEffect(() => {
-    document.documentElement.dir = isRtl ? 'rtl' : 'ltr';
-    document.documentElement.lang = languageCode;
-  }, [isRtl, languageCode]);
-
   return (
-    <LanguageContext.Provider value={{ language, languageCode, setLanguageCode, isRtl }}>
+    <LanguageContext.Provider value={{ 
+      language, 
+      languageCode: FIXED_LANGUAGE, 
+      setLanguageCode, 
+      isRtl: false 
+    }}>
       {children}
     </LanguageContext.Provider>
   );

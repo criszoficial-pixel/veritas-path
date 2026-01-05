@@ -1,16 +1,13 @@
 import { useState, useCallback, useRef } from 'react';
 import { searchTextInBible, type TextSearchResult } from '@/services/searchService';
-import type { LanguageCode } from '@/types/language';
 
 interface UseTextSearchOptions {
-  languageCode?: LanguageCode;
   maxResults?: number;
   debounceMs?: number;
 }
 
 export function useTextSearch(options: UseTextSearchOptions = {}) {
   const {
-    languageCode = 'es',
     maxResults = 50,
     debounceMs = 300,
   } = options;
@@ -54,7 +51,7 @@ export function useTextSearch(options: UseTextSearchOptions = {}) {
         setHasSearched(true);
 
         try {
-          const searchResults = await searchTextInBible(languageCode, trimmedQuery, {
+          const searchResults = await searchTextInBible(trimmedQuery, {
             maxResults,
             testament,
             signal: controller.signal,
@@ -74,7 +71,7 @@ export function useTextSearch(options: UseTextSearchOptions = {}) {
         }
       }, debounceMs);
     },
-    [languageCode, maxResults, debounceMs]
+    [maxResults, debounceMs]
   );
 
   const clearResults = useCallback(() => {

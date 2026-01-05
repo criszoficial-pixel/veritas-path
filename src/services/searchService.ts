@@ -1,7 +1,6 @@
 // Service for searching Bible references and text
 
 import { fetchBibleMetadata, fetchChapter } from '@/services/bibleDataService';
-import type { LanguageCode } from '@/types/language';
 import type { BookInfo } from '@/types/bible';
 
 export interface SearchResult {
@@ -173,12 +172,11 @@ export function parseReference(input: string): ReferenceParseResult | null {
 
 // Search for text in a specific chapter
 export async function searchInChapter(
-  languageCode: LanguageCode,
   bookSlug: string,
   chapter: number,
   query: string
 ): Promise<SearchResult[]> {
-  const chapterData = await fetchChapter(languageCode, bookSlug, chapter);
+  const chapterData = await fetchChapter(bookSlug, chapter);
   if (!chapterData) return [];
   
   const results: SearchResult[] = [];
@@ -201,11 +199,8 @@ export async function searchInChapter(
 }
 
 // Get book info by slug from metadata
-export async function getBookBySlug(
-  languageCode: LanguageCode,
-  slug: string
-): Promise<BookInfo | null> {
-  const metadata = await fetchBibleMetadata(languageCode);
+export async function getBookBySlug(slug: string): Promise<BookInfo | null> {
+  const metadata = await fetchBibleMetadata();
   if (!metadata) return null;
   
   return metadata.books.find((book) => book.slug === slug) || null;
@@ -213,7 +208,6 @@ export async function getBookBySlug(
 
 // Search text across the Bible with progressive loading
 export async function searchTextInBible(
-  languageCode: LanguageCode,
   query: string,
   options?: {
     maxResults?: number;
@@ -227,7 +221,7 @@ export async function searchTextInBible(
 
   if (!query || query.length < 2) return [];
 
-  const metadata = await fetchBibleMetadata(languageCode);
+  const metadata = await fetchBibleMetadata();
   if (!metadata) return [];
 
   const results: TextSearchResult[] = [];
@@ -259,7 +253,7 @@ export async function searchTextInBible(
       if (results.length >= maxResults) break;
 
       try {
-        const chapterData = await fetchChapter(languageCode, book.slug, chapter);
+        const chapterData = await fetchChapter(book.slug, chapter);
         if (!chapterData) continue;
 
         for (const verse of chapterData.verses) {
