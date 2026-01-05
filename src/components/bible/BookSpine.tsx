@@ -13,9 +13,9 @@ export function BookSpine({ book, index }: BookSpineProps) {
   return (
     <Link
       to={`/leer/${book.slug}/1`}
-      className="group relative flex-shrink-0 cursor-pointer transition-all duration-300 ease-out hover:-translate-y-2 hover:z-10"
+      className="group relative flex-shrink-0 cursor-pointer transition-all duration-300 ease-out hover:-translate-y-2 hover:z-10 opacity-0 animate-book-appear"
       style={{
-        animationDelay: `${index * 30}ms`,
+        animationDelay: `${index * 50}ms`,
       }}
     >
       {/* Book spine */}
