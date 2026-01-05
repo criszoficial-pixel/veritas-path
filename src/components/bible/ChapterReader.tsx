@@ -102,17 +102,47 @@ export const ChapterReader = ({ collectionSlug: propCollectionSlug }: ChapterRea
       
       if (meta && bookName) {
         // First try to find by slug (from URL), then by display name
-        const book = findBookBySlug(meta, bookName) || findBookByName(meta, bookName);
-        setCurrentBook(book || null);
+        let book = findBookBySlug(meta, bookName) || findBookByName(meta, bookName);
         
         if (book) {
           // Load the chapter using the book's slug
-          const chapter = await fetchChapter(languageCode, book.slug, currentChapter);
-          if (chapter) {
-            setChapterData(chapter);
+          const chapterResult = await fetchChapter(languageCode, book.slug, currentChapter);
+          if (chapterResult) {
+            setChapterData(chapterResult);
+            setCurrentBook(book);
             setChapterNotAvailable(false);
           } else {
             setChapterData(null);
+            setCurrentBook(book);
+            setChapterNotAvailable(true);
+          }
+        } else {
+          // Book not found in current language metadata - try direct slug approach
+          // This handles cases like URL "Juan" when UI is in English (metadata has "John")
+          const slugCandidate = bookNameToSlug(bookName);
+          const chapterResult = await fetchChapter(languageCode, slugCandidate, currentChapter);
+          
+          if (chapterResult) {
+            setChapterData(chapterResult);
+            setChapterNotAvailable(false);
+            
+            // Try to find book info - first in current metadata by slug
+            let resolvedBook = findBookBySlug(meta, slugCandidate);
+            
+            // If not found, load Spanish metadata and find there
+            if (!resolvedBook) {
+              const spanishMeta = await fetchBibleMetadata('es');
+              if (spanishMeta) {
+                resolvedBook = findBookBySlug(spanishMeta, slugCandidate);
+                // Update metadata to Spanish for version display
+                setMetadata(spanishMeta);
+              }
+            }
+            
+            setCurrentBook(resolvedBook || null);
+          } else {
+            setChapterData(null);
+            setCurrentBook(null);
             setChapterNotAvailable(true);
           }
         }
