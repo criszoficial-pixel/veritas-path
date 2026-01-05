@@ -5,12 +5,15 @@ import { Button } from '@/components/ui/button';
 import { getChapterAudioData, hasAudioData } from '@/data/audioSyncData';
 import { useAudioPlayer } from '@/hooks/useAudioPlayer';
 import { useAudioSync } from '@/hooks/useAudioSync';
+import { useVerseNotes } from '@/hooks/useVerseNotes';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/hooks/useTranslation';
 import { SyncedVerse } from './SyncedVerse';
 import { AudioPlayerBar } from '@/components/audio/AudioPlayerBar';
 import { BookmarkButton } from './BookmarkButton';
 import { ReaderSettings } from './ReaderSettings';
+import { NoteEditor } from './NoteEditor';
+import { VerseNoteIndicator } from './VerseNoteIndicator';
 import { cn } from '@/lib/utils';
 import { fetchBibleMetadata, fetchChapter, findBookByName, bookNameToSlug } from '@/services/bibleDataService';
 import { trackChapterRead, getPreferences, updatePreferences } from '@/services/userDataService';
@@ -33,6 +36,10 @@ export const ChapterReader = () => {
   const [audioData, setAudioData] = useState<ChapterAudioData | null>(null);
   const [showAudioPlayer, setShowAudioPlayer] = useState(false);
   const verseRefs = useRef<Map<number, HTMLDivElement>>(new Map());
+  
+  // Note editor state
+  const [noteEditorOpen, setNoteEditorOpen] = useState(false);
+  const [selectedVerse, setSelectedVerse] = useState<VerseData | null>(null);
 
   const currentChapter = parseInt(chapter || '1');
 
@@ -45,6 +52,32 @@ export const ChapterReader = () => {
   });
 
   const { activePosition, seekToWord } = useAudioSync(audioData, audioPlayer.currentTime);
+  
+  // Verse notes hook
+  const { hasNote, getNote, saveNote, removeNote } = useVerseNotes(
+    currentBook?.slug || '',
+    currentChapter
+  );
+  
+  // Handle opening note editor
+  const handleOpenNoteEditor = (verse: VerseData) => {
+    setSelectedVerse(verse);
+    setNoteEditorOpen(true);
+  };
+  
+  // Handle saving note
+  const handleSaveNote = (noteContent: string) => {
+    if (selectedVerse && chapterData && currentBook) {
+      saveNote(selectedVerse.number, noteContent, chapterData.book, selectedVerse.text);
+    }
+  };
+  
+  // Handle deleting note
+  const handleDeleteNote = () => {
+    if (selectedVerse) {
+      removeNote(selectedVerse.number);
+    }
+  };
 
   // Load metadata and chapter data
   useEffect(() => {
@@ -236,11 +269,35 @@ export const ChapterReader = () => {
               const activeWordIdx = isActiveVerse ? activePosition.wordIndex : null;
 
               return (
-                <div key={verse.number} ref={(el) => { if (el) verseRefs.current.set(verse.number, el); }}>
+                <div key={verse.number} ref={(el) => { if (el) verseRefs.current.set(verse.number, el); }} className="group">
                   {syncedData ? (
-                    <SyncedVerse verse={syncedData} activeWordIndex={activeWordIdx} isActiveVerse={isActiveVerse && audioPlayer.isPlaying} onWordClick={(wordIdx) => handleWordClick(verse.number, wordIdx)} />
+                    <div className="flex items-start gap-1">
+                      <VerseNoteIndicator 
+                        hasNote={hasNote(verse.number)} 
+                        onClick={() => handleOpenNoteEditor(verse)}
+                        className="mt-1 opacity-0 group-hover:opacity-100 transition-opacity"
+                      />
+                      <div className="flex-1">
+                        <SyncedVerse verse={syncedData} activeWordIndex={activeWordIdx} isActiveVerse={isActiveVerse && audioPlayer.isPlaying} onWordClick={(wordIdx) => handleWordClick(verse.number, wordIdx)} />
+                      </div>
+                    </div>
                   ) : (
-                    <p className="text-foreground"><sup className="verse-number">{verse.number}</sup> {verse.text}</p>
+                    <p className="text-foreground">
+                      <span className="inline-flex items-center gap-1">
+                        <VerseNoteIndicator 
+                          hasNote={hasNote(verse.number)} 
+                          onClick={() => handleOpenNoteEditor(verse)}
+                          className="opacity-40 group-hover:opacity-100 transition-opacity"
+                        />
+                        <sup 
+                          className="verse-number cursor-pointer hover:text-primary transition-colors"
+                          onClick={() => handleOpenNoteEditor(verse)}
+                        >
+                          {verse.number}
+                        </sup>
+                      </span>
+                      {' '}{verse.text}
+                    </p>
                   )}
                 </div>
               );
@@ -270,6 +327,20 @@ export const ChapterReader = () => {
           </div>
         </div>
       </div>
+
+      {/* Note Editor */}
+      {selectedVerse && chapterData && (
+        <NoteEditor
+          isOpen={noteEditorOpen}
+          onClose={() => setNoteEditorOpen(false)}
+          reference={`${chapterData.book} ${currentChapter}:${selectedVerse.number}`}
+          verseText={selectedVerse.text}
+          verseNumber={selectedVerse.number}
+          existingNote={getNote(selectedVerse.number)}
+          onSave={handleSaveNote}
+          onDelete={handleDeleteNote}
+        />
+      )}
     </div>
   );
 };
