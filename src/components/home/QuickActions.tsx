@@ -28,20 +28,20 @@ export const QuickActions = () => {
   const actions = [
     continueReadingAction,
     {
+      icon: Brain,
+      label: 'Quizzes',
+      description: 'Pon a prueba tu fe',
+      to: '/quizzes',
+      color: 'bg-accent/10 text-accent',
+      iconBg: 'bg-accent',
+    },
+    {
       icon: Map,
       label: 'Historial',
       description: 'Lecturas recientes',
       to: '/historial',
       color: 'bg-spirit/10 text-spirit',
       iconBg: 'bg-spirit',
-    },
-    {
-      icon: Brain,
-      label: 'Marcadores',
-      description: 'Versículos guardados',
-      to: '/marcadores',
-      color: 'bg-accent/10 text-accent',
-      iconBg: 'bg-accent',
     },
     {
       icon: Heart,

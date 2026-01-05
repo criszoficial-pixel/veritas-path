@@ -5,7 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { QuizCard } from '@/components/quiz/QuizCard';
 import { QuizStats } from '@/components/quiz/QuizStats';
-import { getCategoriesByType, quizCategories, getCategoryById } from '@/data/quizData';
+import { getCategoriesByType, quizCategories, getCategoryById, QuizCategory } from '@/data/quizData';
 import { getDailyChallenge, getUserStats } from '@/services/quizService';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { 
@@ -17,12 +17,84 @@ import {
   Trophy,
   Flame,
   Calendar,
-  ChevronRight
+  ChevronRight,
+  Scroll,
+  Sparkles
 } from 'lucide-react';
+import { cn } from '@/lib/utils';
+
+interface CategorySectionProps {
+  title: string;
+  icon: React.ReactNode;
+  categories: QuizCategory[];
+  showAll?: boolean;
+  maxVisible?: number;
+}
+
+const CategorySection = ({ title, icon, categories, showAll = false, maxVisible = 4 }: CategorySectionProps) => {
+  const displayCategories = showAll ? categories : categories.slice(0, maxVisible);
+  const hasMore = categories.length > maxVisible && !showAll;
+
+  if (categories.length === 0) return null;
+
+  return (
+    <section className="space-y-3">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          {icon}
+          <h2 className="font-semibold text-foreground">{title}</h2>
+          <span className="text-xs text-muted-foreground">({categories.length})</span>
+        </div>
+      </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+        {displayCategories.map(category => (
+          <Link
+            key={category.id}
+            to={`/quizzes/jugar/${category.id}`}
+            className="group"
+          >
+            <Card className="h-full hover:border-primary/50 transition-all hover:shadow-md">
+              <CardContent className="p-4 flex flex-col items-center text-center gap-2">
+                <div 
+                  className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl"
+                  style={{ backgroundColor: `${category.color}20` }}
+                >
+                  {category.icon}
+                </div>
+                <div>
+                  <h3 className="font-medium text-sm text-foreground group-hover:text-primary transition-colors">
+                    {category.title}
+                  </h3>
+                  <p className="text-xs text-muted-foreground">
+                    {category.questionCount} preguntas
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </Link>
+        ))}
+        {hasMore && (
+          <Link to={`/quizzes?tab=${title.toLowerCase().replace(' ', '-')}`} className="group">
+            <Card className="h-full border-dashed hover:border-primary/50 transition-all">
+              <CardContent className="p-4 flex flex-col items-center justify-center text-center gap-2 h-full min-h-[120px]">
+                <div className="w-12 h-12 rounded-xl bg-muted flex items-center justify-center">
+                  <ChevronRight className="h-6 w-6 text-muted-foreground group-hover:text-primary transition-colors" />
+                </div>
+                <p className="text-sm text-muted-foreground group-hover:text-primary transition-colors">
+                  Ver todos ({categories.length})
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
+        )}
+      </div>
+    </section>
+  );
+};
 
 const Quizzes = () => {
   const { language } = useLanguage();
-  const [activeTab, setActiveTab] = useState('todos');
+  const [activeTab, setActiveTab] = useState('inicio');
   
   const dailyChallenge = getDailyChallenge();
   const dailyCategory = getCategoryById(dailyChallenge.categoryId);
@@ -31,6 +103,7 @@ const Quizzes = () => {
   const libroCategories = getCategoriesByType('libro');
   const personajeCategories = getCategoriesByType('personaje');
   const eventoCategories = getCategoriesByType('evento');
+  const temaCategories = getCategoriesByType('tema');
   const versiculoCategories = getCategoriesByType('versiculo');
 
   return (
@@ -137,16 +210,20 @@ const Quizzes = () => {
             </div>
           )}
 
-          {/* Tabs de categorías */}
+          {/* Tabs de navegación */}
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <TabsList className="w-full justify-start overflow-x-auto">
-              <TabsTrigger value="todos" className="gap-1">
-                <BookOpen className="h-4 w-4" />
-                Todos
+              <TabsTrigger value="inicio" className="gap-1">
+                <Sparkles className="h-4 w-4" />
+                Inicio
               </TabsTrigger>
               <TabsTrigger value="libros" className="gap-1">
                 <BookMarked className="h-4 w-4" />
                 Libros
+              </TabsTrigger>
+              <TabsTrigger value="temas" className="gap-1">
+                <Scroll className="h-4 w-4" />
+                Temas
               </TabsTrigger>
               <TabsTrigger value="personajes" className="gap-1">
                 <Users className="h-4 w-4" />
@@ -162,17 +239,48 @@ const Quizzes = () => {
               </TabsTrigger>
             </TabsList>
 
-            <TabsContent value="todos" className="mt-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {quizCategories.map(category => (
-                  <QuizCard key={category.id} category={category} />
-                ))}
-              </div>
+            {/* Inicio - Vista general con secciones */}
+            <TabsContent value="inicio" className="mt-6 space-y-8">
+              <CategorySection 
+                title="Por Libro" 
+                icon={<BookMarked className="h-5 w-5 text-primary" />}
+                categories={libroCategories}
+                maxVisible={4}
+              />
+              
+              <CategorySection 
+                title="Por Tema" 
+                icon={<Scroll className="h-5 w-5 text-amber-500" />}
+                categories={[...temaCategories, ...versiculoCategories]}
+                maxVisible={4}
+              />
+              
+              <CategorySection 
+                title="Por Personaje" 
+                icon={<Users className="h-5 w-5 text-blue-500" />}
+                categories={personajeCategories}
+                maxVisible={4}
+              />
+              
+              <CategorySection 
+                title="Por Evento" 
+                icon={<Zap className="h-5 w-5 text-orange-500" />}
+                categories={eventoCategories}
+                maxVisible={4}
+              />
             </TabsContent>
 
             <TabsContent value="libros" className="mt-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {libroCategories.map(category => (
+                  <QuizCard key={category.id} category={category} />
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="temas" className="mt-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[...temaCategories, ...versiculoCategories].map(category => (
                   <QuizCard key={category.id} category={category} />
                 ))}
               </div>
@@ -188,7 +296,7 @@ const Quizzes = () => {
 
             <TabsContent value="eventos" className="mt-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {[...eventoCategories, ...versiculoCategories].map(category => (
+                {eventoCategories.map(category => (
                   <QuizCard key={category.id} category={category} />
                 ))}
               </div>
