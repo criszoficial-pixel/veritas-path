@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, useNavigate, Link, useSearchParams } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, Volume2, VolumeX, Loader2, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { getChapterAudioData, hasAudioData } from '@/data/audioSyncData';
@@ -23,6 +23,7 @@ import type { BibleMetadata, ChapterData, VerseData, BookInfo } from '@/types/bi
 
 export const ChapterReader = () => {
   const { collectionSlug, bookName, chapter } = useParams();
+  const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const { languageCode } = useLanguage();
   const { t } = useTranslation();
@@ -37,12 +38,14 @@ export const ChapterReader = () => {
   const [audioData, setAudioData] = useState<ChapterAudioData | null>(null);
   const [showAudioPlayer, setShowAudioPlayer] = useState(false);
   const verseRefs = useRef<Map<number, HTMLDivElement>>(new Map());
+  const [highlightedVerse, setHighlightedVerse] = useState<number | null>(null);
   
   // Note editor state
   const [noteEditorOpen, setNoteEditorOpen] = useState(false);
   const [selectedVerse, setSelectedVerse] = useState<VerseData | null>(null);
 
   const currentChapter = parseInt(chapter || '1');
+  const targetVerse = searchParams.get('v');
 
   const audioPlayer = useAudioPlayer({
     onEnded: () => {
@@ -132,6 +135,23 @@ export const ChapterReader = () => {
       return () => clearTimeout(timer);
     }
   }, [chapterData, currentBook, currentChapter]);
+
+  // Scroll to target verse from URL parameter
+  useEffect(() => {
+    if (targetVerse && chapterData && !isLoading) {
+      const verseNum = parseInt(targetVerse);
+      const timer = setTimeout(() => {
+        const verseElement = verseRefs.current.get(verseNum);
+        if (verseElement) {
+          verseElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          setHighlightedVerse(verseNum);
+          // Remove highlight after 3 seconds
+          setTimeout(() => setHighlightedVerse(null), 3000);
+        }
+      }, 300);
+      return () => clearTimeout(timer);
+    }
+  }, [targetVerse, chapterData, isLoading]);
 
   useEffect(() => {
     if (activePosition.verseNumber && audioPlayer.isPlaying) {
@@ -270,7 +290,14 @@ export const ChapterReader = () => {
               const activeWordIdx = isActiveVerse ? activePosition.wordIndex : null;
 
               return (
-                <div key={verse.number} ref={(el) => { if (el) verseRefs.current.set(verse.number, el); }} className="group">
+                <div 
+                  key={verse.number} 
+                  ref={(el) => { if (el) verseRefs.current.set(verse.number, el); }} 
+                  className={cn(
+                    "group transition-all duration-500",
+                    highlightedVerse === verse.number && "bg-primary/15 rounded-lg px-3 py-2 -mx-3 ring-2 ring-primary/30"
+                  )}
+                >
                   {syncedData ? (
                     <div className="flex items-start gap-1">
                       <VerseNoteIndicator 

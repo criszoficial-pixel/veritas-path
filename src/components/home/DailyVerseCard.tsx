@@ -55,7 +55,8 @@ export const DailyVerseCard = () => {
 
   const handleReadMore = () => {
     const bookName = dailyVerse.reference.split(/\s+\d/)[0];
-    navigate(`/leer/${encodeURIComponent(bookName)}/${dailyVerse.chapter}`);
+    const verseNumber = dailyVerse.verseNumbers[0];
+    navigate(`/leer/${encodeURIComponent(bookName)}/${dailyVerse.chapter}?v=${verseNumber}`);
   };
 
   return (
