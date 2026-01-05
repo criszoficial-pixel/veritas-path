@@ -52,6 +52,7 @@ interface UserData {
   history: ReadingProgress[];
   bookmarks: Bookmark[];
   notes: VerseNote[];
+  searchHistory: string[];
   stats: UserStats;
   preferences: UserPreferences;
   lastReading: ReadingProgress | null;
@@ -63,6 +64,7 @@ const defaultUserData: UserData = {
   history: [],
   bookmarks: [],
   notes: [],
+  searchHistory: [],
   stats: {
     chaptersRead: 0,
     totalReadingTimeMinutes: 0,
@@ -362,4 +364,38 @@ export function getNotesForChapter(bookSlug: string, chapter: number): VerseNote
 export function getNotesCount(): number {
   const data = getUserData();
   return data.notes.length;
+}
+
+// ============= SEARCH HISTORY FUNCTIONS =============
+
+// Add a search to history
+export function addSearchToHistory(query: string): void {
+  const data = getUserData();
+  const trimmedQuery = query.trim().toLowerCase();
+  
+  if (!trimmedQuery || trimmedQuery.length < 2) return;
+  
+  // Remove if already exists
+  data.searchHistory = data.searchHistory.filter(q => q !== trimmedQuery);
+  
+  // Add to front
+  data.searchHistory.unshift(trimmedQuery);
+  
+  // Keep only last 10 searches
+  data.searchHistory = data.searchHistory.slice(0, 10);
+  
+  saveUserData(data);
+}
+
+// Get search history
+export function getSearchHistory(limit: number = 5): string[] {
+  const data = getUserData();
+  return data.searchHistory.slice(0, limit);
+}
+
+// Clear search history
+export function clearSearchHistory(): void {
+  const data = getUserData();
+  data.searchHistory = [];
+  saveUserData(data);
 }
