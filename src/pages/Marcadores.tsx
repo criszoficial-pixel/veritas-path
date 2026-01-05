@@ -1,14 +1,22 @@
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
 import { BottomNav } from '@/components/layout/BottomNav';
 import { Button } from '@/components/ui/button';
-import { ChevronLeft, Bookmark, BookOpen, Trash2 } from 'lucide-react';
+import { ChevronLeft, Bookmark, BookOpen, Trash2, Image } from 'lucide-react';
 import { useBookmarks } from '@/hooks/useBookmarks';
 import { cn } from '@/lib/utils';
+import { ShareVerseDialog } from '@/components/share/ShareVerseDialog';
+
+interface SelectedVerse {
+  text: string;
+  reference: string;
+}
 
 const Marcadores = () => {
   const navigate = useNavigate();
   const { bookmarks, remove } = useBookmarks();
+  const [selectedVerse, setSelectedVerse] = useState<SelectedVerse | null>(null);
 
   const handleNavigate = (bookmark: typeof bookmarks[0]) => {
     navigate(`/leer/${encodeURIComponent(bookmark.bookName)}/${bookmark.chapter}`);
@@ -23,6 +31,15 @@ const Marcadores = () => {
     if (diffDays === 1) return 'Ayer';
     if (diffDays < 7) return `Hace ${diffDays} días`;
     return date.toLocaleDateString('es-ES', { day: 'numeric', month: 'short' });
+  };
+
+  const handleShareAsImage = (bookmark: typeof bookmarks[0]) => {
+    if (bookmark.verseText) {
+      setSelectedVerse({
+        text: bookmark.verseText,
+        reference: bookmark.reference,
+      });
+    }
   };
 
   return (
@@ -102,6 +119,18 @@ const Marcadores = () => {
                     Leer
                   </button>
                   <div className="w-px bg-border/50" />
+                  {bookmark.verseText && (
+                    <>
+                      <button
+                        onClick={() => handleShareAsImage(bookmark)}
+                        className="flex-1 px-4 py-3 text-sm text-muted-foreground hover:bg-secondary/50 transition-colors flex items-center justify-center gap-2"
+                      >
+                        <Image className="h-4 w-4" />
+                        Imagen
+                      </button>
+                      <div className="w-px bg-border/50" />
+                    </>
+                  )}
                   <button
                     onClick={() => remove(bookmark.id)}
                     className="flex-1 px-4 py-3 text-sm text-destructive hover:bg-destructive/10 transition-colors flex items-center justify-center gap-2"
@@ -117,6 +146,15 @@ const Marcadores = () => {
       </main>
 
       <BottomNav />
+
+      {selectedVerse && (
+        <ShareVerseDialog
+          isOpen={!!selectedVerse}
+          onClose={() => setSelectedVerse(null)}
+          verse={selectedVerse.text}
+          reference={selectedVerse.reference}
+        />
+      )}
     </div>
   );
 };
