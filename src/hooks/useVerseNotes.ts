@@ -4,43 +4,61 @@ import {
   addNote,
   updateNote,
   deleteNote,
-  getNoteForVerse,
   type VerseNote,
 } from '@/services/userDataService';
 
 export function useVerseNotes(bookSlug: string, chapter: number) {
-  const [notesMap, setNotesMap] = useState<Map<number, VerseNote>>(new Map());
+  const [notes, setNotes] = useState<VerseNote[]>([]);
 
   // Load notes for the chapter
   const refresh = useCallback(() => {
-    const notes = getNotesForChapter(bookSlug, chapter);
-    const map = new Map<number, VerseNote>();
-    notes.forEach(note => map.set(note.verseNumber, note));
-    setNotesMap(map);
+    const chapterNotes = getNotesForChapter(bookSlug, chapter);
+    setNotes(chapterNotes);
   }, [bookSlug, chapter]);
 
   useEffect(() => {
     refresh();
   }, [refresh]);
 
-  // Check if a verse has a note
+  // Check if a verse has a note (is within any note range)
   const hasNote = useCallback((verseNumber: number): boolean => {
-    return notesMap.has(verseNumber);
-  }, [notesMap]);
+    return notes.some(note => {
+      const start = note.verseStart ?? note.verseNumber ?? 0;
+      const end = note.verseEnd ?? note.verseNumber ?? 0;
+      return verseNumber >= start && verseNumber <= end;
+    });
+  }, [notes]);
 
-  // Get note for a verse
+  // Get note that contains a specific verse
   const getNote = useCallback((verseNumber: number): VerseNote | null => {
-    return notesMap.get(verseNumber) || null;
-  }, [notesMap]);
+    return notes.find(note => {
+      const start = note.verseStart ?? note.verseNumber ?? 0;
+      const end = note.verseEnd ?? note.verseNumber ?? 0;
+      return verseNumber >= start && verseNumber <= end;
+    }) || null;
+  }, [notes]);
 
-  // Save or update a note
+  // Get note for a specific range
+  const getNoteForRange = useCallback((verseStart: number, verseEnd: number): VerseNote | null => {
+    return notes.find(note => {
+      const start = note.verseStart ?? note.verseNumber ?? 0;
+      const end = note.verseEnd ?? note.verseNumber ?? 0;
+      return start === verseStart && end === verseEnd;
+    }) || null;
+  }, [notes]);
+
+  // Save or update a note for a verse range
   const saveNote = useCallback((
-    verseNumber: number,
+    verseStart: number,
+    verseEnd: number,
     noteContent: string,
     bookName: string,
     verseText: string
   ): VerseNote => {
-    const existingNote = notesMap.get(verseNumber);
+    const existingNote = getNoteForRange(verseStart, verseEnd);
+    const reference = verseStart === verseEnd 
+      ? `${bookName} ${chapter}:${verseStart}`
+      : `${bookName} ${chapter}:${verseStart}-${verseEnd}`;
     
     if (existingNote) {
       const updated = updateNote(existingNote.id, noteContent);
@@ -51,32 +69,31 @@ export function useVerseNotes(bookSlug: string, chapter: number) {
         bookSlug,
         bookName,
         chapter,
-        verseNumber,
+        verseStart,
+        verseEnd,
         verseText,
-        reference: `${bookName} ${chapter}:${verseNumber}`,
+        reference,
         note: noteContent,
       });
       refresh();
       return newNote;
     }
-  }, [bookSlug, chapter, notesMap, refresh]);
+  }, [bookSlug, chapter, getNoteForRange, refresh]);
 
-  // Remove a note
-  const removeNote = useCallback((verseNumber: number): void => {
-    const existingNote = notesMap.get(verseNumber);
-    if (existingNote) {
-      deleteNote(existingNote.id);
-      refresh();
-    }
-  }, [notesMap, refresh]);
+  // Remove a note by its ID
+  const removeNote = useCallback((noteId: string): void => {
+    deleteNote(noteId);
+    refresh();
+  }, [refresh]);
 
   return {
-    notesMap,
+    notes,
     hasNote,
     getNote,
+    getNoteForRange,
     saveNote,
     removeNote,
     refresh,
-    count: notesMap.size,
+    count: notes.length,
   };
 }

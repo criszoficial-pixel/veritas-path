@@ -40,12 +40,15 @@ export interface VerseNote {
   bookSlug: string;
   bookName: string;
   chapter: number;
-  verseNumber: number;
+  verseStart: number;
+  verseEnd: number;
   verseText: string;
   reference: string;
   note: string;
   createdAt: number;
   updatedAt: number;
+  // Legacy support
+  verseNumber?: number;
 }
 
 interface UserData {
@@ -281,13 +284,32 @@ export function getUniqueBooksRead(): number {
 
 // ============= NOTES FUNCTIONS =============
 
-// Add a note to a verse
+// Migrate legacy note format
+function migrateNote(note: VerseNote): VerseNote {
+  if (note.verseNumber !== undefined && note.verseStart === undefined) {
+    return {
+      ...note,
+      verseStart: note.verseNumber,
+      verseEnd: note.verseNumber,
+    };
+  }
+  return note;
+}
+
+// Add a note to a verse range
 export function addNote(note: Omit<VerseNote, 'id' | 'createdAt' | 'updatedAt'>): VerseNote {
   const data = getUserData();
   
-  // Check if note already exists for this verse
+  // Migrate verseNumber to verseStart/verseEnd if needed
+  const verseStart = note.verseStart ?? (note as any).verseNumber ?? 1;
+  const verseEnd = note.verseEnd ?? verseStart;
+  
+  // Check if note already exists for this verse range
   const existingIndex = data.notes.findIndex(
-    n => n.bookSlug === note.bookSlug && n.chapter === note.chapter && n.verseNumber === note.verseNumber
+    n => n.bookSlug === note.bookSlug && 
+         n.chapter === note.chapter && 
+         ((n.verseStart ?? n.verseNumber) === verseStart) &&
+         ((n.verseEnd ?? n.verseNumber) === verseEnd)
   );
   
   const now = Date.now();
@@ -300,12 +322,14 @@ export function addNote(note: Omit<VerseNote, 'id' | 'createdAt' | 'updatedAt'>)
       updatedAt: now,
     };
     saveUserData(data);
-    return data.notes[existingIndex];
+    return migrateNote(data.notes[existingIndex]);
   }
   
   const newNote: VerseNote = {
     ...note,
-    id: `note-${note.bookSlug}-${note.chapter}-${note.verseNumber}-${now}`,
+    verseStart,
+    verseEnd,
+    id: `note-${note.bookSlug}-${note.chapter}-${verseStart}-${verseEnd}-${now}`,
     createdAt: now,
     updatedAt: now,
   };
@@ -340,24 +364,30 @@ export function deleteNote(noteId: string): void {
   saveUserData(data);
 }
 
-// Get note for a specific verse
+// Get note for a specific verse (checks if verse is within any note range)
 export function getNoteForVerse(bookSlug: string, chapter: number, verseNumber: number): VerseNote | null {
   const data = getUserData();
-  return data.notes.find(
-    n => n.bookSlug === bookSlug && n.chapter === chapter && n.verseNumber === verseNumber
-  ) || null;
+  const note = data.notes.find(n => {
+    if (n.bookSlug !== bookSlug || n.chapter !== chapter) return false;
+    const start = n.verseStart ?? n.verseNumber ?? 0;
+    const end = n.verseEnd ?? n.verseNumber ?? 0;
+    return verseNumber >= start && verseNumber <= end;
+  });
+  return note ? migrateNote(note) : null;
 }
 
 // Get all notes
 export function getAllNotes(): VerseNote[] {
   const data = getUserData();
-  return data.notes;
+  return data.notes.map(migrateNote);
 }
 
 // Get notes for a specific chapter
 export function getNotesForChapter(bookSlug: string, chapter: number): VerseNote[] {
   const data = getUserData();
-  return data.notes.filter(n => n.bookSlug === bookSlug && n.chapter === chapter);
+  return data.notes
+    .filter(n => n.bookSlug === bookSlug && n.chapter === chapter)
+    .map(migrateNote);
 }
 
 // Get total notes count
