@@ -3154,6 +3154,674 @@ export const diluvioQuestions: QuizQuestion[] = [
   }
 ];
 
+// MILAGROS DE JESÚS - 12 preguntas
+export const milagrosJesusQuestions: QuizQuestion[] = [
+  {
+    id: 'mil-001',
+    type: 'multiple-choice',
+    question: '¿Cuál fue el primer milagro de Jesús según el Evangelio de Juan?',
+    options: ['Sanó a un ciego', 'Convirtió agua en vino', 'Multiplicó los panes', 'Caminó sobre el agua'],
+    correctAnswer: 1,
+    explanation: 'En las bodas de Caná, Jesús convirtió agua en vino, su primer milagro.',
+    reference: 'Juan 2:1-11',
+    difficulty: 'facil',
+    category: 'milagros-jesus',
+    tags: ['milagro', 'cana', 'vino']
+  },
+  {
+    id: 'mil-002',
+    type: 'multiple-choice',
+    question: '¿Cuántos panes usó Jesús para alimentar a los 5,000?',
+    options: ['3 panes', '5 panes', '7 panes', '12 panes'],
+    correctAnswer: 1,
+    explanation: 'Jesús usó 5 panes y 2 peces para alimentar a la multitud.',
+    reference: 'Mateo 14:17-21',
+    difficulty: 'facil',
+    category: 'milagros-jesus',
+    tags: ['panes', 'multiplicacion']
+  },
+  {
+    id: 'mil-003',
+    type: 'multiple-choice',
+    question: '¿A quién resucitó Jesús después de 4 días muerto?',
+    options: ['El hijo de la viuda', 'Lázaro', 'La hija de Jairo', 'Tabita'],
+    correctAnswer: 1,
+    explanation: 'Lázaro fue resucitado después de estar 4 días en la tumba.',
+    reference: 'Juan 11:38-44',
+    difficulty: 'facil',
+    category: 'milagros-jesus',
+    tags: ['lazaro', 'resurreccion']
+  },
+  {
+    id: 'mil-004',
+    type: 'multiple-choice',
+    question: '¿Qué discípulo caminó sobre el agua hacia Jesús?',
+    options: ['Juan', 'Pedro', 'Santiago', 'Andrés'],
+    correctAnswer: 1,
+    explanation: 'Pedro caminó sobre el agua pero comenzó a hundirse cuando dudó.',
+    reference: 'Mateo 14:28-31',
+    difficulty: 'facil',
+    category: 'milagros-jesus',
+    tags: ['pedro', 'agua', 'fe']
+  },
+  {
+    id: 'mil-005',
+    type: 'multiple-choice',
+    question: '¿Cuántas canastas sobraron después de alimentar a los 5,000?',
+    options: ['5 canastas', '7 canastas', '12 canastas', '2 canastas'],
+    correctAnswer: 2,
+    explanation: 'Sobraron 12 canastas llenas después de que todos comieron.',
+    reference: 'Mateo 14:20',
+    difficulty: 'medio',
+    category: 'milagros-jesus',
+    tags: ['panes', 'canastas']
+  },
+  {
+    id: 'mil-006',
+    type: 'multiple-choice',
+    question: '¿Cómo sanó Jesús al ciego de nacimiento en Juan 9?',
+    options: ['Solo con palabras', 'Con lodo en los ojos', 'Tocándole los ojos', 'A distancia'],
+    correctAnswer: 1,
+    explanation: 'Jesús hizo lodo con saliva y lo puso en los ojos del ciego.',
+    reference: 'Juan 9:6-7',
+    difficulty: 'medio',
+    category: 'milagros-jesus',
+    tags: ['ciego', 'sanidad']
+  },
+  {
+    id: 'mil-007',
+    type: 'multiple-choice',
+    question: '¿Qué le dijo Jesús al paralítico antes de sanarlo?',
+    options: ['Levántate y anda', 'Tus pecados te son perdonados', 'Ten fe', 'Sígueme'],
+    correctAnswer: 1,
+    explanation: 'Jesús primero perdonó sus pecados, luego lo sanó.',
+    reference: 'Marcos 2:5-11',
+    difficulty: 'medio',
+    category: 'milagros-jesus',
+    tags: ['paralitico', 'perdon']
+  },
+  {
+    id: 'mil-008',
+    type: 'multiple-choice',
+    question: '¿Cuántos leprosos sanó Jesús en Lucas 17?',
+    options: ['1 leproso', '5 leprosos', '10 leprosos', '7 leprosos'],
+    correctAnswer: 2,
+    explanation: 'Jesús sanó a 10 leprosos, pero solo uno volvió a agradecer.',
+    reference: 'Lucas 17:12-19',
+    difficulty: 'medio',
+    category: 'milagros-jesus',
+    tags: ['leprosos', 'gratitud']
+  },
+  {
+    id: 'mil-009',
+    type: 'multiple-choice',
+    question: '¿Cómo se llamaba la ciudad donde Jesús resucitó al hijo de la viuda?',
+    options: ['Capernaum', 'Naín', 'Betania', 'Jerusalén'],
+    correctAnswer: 1,
+    explanation: 'En Naín, Jesús resucitó al único hijo de una viuda.',
+    reference: 'Lucas 7:11-15',
+    difficulty: 'dificil',
+    category: 'milagros-jesus',
+    tags: ['nain', 'viuda', 'resurreccion']
+  },
+  {
+    id: 'mil-010',
+    type: 'multiple-choice',
+    question: '¿Qué calmó Jesús con solo una orden?',
+    options: ['Un terremoto', 'Una tormenta', 'Un incendio', 'Una inundación'],
+    correctAnswer: 1,
+    explanation: 'Jesús ordenó al viento y al mar que se calmaran.',
+    reference: 'Marcos 4:39',
+    difficulty: 'facil',
+    category: 'milagros-jesus',
+    tags: ['tormenta', 'autoridad']
+  },
+  {
+    id: 'mil-011',
+    type: 'multiple-choice',
+    question: '¿Cuántos años estuvo enferma la mujer que tocó el manto de Jesús?',
+    options: ['5 años', '8 años', '12 años', '18 años'],
+    correctAnswer: 2,
+    explanation: 'La mujer con flujo de sangre había sufrido por 12 años.',
+    reference: 'Marcos 5:25-29',
+    difficulty: 'medio',
+    category: 'milagros-jesus',
+    tags: ['mujer', 'flujo', 'fe']
+  },
+  {
+    id: 'mil-012',
+    type: 'multiple-choice',
+    question: '¿En qué lago realizó Jesús la pesca milagrosa?',
+    options: ['Mar Muerto', 'Mar de Galilea', 'Río Jordán', 'Mar Mediterráneo'],
+    correctAnswer: 1,
+    explanation: 'La pesca milagrosa ocurrió en el Mar de Galilea.',
+    reference: 'Lucas 5:4-7',
+    difficulty: 'facil',
+    category: 'milagros-jesus',
+    tags: ['pesca', 'galilea']
+  }
+];
+
+// LAS PARÁBOLAS - 12 preguntas
+export const parabolasQuestions: QuizQuestion[] = [
+  {
+    id: 'par-001',
+    type: 'multiple-choice',
+    question: '¿Qué hijo regresó a casa en la parábola del hijo pródigo?',
+    options: ['El mayor', 'El menor', 'Ambos', 'Ninguno'],
+    correctAnswer: 1,
+    explanation: 'El hijo menor malgastó su herencia y regresó arrepentido.',
+    reference: 'Lucas 15:11-32',
+    difficulty: 'facil',
+    category: 'parabolas',
+    tags: ['hijo prodigo', 'arrepentimiento']
+  },
+  {
+    id: 'par-002',
+    type: 'multiple-choice',
+    question: '¿Cuántos tipos de terreno menciona la parábola del sembrador?',
+    options: ['2 tipos', '3 tipos', '4 tipos', '5 tipos'],
+    correctAnswer: 2,
+    explanation: 'La semilla cayó en el camino, pedregales, espinos y buena tierra.',
+    reference: 'Mateo 13:3-8',
+    difficulty: 'medio',
+    category: 'parabolas',
+    tags: ['sembrador', 'terreno']
+  },
+  {
+    id: 'par-003',
+    type: 'multiple-choice',
+    question: '¿Quién ayudó al herido en la parábola del buen samaritano?',
+    options: ['Un sacerdote', 'Un levita', 'Un samaritano', 'Un fariseo'],
+    correctAnswer: 2,
+    explanation: 'El samaritano fue el único que se detuvo a ayudar.',
+    reference: 'Lucas 10:30-35',
+    difficulty: 'facil',
+    category: 'parabolas',
+    tags: ['samaritano', 'misericordia']
+  },
+  {
+    id: 'par-004',
+    type: 'multiple-choice',
+    question: '¿Cuántos talentos recibió el siervo que los enterró?',
+    options: ['1 talento', '2 talentos', '5 talentos', '10 talentos'],
+    correctAnswer: 0,
+    explanation: 'El siervo perezoso recibió 1 talento y lo enterró.',
+    reference: 'Mateo 25:24-25',
+    difficulty: 'medio',
+    category: 'parabolas',
+    tags: ['talentos', 'siervo']
+  },
+  {
+    id: 'par-005',
+    type: 'multiple-choice',
+    question: '¿Cuántas vírgenes eran prudentes en la parábola?',
+    options: ['3 vírgenes', '5 vírgenes', '7 vírgenes', '10 vírgenes'],
+    correctAnswer: 1,
+    explanation: 'De las 10 vírgenes, 5 eran prudentes y llevaron aceite extra.',
+    reference: 'Mateo 25:1-4',
+    difficulty: 'medio',
+    category: 'parabolas',
+    tags: ['virgenes', 'preparacion']
+  },
+  {
+    id: 'par-006',
+    type: 'multiple-choice',
+    question: '¿Qué buscaba la mujer en la parábola de la moneda perdida?',
+    options: ['Una perla', 'Una dracma', 'Un denario', 'Un siclo'],
+    correctAnswer: 1,
+    explanation: 'La mujer buscó diligentemente una dracma perdida.',
+    reference: 'Lucas 15:8-10',
+    difficulty: 'medio',
+    category: 'parabolas',
+    tags: ['dracma', 'busqueda']
+  },
+  {
+    id: 'par-007',
+    type: 'multiple-choice',
+    question: '¿Qué animal representa a Jesús en la parábola del buen pastor?',
+    options: ['Oveja', 'León', 'Cordero', 'Pastor'],
+    correctAnswer: 3,
+    explanation: 'Jesús es el buen pastor que da su vida por las ovejas.',
+    reference: 'Juan 10:11-14',
+    difficulty: 'facil',
+    category: 'parabolas',
+    tags: ['pastor', 'ovejas']
+  },
+  {
+    id: 'par-008',
+    type: 'multiple-choice',
+    question: '¿Cuántas ovejas dejó el pastor para buscar la perdida?',
+    options: ['50 ovejas', '90 ovejas', '99 ovejas', '100 ovejas'],
+    correctAnswer: 2,
+    explanation: 'El pastor dejó las 99 para buscar la oveja perdida.',
+    reference: 'Lucas 15:4',
+    difficulty: 'facil',
+    category: 'parabolas',
+    tags: ['oveja', 'busqueda']
+  },
+  {
+    id: 'par-009',
+    type: 'multiple-choice',
+    question: '¿A qué comparó Jesús el reino de los cielos en Mateo 13:31?',
+    options: ['A una perla', 'A un grano de mostaza', 'A un tesoro', 'A una red'],
+    correctAnswer: 1,
+    explanation: 'El reino es como un grano de mostaza que crece hasta ser árbol.',
+    reference: 'Mateo 13:31-32',
+    difficulty: 'facil',
+    category: 'parabolas',
+    tags: ['mostaza', 'reino']
+  },
+  {
+    id: 'par-010',
+    type: 'multiple-choice',
+    question: '¿Qué hacía el hombre rico en la parábola de Lázaro?',
+    options: ['Trabajaba mucho', 'Vivía lujosamente', 'Ayudaba a pobres', 'Predicaba'],
+    correctAnswer: 1,
+    explanation: 'El rico vestía de púrpura y lino, y hacía banquetes cada día.',
+    reference: 'Lucas 16:19',
+    difficulty: 'medio',
+    category: 'parabolas',
+    tags: ['rico', 'lazaro']
+  },
+  {
+    id: 'par-011',
+    type: 'multiple-choice',
+    question: '¿Qué hizo el fariseo en la parábola del fariseo y el publicano?',
+    options: ['Se humilló', 'Oró con orgullo', 'Ayudó al publicano', 'Dio limosna'],
+    correctAnswer: 1,
+    explanation: 'El fariseo se exaltó a sí mismo en su oración.',
+    reference: 'Lucas 18:11-12',
+    difficulty: 'medio',
+    category: 'parabolas',
+    tags: ['fariseo', 'publicano', 'oracion']
+  },
+  {
+    id: 'par-012',
+    type: 'multiple-choice',
+    question: '¿Qué encontró el hombre y vendió todo para comprarlo?',
+    options: ['Un campo con tesoro', 'Una perla preciosa', 'Una viña', 'Una casa'],
+    correctAnswer: 0,
+    explanation: 'El hombre encontró un tesoro escondido en un campo.',
+    reference: 'Mateo 13:44',
+    difficulty: 'medio',
+    category: 'parabolas',
+    tags: ['tesoro', 'campo']
+  }
+];
+
+// MUJERES DE LA BIBLIA - 10 preguntas
+export const mujeresBibliaQuestions: QuizQuestion[] = [
+  {
+    id: 'muj-001',
+    type: 'multiple-choice',
+    question: '¿Quién fue la primera mujer según la Biblia?',
+    options: ['Sara', 'Eva', 'María', 'Raquel'],
+    correctAnswer: 1,
+    explanation: 'Eva fue la primera mujer, creada de la costilla de Adán.',
+    reference: 'Génesis 2:21-22',
+    difficulty: 'facil',
+    category: 'mujeres-biblia',
+    tags: ['eva', 'creacion']
+  },
+  {
+    id: 'muj-002',
+    type: 'multiple-choice',
+    question: '¿Qué mujer fue jueza de Israel?',
+    options: ['Rut', 'Débora', 'Ester', 'Raquel'],
+    correctAnswer: 1,
+    explanation: 'Débora fue profetisa y jueza que lideró a Israel.',
+    reference: 'Jueces 4:4',
+    difficulty: 'medio',
+    category: 'mujeres-biblia',
+    tags: ['debora', 'jueza']
+  },
+  {
+    id: 'muj-003',
+    type: 'multiple-choice',
+    question: '¿Quién fue la suegra de Rut?',
+    options: ['Noemí', 'Ana', 'Lea', 'Rebeca'],
+    correctAnswer: 0,
+    explanation: 'Noemí fue la suegra de Rut, a quien siguió hasta Belén.',
+    reference: 'Rut 1:14-16',
+    difficulty: 'facil',
+    category: 'mujeres-biblia',
+    tags: ['rut', 'noemi']
+  },
+  {
+    id: 'muj-004',
+    type: 'multiple-choice',
+    question: '¿Qué reina salvó a su pueblo del exterminio?',
+    options: ['Jezabel', 'Ester', 'Betsabé', 'Vasti'],
+    correctAnswer: 1,
+    explanation: 'Ester arriesgó su vida para salvar al pueblo judío de Amán.',
+    reference: 'Ester 7:3-4',
+    difficulty: 'facil',
+    category: 'mujeres-biblia',
+    tags: ['ester', 'reina']
+  },
+  {
+    id: 'muj-005',
+    type: 'multiple-choice',
+    question: '¿Quién era la madre de Samuel?',
+    options: ['Sara', 'Ana', 'Rebeca', 'María'],
+    correctAnswer: 1,
+    explanation: 'Ana oró fervientemente por un hijo y prometió dedicarlo a Dios.',
+    reference: '1 Samuel 1:20',
+    difficulty: 'medio',
+    category: 'mujeres-biblia',
+    tags: ['ana', 'samuel']
+  },
+  {
+    id: 'muj-006',
+    type: 'multiple-choice',
+    question: '¿Qué mujer escondió a los espías israelitas en Jericó?',
+    options: ['Débora', 'Rahab', 'Ester', 'María'],
+    correctAnswer: 1,
+    explanation: 'Rahab escondió a los espías y su familia fue salvada.',
+    reference: 'Josué 2:1-6',
+    difficulty: 'medio',
+    category: 'mujeres-biblia',
+    tags: ['rahab', 'espias']
+  },
+  {
+    id: 'muj-007',
+    type: 'multiple-choice',
+    question: '¿Quién fue la madre de Jesús?',
+    options: ['María Magdalena', 'María de Betania', 'María, la madre de Jesús', 'Marta'],
+    correctAnswer: 2,
+    explanation: 'María fue escogida por Dios para ser la madre del Mesías.',
+    reference: 'Lucas 1:30-31',
+    difficulty: 'facil',
+    category: 'mujeres-biblia',
+    tags: ['maria', 'jesus']
+  },
+  {
+    id: 'muj-008',
+    type: 'multiple-choice',
+    question: '¿Quién ungió los pies de Jesús con perfume?',
+    options: ['Marta', 'María de Betania', 'María Magdalena', 'Salomé'],
+    correctAnswer: 1,
+    explanation: 'María de Betania ungió los pies de Jesús con nardo costoso.',
+    reference: 'Juan 12:3',
+    difficulty: 'medio',
+    category: 'mujeres-biblia',
+    tags: ['maria', 'betania', 'perfume']
+  },
+  {
+    id: 'muj-009',
+    type: 'multiple-choice',
+    question: '¿Qué mujer samaritana habló con Jesús junto al pozo?',
+    options: ['Una viuda', 'Una mujer sin nombre', 'Lidia', 'Priscila'],
+    correctAnswer: 1,
+    explanation: 'La mujer samaritana no es nombrada pero su testimonio convirtió a muchos.',
+    reference: 'Juan 4:7-26',
+    difficulty: 'medio',
+    category: 'mujeres-biblia',
+    tags: ['samaritana', 'pozo']
+  },
+  {
+    id: 'muj-010',
+    type: 'multiple-choice',
+    question: '¿Qué mujer vendía púrpura y se convirtió en Filipos?',
+    options: ['Priscila', 'Lidia', 'Febe', 'Dorcas'],
+    correctAnswer: 1,
+    explanation: 'Lidia fue la primera convertida en Europa, comerciante de púrpura.',
+    reference: 'Hechos 16:14',
+    difficulty: 'medio',
+    category: 'mujeres-biblia',
+    tags: ['lidia', 'purpura']
+  }
+];
+
+// REYES DE ISRAEL - 10 preguntas
+export const reyesIsraelQuestions: QuizQuestion[] = [
+  {
+    id: 'rey-001',
+    type: 'multiple-choice',
+    question: '¿Quién fue el primer rey de Israel?',
+    options: ['David', 'Saúl', 'Salomón', 'Samuel'],
+    correctAnswer: 1,
+    explanation: 'Saúl fue ungido por Samuel como el primer rey de Israel.',
+    reference: '1 Samuel 10:1',
+    difficulty: 'facil',
+    category: 'reyes-israel',
+    tags: ['saul', 'primer rey']
+  },
+  {
+    id: 'rey-002',
+    type: 'multiple-choice',
+    question: '¿Qué rey construyó el primer templo de Jerusalén?',
+    options: ['David', 'Salomón', 'Ezequías', 'Josías'],
+    correctAnswer: 1,
+    explanation: 'Salomón edificó el templo que su padre David había deseado construir.',
+    reference: '1 Reyes 6:1',
+    difficulty: 'facil',
+    category: 'reyes-israel',
+    tags: ['salomon', 'templo']
+  },
+  {
+    id: 'rey-003',
+    type: 'multiple-choice',
+    question: '¿Por qué don era conocido el rey Salomón?',
+    options: ['Fuerza', 'Sabiduría', 'Valentía', 'Riquezas'],
+    correctAnswer: 1,
+    explanation: 'Salomón pidió sabiduría a Dios y fue el más sabio de su tiempo.',
+    reference: '1 Reyes 3:12',
+    difficulty: 'facil',
+    category: 'reyes-israel',
+    tags: ['salomon', 'sabiduria']
+  },
+  {
+    id: 'rey-004',
+    type: 'multiple-choice',
+    question: '¿Qué rey derrotó a Goliat siendo joven?',
+    options: ['Saúl', 'David', 'Jonatán', 'Salomón'],
+    correctAnswer: 1,
+    explanation: 'David venció al gigante Goliat con una honda y una piedra.',
+    reference: '1 Samuel 17:49-50',
+    difficulty: 'facil',
+    category: 'reyes-israel',
+    tags: ['david', 'goliat']
+  },
+  {
+    id: 'rey-005',
+    type: 'multiple-choice',
+    question: '¿Qué rey malvado se casó con Jezabel?',
+    options: ['Jeroboam', 'Acab', 'Manasés', 'Roboam'],
+    correctAnswer: 1,
+    explanation: 'Acab se casó con Jezabel y llevó a Israel a la idolatría.',
+    reference: '1 Reyes 16:31',
+    difficulty: 'medio',
+    category: 'reyes-israel',
+    tags: ['acab', 'jezabel']
+  },
+  {
+    id: 'rey-006',
+    type: 'multiple-choice',
+    question: '¿Qué rey encontró el libro de la ley en el templo?',
+    options: ['Ezequías', 'Josías', 'Asa', 'Jehú'],
+    correctAnswer: 1,
+    explanation: 'Josías ordenó reparar el templo y se encontró el libro de la ley.',
+    reference: '2 Reyes 22:8-10',
+    difficulty: 'medio',
+    category: 'reyes-israel',
+    tags: ['josias', 'ley']
+  },
+  {
+    id: 'rey-007',
+    type: 'multiple-choice',
+    question: '¿Qué rey vio retroceder la sombra 10 grados?',
+    options: ['David', 'Salomón', 'Ezequías', 'Josías'],
+    correctAnswer: 2,
+    explanation: 'Dios hizo retroceder la sombra como señal para Ezequías.',
+    reference: '2 Reyes 20:9-11',
+    difficulty: 'dificil',
+    category: 'reyes-israel',
+    tags: ['ezequias', 'milagro']
+  },
+  {
+    id: 'rey-008',
+    type: 'multiple-choice',
+    question: '¿Cuántos años tenía Josías cuando comenzó a reinar?',
+    options: ['8 años', '12 años', '16 años', '20 años'],
+    correctAnswer: 0,
+    explanation: 'Josías tenía solo 8 años cuando comenzó su reinado.',
+    reference: '2 Reyes 22:1',
+    difficulty: 'dificil',
+    category: 'reyes-israel',
+    tags: ['josias', 'edad']
+  },
+  {
+    id: 'rey-009',
+    type: 'multiple-choice',
+    question: '¿Qué rey dividió el reino con su dureza?',
+    options: ['Salomón', 'Roboam', 'Jeroboam', 'Asa'],
+    correctAnswer: 1,
+    explanation: 'Roboam rechazó aliviar la carga del pueblo, causando la división.',
+    reference: '1 Reyes 12:13-16',
+    difficulty: 'medio',
+    category: 'reyes-israel',
+    tags: ['roboam', 'division']
+  },
+  {
+    id: 'rey-010',
+    type: 'multiple-choice',
+    question: '¿Cuántos años reinó David sobre todo Israel?',
+    options: ['30 años', '33 años', '40 años', '45 años'],
+    correctAnswer: 2,
+    explanation: 'David reinó 40 años: 7 en Hebrón y 33 en Jerusalén.',
+    reference: '2 Samuel 5:4-5',
+    difficulty: 'medio',
+    category: 'reyes-israel',
+    tags: ['david', 'reinado']
+  }
+];
+
+// PROFECÍAS MESIÁNICAS - 10 preguntas
+export const profeciasQuestions: QuizQuestion[] = [
+  {
+    id: 'pro-001',
+    type: 'multiple-choice',
+    question: '¿Qué profeta predijo que el Mesías nacería en Belén?',
+    options: ['Isaías', 'Miqueas', 'Zacarías', 'Jeremías'],
+    correctAnswer: 1,
+    explanation: 'Miqueas profetizó que de Belén saldría el gobernante de Israel.',
+    reference: 'Miqueas 5:2',
+    difficulty: 'medio',
+    category: 'profecias',
+    tags: ['miqueas', 'belen']
+  },
+  {
+    id: 'pro-002',
+    type: 'multiple-choice',
+    question: '¿Qué profeta describió al Mesías como "varón de dolores"?',
+    options: ['Daniel', 'Ezequiel', 'Isaías', 'Oseas'],
+    correctAnswer: 2,
+    explanation: 'Isaías 53 describe al siervo sufriente, cumplido en Cristo.',
+    reference: 'Isaías 53:3',
+    difficulty: 'medio',
+    category: 'profecias',
+    tags: ['isaias', 'sufrimiento']
+  },
+  {
+    id: 'pro-003',
+    type: 'multiple-choice',
+    question: '¿Qué profetizó Zacarías sobre la entrada del Mesías a Jerusalén?',
+    options: ['Vendría en caballo', 'Vendría en asno', 'Vendría caminando', 'Vendría en carro'],
+    correctAnswer: 1,
+    explanation: 'Zacarías profetizó que el rey vendría montado en un asno.',
+    reference: 'Zacarías 9:9',
+    difficulty: 'medio',
+    category: 'profecias',
+    tags: ['zacarias', 'entrada']
+  },
+  {
+    id: 'pro-004',
+    type: 'multiple-choice',
+    question: '¿Por cuántas piezas de plata sería traicionado el Mesías?',
+    options: ['20 piezas', '30 piezas', '40 piezas', '50 piezas'],
+    correctAnswer: 1,
+    explanation: 'Zacarías profetizó 30 piezas de plata, cumplido por Judas.',
+    reference: 'Zacarías 11:12',
+    difficulty: 'medio',
+    category: 'profecias',
+    tags: ['traicion', 'plata']
+  },
+  {
+    id: 'pro-005',
+    type: 'multiple-choice',
+    question: '¿Qué profeta predijo que el Mesías nacería de una virgen?',
+    options: ['Jeremías', 'Isaías', 'Daniel', 'Joel'],
+    correctAnswer: 1,
+    explanation: 'Isaías profetizó: "He aquí que la virgen concebirá".',
+    reference: 'Isaías 7:14',
+    difficulty: 'facil',
+    category: 'profecias',
+    tags: ['isaias', 'virgen']
+  },
+  {
+    id: 'pro-006',
+    type: 'multiple-choice',
+    question: '¿Qué profeta vio "uno como un hijo de hombre" viniendo en las nubes?',
+    options: ['Isaías', 'Ezequiel', 'Daniel', 'Zacarías'],
+    correctAnswer: 2,
+    explanation: 'Daniel tuvo la visión del Hijo del Hombre viniendo con poder.',
+    reference: 'Daniel 7:13',
+    difficulty: 'medio',
+    category: 'profecias',
+    tags: ['daniel', 'hijo de hombre']
+  },
+  {
+    id: 'pro-007',
+    type: 'multiple-choice',
+    question: '¿Qué profeta predijo que el Mesías sería llamado de Egipto?',
+    options: ['Oseas', 'Amós', 'Miqueas', 'Habacuc'],
+    correctAnswer: 0,
+    explanation: 'Oseas profetizó: "De Egipto llamé a mi hijo".',
+    reference: 'Oseas 11:1',
+    difficulty: 'dificil',
+    category: 'profecias',
+    tags: ['oseas', 'egipto']
+  },
+  {
+    id: 'pro-008',
+    type: 'multiple-choice',
+    question: '¿Qué dijo Isaías sobre los huesos del Mesías?',
+    options: ['Serían quebrados', 'No serían quebrados', 'Serían quemados', 'Serían enterrados'],
+    correctAnswer: 1,
+    explanation: 'Ni un hueso del Mesías sería quebrado, cumplido en la cruz.',
+    reference: 'Salmo 34:20',
+    difficulty: 'dificil',
+    category: 'profecias',
+    tags: ['huesos', 'crucifixion']
+  },
+  {
+    id: 'pro-009',
+    type: 'multiple-choice',
+    question: '¿Qué profetizó Isaías sobre las manos y pies del Mesías?',
+    options: ['Serían ungidos', 'Serían horadados', 'Serían lavados', 'Serían bendecidos'],
+    correctAnswer: 1,
+    explanation: 'Salmo 22 profetiza la perforación de manos y pies.',
+    reference: 'Salmo 22:16',
+    difficulty: 'medio',
+    category: 'profecias',
+    tags: ['manos', 'pies', 'cruz']
+  },
+  {
+    id: 'pro-010',
+    type: 'multiple-choice',
+    question: '¿Con quién sería sepultado el Mesías según Isaías?',
+    options: ['Con criminales', 'Con reyes', 'Con el rico', 'Solo'],
+    correctAnswer: 2,
+    explanation: 'Isaías profetizó su sepultura con el rico, cumplido por José de Arimatea.',
+    reference: 'Isaías 53:9',
+    difficulty: 'dificil',
+    category: 'profecias',
+    tags: ['sepultura', 'rico']
+  }
+];
+
 // Exportar todas las preguntas organizadas
 export const allQuestions: Record<string, QuizQuestion[]> = {
   genesis: genesisQuestions,
@@ -3178,7 +3846,13 @@ export const allQuestions: Record<string, QuizQuestion[]> = {
   david: davidQuestions,
   pablo: pabloQuestions,
   diluvio: diluvioQuestions,
-  'exodo-evento': exodoQuestions, // Reusa preguntas de Éxodo
+  'exodo-evento': exodoQuestions,
+  // Nuevas categorías temáticas
+  'milagros-jesus': milagrosJesusQuestions,
+  'parabolas': parabolasQuestions,
+  'mujeres-biblia': mujeresBibliaQuestions,
+  'reyes-israel': reyesIsraelQuestions,
+  'profecias': profeciasQuestions,
 };
 
 export const getQuestionsByCategory = (categoryId: string): QuizQuestion[] => {
