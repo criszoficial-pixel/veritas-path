@@ -16,7 +16,7 @@ import { NoteEditor } from './NoteEditor';
 import { VerseNoteIndicator } from './VerseNoteIndicator';
 import { QuizSuggestion } from '@/components/quiz/QuizSuggestion';
 import { cn } from '@/lib/utils';
-import { fetchBibleMetadata, fetchChapter, findBookByName, bookNameToSlug } from '@/services/bibleDataService';
+import { fetchBibleMetadata, fetchChapter, findBookByName, findBookBySlug, bookNameToSlug } from '@/services/bibleDataService';
 import { trackChapterRead, getPreferences, updatePreferences } from '@/services/userDataService';
 import type { ChapterAudioData, VerseSyncData } from '@/types/audio';
 import type { BibleMetadata, ChapterData, VerseData, BookInfo } from '@/types/bible';
@@ -94,8 +94,8 @@ export const ChapterReader = () => {
       setMetadata(meta);
       
       if (meta && bookName) {
-        // Find the book in metadata
-        const book = findBookByName(meta, bookName);
+        // First try to find by slug (from URL), then by display name
+        const book = findBookBySlug(meta, bookName) || findBookByName(meta, bookName);
         setCurrentBook(book || null);
         
         if (book) {

@@ -192,6 +192,13 @@ export function findBookByName(metadata: BibleMetadata, bookName: string): BookI
 }
 
 /**
+ * Finds a book by its slug in the metadata
+ */
+export function findBookBySlug(metadata: BibleMetadata, bookSlug: string): BookInfo | undefined {
+  return metadata.books.find(book => book.slug === bookSlug);
+}
+
+/**
  * Clears all cached data (useful for language changes)
  */
 export function clearBibleCache(): void {
