@@ -14,6 +14,7 @@ import { BookmarkButton } from './BookmarkButton';
 import { ReaderSettings } from './ReaderSettings';
 import { NoteEditor } from './NoteEditor';
 import { VerseNoteIndicator } from './VerseNoteIndicator';
+import { QuizSuggestion } from '@/components/quiz/QuizSuggestion';
 import { cn } from '@/lib/utils';
 import { fetchBibleMetadata, fetchChapter, findBookByName, bookNameToSlug } from '@/services/bibleDataService';
 import { trackChapterRead, getPreferences, updatePreferences } from '@/services/userDataService';
@@ -303,6 +304,15 @@ export const ChapterReader = () => {
               );
             })}
           </div>
+          
+          {/* Quiz suggestion after reading */}
+          {currentBook && chapterData && (
+            <QuizSuggestion 
+              bookId={currentBook.slug}
+              bookName={chapterData.book}
+              chapter={currentChapter}
+            />
+          )}
         </article>
       </div>
 

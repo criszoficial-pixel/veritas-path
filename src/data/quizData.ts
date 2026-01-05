@@ -257,6 +257,52 @@ export const quizCategories: QuizCategory[] = [
     color: 'hsl(220, 70%, 50%)',
     type: 'libro',
     questionCount: 12
+  },
+  // Nuevas categorías temáticas
+  {
+    id: 'milagros-jesus',
+    title: 'Milagros de Jesús',
+    description: 'Las obras sobrenaturales del Mesías',
+    icon: '✨',
+    color: 'hsl(280, 80%, 55%)',
+    type: 'tema',
+    questionCount: 12
+  },
+  {
+    id: 'parabolas',
+    title: 'Las Parábolas',
+    description: 'Historias con enseñanzas profundas de Jesús',
+    icon: '📚',
+    color: 'hsl(160, 70%, 40%)',
+    type: 'tema',
+    questionCount: 12
+  },
+  {
+    id: 'mujeres-biblia',
+    title: 'Mujeres de la Biblia',
+    description: 'Heroínas de fe a través de las Escrituras',
+    icon: '👑',
+    color: 'hsl(330, 80%, 50%)',
+    type: 'personaje',
+    questionCount: 10
+  },
+  {
+    id: 'reyes-israel',
+    title: 'Reyes de Israel',
+    description: 'Los monarcas del pueblo de Dios',
+    icon: '🏰',
+    color: 'hsl(45, 90%, 45%)',
+    type: 'personaje',
+    questionCount: 10
+  },
+  {
+    id: 'profecias',
+    title: 'Profecías Mesiánicas',
+    description: 'Predicciones cumplidas en Cristo',
+    icon: '🔮',
+    color: 'hsl(200, 80%, 45%)',
+    type: 'tema',
+    questionCount: 10
   }
 ];
 
@@ -372,6 +418,47 @@ export const achievements: Achievement[] = [
     description: 'Comprende la doctrina de Romanos',
     icon: '⚖️',
     condition: (stats) => stats.quizzesByCategory['romanos'] >= 1,
+    points: 100
+  },
+  // Logros para nuevas categorías
+  {
+    id: 'testigo-milagros',
+    title: 'Testigo de Milagros',
+    description: 'Conoce los milagros de Jesús',
+    icon: '✨',
+    condition: (stats) => stats.quizzesByCategory['milagros-jesus'] >= 1,
+    points: 100
+  },
+  {
+    id: 'interprete-parabolas',
+    title: 'Intérprete de Parábolas',
+    description: 'Comprende las enseñanzas de Jesús',
+    icon: '📚',
+    condition: (stats) => stats.quizzesByCategory['parabolas'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-heroinas',
+    title: 'Conocedor de Heroínas',
+    description: 'Conoce a las mujeres de la Biblia',
+    icon: '👑',
+    condition: (stats) => stats.quizzesByCategory['mujeres-biblia'] >= 1,
+    points: 100
+  },
+  {
+    id: 'historiador-reyes',
+    title: 'Historiador de Reyes',
+    description: 'Domina la historia de los reyes',
+    icon: '🏰',
+    condition: (stats) => stats.quizzesByCategory['reyes-israel'] >= 1,
+    points: 100
+  },
+  {
+    id: 'estudioso-profecias',
+    title: 'Estudioso de Profecías',
+    description: 'Conoce las profecías mesiánicas',
+    icon: '🔮',
+    condition: (stats) => stats.quizzesByCategory['profecias'] >= 1,
     points: 100
   }
 ];
