@@ -33,6 +33,9 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/leer" element={<Leer />} />
             <Route path="/leer/:collectionSlug" element={<LeerColeccion />} />
+            {/* Ruta sin collectionSlug - usa santa-biblia por defecto */}
+            <Route path="/leer/:bookName/:chapter" element={<LeerCapitulo />} />
+            {/* Ruta completa con collectionSlug */}
             <Route path="/leer/:collectionSlug/:bookName/:chapter" element={<LeerCapitulo />} />
             <Route path="/aprender" element={<Aprender />} />
             <Route path="/guia" element={<Guia />} />
