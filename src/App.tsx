@@ -16,6 +16,8 @@ import Marcadores from "./pages/Marcadores";
 import Historial from "./pages/Historial";
 import Buscar from "./pages/Buscar";
 import MisNotas from "./pages/MisNotas";
+import Quizzes from "./pages/Quizzes";
+import QuizJugar from "./pages/QuizJugar";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -40,6 +42,8 @@ const App = () => (
             <Route path="/historial" element={<Historial />} />
             <Route path="/buscar" element={<Buscar />} />
             <Route path="/mis-notas" element={<MisNotas />} />
+            <Route path="/quizzes" element={<Quizzes />} />
+            <Route path="/quizzes/jugar/:categoryId" element={<QuizJugar />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
