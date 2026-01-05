@@ -1,11 +1,14 @@
-import { Share2, Bookmark, BookmarkCheck, BookOpen } from 'lucide-react';
+import { useState } from 'react';
+import { Share2, Bookmark, BookmarkCheck, BookOpen, Image } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 import { getDailyVerseByDate } from '@/data/dailyVerses';
 import { useBookmarks } from '@/hooks/useBookmarks';
 import { toast } from 'sonner';
+import { ShareVerseDialog } from '@/components/share/ShareVerseDialog';
 
 export const DailyVerseCard = () => {
+  const [shareDialogOpen, setShareDialogOpen] = useState(false);
   const navigate = useNavigate();
   const dailyVerse = getDailyVerseByDate();
   const { toggleVerseBookmark, checkBookmarked } = useBookmarks();
@@ -83,7 +86,17 @@ export const DailyVerseCard = () => {
               variant="ghost"
               size="icon"
               className="h-8 w-8 text-primary-foreground/80 hover:text-primary-foreground hover:bg-white/10"
+              onClick={() => setShareDialogOpen(true)}
+              title="Compartir como imagen"
+            >
+              <Image className="h-4 w-4" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="h-8 w-8 text-primary-foreground/80 hover:text-primary-foreground hover:bg-white/10"
               onClick={handleShare}
+              title="Compartir texto"
             >
               <Share2 className="h-4 w-4" />
             </Button>
@@ -115,6 +128,13 @@ export const DailyVerseCard = () => {
           Leer capítulo completo
         </Button>
       </div>
+
+      <ShareVerseDialog
+        isOpen={shareDialogOpen}
+        onClose={() => setShareDialogOpen(false)}
+        verse={dailyVerse.verse}
+        reference={dailyVerse.reference}
+      />
     </div>
   );
 };
