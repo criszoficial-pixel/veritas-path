@@ -15,47 +15,147 @@ export interface ReadingPlan {
   schedule: ReadingPlanDay[];
 }
 
-// Bible in 1 Year Plan - 3-4 chapters per day
-const bibleIn1YearSchedule: ReadingPlanDay[] = [
-  { day: 1, readings: [{ bookSlug: 'genesis', chapter: 1 }, { bookSlug: 'genesis', chapter: 2 }, { bookSlug: 'genesis', chapter: 3 }] },
-  { day: 2, readings: [{ bookSlug: 'genesis', chapter: 4 }, { bookSlug: 'genesis', chapter: 5 }, { bookSlug: 'genesis', chapter: 6 }] },
-  { day: 3, readings: [{ bookSlug: 'genesis', chapter: 7 }, { bookSlug: 'genesis', chapter: 8 }, { bookSlug: 'genesis', chapter: 9 }] },
-  { day: 4, readings: [{ bookSlug: 'genesis', chapter: 10 }, { bookSlug: 'genesis', chapter: 11 }, { bookSlug: 'genesis', chapter: 12 }] },
-  { day: 5, readings: [{ bookSlug: 'genesis', chapter: 13 }, { bookSlug: 'genesis', chapter: 14 }, { bookSlug: 'genesis', chapter: 15 }] },
-  { day: 6, readings: [{ bookSlug: 'genesis', chapter: 16 }, { bookSlug: 'genesis', chapter: 17 }, { bookSlug: 'genesis', chapter: 18 }] },
-  { day: 7, readings: [{ bookSlug: 'genesis', chapter: 19 }, { bookSlug: 'genesis', chapter: 20 }, { bookSlug: 'genesis', chapter: 21 }] },
-  { day: 8, readings: [{ bookSlug: 'genesis', chapter: 22 }, { bookSlug: 'genesis', chapter: 23 }, { bookSlug: 'genesis', chapter: 24 }] },
-  { day: 9, readings: [{ bookSlug: 'genesis', chapter: 25 }, { bookSlug: 'genesis', chapter: 26 }, { bookSlug: 'genesis', chapter: 27 }] },
-  { day: 10, readings: [{ bookSlug: 'genesis', chapter: 28 }, { bookSlug: 'genesis', chapter: 29 }, { bookSlug: 'genesis', chapter: 30 }] },
+// All Bible books with chapter counts
+const allBibleBooks = [
+  // Old Testament (39 books, 929 chapters)
+  { slug: 'genesis', chapters: 50 },
+  { slug: 'exodo', chapters: 40 },
+  { slug: 'levitico', chapters: 27 },
+  { slug: 'numeros', chapters: 36 },
+  { slug: 'deuteronomio', chapters: 34 },
+  { slug: 'josue', chapters: 24 },
+  { slug: 'jueces', chapters: 21 },
+  { slug: 'rut', chapters: 4 },
+  { slug: '1-samuel', chapters: 31 },
+  { slug: '2-samuel', chapters: 24 },
+  { slug: '1-reyes', chapters: 22 },
+  { slug: '2-reyes', chapters: 25 },
+  { slug: '1-cronicas', chapters: 29 },
+  { slug: '2-cronicas', chapters: 36 },
+  { slug: 'esdras', chapters: 10 },
+  { slug: 'nehemias', chapters: 13 },
+  { slug: 'ester', chapters: 10 },
+  { slug: 'job', chapters: 42 },
+  { slug: 'salmos', chapters: 150 },
+  { slug: 'proverbios', chapters: 31 },
+  { slug: 'eclesiastes', chapters: 12 },
+  { slug: 'cantares', chapters: 8 },
+  { slug: 'isaias', chapters: 66 },
+  { slug: 'jeremias', chapters: 52 },
+  { slug: 'lamentaciones', chapters: 5 },
+  { slug: 'ezequiel', chapters: 48 },
+  { slug: 'daniel', chapters: 12 },
+  { slug: 'oseas', chapters: 14 },
+  { slug: 'joel', chapters: 3 },
+  { slug: 'amos', chapters: 9 },
+  { slug: 'abdias', chapters: 1 },
+  { slug: 'jonas', chapters: 4 },
+  { slug: 'miqueas', chapters: 7 },
+  { slug: 'nahum', chapters: 3 },
+  { slug: 'habacuc', chapters: 3 },
+  { slug: 'sofonias', chapters: 3 },
+  { slug: 'hageo', chapters: 2 },
+  { slug: 'zacarias', chapters: 14 },
+  { slug: 'malaquias', chapters: 4 },
+  // New Testament (27 books, 260 chapters)
+  { slug: 'mateo', chapters: 28 },
+  { slug: 'marcos', chapters: 16 },
+  { slug: 'lucas', chapters: 24 },
+  { slug: 'juan', chapters: 21 },
+  { slug: 'hechos', chapters: 28 },
+  { slug: 'romanos', chapters: 16 },
+  { slug: '1-corintios', chapters: 16 },
+  { slug: '2-corintios', chapters: 13 },
+  { slug: 'galatas', chapters: 6 },
+  { slug: 'efesios', chapters: 6 },
+  { slug: 'filipenses', chapters: 4 },
+  { slug: 'colosenses', chapters: 4 },
+  { slug: '1-tesalonicenses', chapters: 5 },
+  { slug: '2-tesalonicenses', chapters: 3 },
+  { slug: '1-timoteo', chapters: 6 },
+  { slug: '2-timoteo', chapters: 4 },
+  { slug: 'tito', chapters: 3 },
+  { slug: 'filemon', chapters: 1 },
+  { slug: 'hebreos', chapters: 13 },
+  { slug: 'santiago', chapters: 5 },
+  { slug: '1-pedro', chapters: 5 },
+  { slug: '2-pedro', chapters: 3 },
+  { slug: '1-juan', chapters: 5 },
+  { slug: '2-juan', chapters: 1 },
+  { slug: '3-juan', chapters: 1 },
+  { slug: 'judas', chapters: 1 },
+  { slug: 'apocalipsis', chapters: 22 },
 ];
 
-// New Testament in 90 Days - ~3 chapters per day
-const ntIn90DaysSchedule: ReadingPlanDay[] = [
-  { day: 1, readings: [{ bookSlug: 'mateo', chapter: 1 }, { bookSlug: 'mateo', chapter: 2 }, { bookSlug: 'mateo', chapter: 3 }] },
-  { day: 2, readings: [{ bookSlug: 'mateo', chapter: 4 }, { bookSlug: 'mateo', chapter: 5 }] },
-  { day: 3, readings: [{ bookSlug: 'mateo', chapter: 6 }, { bookSlug: 'mateo', chapter: 7 }] },
-  { day: 4, readings: [{ bookSlug: 'mateo', chapter: 8 }, { bookSlug: 'mateo', chapter: 9 }] },
-  { day: 5, readings: [{ bookSlug: 'mateo', chapter: 10 }, { bookSlug: 'mateo', chapter: 11 }] },
-  { day: 6, readings: [{ bookSlug: 'mateo', chapter: 12 }, { bookSlug: 'mateo', chapter: 13 }] },
-  { day: 7, readings: [{ bookSlug: 'mateo', chapter: 14 }, { bookSlug: 'mateo', chapter: 15 }] },
-  { day: 8, readings: [{ bookSlug: 'mateo', chapter: 16 }, { bookSlug: 'mateo', chapter: 17 }] },
-  { day: 9, readings: [{ bookSlug: 'mateo', chapter: 18 }, { bookSlug: 'mateo', chapter: 19 }] },
-  { day: 10, readings: [{ bookSlug: 'mateo', chapter: 20 }, { bookSlug: 'mateo', chapter: 21 }] },
-];
+// New Testament books only
+const ntBooks = allBibleBooks.slice(39); // From Mateo onwards
 
-// Psalms and Proverbs in 30 Days
-const psalmsProverbsSchedule: ReadingPlanDay[] = [
-  { day: 1, readings: [{ bookSlug: 'salmos', chapter: 1 }, { bookSlug: 'salmos', chapter: 2 }, { bookSlug: 'salmos', chapter: 3 }, { bookSlug: 'salmos', chapter: 4 }, { bookSlug: 'salmos', chapter: 5 }, { bookSlug: 'proverbios', chapter: 1 }] },
-  { day: 2, readings: [{ bookSlug: 'salmos', chapter: 6 }, { bookSlug: 'salmos', chapter: 7 }, { bookSlug: 'salmos', chapter: 8 }, { bookSlug: 'salmos', chapter: 9 }, { bookSlug: 'salmos', chapter: 10 }, { bookSlug: 'proverbios', chapter: 2 }] },
-  { day: 3, readings: [{ bookSlug: 'salmos', chapter: 11 }, { bookSlug: 'salmos', chapter: 12 }, { bookSlug: 'salmos', chapter: 13 }, { bookSlug: 'salmos', chapter: 14 }, { bookSlug: 'salmos', chapter: 15 }, { bookSlug: 'proverbios', chapter: 3 }] },
-  { day: 4, readings: [{ bookSlug: 'salmos', chapter: 16 }, { bookSlug: 'salmos', chapter: 17 }, { bookSlug: 'salmos', chapter: 18 }, { bookSlug: 'proverbios', chapter: 4 }] },
-  { day: 5, readings: [{ bookSlug: 'salmos', chapter: 19 }, { bookSlug: 'salmos', chapter: 20 }, { bookSlug: 'salmos', chapter: 21 }, { bookSlug: 'salmos', chapter: 22 }, { bookSlug: 'salmos', chapter: 23 }, { bookSlug: 'proverbios', chapter: 5 }] },
-  { day: 6, readings: [{ bookSlug: 'salmos', chapter: 24 }, { bookSlug: 'salmos', chapter: 25 }, { bookSlug: 'salmos', chapter: 26 }, { bookSlug: 'salmos', chapter: 27 }, { bookSlug: 'salmos', chapter: 28 }, { bookSlug: 'proverbios', chapter: 6 }] },
-  { day: 7, readings: [{ bookSlug: 'salmos', chapter: 29 }, { bookSlug: 'salmos', chapter: 30 }, { bookSlug: 'salmos', chapter: 31 }, { bookSlug: 'salmos', chapter: 32 }, { bookSlug: 'proverbios', chapter: 7 }] },
-  { day: 8, readings: [{ bookSlug: 'salmos', chapter: 33 }, { bookSlug: 'salmos', chapter: 34 }, { bookSlug: 'salmos', chapter: 35 }, { bookSlug: 'salmos', chapter: 36 }, { bookSlug: 'proverbios', chapter: 8 }] },
-  { day: 9, readings: [{ bookSlug: 'salmos', chapter: 37 }, { bookSlug: 'salmos', chapter: 38 }, { bookSlug: 'salmos', chapter: 39 }, { bookSlug: 'salmos', chapter: 40 }, { bookSlug: 'proverbios', chapter: 9 }] },
-  { day: 10, readings: [{ bookSlug: 'salmos', chapter: 41 }, { bookSlug: 'salmos', chapter: 42 }, { bookSlug: 'salmos', chapter: 43 }, { bookSlug: 'salmos', chapter: 44 }, { bookSlug: 'salmos', chapter: 45 }, { bookSlug: 'proverbios', chapter: 10 }] },
-];
+// Generate schedule distributing chapters across days
+function generateFlexibleSchedule(
+  books: { slug: string; chapters: number }[],
+  totalDays: number
+): ReadingPlanDay[] {
+  // Create flat list of all chapters
+  const allChapters: { bookSlug: string; chapter: number }[] = [];
+  for (const book of books) {
+    for (let ch = 1; ch <= book.chapters; ch++) {
+      allChapters.push({ bookSlug: book.slug, chapter: ch });
+    }
+  }
+
+  const totalChapters = allChapters.length;
+  const schedule: ReadingPlanDay[] = [];
+  let chapterIndex = 0;
+
+  for (let day = 1; day <= totalDays; day++) {
+    const remainingDays = totalDays - day + 1;
+    const remainingChapters = totalChapters - chapterIndex;
+    const chaptersToday = Math.ceil(remainingChapters / remainingDays);
+
+    const readings = allChapters.slice(chapterIndex, chapterIndex + chaptersToday);
+    schedule.push({ day, readings });
+    chapterIndex += chaptersToday;
+  }
+
+  return schedule;
+}
+
+// Bible in 1 Year Plan - 1,189 chapters in 365 days (~3.26 chapters/day)
+const bibleIn1YearSchedule = generateFlexibleSchedule(allBibleBooks, 365);
+
+// New Testament in 90 Days - 260 chapters in 90 days (~2.89 chapters/day)
+const ntIn90DaysSchedule = generateFlexibleSchedule(ntBooks, 90);
+
+// Psalms and Proverbs in 30 Days - 5 Psalms + 1 Proverb per day
+function generatePsalmsProverbsSchedule(): ReadingPlanDay[] {
+  const schedule: ReadingPlanDay[] = [];
+  let psalmIndex = 1;
+
+  for (let day = 1; day <= 30; day++) {
+    const readings: { bookSlug: string; chapter: number }[] = [];
+
+    // Add 5 Psalms per day (150 Psalms / 30 days = 5/day)
+    for (let i = 0; i < 5 && psalmIndex <= 150; i++) {
+      readings.push({ bookSlug: 'salmos', chapter: psalmIndex });
+      psalmIndex++;
+    }
+
+    // Add 1 Proverb per day (31 Proverbs for 30 days)
+    if (day <= 30) {
+      readings.push({ bookSlug: 'proverbios', chapter: day });
+    }
+    // Add Proverbs 31 on day 30
+    if (day === 30) {
+      readings.push({ bookSlug: 'proverbios', chapter: 31 });
+    }
+
+    schedule.push({ day, readings });
+  }
+
+  return schedule;
+}
+
+const psalmsProverbsSchedule = generatePsalmsProverbsSchedule();
 
 // Gospel of John - 1 chapter per day for 21 days
 const johnGospelSchedule: ReadingPlanDay[] = Array.from({ length: 21 }, (_, i) => ({
