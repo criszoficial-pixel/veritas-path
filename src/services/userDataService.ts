@@ -35,9 +35,23 @@ export interface UserPreferences {
   languageCode: string;
 }
 
+export interface VerseNote {
+  id: string;
+  bookSlug: string;
+  bookName: string;
+  chapter: number;
+  verseNumber: number;
+  verseText: string;
+  reference: string;
+  note: string;
+  createdAt: number;
+  updatedAt: number;
+}
+
 interface UserData {
   history: ReadingProgress[];
   bookmarks: Bookmark[];
+  notes: VerseNote[];
   stats: UserStats;
   preferences: UserPreferences;
   lastReading: ReadingProgress | null;
@@ -48,6 +62,7 @@ const STORAGE_KEY = 'shalom_user_data';
 const defaultUserData: UserData = {
   history: [],
   bookmarks: [],
+  notes: [],
   stats: {
     chaptersRead: 0,
     totalReadingTimeMinutes: 0,
@@ -260,4 +275,91 @@ export function getUniqueBooksRead(): number {
   const data = getUserData();
   const uniqueBooks = new Set(data.history.map(h => h.bookSlug));
   return uniqueBooks.size;
+}
+
+// ============= NOTES FUNCTIONS =============
+
+// Add a note to a verse
+export function addNote(note: Omit<VerseNote, 'id' | 'createdAt' | 'updatedAt'>): VerseNote {
+  const data = getUserData();
+  
+  // Check if note already exists for this verse
+  const existingIndex = data.notes.findIndex(
+    n => n.bookSlug === note.bookSlug && n.chapter === note.chapter && n.verseNumber === note.verseNumber
+  );
+  
+  const now = Date.now();
+  
+  if (existingIndex !== -1) {
+    // Update existing note
+    data.notes[existingIndex] = {
+      ...data.notes[existingIndex],
+      note: note.note,
+      updatedAt: now,
+    };
+    saveUserData(data);
+    return data.notes[existingIndex];
+  }
+  
+  const newNote: VerseNote = {
+    ...note,
+    id: `note-${note.bookSlug}-${note.chapter}-${note.verseNumber}-${now}`,
+    createdAt: now,
+    updatedAt: now,
+  };
+  
+  data.notes.unshift(newNote);
+  saveUserData(data);
+  
+  return newNote;
+}
+
+// Update an existing note
+export function updateNote(noteId: string, content: string): VerseNote | null {
+  const data = getUserData();
+  const noteIndex = data.notes.findIndex(n => n.id === noteId);
+  
+  if (noteIndex === -1) return null;
+  
+  data.notes[noteIndex] = {
+    ...data.notes[noteIndex],
+    note: content,
+    updatedAt: Date.now(),
+  };
+  
+  saveUserData(data);
+  return data.notes[noteIndex];
+}
+
+// Delete a note
+export function deleteNote(noteId: string): void {
+  const data = getUserData();
+  data.notes = data.notes.filter(n => n.id !== noteId);
+  saveUserData(data);
+}
+
+// Get note for a specific verse
+export function getNoteForVerse(bookSlug: string, chapter: number, verseNumber: number): VerseNote | null {
+  const data = getUserData();
+  return data.notes.find(
+    n => n.bookSlug === bookSlug && n.chapter === chapter && n.verseNumber === verseNumber
+  ) || null;
+}
+
+// Get all notes
+export function getAllNotes(): VerseNote[] {
+  const data = getUserData();
+  return data.notes;
+}
+
+// Get notes for a specific chapter
+export function getNotesForChapter(bookSlug: string, chapter: number): VerseNote[] {
+  const data = getUserData();
+  return data.notes.filter(n => n.bookSlug === bookSlug && n.chapter === chapter);
+}
+
+// Get total notes count
+export function getNotesCount(): number {
+  const data = getUserData();
+  return data.notes.length;
 }

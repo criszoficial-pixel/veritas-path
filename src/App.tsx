@@ -14,6 +14,7 @@ import Perfil from "./pages/Perfil";
 import Marcadores from "./pages/Marcadores";
 import Historial from "./pages/Historial";
 import Buscar from "./pages/Buscar";
+import MisNotas from "./pages/MisNotas";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +37,7 @@ const App = () => (
             <Route path="/marcadores" element={<Marcadores />} />
             <Route path="/historial" element={<Historial />} />
             <Route path="/buscar" element={<Buscar />} />
+            <Route path="/mis-notas" element={<MisNotas />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
