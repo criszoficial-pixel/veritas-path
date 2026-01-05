@@ -6,7 +6,6 @@ import { getChapterAudioData, hasAudioData } from '@/data/audioSyncData';
 import { useAudioPlayer } from '@/hooks/useAudioPlayer';
 import { useAudioSync } from '@/hooks/useAudioSync';
 import { useVerseNotes } from '@/hooks/useVerseNotes';
-import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/hooks/useTranslation';
 import { SyncedVerse } from './SyncedVerse';
 import { AudioPlayerBar } from '@/components/audio/AudioPlayerBar';
@@ -29,7 +28,6 @@ export const ChapterReader = ({ collectionSlug: propCollectionSlug }: ChapterRea
   const { collectionSlug: urlCollectionSlug, bookName, chapter } = useParams();
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
-  const { languageCode } = useLanguage();
   
   // Use prop collectionSlug if provided, otherwise use URL param, or default to 'santa-biblia'
   const collectionSlug = propCollectionSlug || urlCollectionSlug || 'santa-biblia';
@@ -96,17 +94,23 @@ export const ChapterReader = ({ collectionSlug: propCollectionSlug }: ChapterRea
       setIsLoading(true);
       setChapterNotAvailable(false);
       
-      // Load metadata first
-      const meta = await fetchBibleMetadata(languageCode);
+      // Load Spanish metadata
+      const meta = await fetchBibleMetadata();
       setMetadata(meta);
       
       if (meta && bookName) {
-        // First try to find by slug (from URL), then by display name
+        // Find by slug or display name
         let book = findBookBySlug(meta, bookName) || findBookByName(meta, bookName);
         
+        // If not found, try converting the URL name to a slug
+        if (!book) {
+          const slugCandidate = bookNameToSlug(bookName);
+          book = findBookBySlug(meta, slugCandidate);
+        }
+        
         if (book) {
-          // Load the chapter using the book's slug
-          const chapterResult = await fetchChapter(languageCode, book.slug, currentChapter);
+          // Load the chapter
+          const chapterResult = await fetchChapter(book.slug, currentChapter);
           if (chapterResult) {
             setChapterData(chapterResult);
             setCurrentBook(book);
@@ -117,40 +121,15 @@ export const ChapterReader = ({ collectionSlug: propCollectionSlug }: ChapterRea
             setChapterNotAvailable(true);
           }
         } else {
-          // Book not found in current language metadata - try direct slug approach
-          // This handles cases like URL "Juan" when UI is in English (metadata has "John")
-          const slugCandidate = bookNameToSlug(bookName);
-          const chapterResult = await fetchChapter(languageCode, slugCandidate, currentChapter);
-          
-          if (chapterResult) {
-            setChapterData(chapterResult);
-            setChapterNotAvailable(false);
-            
-            // Try to find book info - first in current metadata by slug
-            let resolvedBook = findBookBySlug(meta, slugCandidate);
-            
-            // If not found, load Spanish metadata and find there
-            if (!resolvedBook) {
-              const spanishMeta = await fetchBibleMetadata('es');
-              if (spanishMeta) {
-                resolvedBook = findBookBySlug(spanishMeta, slugCandidate);
-                // Update metadata to Spanish for version display
-                setMetadata(spanishMeta);
-              }
-            }
-            
-            setCurrentBook(resolvedBook || null);
-          } else {
-            setChapterData(null);
-            setCurrentBook(null);
-            setChapterNotAvailable(true);
-          }
+          setChapterData(null);
+          setCurrentBook(null);
+          setChapterNotAvailable(true);
         }
       }
       
-      // Load audio data (from existing system)
+      // Load audio data
       if (bookName) {
-        const audio = getChapterAudioData(bookName, currentChapter, languageCode);
+        const audio = getChapterAudioData(bookName, currentChapter, 'es');
         setAudioData(audio);
         if (audio) {
           audioPlayer.loadAudio(audio.audioUrl);
@@ -161,7 +140,7 @@ export const ChapterReader = ({ collectionSlug: propCollectionSlug }: ChapterRea
     };
     
     loadData();
-  }, [bookName, chapter, languageCode, currentChapter]);
+  }, [bookName, chapter, currentChapter]);
 
   // Track chapter reading when chapter data loads
   useEffect(() => {
@@ -234,7 +213,7 @@ export const ChapterReader = ({ collectionSlug: propCollectionSlug }: ChapterRea
     return audioData.verses.find((v) => v.number === verse.number) || null;
   };
 
-  const hasAudio = hasAudioData(bookName || '', currentChapter, languageCode);
+  const hasAudio = hasAudioData(bookName || '', currentChapter, 'es');
 
   // Loading state
   if (isLoading) {

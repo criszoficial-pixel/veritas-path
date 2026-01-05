@@ -1,6 +1,5 @@
 import { Search, Bell, ChevronLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { LanguageSelector } from '@/components/settings/LanguageSelector';
 import { useNavigate } from 'react-router-dom';
 
 interface HeaderProps {
@@ -35,7 +34,6 @@ export const Header = ({
         </div>
         
         <div className="flex items-center gap-1">
-          <LanguageSelector />
           {showSearch && (
             <Button variant="ghost" size="icon" className="text-muted-foreground" onClick={() => navigate('/buscar')}>
               <Search className="h-5 w-5" />

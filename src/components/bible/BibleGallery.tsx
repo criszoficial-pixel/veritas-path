@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { fetchBibleMetadata } from '@/services/bibleDataService';
-import { useLanguage } from '@/contexts/LanguageContext';
 import { BookShelf } from './BookShelf';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -9,12 +8,11 @@ import { BookOpen } from 'lucide-react';
 import type { BookInfo } from '@/types/bible';
 
 export function BibleGallery() {
-  const { languageCode } = useLanguage();
   const [testament, setTestament] = useState<'AT' | 'NT'>('AT');
 
   const { data: metadata, isLoading, error } = useQuery({
-    queryKey: ['bible-metadata', languageCode],
-    queryFn: () => fetchBibleMetadata(languageCode),
+    queryKey: ['bible-metadata'],
+    queryFn: () => fetchBibleMetadata(),
   });
 
   if (isLoading) {
@@ -64,12 +62,8 @@ export function BibleGallery() {
       {/* Testament toggle */}
       <Tabs value={testament} onValueChange={(v) => setTestament(v as 'AT' | 'NT')} className="w-full">
         <TabsList className="grid w-full max-w-md mx-auto grid-cols-2">
-          <TabsTrigger value="AT">
-            {languageCode === 'es' ? 'Antiguo Testamento' : 'Old Testament'}
-          </TabsTrigger>
-          <TabsTrigger value="NT">
-            {languageCode === 'es' ? 'Nuevo Testamento' : 'New Testament'}
-          </TabsTrigger>
+          <TabsTrigger value="AT">Antiguo Testamento</TabsTrigger>
+          <TabsTrigger value="NT">Nuevo Testamento</TabsTrigger>
         </TabsList>
 
         <TabsContent value="AT" className="mt-6">

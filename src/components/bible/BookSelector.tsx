@@ -2,27 +2,25 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { ChevronRight, Loader2 } from 'lucide-react';
-import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/hooks/useTranslation';
 import { fetchBibleMetadata } from '@/services/bibleDataService';
-import type { BibleMetadata, BookInfo } from '@/types/bible';
+import type { BibleMetadata } from '@/types/bible';
 
 export const BookSelector = () => {
   const [activeTestament, setActiveTestament] = useState<'AT' | 'NT'>('AT');
   const [metadata, setMetadata] = useState<BibleMetadata | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const { languageCode } = useLanguage();
   const { t } = useTranslation();
 
   useEffect(() => {
     const loadMetadata = async () => {
       setIsLoading(true);
-      const data = await fetchBibleMetadata(languageCode);
+      const data = await fetchBibleMetadata();
       setMetadata(data);
       setIsLoading(false);
     };
     loadMetadata();
-  }, [languageCode]);
+  }, []);
 
   const filteredBooks = metadata?.books.filter((book) => book.testament === activeTestament) ?? [];
 

@@ -10,21 +10,18 @@ import { parseReference, getBookBySlug } from '@/services/searchService';
 import { getReadingHistory, addSearchToHistory, getSearchHistory } from '@/services/userDataService';
 import { useTextSearch } from '@/hooks/useTextSearch';
 import { SearchResultItem } from '@/components/search/SearchResultItem';
-import type { LanguageCode } from '@/types/language';
 
 type SearchMode = 'reference' | 'text';
 type Testament = 'all' | 'nt' | 'at';
 
 const Buscar = () => {
   const navigate = useNavigate();
-  const languageCode: LanguageCode = 'es';
   const [searchMode, setSearchMode] = useState<SearchMode>('text');
   const [query, setQuery] = useState('');
   const [error, setError] = useState('');
   const [testament, setTestament] = useState<Testament>('all');
 
   const { results, isSearching, hasSearched, search, clearResults, currentQuery } = useTextSearch({
-    languageCode,
     maxResults: 50,
   });
 
@@ -45,7 +42,7 @@ const Buscar = () => {
     const parsed = parseReference(query);
     
     if (parsed) {
-      const book = await getBookBySlug(languageCode, parsed.bookSlug);
+      const book = await getBookBySlug(parsed.bookSlug);
       if (book) {
         navigate(`/leer/${book.slug}/${parsed.chapter}`);
         return;
