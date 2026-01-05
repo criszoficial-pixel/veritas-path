@@ -21,6 +21,17 @@ export interface ReferenceParseResult {
   valid: boolean;
 }
 
+export interface TextSearchResult {
+  bookSlug: string;
+  bookName: string;
+  chapter: number;
+  verseNumber: number;
+  verseText: string;
+  reference: string;
+  matchStart: number;
+  matchEnd: number;
+}
+
 // Common Bible book name variations (Spanish)
 const bookAliases: Record<string, string> = {
   'gen': 'genesis',
@@ -198,4 +209,84 @@ export async function getBookBySlug(
   if (!metadata) return null;
   
   return metadata.books.find((book) => book.slug === slug) || null;
+}
+
+// Search text across the Bible with progressive loading
+export async function searchTextInBible(
+  languageCode: LanguageCode,
+  query: string,
+  options?: {
+    maxResults?: number;
+    testament?: 'all' | 'nt' | 'at';
+    signal?: AbortSignal;
+  }
+): Promise<TextSearchResult[]> {
+  const maxResults = options?.maxResults ?? 50;
+  const testament = options?.testament ?? 'all';
+  const signal = options?.signal;
+
+  if (!query || query.length < 2) return [];
+
+  const metadata = await fetchBibleMetadata(languageCode);
+  if (!metadata) return [];
+
+  const results: TextSearchResult[] = [];
+  const queryLower = query.toLowerCase();
+
+  // NT books start at index 39 (Mateo is the 40th book, 0-indexed = 39)
+  const ntStartIndex = metadata.books.findIndex(b => b.slug === 'mateo');
+  
+  let booksToSearch: BookInfo[] = [];
+  
+  if (testament === 'nt') {
+    booksToSearch = metadata.books.slice(ntStartIndex);
+  } else if (testament === 'at') {
+    booksToSearch = metadata.books.slice(0, ntStartIndex);
+  } else {
+    // Search NT first (more commonly searched), then AT
+    const ntBooks = metadata.books.slice(ntStartIndex);
+    const atBooks = metadata.books.slice(0, ntStartIndex);
+    booksToSearch = [...ntBooks, ...atBooks];
+  }
+
+  // Search progressively through books
+  for (const book of booksToSearch) {
+    if (signal?.aborted) break;
+    if (results.length >= maxResults) break;
+
+    for (let chapter = 1; chapter <= book.chapters; chapter++) {
+      if (signal?.aborted) break;
+      if (results.length >= maxResults) break;
+
+      try {
+        const chapterData = await fetchChapter(languageCode, book.slug, chapter);
+        if (!chapterData) continue;
+
+        for (const verse of chapterData.verses) {
+          if (results.length >= maxResults) break;
+
+          const textLower = verse.text.toLowerCase();
+          const matchIndex = textLower.indexOf(queryLower);
+          
+          if (matchIndex !== -1) {
+            results.push({
+              bookSlug: book.slug,
+              bookName: book.name,
+              chapter,
+              verseNumber: verse.number,
+              verseText: verse.text,
+              reference: `${book.name} ${chapter}:${verse.number}`,
+              matchStart: matchIndex,
+              matchEnd: matchIndex + query.length,
+            });
+          }
+        }
+      } catch (error) {
+        // Skip chapters that fail to load
+        console.error(`Error searching in ${book.slug} ${chapter}:`, error);
+      }
+    }
+  }
+
+  return results;
 }

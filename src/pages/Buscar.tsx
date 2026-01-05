@@ -1,30 +1,50 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
 import { BottomNav } from '@/components/layout/BottomNav';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Search, BookOpen, ArrowRight, History } from 'lucide-react';
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Search, BookOpen, ArrowRight, History, Loader2, X } from 'lucide-react';
 import { parseReference, getBookBySlug } from '@/services/searchService';
-import { getReadingHistory } from '@/services/userDataService';
+import { getReadingHistory, addSearchToHistory, getSearchHistory } from '@/services/userDataService';
+import { useTextSearch } from '@/hooks/useTextSearch';
+import { SearchResultItem } from '@/components/search/SearchResultItem';
 import type { LanguageCode } from '@/types/language';
+
+type SearchMode = 'reference' | 'text';
+type Testament = 'all' | 'nt' | 'at';
 
 const Buscar = () => {
   const navigate = useNavigate();
   const languageCode: LanguageCode = 'es';
+  const [searchMode, setSearchMode] = useState<SearchMode>('text');
   const [query, setQuery] = useState('');
   const [error, setError] = useState('');
+  const [testament, setTestament] = useState<Testament>('all');
+
+  const { results, isSearching, hasSearched, search, clearResults, currentQuery } = useTextSearch({
+    languageCode,
+    maxResults: 50,
+  });
 
   const recentHistory = useMemo(() => getReadingHistory(5), []);
+  const searchHistory = useMemo(() => getSearchHistory(5), []);
 
-  const handleSearch = async () => {
+  // Trigger text search when query or testament changes
+  useEffect(() => {
+    if (searchMode === 'text' && query.trim().length >= 2) {
+      search(query, testament);
+    }
+  }, [query, testament, searchMode, search]);
+
+  const handleReferenceSearch = async () => {
     if (!query.trim()) return;
     
     setError('');
     const parsed = parseReference(query);
     
     if (parsed) {
-      // Verify the book exists
       const book = await getBookBySlug(languageCode, parsed.bookSlug);
       if (book) {
         navigate(`/leer/${book.slug}/${parsed.chapter}`);
@@ -32,14 +52,43 @@ const Buscar = () => {
       }
     }
     
-    // If not a valid reference, show error
     setError('No se encontró la referencia. Intenta con formato: "Juan 3:16" o "Salmos 23"');
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter') {
-      handleSearch();
+    if (e.key === 'Enter' && searchMode === 'reference') {
+      handleReferenceSearch();
     }
+  };
+
+  const handleModeChange = (mode: string) => {
+    setSearchMode(mode as SearchMode);
+    setError('');
+    if (mode === 'reference') {
+      clearResults();
+    }
+  };
+
+  const handleQueryChange = (value: string) => {
+    setQuery(value);
+    setError('');
+  };
+
+  const handleClearQuery = () => {
+    setQuery('');
+    clearResults();
+  };
+
+  // Save to history when user clicks a result
+  useEffect(() => {
+    if (hasSearched && results.length > 0 && currentQuery) {
+      addSearchToHistory(currentQuery);
+    }
+  }, [hasSearched, results.length, currentQuery]);
+
+  const handleHistoryClick = (historyQuery: string) => {
+    setQuery(historyQuery);
+    setSearchMode('text');
   };
 
   const quickReferences = [
@@ -55,70 +104,181 @@ const Buscar = () => {
     <div className="min-h-screen bg-background pb-24">
       <Header title="Buscar" showBack />
       
-      <main className="container px-4 py-6 space-y-8">
+      <main className="container px-4 py-6 space-y-6">
+        {/* Search Mode Tabs */}
+        <Tabs value={searchMode} onValueChange={handleModeChange}>
+          <TabsList className="w-full">
+            <TabsTrigger value="text" className="flex-1">Por Texto</TabsTrigger>
+            <TabsTrigger value="reference" className="flex-1">Por Referencia</TabsTrigger>
+          </TabsList>
+        </Tabs>
+
         {/* Search Input */}
         <section className="space-y-4">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
             <Input
-              placeholder="Buscar referencia (ej: Juan 3:16)"
+              placeholder={searchMode === 'text' ? 'Buscar palabra (ej: amor)' : 'Buscar referencia (ej: Juan 3:16)'}
               value={query}
-              onChange={(e) => setQuery(e.target.value)}
+              onChange={(e) => handleQueryChange(e.target.value)}
               onKeyDown={handleKeyDown}
-              className="pl-10 h-12 text-base"
+              className="pl-10 pr-10 h-12 text-base"
             />
+            {query && (
+              <button
+                onClick={handleClearQuery}
+                className="absolute right-3 top-1/2 -translate-y-1/2 p-1 hover:bg-muted rounded-full"
+              >
+                <X className="h-4 w-4 text-muted-foreground" />
+              </button>
+            )}
           </div>
-          <Button onClick={handleSearch} className="w-full">
-            <Search className="h-4 w-4 mr-2" />
-            Buscar
-          </Button>
+
+          {/* Testament Filter (only for text search) */}
+          {searchMode === 'text' && (
+            <div className="flex gap-2">
+              <Button
+                variant={testament === 'all' ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => setTestament('all')}
+                className="flex-1"
+              >
+                Toda la Biblia
+              </Button>
+              <Button
+                variant={testament === 'nt' ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => setTestament('nt')}
+                className="flex-1"
+              >
+                Nuevo T.
+              </Button>
+              <Button
+                variant={testament === 'at' ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => setTestament('at')}
+                className="flex-1"
+              >
+                Antiguo T.
+              </Button>
+            </div>
+          )}
+
+          {searchMode === 'reference' && (
+            <Button onClick={handleReferenceSearch} className="w-full">
+              <Search className="h-4 w-4 mr-2" />
+              Buscar
+            </Button>
+          )}
+          
           {error && (
             <p className="text-sm text-destructive text-center">{error}</p>
           )}
         </section>
 
-        {/* Quick References */}
-        <section className="space-y-4">
-          <h3 className="text-sm font-medium text-muted-foreground">Referencias populares</h3>
-          <div className="grid grid-cols-2 gap-2">
-            {quickReferences.map((ref) => (
-              <button
-                key={ref.label}
-                onClick={() => navigate(`/leer/${ref.bookSlug}/${ref.chapter}`)}
-                className="flex items-center justify-between p-3 rounded-xl bg-card border border-border hover:bg-accent transition-colors text-left"
-              >
-                <span className="text-sm font-medium">{ref.label}</span>
-                <ArrowRight className="h-4 w-4 text-muted-foreground" />
-              </button>
-            ))}
-          </div>
-        </section>
+        {/* Text Search Results */}
+        {searchMode === 'text' && (
+          <>
+            {isSearching && (
+              <div className="flex items-center justify-center gap-2 py-8 text-muted-foreground">
+                <Loader2 className="h-5 w-5 animate-spin" />
+                <span>Buscando...</span>
+              </div>
+            )}
 
-        {/* Recent History */}
-        {recentHistory.length > 0 && (
-          <section className="space-y-4">
-            <div className="flex items-center gap-2">
-              <History className="h-4 w-4 text-muted-foreground" />
-              <h3 className="text-sm font-medium text-muted-foreground">Lectura reciente</h3>
-            </div>
-            <div className="space-y-2">
-              {recentHistory.map((item, idx) => (
-                <button
-                  key={`${item.bookSlug}-${item.chapter}-${idx}`}
-                  onClick={() => navigate(`/leer/${item.bookSlug}/${item.chapter}`)}
-                  className="flex items-center justify-between w-full p-3 rounded-xl bg-card border border-border hover:bg-accent transition-colors"
-                >
-                  <div className="flex items-center gap-3">
-                    <BookOpen className="h-4 w-4 text-primary" />
-                    <span className="text-sm font-medium">
-                      {item.bookName} {item.chapter}
-                    </span>
-                  </div>
-                  <ArrowRight className="h-4 w-4 text-muted-foreground" />
-                </button>
-              ))}
-            </div>
-          </section>
+            {!isSearching && hasSearched && results.length === 0 && (
+              <div className="text-center py-8 text-muted-foreground">
+                <p>No se encontraron versículos con "{currentQuery}"</p>
+              </div>
+            )}
+
+            {!isSearching && results.length > 0 && (
+              <section className="space-y-3">
+                <p className="text-sm text-muted-foreground">
+                  {results.length} versículo{results.length !== 1 ? 's' : ''} encontrado{results.length !== 1 ? 's' : ''}
+                </p>
+                <div className="space-y-2">
+                  {results.map((result, idx) => (
+                    <SearchResultItem
+                      key={`${result.bookSlug}-${result.chapter}-${result.verseNumber}-${idx}`}
+                      result={result}
+                      query={currentQuery}
+                    />
+                  ))}
+                </div>
+              </section>
+            )}
+          </>
+        )}
+
+        {/* Reference Search Content */}
+        {searchMode === 'reference' && (
+          <>
+            {/* Search History */}
+            {searchHistory.length > 0 && (
+              <section className="space-y-3">
+                <div className="flex items-center gap-2">
+                  <History className="h-4 w-4 text-muted-foreground" />
+                  <h3 className="text-sm font-medium text-muted-foreground">Búsquedas recientes</h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {searchHistory.map((historyQuery, idx) => (
+                    <button
+                      key={`${historyQuery}-${idx}`}
+                      onClick={() => handleHistoryClick(historyQuery)}
+                      className="px-3 py-1.5 text-sm rounded-full bg-muted hover:bg-accent transition-colors"
+                    >
+                      {historyQuery}
+                    </button>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {/* Quick References */}
+            <section className="space-y-4">
+              <h3 className="text-sm font-medium text-muted-foreground">Referencias populares</h3>
+              <div className="grid grid-cols-2 gap-2">
+                {quickReferences.map((ref) => (
+                  <button
+                    key={ref.label}
+                    onClick={() => navigate(`/leer/${ref.bookSlug}/${ref.chapter}`)}
+                    className="flex items-center justify-between p-3 rounded-xl bg-card border border-border hover:bg-accent transition-colors text-left"
+                  >
+                    <span className="text-sm font-medium">{ref.label}</span>
+                    <ArrowRight className="h-4 w-4 text-muted-foreground" />
+                  </button>
+                ))}
+              </div>
+            </section>
+
+            {/* Recent History */}
+            {recentHistory.length > 0 && (
+              <section className="space-y-4">
+                <div className="flex items-center gap-2">
+                  <History className="h-4 w-4 text-muted-foreground" />
+                  <h3 className="text-sm font-medium text-muted-foreground">Lectura reciente</h3>
+                </div>
+                <div className="space-y-2">
+                  {recentHistory.map((item, idx) => (
+                    <button
+                      key={`${item.bookSlug}-${item.chapter}-${idx}`}
+                      onClick={() => navigate(`/leer/${item.bookSlug}/${item.chapter}`)}
+                      className="flex items-center justify-between w-full p-3 rounded-xl bg-card border border-border hover:bg-accent transition-colors"
+                    >
+                      <div className="flex items-center gap-3">
+                        <BookOpen className="h-4 w-4 text-primary" />
+                        <span className="text-sm font-medium">
+                          {item.bookName} {item.chapter}
+                        </span>
+                      </div>
+                      <ArrowRight className="h-4 w-4 text-muted-foreground" />
+                    </button>
+                  ))}
+                </div>
+              </section>
+            )}
+          </>
         )}
       </main>
 
