@@ -107,11 +107,26 @@ export default {
             transform: "translateY(0) scale(1)" 
           }
         },
+        "cover-appear": {
+          "0%": { 
+            opacity: "0", 
+            transform: "translateY(30px) rotateX(10deg)" 
+          },
+          "60%": { 
+            opacity: "1",
+            transform: "translateY(-5px) rotateX(0deg)" 
+          },
+          "100%": { 
+            opacity: "1", 
+            transform: "translateY(0) rotateX(0deg)" 
+          }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "book-appear": "book-appear 0.4s ease-out forwards",
+        "cover-appear": "cover-appear 0.6s ease-out forwards",
       },
     },
   },

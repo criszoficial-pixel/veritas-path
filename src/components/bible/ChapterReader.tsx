@@ -21,7 +21,7 @@ import type { ChapterAudioData, VerseSyncData } from '@/types/audio';
 import type { BibleMetadata, ChapterData, VerseData, BookInfo } from '@/types/bible';
 
 export const ChapterReader = () => {
-  const { bookName, chapter } = useParams();
+  const { collectionSlug, bookName, chapter } = useParams();
   const navigate = useNavigate();
   const { languageCode } = useLanguage();
   const { t } = useTranslation();
@@ -143,13 +143,13 @@ export const ChapterReader = () => {
 
   const goToPrevChapter = () => {
     audioPlayer.stop();
-    if (currentChapter > 1) navigate(`/leer/${bookName}/${currentChapter - 1}`);
+    if (currentChapter > 1) navigate(`/leer/${collectionSlug}/${bookName}/${currentChapter - 1}`);
   };
 
   const goToNextChapter = () => {
     audioPlayer.stop();
     if (currentBook && currentChapter < currentBook.chapters) {
-      navigate(`/leer/${bookName}/${currentChapter + 1}`);
+      navigate(`/leer/${collectionSlug}/${bookName}/${currentChapter + 1}`);
     }
   };
 
@@ -193,10 +193,10 @@ export const ChapterReader = () => {
       <div className="min-h-screen bg-background pb-48">
         <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur-lg">
           <div className="container flex h-14 items-center justify-between px-4">
-            <Link to="/leer" className="flex items-center gap-2 text-muted-foreground hover:text-foreground">
-              <ChevronLeft className="h-5 w-5" />
-              <span className="text-sm font-medium">{t('nav.read')}</span>
-            </Link>
+          <Link to={collectionSlug ? `/leer/${collectionSlug}` : '/leer'} className="flex items-center gap-2 text-muted-foreground hover:text-foreground">
+            <ChevronLeft className="h-5 w-5" />
+            <span className="text-sm font-medium">{t('nav.read')}</span>
+          </Link>
           </div>
         </header>
         
@@ -220,12 +220,12 @@ export const ChapterReader = () => {
 
   return (
     <div className="min-h-screen bg-background pb-48">
-      <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur-lg">
-        <div className="container flex h-14 items-center justify-between px-4">
-          <Link to="/leer" className="flex items-center gap-2 text-muted-foreground hover:text-foreground">
-            <ChevronLeft className="h-5 w-5" />
-            <span className="text-sm font-medium">{t('nav.read')}</span>
-          </Link>
+        <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur-lg">
+          <div className="container flex h-14 items-center justify-between px-4">
+            <Link to={collectionSlug ? `/leer/${collectionSlug}` : '/leer'} className="flex items-center gap-2 text-muted-foreground hover:text-foreground">
+              <ChevronLeft className="h-5 w-5" />
+              <span className="text-sm font-medium">{t('nav.read')}</span>
+            </Link>
           <div className="flex items-center gap-1">
             {hasAudio && (
               <Button variant="ghost" size="icon" className={cn('h-9 w-9', showAudioPlayer && 'text-primary')} onClick={toggleAudioPlayer}>

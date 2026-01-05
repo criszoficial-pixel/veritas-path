@@ -1,0 +1,59 @@
+{
+  "collections": [
+    {
+      "id": "santa-biblia-rv1960",
+      "slug": "santa-biblia",
+      "title": "Santa Biblia",
+      "subtitle": "Reina Valera 1960",
+      "description": "La versión más leída en español",
+      "coverColor": "220 60% 20%",
+      "accentColor": "45 80% 55%",
+      "language": "es",
+      "metadataPath": "/bible/es/metadata.json",
+      "type": "full-bible",
+      "icon": "cross"
+    },
+    {
+      "id": "tora",
+      "slug": "tora",
+      "title": "Torá",
+      "subtitle": "Los Cinco Libros de Moisés",
+      "description": "Pentateuco: Génesis a Deuteronomio",
+      "coverColor": "35 45% 25%",
+      "accentColor": "45 70% 65%",
+      "language": "es",
+      "metadataPath": "/bible/es/metadata.json",
+      "booksFilter": [1, 2, 3, 4, 5],
+      "type": "collection",
+      "icon": "scroll"
+    },
+    {
+      "id": "evangelios",
+      "slug": "evangelios",
+      "title": "Los Evangelios",
+      "subtitle": "La Vida de Jesús",
+      "description": "Mateo, Marcos, Lucas y Juan",
+      "coverColor": "0 50% 30%",
+      "accentColor": "45 85% 60%",
+      "language": "es",
+      "metadataPath": "/bible/es/metadata.json",
+      "booksFilter": [40, 41, 42, 43],
+      "type": "collection",
+      "icon": "heart"
+    },
+    {
+      "id": "salmos-proverbios",
+      "slug": "sabiduria",
+      "title": "Sabiduría",
+      "subtitle": "Salmos y Proverbios",
+      "description": "Poesía y sabiduría bíblica",
+      "coverColor": "270 40% 25%",
+      "accentColor": "45 75% 60%",
+      "language": "es",
+      "metadataPath": "/bible/es/metadata.json",
+      "booksFilter": [19, 20, 21],
+      "type": "collection",
+      "icon": "sparkles"
+    }
+  ]
+}
