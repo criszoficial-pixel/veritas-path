@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
 import { BottomNav } from '@/components/layout/BottomNav';
 import { Button } from '@/components/ui/button';
-import { User, BookOpen, Trophy, Flame, Clock, Settings, Heart, Bookmark, History, ChevronRight, StickyNote, Brain } from 'lucide-react';
+import { User, BookOpen, Trophy, CheckCircle2, Clock, Settings, Heart, Bookmark, History, ChevronRight, StickyNote, Brain } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useUserProgress } from '@/hooks/useUserProgress';
 import { useBookmarks } from '@/hooks/useBookmarks';
@@ -24,7 +24,7 @@ const Perfil = () => {
   const displayStats = [
     { label: 'Capítulos Leídos', value: stats.chaptersRead.toString(), icon: BookOpen },
     { label: 'Libros Explorados', value: uniqueBooks.toString(), icon: Trophy },
-    { label: 'Días de Racha', value: stats.currentStreak.toString(), icon: Flame },
+    { label: 'Días de Racha', value: stats.currentStreak.toString(), icon: CheckCircle2 },
     { label: 'Tiempo Total', value: readingTime, icon: Clock },
   ];
 
@@ -87,7 +87,7 @@ const Perfil = () => {
                       isActive ? 'bg-spirit/20 text-spirit' : 'bg-secondary text-muted-foreground'
                     )}
                   >
-                    {isActive && <Flame className="h-4 w-4" />}
+                    {isActive && <CheckCircle2 className="h-4 w-4" />}
                   </div>
                   <span className="text-xs text-muted-foreground">{day}</span>
                 </div>
