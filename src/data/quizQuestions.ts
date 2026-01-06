@@ -8285,6 +8285,875 @@ export const samuelQuestions: QuizQuestion[] = [
   }
 ];
 
+// 1-2 REYES - 35 preguntas
+export const reyesQuestions: QuizQuestion[] = [
+  // 1 Reyes 1-2 - Salomón se convierte en rey
+  {
+    id: 'rey-001',
+    type: 'multiple-choice',
+    question: '¿Quién intentó usurpar el trono de David antes de que Salomón fuera coronado?',
+    options: ['Absalón', 'Adonías', 'Joab', 'Abiatar'],
+    correctAnswer: 1,
+    explanation: 'Adonías, hijo de David, se proclamó rey sin la aprobación de su padre.',
+    reference: '1 Reyes 1:5',
+    difficulty: 'medio',
+    category: 'reyes',
+    tags: ['adonias', 'salomon', 'sucesion']
+  },
+  {
+    id: 'rey-002',
+    type: 'multiple-choice',
+    question: '¿Qué profeta ayudó a que Salomón fuera coronado rey?',
+    options: ['Elías', 'Natán', 'Eliseo', 'Samuel'],
+    correctAnswer: 1,
+    explanation: 'El profeta Natán advirtió a Betsabé y juntos lograron que David coronara a Salomón.',
+    reference: '1 Reyes 1:11-13',
+    difficulty: 'medio',
+    category: 'reyes',
+    tags: ['natan', 'salomon', 'coronacion']
+  },
+  {
+    id: 'rey-003',
+    type: 'multiple-choice',
+    question: '¿Cuántos años reinó Salomón sobre Israel?',
+    options: ['30 años', '40 años', '50 años', '33 años'],
+    correctAnswer: 1,
+    explanation: 'Salomón reinó 40 años sobre todo Israel.',
+    reference: '1 Reyes 11:42',
+    difficulty: 'medio',
+    category: 'reyes',
+    tags: ['salomon', 'reinado', 'años']
+  },
+  // 1 Reyes 3-4 - Sabiduría de Salomón
+  {
+    id: 'rey-004',
+    type: 'multiple-choice',
+    question: '¿Qué pidió Salomón a Dios cuando le ofreció lo que quisiera?',
+    options: ['Riquezas', 'Larga vida', 'Sabiduría', 'Victoria sobre enemigos'],
+    correctAnswer: 2,
+    explanation: 'Salomón pidió un corazón sabio para juzgar al pueblo, y Dios se lo concedió.',
+    reference: '1 Reyes 3:9',
+    difficulty: 'facil',
+    category: 'reyes',
+    tags: ['salomon', 'sabiduria', 'peticion']
+  },
+  {
+    id: 'rey-005',
+    type: 'multiple-choice',
+    question: '¿Cómo resolvió Salomón el caso de las dos mujeres que reclamaban al mismo bebé?',
+    options: ['Preguntó a testigos', 'Ordenó partir al niño en dos', 'Echó suertes', 'Consultó a un profeta'],
+    correctAnswer: 1,
+    explanation: 'Salomón ordenó dividir al niño, revelando así a la verdadera madre.',
+    reference: '1 Reyes 3:24-27',
+    difficulty: 'facil',
+    category: 'reyes',
+    tags: ['salomon', 'juicio', 'sabiduria']
+  },
+  {
+    id: 'rey-006',
+    type: 'multiple-choice',
+    question: '¿Con la sabiduría de quién se compara la sabiduría de Salomón?',
+    options: ['Los sabios de Egipto', 'Los hijos del oriente', 'Etán ezraíta', 'Todas las anteriores'],
+    correctAnswer: 3,
+    explanation: 'La sabiduría de Salomón superó a la de todos los orientales y egipcios.',
+    reference: '1 Reyes 4:30-31',
+    difficulty: 'dificil',
+    category: 'reyes',
+    tags: ['salomon', 'sabiduria', 'comparacion']
+  },
+  {
+    id: 'rey-007',
+    type: 'multiple-choice',
+    question: '¿Cuántos proverbios compuso Salomón?',
+    options: ['1,000', '3,000', '5,000', '500'],
+    correctAnswer: 1,
+    explanation: 'Salomón compuso 3,000 proverbios y 1,005 cánticos.',
+    reference: '1 Reyes 4:32',
+    difficulty: 'medio',
+    category: 'reyes',
+    tags: ['salomon', 'proverbios', 'cantidad']
+  },
+  // 1 Reyes 5-8 - Construcción del templo
+  {
+    id: 'rey-008',
+    type: 'multiple-choice',
+    question: '¿Cuántos años tomó construir el templo de Salomón?',
+    options: ['5 años', '7 años', '10 años', '20 años'],
+    correctAnswer: 1,
+    explanation: 'El templo de Salomón fue construido en 7 años.',
+    reference: '1 Reyes 6:38',
+    difficulty: 'facil',
+    category: 'reyes',
+    tags: ['templo', 'construccion', 'años']
+  },
+  {
+    id: 'rey-009',
+    type: 'multiple-choice',
+    question: '¿Qué rey de Tiro proveyó madera y obreros para el templo?',
+    options: ['Nabucodonosor', 'Hiram', 'Senaquerib', 'Ciro'],
+    correctAnswer: 1,
+    explanation: 'Hiram rey de Tiro envió cedros del Líbano y artesanos.',
+    reference: '1 Reyes 5:10',
+    difficulty: 'medio',
+    category: 'reyes',
+    tags: ['hiram', 'tiro', 'templo']
+  },
+  {
+    id: 'rey-010',
+    type: 'multiple-choice',
+    question: '¿Qué llenó el templo cuando los sacerdotes salieron del lugar santo?',
+    options: ['Fuego', 'Una nube', 'Ángeles', 'Luz brillante'],
+    correctAnswer: 1,
+    explanation: 'La gloria de Jehová llenó la casa con una nube.',
+    reference: '1 Reyes 8:10-11',
+    difficulty: 'facil',
+    category: 'reyes',
+    tags: ['templo', 'gloria', 'nube']
+  },
+  {
+    id: 'rey-011',
+    type: 'multiple-choice',
+    question: '¿De qué material estaba recubierto el interior del templo?',
+    options: ['Plata', 'Oro', 'Bronce', 'Cobre'],
+    correctAnswer: 1,
+    explanation: 'El interior del templo estaba recubierto de oro puro.',
+    reference: '1 Reyes 6:21-22',
+    difficulty: 'facil',
+    category: 'reyes',
+    tags: ['templo', 'oro', 'materiales']
+  },
+  {
+    id: 'rey-012',
+    type: 'multiple-choice',
+    question: '¿Qué había dentro del Lugar Santísimo del templo?',
+    options: ['El altar de incienso', 'El arca del pacto', 'La mesa de los panes', 'El candelabro de oro'],
+    correctAnswer: 1,
+    explanation: 'En el Lugar Santísimo se colocó el arca del pacto bajo los querubines.',
+    reference: '1 Reyes 8:6',
+    difficulty: 'facil',
+    category: 'reyes',
+    tags: ['templo', 'arca', 'santisimo']
+  },
+  // 1 Reyes 10 - La reina de Sabá
+  {
+    id: 'rey-013',
+    type: 'multiple-choice',
+    question: '¿Qué dijo la reina de Sabá después de ver la sabiduría de Salomón?',
+    options: ['No me habían contado ni la mitad', 'Eres el más sabio del mundo', 'Tu Dios es grande', 'Seré tu aliada'],
+    correctAnswer: 0,
+    explanation: 'La reina de Sabá dijo que no le habían contado ni la mitad de su sabiduría.',
+    reference: '1 Reyes 10:7',
+    difficulty: 'medio',
+    category: 'reyes',
+    tags: ['saba', 'salomon', 'visita']
+  },
+  {
+    id: 'rey-014',
+    type: 'multiple-choice',
+    question: '¿Qué le regaló la reina de Sabá a Salomón?',
+    options: ['Oro, especias y piedras preciosas', 'Caballos de guerra', 'Esclavos', 'Territorio'],
+    correctAnswer: 0,
+    explanation: 'La reina trajo 120 talentos de oro, especias y piedras preciosas.',
+    reference: '1 Reyes 10:10',
+    difficulty: 'medio',
+    category: 'reyes',
+    tags: ['saba', 'regalos', 'oro']
+  },
+  // 1 Reyes 11-12 - División del reino
+  {
+    id: 'rey-015',
+    type: 'multiple-choice',
+    question: '¿Qué causó que Dios apartara el reino de la casa de Salomón?',
+    options: ['Injusticia', 'Idolatría', 'Orgullo', 'Asesinato'],
+    correctAnswer: 1,
+    explanation: 'Salomón siguió a dioses extranjeros por influencia de sus esposas.',
+    reference: '1 Reyes 11:4-11',
+    difficulty: 'facil',
+    category: 'reyes',
+    tags: ['salomon', 'idolatria', 'pecado']
+  },
+  {
+    id: 'rey-016',
+    type: 'multiple-choice',
+    question: '¿Cuántas esposas y concubinas tuvo Salomón?',
+    options: ['100 esposas', '700 esposas y 300 concubinas', '500 esposas y 200 concubinas', '1000 esposas'],
+    correctAnswer: 1,
+    explanation: 'Salomón tuvo 700 esposas princesas y 300 concubinas.',
+    reference: '1 Reyes 11:3',
+    difficulty: 'medio',
+    category: 'reyes',
+    tags: ['salomon', 'esposas', 'concubinas']
+  },
+  {
+    id: 'rey-017',
+    type: 'multiple-choice',
+    question: '¿Cuántas tribus siguieron a Jeroboam después de la división?',
+    options: ['2 tribus', '5 tribus', '10 tribus', '12 tribus'],
+    correctAnswer: 2,
+    explanation: 'Diez tribus siguieron a Jeroboam formando el reino del norte (Israel).',
+    reference: '1 Reyes 11:31',
+    difficulty: 'medio',
+    category: 'reyes',
+    tags: ['division', 'jeroboam', 'tribus']
+  },
+  {
+    id: 'rey-018',
+    type: 'multiple-choice',
+    question: '¿Qué respondió Roboam cuando el pueblo le pidió aliviar sus cargas?',
+    options: ['Aceptó reducirlas', 'Las aumentaría más que su padre', 'Consultó a Dios', 'Pidió tiempo para decidir'],
+    correctAnswer: 1,
+    explanation: 'Roboam amenazó con cargas más pesadas, causando la división del reino.',
+    reference: '1 Reyes 12:14',
+    difficulty: 'medio',
+    category: 'reyes',
+    tags: ['roboam', 'division', 'respuesta']
+  },
+  // 1 Reyes 17-19 - Elías
+  {
+    id: 'rey-019',
+    type: 'multiple-choice',
+    question: '¿Quién alimentó a Elías junto al arroyo de Querit?',
+    options: ['Ángeles', 'Cuervos', 'Una viuda', 'Eliseo'],
+    correctAnswer: 1,
+    explanation: 'Los cuervos le traían pan y carne por la mañana y por la tarde.',
+    reference: '1 Reyes 17:6',
+    difficulty: 'facil',
+    category: 'reyes',
+    tags: ['elias', 'cuervos', 'provisión']
+  },
+  {
+    id: 'rey-020',
+    type: 'multiple-choice',
+    question: '¿En qué ciudad vivía la viuda que alimentó a Elías?',
+    options: ['Jerusalén', 'Samaria', 'Sarepta', 'Jericó'],
+    correctAnswer: 2,
+    explanation: 'La viuda de Sarepta compartió su última harina y aceite con Elías.',
+    reference: '1 Reyes 17:9',
+    difficulty: 'medio',
+    category: 'reyes',
+    tags: ['elias', 'viuda', 'sarepta']
+  },
+  {
+    id: 'rey-021',
+    type: 'multiple-choice',
+    question: '¿Qué milagro hizo Elías con el hijo de la viuda de Sarepta?',
+    options: ['Lo sanó de lepra', 'Lo resucitó de entre los muertos', 'Le devolvió la vista', 'Lo alimentó milagrosamente'],
+    correctAnswer: 1,
+    explanation: 'Elías oró tres veces y el niño volvió a la vida.',
+    reference: '1 Reyes 17:22',
+    difficulty: 'facil',
+    category: 'reyes',
+    tags: ['elias', 'resurreccion', 'viuda']
+  },
+  {
+    id: 'rey-022',
+    type: 'multiple-choice',
+    question: '¿A cuántos profetas de Baal desafió Elías en el monte Carmelo?',
+    options: ['100', '250', '450', '850'],
+    correctAnswer: 2,
+    explanation: 'Elías desafió a 450 profetas de Baal en el monte Carmelo.',
+    reference: '1 Reyes 18:19',
+    difficulty: 'medio',
+    category: 'reyes',
+    tags: ['elias', 'carmelo', 'baal']
+  },
+  {
+    id: 'rey-023',
+    type: 'multiple-choice',
+    question: '¿Qué cayó del cielo para consumir el sacrificio de Elías?',
+    options: ['Rayo', 'Fuego de Dios', 'Un ángel', 'Granizo'],
+    correctAnswer: 1,
+    explanation: 'Cayó fuego de Jehová que consumió el holocausto, la leña, las piedras y el agua.',
+    reference: '1 Reyes 18:38',
+    difficulty: 'facil',
+    category: 'reyes',
+    tags: ['elias', 'fuego', 'carmelo']
+  },
+  {
+    id: 'rey-024',
+    type: 'multiple-choice',
+    question: '¿De quién huyó Elías después de la victoria en el Carmelo?',
+    options: ['Acab', 'Jezabel', 'Los profetas de Baal', 'Los soldados'],
+    correctAnswer: 1,
+    explanation: 'Jezabel amenazó de muerte a Elías, y él huyó al desierto.',
+    reference: '1 Reyes 19:1-3',
+    difficulty: 'facil',
+    category: 'reyes',
+    tags: ['elias', 'jezabel', 'huida']
+  },
+  {
+    id: 'rey-025',
+    type: 'multiple-choice',
+    question: '¿Cómo se manifestó Dios a Elías en el monte Horeb?',
+    options: ['En un terremoto', 'En un fuego', 'En un silbo apacible', 'En un viento fuerte'],
+    correctAnswer: 2,
+    explanation: 'Dios no estaba en el viento, terremoto o fuego, sino en un silbo apacible.',
+    reference: '1 Reyes 19:11-12',
+    difficulty: 'facil',
+    category: 'reyes',
+    tags: ['elias', 'horeb', 'silbo']
+  },
+  // 1 Reyes 21 - Viña de Nabot
+  {
+    id: 'rey-026',
+    type: 'multiple-choice',
+    question: '¿Qué quería Acab comprar a Nabot?',
+    options: ['Su casa', 'Su viña', 'Su rebaño', 'Su tierra de labranza'],
+    correctAnswer: 1,
+    explanation: 'Acab quería la viña de Nabot para hacer un huerto de legumbres.',
+    reference: '1 Reyes 21:2',
+    difficulty: 'facil',
+    category: 'reyes',
+    tags: ['acab', 'nabot', 'viña']
+  },
+  {
+    id: 'rey-027',
+    type: 'multiple-choice',
+    question: '¿Quién conspiró para matar a Nabot?',
+    options: ['Acab', 'Jezabel', 'Elías', 'Un profeta falso'],
+    correctAnswer: 1,
+    explanation: 'Jezabel organizó falsos testigos para acusar a Nabot de blasfemia.',
+    reference: '1 Reyes 21:8-10',
+    difficulty: 'facil',
+    category: 'reyes',
+    tags: ['jezabel', 'nabot', 'conspiración']
+  },
+  // 2 Reyes 2 - Elías arrebatado
+  {
+    id: 'rey-028',
+    type: 'multiple-choice',
+    question: '¿Cómo fue llevado Elías al cielo?',
+    options: ['Murió y fue sepultado', 'En un carro de fuego con caballos de fuego', 'Un ángel lo llevó', 'Desapareció misteriosamente'],
+    correctAnswer: 1,
+    explanation: 'Un carro de fuego con caballos de fuego apartó a Elías, quien subió al cielo en un torbellino.',
+    reference: '2 Reyes 2:11',
+    difficulty: 'facil',
+    category: 'reyes',
+    tags: ['elias', 'arrebatamiento', 'cielo']
+  },
+  {
+    id: 'rey-029',
+    type: 'multiple-choice',
+    question: '¿Qué pidió Eliseo a Elías antes de que fuera llevado?',
+    options: ['Su manto', 'Una doble porción de su espíritu', 'Ser profeta en su lugar', 'Larga vida'],
+    correctAnswer: 1,
+    explanation: 'Eliseo pidió una doble porción del espíritu de Elías.',
+    reference: '2 Reyes 2:9',
+    difficulty: 'facil',
+    category: 'reyes',
+    tags: ['eliseo', 'elias', 'espiritu']
+  },
+  {
+    id: 'rey-030',
+    type: 'multiple-choice',
+    question: '¿Qué usó Eliseo para dividir las aguas del Jordán?',
+    options: ['Una vara', 'El manto de Elías', 'Sus manos', 'Una piedra'],
+    correctAnswer: 1,
+    explanation: 'Eliseo golpeó las aguas con el manto de Elías y se dividieron.',
+    reference: '2 Reyes 2:14',
+    difficulty: 'facil',
+    category: 'reyes',
+    tags: ['eliseo', 'manto', 'jordan']
+  },
+  // 2 Reyes 4-5 - Milagros de Eliseo
+  {
+    id: 'rey-031',
+    type: 'multiple-choice',
+    question: '¿Qué milagro hizo Eliseo para una viuda pobre?',
+    options: ['Multiplicó su harina', 'Multiplicó su aceite', 'Le dio oro', 'Le construyó una casa'],
+    correctAnswer: 1,
+    explanation: 'Eliseo multiplicó el aceite de la viuda para pagar sus deudas.',
+    reference: '2 Reyes 4:1-7',
+    difficulty: 'facil',
+    category: 'reyes',
+    tags: ['eliseo', 'aceite', 'viuda']
+  },
+  {
+    id: 'rey-032',
+    type: 'multiple-choice',
+    question: '¿Quién fue sanado de lepra tras bañarse siete veces en el Jordán?',
+    options: ['Gehazi', 'Naamán', 'Hazael', 'Ben-adad'],
+    correctAnswer: 1,
+    explanation: 'Naamán, general sirio, fue sanado al obedecer a Eliseo.',
+    reference: '2 Reyes 5:14',
+    difficulty: 'facil',
+    category: 'reyes',
+    tags: ['naaman', 'lepra', 'jordan']
+  },
+  {
+    id: 'rey-033',
+    type: 'multiple-choice',
+    question: '¿Qué le sucedió a Giezi por su codicia?',
+    options: ['Murió', 'Se volvió leproso', 'Perdió la vista', 'Fue exiliado'],
+    correctAnswer: 1,
+    explanation: 'La lepra de Naamán pasó a Giezi por aceptar regalos deshonestamente.',
+    reference: '2 Reyes 5:27',
+    difficulty: 'medio',
+    category: 'reyes',
+    tags: ['giezi', 'lepra', 'codicia']
+  },
+  // 2 Reyes 17-20 - Caída de Israel y Ezequías
+  {
+    id: 'rey-034',
+    type: 'multiple-choice',
+    question: '¿Qué imperio conquistó el reino del norte (Israel)?',
+    options: ['Babilonia', 'Egipto', 'Asiria', 'Persia'],
+    correctAnswer: 2,
+    explanation: 'Asiria conquistó Samaria y deportó a Israel en el 722 a.C.',
+    reference: '2 Reyes 17:6',
+    difficulty: 'medio',
+    category: 'reyes',
+    tags: ['israel', 'asiria', 'caida']
+  },
+  {
+    id: 'rey-035',
+    type: 'multiple-choice',
+    question: '¿Cuántos años más de vida recibió Ezequías después de orar?',
+    options: ['5 años', '10 años', '15 años', '20 años'],
+    correctAnswer: 2,
+    explanation: 'Dios añadió 15 años a la vida de Ezequías.',
+    reference: '2 Reyes 20:6',
+    difficulty: 'facil',
+    category: 'reyes',
+    tags: ['ezequias', 'vida', 'años']
+  }
+];
+
+// 1-2 CRÓNICAS - 35 preguntas
+export const cronicasQuestions: QuizQuestion[] = [
+  // 1 Crónicas 1-9 - Genealogías
+  {
+    id: 'cro-001',
+    type: 'multiple-choice',
+    question: '¿Con quién comienzan las genealogías de 1 Crónicas?',
+    options: ['Noé', 'Abraham', 'Adán', 'David'],
+    correctAnswer: 2,
+    explanation: 'Las genealogías de 1 Crónicas comienzan con Adán.',
+    reference: '1 Crónicas 1:1',
+    difficulty: 'facil',
+    category: 'cronicas',
+    tags: ['genealogia', 'adan', 'inicio']
+  },
+  {
+    id: 'cro-002',
+    type: 'multiple-choice',
+    question: '¿Qué tribu era responsable del servicio del templo?',
+    options: ['Judá', 'Leví', 'Benjamín', 'Efraín'],
+    correctAnswer: 1,
+    explanation: 'Los levitas fueron apartados para el servicio del santuario.',
+    reference: '1 Crónicas 6:48',
+    difficulty: 'facil',
+    category: 'cronicas',
+    tags: ['levitas', 'templo', 'servicio']
+  },
+  {
+    id: 'cro-003',
+    type: 'multiple-choice',
+    question: '¿Qué oración breve de Jabes es famosa en 1 Crónicas?',
+    options: ['Perdóname', 'Ensancha mi territorio', 'Dame sabiduría', 'Protégeme de enemigos'],
+    correctAnswer: 1,
+    explanation: 'Jabes pidió a Dios que ensanchara su territorio y lo bendijera.',
+    reference: '1 Crónicas 4:10',
+    difficulty: 'medio',
+    category: 'cronicas',
+    tags: ['jabes', 'oracion', 'bendicion']
+  },
+  // 1 Crónicas 10-12 - David rey
+  {
+    id: 'cro-004',
+    type: 'multiple-choice',
+    question: '¿Por qué murió Saúl según 1 Crónicas?',
+    options: ['Por consultar a una adivina y no a Dios', 'Por desobediencia en la guerra', 'Por envidia de David', 'Por su orgullo'],
+    correctAnswer: 0,
+    explanation: 'Saúl murió por su infidelidad y por consultar a una adivina.',
+    reference: '1 Crónicas 10:13-14',
+    difficulty: 'medio',
+    category: 'cronicas',
+    tags: ['saul', 'muerte', 'adivina']
+  },
+  {
+    id: 'cro-005',
+    type: 'multiple-choice',
+    question: '¿Dónde fue David coronado rey sobre todo Israel?',
+    options: ['Jerusalén', 'Belén', 'Hebrón', 'Silo'],
+    correctAnswer: 2,
+    explanation: 'David fue ungido rey sobre todo Israel en Hebrón.',
+    reference: '1 Crónicas 11:3',
+    difficulty: 'facil',
+    category: 'cronicas',
+    tags: ['david', 'hebron', 'coronacion']
+  },
+  {
+    id: 'cro-006',
+    type: 'multiple-choice',
+    question: '¿Quién era el jefe de los tres valientes de David?',
+    options: ['Joab', 'Abisai', 'Jasobeam', 'Benaía'],
+    correctAnswer: 2,
+    explanation: 'Jasobeam era jefe de los treinta y mató a 300 hombres en una batalla.',
+    reference: '1 Crónicas 11:11',
+    difficulty: 'dificil',
+    category: 'cronicas',
+    tags: ['jasobeam', 'valientes', 'david']
+  },
+  {
+    id: 'cro-007',
+    type: 'multiple-choice',
+    question: '¿Qué hazaña hicieron tres valientes para traerle agua a David?',
+    options: ['Cavaron un pozo', 'Atravesaron el campamento filisteo', 'Subieron una montaña', 'Cruzaron un río'],
+    correctAnswer: 1,
+    explanation: 'Tres valientes atravesaron el campamento filisteo para traer agua del pozo de Belén.',
+    reference: '1 Crónicas 11:18',
+    difficulty: 'medio',
+    category: 'cronicas',
+    tags: ['valientes', 'agua', 'belen']
+  },
+  // 1 Crónicas 13-16 - El arca
+  {
+    id: 'cro-008',
+    type: 'multiple-choice',
+    question: '¿Quién murió por tocar el arca cuando la transportaban?',
+    options: ['Obed-edom', 'Uza', 'Ahío', 'Abinadab'],
+    correctAnswer: 1,
+    explanation: 'Uza extendió su mano para sostener el arca y murió por tocarla.',
+    reference: '1 Crónicas 13:9-10',
+    difficulty: 'facil',
+    category: 'cronicas',
+    tags: ['uza', 'arca', 'muerte']
+  },
+  {
+    id: 'cro-009',
+    type: 'multiple-choice',
+    question: '¿En casa de quién permaneció el arca tres meses?',
+    options: ['David', 'Obed-edom', 'Ahío', 'Sadoc'],
+    correctAnswer: 1,
+    explanation: 'El arca estuvo en casa de Obed-edom el geteo por tres meses.',
+    reference: '1 Crónicas 13:14',
+    difficulty: 'medio',
+    category: 'cronicas',
+    tags: ['arca', 'obededom', 'meses']
+  },
+  {
+    id: 'cro-010',
+    type: 'multiple-choice',
+    question: '¿Quiénes debían transportar el arca según la ley?',
+    options: ['Los sacerdotes únicamente', 'Los levitas', 'Los hijos de David', 'Los ancianos de Israel'],
+    correctAnswer: 1,
+    explanation: 'Solo los levitas debían llevar el arca de Dios.',
+    reference: '1 Crónicas 15:2',
+    difficulty: 'facil',
+    category: 'cronicas',
+    tags: ['arca', 'levitas', 'transporte']
+  },
+  {
+    id: 'cro-011',
+    type: 'multiple-choice',
+    question: '¿Quién menospreció a David por danzar ante el arca?',
+    options: ['Betsabé', 'Mical', 'Abigail', 'Ahinoam'],
+    correctAnswer: 1,
+    explanation: 'Mical, hija de Saúl, despreció a David en su corazón.',
+    reference: '1 Crónicas 15:29',
+    difficulty: 'facil',
+    category: 'cronicas',
+    tags: ['mical', 'david', 'danza']
+  },
+  // 1 Crónicas 17 - Pacto davídico
+  {
+    id: 'cro-012',
+    type: 'multiple-choice',
+    question: '¿Qué prometió Dios a David respecto a su descendencia?',
+    options: ['Riquezas eternas', 'Un trono establecido para siempre', 'Muchos hijos', 'Victoria en toda guerra'],
+    correctAnswer: 1,
+    explanation: 'Dios prometió establecer el trono de su descendiente para siempre.',
+    reference: '1 Crónicas 17:14',
+    difficulty: 'facil',
+    category: 'cronicas',
+    tags: ['pacto', 'david', 'trono']
+  },
+  {
+    id: 'cro-013',
+    type: 'multiple-choice',
+    question: '¿Por qué David no pudo construir el templo?',
+    options: ['Era muy viejo', 'No tenía recursos', 'Había derramado mucha sangre', 'No era de la tribu de Leví'],
+    correctAnswer: 2,
+    explanation: 'Dios le dijo a David que había derramado mucha sangre en guerras.',
+    reference: '1 Crónicas 22:8',
+    difficulty: 'medio',
+    category: 'cronicas',
+    tags: ['david', 'templo', 'sangre']
+  },
+  // 1 Crónicas 21 - El censo
+  {
+    id: 'cro-014',
+    type: 'multiple-choice',
+    question: '¿Quién incitó a David a hacer el censo?',
+    options: ['Dios', 'Satanás', 'Joab', 'Un profeta falso'],
+    correctAnswer: 1,
+    explanation: 'Satanás se levantó contra Israel e incitó a David a hacer el censo.',
+    reference: '1 Crónicas 21:1',
+    difficulty: 'medio',
+    category: 'cronicas',
+    tags: ['david', 'censo', 'satanas']
+  },
+  {
+    id: 'cro-015',
+    type: 'multiple-choice',
+    question: '¿Qué castigo eligió David por su pecado del censo?',
+    options: ['3 años de hambre', '3 meses de derrota ante enemigos', '3 días de peste', '3 años de sequía'],
+    correctAnswer: 2,
+    explanation: 'David eligió caer en manos de Dios: tres días de peste.',
+    reference: '1 Crónicas 21:12-14',
+    difficulty: 'medio',
+    category: 'cronicas',
+    tags: ['david', 'peste', 'castigo']
+  },
+  {
+    id: 'cro-016',
+    type: 'multiple-choice',
+    question: '¿A quién compró David la era donde edificaría el templo?',
+    options: ['Arauna', 'Ornán el jebuseo', 'Hiram de Tiro', 'Obed-edom'],
+    correctAnswer: 1,
+    explanation: 'David compró la era de Ornán el jebuseo por 600 siclos de oro.',
+    reference: '1 Crónicas 21:25',
+    difficulty: 'medio',
+    category: 'cronicas',
+    tags: ['david', 'ornan', 'era']
+  },
+  // 1 Crónicas 22-29 - Preparativos del templo
+  {
+    id: 'cro-017',
+    type: 'multiple-choice',
+    question: '¿Cuántos talentos de oro preparó David para el templo?',
+    options: ['1,000', '3,000', '100,000', '500'],
+    correctAnswer: 2,
+    explanation: 'David preparó 100,000 talentos de oro para la casa de Jehová.',
+    reference: '1 Crónicas 22:14',
+    difficulty: 'dificil',
+    category: 'cronicas',
+    tags: ['david', 'oro', 'templo']
+  },
+  {
+    id: 'cro-018',
+    type: 'multiple-choice',
+    question: '¿A qué edad comenzó Salomón a reinar según 1 Crónicas?',
+    options: ['12 años', '20 años', 'Joven e inexperto', '30 años'],
+    correctAnswer: 2,
+    explanation: 'David dijo que Salomón era joven e inexperto para la gran obra.',
+    reference: '1 Crónicas 22:5',
+    difficulty: 'medio',
+    category: 'cronicas',
+    tags: ['salomon', 'joven', 'reinado']
+  },
+  {
+    id: 'cro-019',
+    type: 'multiple-choice',
+    question: '¿En cuántas divisiones organizó David a los sacerdotes?',
+    options: ['12', '24', '7', '48'],
+    correctAnswer: 1,
+    explanation: 'David organizó a los sacerdotes en 24 grupos para el servicio.',
+    reference: '1 Crónicas 24:4',
+    difficulty: 'medio',
+    category: 'cronicas',
+    tags: ['sacerdotes', 'divisiones', 'servicio']
+  },
+  {
+    id: 'cro-020',
+    type: 'multiple-choice',
+    question: '¿Cuántos cantores había para el servicio del templo?',
+    options: ['288', '4,000', '144', '1,000'],
+    correctAnswer: 1,
+    explanation: 'Había 4,000 cantores que alababan a Jehová con instrumentos.',
+    reference: '1 Crónicas 23:5',
+    difficulty: 'dificil',
+    category: 'cronicas',
+    tags: ['cantores', 'templo', 'alabanza']
+  },
+  // 2 Crónicas 1-7 - Salomón y el templo
+  {
+    id: 'cro-021',
+    type: 'multiple-choice',
+    question: '¿Dónde ofreció Salomón mil holocaustos al comenzar su reinado?',
+    options: ['Jerusalén', 'Gabaón', 'Hebrón', 'Betel'],
+    correctAnswer: 1,
+    explanation: 'Salomón fue a Gabaón donde estaba el tabernáculo.',
+    reference: '2 Crónicas 1:3-6',
+    difficulty: 'medio',
+    category: 'cronicas',
+    tags: ['salomon', 'gabaon', 'holocausto']
+  },
+  {
+    id: 'cro-022',
+    type: 'multiple-choice',
+    question: '¿Cuántos codos medía la altura del templo de Salomón?',
+    options: ['30 codos', '60 codos', '120 codos', '20 codos'],
+    correctAnswer: 2,
+    explanation: 'El pórtico del templo tenía 120 codos de altura.',
+    reference: '2 Crónicas 3:4',
+    difficulty: 'dificil',
+    category: 'cronicas',
+    tags: ['templo', 'altura', 'codos']
+  },
+  {
+    id: 'cro-023',
+    type: 'multiple-choice',
+    question: '¿Qué descendió del cielo en la dedicación del templo?',
+    options: ['Ángeles', 'Fuego', 'Maná', 'Agua'],
+    correctAnswer: 1,
+    explanation: 'Descendió fuego del cielo y consumió el holocausto.',
+    reference: '2 Crónicas 7:1',
+    difficulty: 'facil',
+    category: 'cronicas',
+    tags: ['templo', 'fuego', 'dedicacion']
+  },
+  {
+    id: 'cro-024',
+    type: 'multiple-choice',
+    question: '¿Cuántos días duró la fiesta de dedicación del templo?',
+    options: ['7 días', '14 días', '21 días', '3 días'],
+    correctAnswer: 1,
+    explanation: 'La fiesta duró 14 días: 7 de dedicación y 7 de la fiesta de los tabernáculos.',
+    reference: '2 Crónicas 7:8-9',
+    difficulty: 'medio',
+    category: 'cronicas',
+    tags: ['templo', 'dedicacion', 'fiesta']
+  },
+  // 2 Crónicas 10-12 - División y Roboam
+  {
+    id: 'cro-025',
+    type: 'multiple-choice',
+    question: '¿A quién consultó Roboam primero sobre cómo tratar al pueblo?',
+    options: ['Los jóvenes', 'Los ancianos', 'Los profetas', 'Su madre'],
+    correctAnswer: 1,
+    explanation: 'Roboam consultó primero a los ancianos, pero rechazó su consejo.',
+    reference: '2 Crónicas 10:6-8',
+    difficulty: 'facil',
+    category: 'cronicas',
+    tags: ['roboam', 'ancianos', 'consejo']
+  },
+  {
+    id: 'cro-026',
+    type: 'multiple-choice',
+    question: '¿Qué profeta prohibió a Roboam pelear contra Israel?',
+    options: ['Natán', 'Semaías', 'Ahías', 'Iddo'],
+    correctAnswer: 1,
+    explanation: 'Semaías trajo palabra de Dios prohibiendo la guerra civil.',
+    reference: '2 Crónicas 11:2-4',
+    difficulty: 'medio',
+    category: 'cronicas',
+    tags: ['semaias', 'roboam', 'guerra']
+  },
+  // 2 Crónicas - Reyes de Judá
+  {
+    id: 'cro-027',
+    type: 'multiple-choice',
+    question: '¿Qué rey de Judá confió en Dios y derrotó a un millón de etíopes?',
+    options: ['Josafat', 'Asa', 'Ezequías', 'Josías'],
+    correctAnswer: 1,
+    explanation: 'Asa clamó a Dios y derrotó al ejército etíope de Zera.',
+    reference: '2 Crónicas 14:9-12',
+    difficulty: 'medio',
+    category: 'cronicas',
+    tags: ['asa', 'etiopes', 'victoria']
+  },
+  {
+    id: 'cro-028',
+    type: 'multiple-choice',
+    question: '¿Qué dijo Josafat antes de la batalla contra Moab y Amón?',
+    options: ['Confiad en vuestras armas', 'Creed en Jehová y estaréis seguros', 'Huyamos', 'Pidamos paz'],
+    correctAnswer: 1,
+    explanation: 'Josafat exhortó al pueblo a creer en Jehová y en sus profetas.',
+    reference: '2 Crónicas 20:20',
+    difficulty: 'medio',
+    category: 'cronicas',
+    tags: ['josafat', 'fe', 'batalla']
+  },
+  {
+    id: 'cro-029',
+    type: 'multiple-choice',
+    question: '¿Cómo ganó Josafat la batalla contra Moab y Amón?',
+    options: ['Con un gran ejército', 'Con cantores que alababan a Dios', 'Con aliados extranjeros', 'Con armas secretas'],
+    correctAnswer: 1,
+    explanation: 'Josafat puso cantores que alababan a Dios, y los enemigos se destruyeron entre sí.',
+    reference: '2 Crónicas 20:21-22',
+    difficulty: 'medio',
+    category: 'cronicas',
+    tags: ['josafat', 'alabanza', 'victoria']
+  },
+  // 2 Crónicas 29-32 - Ezequías
+  {
+    id: 'cro-030',
+    type: 'multiple-choice',
+    question: '¿Qué hizo Ezequías al comenzar su reinado?',
+    options: ['Construyó palacios', 'Abrió y reparó las puertas del templo', 'Fue a la guerra', 'Hizo alianzas con Egipto'],
+    correctAnswer: 1,
+    explanation: 'En el primer mes de su reinado, Ezequías abrió las puertas del templo.',
+    reference: '2 Crónicas 29:3',
+    difficulty: 'facil',
+    category: 'cronicas',
+    tags: ['ezequias', 'templo', 'reforma']
+  },
+  {
+    id: 'cro-031',
+    type: 'multiple-choice',
+    question: '¿Qué fiesta celebró Ezequías que no se había observado en mucho tiempo?',
+    options: ['Pentecostés', 'Tabernáculos', 'La Pascua', 'Año Nuevo'],
+    correctAnswer: 2,
+    explanation: 'Ezequías celebró la Pascua más grande desde los días de Salomón.',
+    reference: '2 Crónicas 30:26',
+    difficulty: 'facil',
+    category: 'cronicas',
+    tags: ['ezequias', 'pascua', 'celebracion']
+  },
+  {
+    id: 'cro-032',
+    type: 'multiple-choice',
+    question: '¿Qué construcción hizo Ezequías para proveer agua a Jerusalén?',
+    options: ['Un acueducto', 'Un túnel para traer agua de Gihón', 'Pozos profundos', 'Cisternas'],
+    correctAnswer: 1,
+    explanation: 'Ezequías construyó el túnel de Siloé para traer agua a la ciudad.',
+    reference: '2 Crónicas 32:30',
+    difficulty: 'medio',
+    category: 'cronicas',
+    tags: ['ezequias', 'tunel', 'agua']
+  },
+  // 2 Crónicas 34-35 - Josías
+  {
+    id: 'cro-033',
+    type: 'multiple-choice',
+    question: '¿Cuántos años tenía Josías cuando comenzó a reinar?',
+    options: ['8 años', '12 años', '16 años', '20 años'],
+    correctAnswer: 0,
+    explanation: 'Josías tenía solo 8 años cuando comenzó a reinar.',
+    reference: '2 Crónicas 34:1',
+    difficulty: 'facil',
+    category: 'cronicas',
+    tags: ['josias', 'edad', 'rey']
+  },
+  {
+    id: 'cro-034',
+    type: 'multiple-choice',
+    question: '¿Qué se encontró en el templo durante las reparaciones de Josías?',
+    options: ['Oro escondido', 'El libro de la ley', 'El arca perdida', 'Tesoros antiguos'],
+    correctAnswer: 1,
+    explanation: 'Hilcías encontró el libro de la ley de Jehová en el templo.',
+    reference: '2 Crónicas 34:14-15',
+    difficulty: 'facil',
+    category: 'cronicas',
+    tags: ['josias', 'ley', 'libro']
+  },
+  {
+    id: 'cro-035',
+    type: 'multiple-choice',
+    question: '¿Qué profetisa consultó Josías después de hallar el libro de la ley?',
+    options: ['Débora', 'Hulda', 'Miriam', 'Ana'],
+    correctAnswer: 1,
+    explanation: 'Los enviados de Josías consultaron a la profetisa Hulda.',
+    reference: '2 Crónicas 34:22',
+    difficulty: 'medio',
+    category: 'cronicas',
+    tags: ['josias', 'hulda', 'profetisa']
+  }
+];
+
 // Exportar todas las preguntas organizadas
 export const allQuestions: Record<string, QuizQuestion[]> = {
   genesis: genesisQuestions,
@@ -8297,6 +9166,8 @@ export const allQuestions: Record<string, QuizQuestion[]> = {
   jueces: juecesQuestions,
   rut: rutQuestions,
   samuel: samuelQuestions,
+  reyes: reyesQuestions,
+  cronicas: cronicasQuestions,
   // Libros Poéticos
   salmos: salmosQuestions,
   mateo: mateoQuestions,
