@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Share2, Bookmark, BookmarkCheck, BookOpen, Image } from 'lucide-react';
+import { Share2, Bookmark, BookmarkCheck, Image } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 import { getDailyVerseByDate } from '@/data/dailyVerses';
@@ -7,10 +7,30 @@ import { useBookmarks } from '@/hooks/useBookmarks';
 import { toast } from 'sonner';
 import { ShareVerseDialog } from '@/components/share/ShareVerseDialog';
 
+const topicBackgrounds: Record<string, string> = {
+  'confianza': 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4',
+  'fe': 'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8',
+  'amor': 'https://images.unsplash.com/photo-1518173946687-a4c036bc2c0c',
+  'fortaleza': 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b',
+  'paz': 'https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5',
+  'esperanza': 'https://images.unsplash.com/photo-1475924156734-496f6cac6ec1',
+  'sabiduria': 'https://images.unsplash.com/photo-1448375240586-882707db888b',
+  'gratitud': 'https://images.unsplash.com/photo-1501854140801-50d01698950b',
+  'perdon': 'https://images.unsplash.com/photo-1469474968028-56623f02e42e',
+  'servicio': 'https://images.unsplash.com/photo-1433086966358-54859d0ed716',
+  'obediencia': 'https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5',
+  'provision': 'https://images.unsplash.com/photo-1505765050516-f72dcac9c60e',
+  'gozo': 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05',
+  'oracion': 'https://images.unsplash.com/photo-1507400492013-162706c8c05e',
+};
+
+const defaultBackground = 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4';
+
 export const DailyVerseCard = () => {
   const [shareDialogOpen, setShareDialogOpen] = useState(false);
   const navigate = useNavigate();
   const dailyVerse = getDailyVerseByDate();
+  const backgroundImage = topicBackgrounds[dailyVerse.topic] || defaultBackground;
   const { toggleVerseBookmark, checkBookmarked } = useBookmarks();
 
   const isVerseBookmarked = checkBookmarked(
@@ -60,7 +80,12 @@ export const DailyVerseCard = () => {
   };
 
   return (
-    <div className="relative overflow-hidden rounded-2xl divine-gradient p-6 text-primary-foreground shadow-card">
+    <div 
+      className="relative overflow-hidden rounded-2xl p-6 text-white shadow-card bg-cover bg-center"
+      style={{ 
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), url(${backgroundImage}?w=800&q=80)`
+      }}
+    >
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
@@ -115,14 +140,6 @@ export const DailyVerseCard = () => {
           — {dailyVerse.reference}
         </button>
 
-        <Button
-          variant="secondary"
-          size="sm"
-          onClick={handleReadMore}
-        >
-          <BookOpen className="h-4 w-4 mr-2" />
-          Leer capítulo completo
-        </Button>
       </div>
 
       <ShareVerseDialog
