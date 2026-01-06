@@ -1,5 +1,5 @@
-import { Check } from 'lucide-react';
 import { useUserProgress } from '@/hooks/useUserProgress';
+import doveIcon from '@/assets/dove.png';
 
 const DayIndicator = ({ 
   label, 
@@ -23,7 +23,13 @@ const DayIndicator = ({
           ${isToday && isActive ? 'ring-2 ring-green-400 ring-offset-2 ring-offset-background' : ''}
         `}
       >
-        {isActive && <Check className="w-5 h-5" strokeWidth={3} />}
+        {isActive && (
+          <img 
+            src={doveIcon} 
+            alt="" 
+            className="w-5 h-5 brightness-0 invert" 
+          />
+        )}
       </div>
       <span className={`text-xs font-medium ${isToday ? 'text-primary' : 'text-muted-foreground'}`}>
         {label}
@@ -42,6 +48,9 @@ export const WeeklyCalendar = () => {
 
   return (
     <div className="bg-card rounded-2xl p-4 border animate-fade-in">
+      <h3 className="text-sm font-medium text-muted-foreground mb-3">
+        Tu actividad esta semana
+      </h3>
       <div className="flex justify-between items-center px-2">
         {dayLabels.map((label, index) => (
           <DayIndicator 
