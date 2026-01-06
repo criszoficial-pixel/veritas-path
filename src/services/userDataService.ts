@@ -492,3 +492,17 @@ export function calculatePlanProgressPercent(planId: string, totalReadings: numb
   
   return Math.round((progress.completedReadings.length / totalReadings) * 100);
 }
+
+// Reset all plan progress
+export function resetAllPlanProgress(): void {
+  const data = getUserData();
+  data.planProgress = {};
+  saveUserData(data);
+  
+  // Clear plan start dates
+  Object.keys(localStorage).forEach(key => {
+    if (key.startsWith('plan_start_')) {
+      localStorage.removeItem(key);
+    }
+  });
+}
