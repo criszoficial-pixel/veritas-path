@@ -145,7 +145,11 @@
   }
 
   .verse-number {
-    @apply text-primary font-ui font-semibold text-sm align-super mr-1;
+    @apply text-primary font-ui font-bold leading-none mr-1;
+    font-size: 0.7em;
+    vertical-align: super;
+    position: relative;
+    top: -0.15em;
   }
 }
 

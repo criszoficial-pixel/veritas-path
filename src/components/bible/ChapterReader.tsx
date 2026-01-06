@@ -395,16 +395,16 @@ export const ChapterReader = ({ collectionSlug: propCollectionSlug }: ChapterRea
                     </div>
                   ) : (
                     <p className="text-foreground">
-                      <sup 
+                      <span 
                         className={cn(
-                          "verse-number cursor-pointer transition-colors font-bold mr-1",
+                          "verse-number cursor-pointer transition-colors",
                           isSelected ? "text-primary" : "hover:text-primary",
                           verseHasNote && "text-primary"
                         )}
                         onClick={() => handleVerseClick(verse.number)}
                       >
                         {verse.number}
-                      </sup>
+                      </span>
                       {verse.text}
                     </p>
                   )}
