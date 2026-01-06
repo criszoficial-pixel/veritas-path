@@ -12019,6 +12019,1494 @@ export const danielQuestions: QuizQuestion[] = [
   }
 ];
 
+// OSEAS - 12 preguntas
+export const oseasQuestions: QuizQuestion[] = [
+  {
+    id: 'ose-001',
+    type: 'multiple-choice',
+    question: '¿Con quién se casó Oseas por mandato de Dios?',
+    options: ['Una viuda', 'Una mujer prostituta', 'Una extranjera', 'Una virgen'],
+    correctAnswer: 1,
+    explanation: 'Dios mandó a Oseas casarse con Gomer, una mujer de prostitución.',
+    reference: 'Oseas 1:2',
+    difficulty: 'facil',
+    category: 'oseas',
+    tags: ['oseas', 'gomer', 'matrimonio']
+  },
+  {
+    id: 'ose-002',
+    type: 'multiple-choice',
+    question: '¿Cómo se llamaba la esposa de Oseas?',
+    options: ['Raquel', 'Gomer', 'Lea', 'Débora'],
+    correctAnswer: 1,
+    explanation: 'Gomer hija de Diblaim fue la esposa de Oseas.',
+    reference: 'Oseas 1:3',
+    difficulty: 'facil',
+    category: 'oseas',
+    tags: ['oseas', 'gomer', 'nombre']
+  },
+  {
+    id: 'ose-003',
+    type: 'multiple-choice',
+    question: '¿Cuántos hijos tuvo Oseas con Gomer?',
+    options: ['Uno', 'Dos', 'Tres', 'Cuatro'],
+    correctAnswer: 2,
+    explanation: 'Tuvieron tres hijos: Jezreel, Lo-ruhama y Lo-ammi.',
+    reference: 'Oseas 1:3-9',
+    difficulty: 'facil',
+    category: 'oseas',
+    tags: ['oseas', 'hijos', 'gomer']
+  },
+  {
+    id: 'ose-004',
+    type: 'multiple-choice',
+    question: '¿Qué significa el nombre "Lo-ammi"?',
+    options: ['Sin misericordia', 'No pueblo mío', 'Dios siembra', 'Amado'],
+    correctAnswer: 1,
+    explanation: 'Lo-ammi significa "no pueblo mío".',
+    reference: 'Oseas 1:9',
+    difficulty: 'medio',
+    category: 'oseas',
+    tags: ['oseas', 'lo-ammi', 'significado']
+  },
+  {
+    id: 'ose-005',
+    type: 'multiple-choice',
+    question: '¿Qué representa el matrimonio de Oseas?',
+    options: ['La guerra con Asiria', 'El amor de Dios por Israel infiel', 'La conquista de Canaán', 'El exilio'],
+    correctAnswer: 1,
+    explanation: 'El matrimonio simboliza el amor fiel de Dios hacia Israel a pesar de su infidelidad.',
+    reference: 'Oseas 1:2',
+    difficulty: 'facil',
+    category: 'oseas',
+    tags: ['oseas', 'simbolo', 'amor']
+  },
+  {
+    id: 'ose-006',
+    type: 'multiple-choice',
+    question: '¿Cuánto pagó Oseas para redimir a Gomer?',
+    options: ['10 siclos de plata', '15 siclos de plata y cebada', '30 siclos de plata', '20 siclos de oro'],
+    correctAnswer: 1,
+    explanation: 'La compró por 15 siclos de plata y homer y medio de cebada.',
+    reference: 'Oseas 3:2',
+    difficulty: 'dificil',
+    category: 'oseas',
+    tags: ['oseas', 'redencion', 'precio']
+  },
+  {
+    id: 'ose-007',
+    type: 'multiple-choice',
+    question: '¿Qué dice Oseas 6:6 que desea Dios más que los sacrificios?',
+    options: ['Ofrendas', 'Misericordia', 'Holocaustos', 'Diezmos'],
+    correctAnswer: 1,
+    explanation: 'Misericordia quiero, y no sacrificio.',
+    reference: 'Oseas 6:6',
+    difficulty: 'facil',
+    category: 'oseas',
+    tags: ['oseas', 'misericordia', 'sacrificio']
+  },
+  {
+    id: 'ose-008',
+    type: 'multiple-choice',
+    question: '¿De dónde llamó Dios a su hijo según Oseas 11:1?',
+    options: ['De Babilonia', 'De Egipto', 'De Asiria', 'De Siria'],
+    correctAnswer: 1,
+    explanation: 'De Egipto llamé a mi hijo.',
+    reference: 'Oseas 11:1',
+    difficulty: 'facil',
+    category: 'oseas',
+    tags: ['oseas', 'egipto', 'profecia']
+  },
+  {
+    id: 'ose-009',
+    type: 'multiple-choice',
+    question: '¿Contra qué reino profetizó principalmente Oseas?',
+    options: ['Judá', 'Israel (reino del norte)', 'Edom', 'Moab'],
+    correctAnswer: 1,
+    explanation: 'Oseas profetizó principalmente contra el reino del norte, Israel.',
+    reference: 'Oseas 1:1',
+    difficulty: 'facil',
+    category: 'oseas',
+    tags: ['oseas', 'israel', 'reino norte']
+  },
+  {
+    id: 'ose-010',
+    type: 'multiple-choice',
+    question: '¿Qué compara Oseas con el rocío de la mañana?',
+    options: ['La ira de Dios', 'El amor de Israel', 'La bendición de Dios', 'Los pecados'],
+    correctAnswer: 1,
+    explanation: 'Vuestra piedad es como nube de la mañana, y como el rocío que de madrugada desaparece.',
+    reference: 'Oseas 6:4',
+    difficulty: 'medio',
+    category: 'oseas',
+    tags: ['oseas', 'rocio', 'piedad']
+  },
+  {
+    id: 'ose-011',
+    type: 'multiple-choice',
+    question: '¿Qué promete Dios sanar según Oseas 14?',
+    options: ['Sus enfermedades', 'Su rebelión', 'Sus heridas', 'Su tierra'],
+    correctAnswer: 1,
+    explanation: 'Yo sanaré su rebelión, los amaré de pura gracia.',
+    reference: 'Oseas 14:4',
+    difficulty: 'medio',
+    category: 'oseas',
+    tags: ['oseas', 'sanidad', 'rebelion']
+  },
+  {
+    id: 'ose-012',
+    type: 'multiple-choice',
+    question: '¿Cuántos capítulos tiene el libro de Oseas?',
+    options: ['10 capítulos', '12 capítulos', '14 capítulos', '16 capítulos'],
+    correctAnswer: 2,
+    explanation: 'Oseas tiene 14 capítulos.',
+    reference: 'Oseas',
+    difficulty: 'facil',
+    category: 'oseas',
+    tags: ['oseas', 'capitulos', 'libro']
+  }
+];
+
+// JOEL - 10 preguntas
+export const joelQuestions: QuizQuestion[] = [
+  {
+    id: 'joe-001',
+    type: 'multiple-choice',
+    question: '¿Qué plaga describe Joel en el capítulo 1?',
+    options: ['Sequía', 'Langostas', 'Granizo', 'Tinieblas'],
+    correctAnswer: 1,
+    explanation: 'Joel describe una devastadora plaga de langostas.',
+    reference: 'Joel 1:4',
+    difficulty: 'facil',
+    category: 'joel',
+    tags: ['joel', 'langostas', 'plaga']
+  },
+  {
+    id: 'joe-002',
+    type: 'multiple-choice',
+    question: '¿Qué promete Dios derramar sobre toda carne según Joel?',
+    options: ['Bendiciones', 'Su Espíritu', 'Lluvia', 'Paz'],
+    correctAnswer: 1,
+    explanation: 'Derramaré mi Espíritu sobre toda carne.',
+    reference: 'Joel 2:28',
+    difficulty: 'facil',
+    category: 'joel',
+    tags: ['joel', 'espiritu', 'profecia']
+  },
+  {
+    id: 'joe-003',
+    type: 'multiple-choice',
+    question: '¿Qué harán los hijos e hijas según la profecía de Joel?',
+    options: ['Serán reyes', 'Profetizarán', 'Conquistarán', 'Serán sacerdotes'],
+    correctAnswer: 1,
+    explanation: 'Vuestros hijos y vuestras hijas profetizarán.',
+    reference: 'Joel 2:28',
+    difficulty: 'facil',
+    category: 'joel',
+    tags: ['joel', 'profecia', 'hijos']
+  },
+  {
+    id: 'joe-004',
+    type: 'multiple-choice',
+    question: '¿Qué soñarán los ancianos según Joel 2:28?',
+    options: ['Visiones', 'Sueños', 'Profecías', 'Revelaciones'],
+    correctAnswer: 1,
+    explanation: 'Vuestros ancianos soñarán sueños.',
+    reference: 'Joel 2:28',
+    difficulty: 'facil',
+    category: 'joel',
+    tags: ['joel', 'ancianos', 'suenos']
+  },
+  {
+    id: 'joe-005',
+    type: 'multiple-choice',
+    question: '¿En qué valle juzgará Dios a las naciones según Joel?',
+    options: ['Valle de Meguido', 'Valle de Josafat', 'Valle del Jordán', 'Valle de Acor'],
+    correctAnswer: 1,
+    explanation: 'Las reuniré en el valle de Josafat, y allí entraré en juicio con ellas.',
+    reference: 'Joel 3:2',
+    difficulty: 'medio',
+    category: 'joel',
+    tags: ['joel', 'josafat', 'juicio']
+  },
+  {
+    id: 'joe-006',
+    type: 'multiple-choice',
+    question: '¿Qué día anuncia Joel repetidamente?',
+    options: ['El día del reposo', 'El día de Jehová', 'El día del perdón', 'El día de la fiesta'],
+    correctAnswer: 1,
+    explanation: 'El día de Jehová viene, cercano está.',
+    reference: 'Joel 1:15',
+    difficulty: 'facil',
+    category: 'joel',
+    tags: ['joel', 'dia', 'jehova']
+  },
+  {
+    id: 'joe-007',
+    type: 'multiple-choice',
+    question: '¿Qué deben convertir en espadas según Joel?',
+    options: ['Las lanzas', 'Los arados', 'Las hoces', 'Los escudos'],
+    correctAnswer: 1,
+    explanation: 'Forjad espadas de vuestros azadones.',
+    reference: 'Joel 3:10',
+    difficulty: 'medio',
+    category: 'joel',
+    tags: ['joel', 'espadas', 'guerra']
+  },
+  {
+    id: 'joe-008',
+    type: 'multiple-choice',
+    question: '¿Cuántos capítulos tiene el libro de Joel?',
+    options: ['2 capítulos', '3 capítulos', '4 capítulos', '5 capítulos'],
+    correctAnswer: 1,
+    explanation: 'Joel tiene 3 capítulos.',
+    reference: 'Joel',
+    difficulty: 'facil',
+    category: 'joel',
+    tags: ['joel', 'capitulos', 'libro']
+  },
+  {
+    id: 'joe-009',
+    type: 'multiple-choice',
+    question: '¿Qué pide Joel que hagan los sacerdotes?',
+    options: ['Que celebren', 'Que ayunen y lloren', 'Que sacrifiquen', 'Que canten'],
+    correctAnswer: 1,
+    explanation: 'Ceñíos y lamentad, sacerdotes.',
+    reference: 'Joel 1:13',
+    difficulty: 'facil',
+    category: 'joel',
+    tags: ['joel', 'sacerdotes', 'ayuno']
+  },
+  {
+    id: 'joe-010',
+    type: 'multiple-choice',
+    question: '¿Qué pasará con el sol y la luna según Joel?',
+    options: ['Brillarán más', 'Se oscurecerán', 'Desaparecerán', 'Se multiplicarán'],
+    correctAnswer: 1,
+    explanation: 'El sol se convertirá en tinieblas, y la luna en sangre.',
+    reference: 'Joel 2:31',
+    difficulty: 'facil',
+    category: 'joel',
+    tags: ['joel', 'sol', 'luna']
+  }
+];
+
+// AMÓS - 12 preguntas
+export const amosQuestions: QuizQuestion[] = [
+  {
+    id: 'amo-001',
+    type: 'multiple-choice',
+    question: '¿Cuál era la profesión de Amós antes de ser profeta?',
+    options: ['Sacerdote', 'Pastor y cultivador de higos', 'Carpintero', 'Pescador'],
+    correctAnswer: 1,
+    explanation: 'No soy profeta, sino boyero, y cultivador de higos silvestres.',
+    reference: 'Amós 7:14',
+    difficulty: 'facil',
+    category: 'amos',
+    tags: ['amos', 'profesion', 'pastor']
+  },
+  {
+    id: 'amo-002',
+    type: 'multiple-choice',
+    question: '¿De dónde era originario Amós?',
+    options: ['Jerusalén', 'Tecoa', 'Samaria', 'Betel'],
+    correctAnswer: 1,
+    explanation: 'Amós era de Tecoa, en Judá.',
+    reference: 'Amós 1:1',
+    difficulty: 'facil',
+    category: 'amos',
+    tags: ['amos', 'tecoa', 'origen']
+  },
+  {
+    id: 'amo-003',
+    type: 'multiple-choice',
+    question: '¿Qué frase repite Amós al anunciar juicio contra las naciones?',
+    options: ['Así dice Jehová', 'Por tres pecados y por cuatro', 'Oíd palabra de Jehová', 'El día viene'],
+    correctAnswer: 1,
+    explanation: 'Por tres pecados y por el cuatro, no revocaré su castigo.',
+    reference: 'Amós 1:3',
+    difficulty: 'medio',
+    category: 'amos',
+    tags: ['amos', 'juicio', 'pecados']
+  },
+  {
+    id: 'amo-004',
+    type: 'multiple-choice',
+    question: '¿Qué vio Amós en una de sus visiones que simbolizaba el fin de Israel?',
+    options: ['Un león', 'Una canasta de fruta de verano', 'Un águila', 'Un terremoto'],
+    correctAnswer: 1,
+    explanation: 'Amós vio una canasta de fruta madura, simbolizando que el fin había llegado.',
+    reference: 'Amós 8:1-2',
+    difficulty: 'medio',
+    category: 'amos',
+    tags: ['amos', 'vision', 'fruta']
+  },
+  {
+    id: 'amo-005',
+    type: 'multiple-choice',
+    question: '¿Qué dice Amós 5:24 que corra como las aguas?',
+    options: ['La paz', 'El juicio', 'La bendición', 'El perdón'],
+    correctAnswer: 1,
+    explanation: 'Pero corra el juicio como las aguas, y la justicia como impetuoso arroyo.',
+    reference: 'Amós 5:24',
+    difficulty: 'facil',
+    category: 'amos',
+    tags: ['amos', 'juicio', 'justicia']
+  },
+  {
+    id: 'amo-006',
+    type: 'multiple-choice',
+    question: '¿Qué instrumento usó Dios como símbolo de juicio en una visión de Amós?',
+    options: ['Una espada', 'Una plomada', 'Un martillo', 'Una balanza'],
+    correctAnswer: 1,
+    explanation: 'Jehová estaba sobre un muro hecho a plomada, y en su mano una plomada.',
+    reference: 'Amós 7:7-8',
+    difficulty: 'medio',
+    category: 'amos',
+    tags: ['amos', 'plomada', 'vision']
+  },
+  {
+    id: 'amo-007',
+    type: 'multiple-choice',
+    question: '¿Contra quién denuncia Amós que oprimen a los pobres?',
+    options: ['Los sacerdotes', 'Las mujeres ricas de Samaria', 'Los reyes', 'Los profetas'],
+    correctAnswer: 1,
+    explanation: 'Amós llama a las mujeres ricas "vacas de Basán" por oprimir a los pobres.',
+    reference: 'Amós 4:1',
+    difficulty: 'medio',
+    category: 'amos',
+    tags: ['amos', 'opresion', 'pobres']
+  },
+  {
+    id: 'amo-008',
+    type: 'multiple-choice',
+    question: '¿Qué sacerdote ordenó a Amós que dejara de profetizar?',
+    options: ['Elí', 'Amasías', 'Aarón', 'Sadoc'],
+    correctAnswer: 1,
+    explanation: 'Amasías sacerdote de Bet-el envió a decir que Amós se fuera.',
+    reference: 'Amós 7:10-13',
+    difficulty: 'medio',
+    category: 'amos',
+    tags: ['amos', 'amasias', 'betel']
+  },
+  {
+    id: 'amo-009',
+    type: 'multiple-choice',
+    question: '¿Qué hambre anuncia Amós que vendrá sobre la tierra?',
+    options: ['De pan', 'De oír la palabra de Jehová', 'De agua', 'De paz'],
+    correctAnswer: 1,
+    explanation: 'No hambre de pan, ni sed de agua, sino de oír la palabra de Jehová.',
+    reference: 'Amós 8:11',
+    difficulty: 'facil',
+    category: 'amos',
+    tags: ['amos', 'hambre', 'palabra']
+  },
+  {
+    id: 'amo-010',
+    type: 'multiple-choice',
+    question: '¿Cuántos capítulos tiene el libro de Amós?',
+    options: ['7 capítulos', '9 capítulos', '11 capítulos', '12 capítulos'],
+    correctAnswer: 1,
+    explanation: 'Amós tiene 9 capítulos.',
+    reference: 'Amós',
+    difficulty: 'facil',
+    category: 'amos',
+    tags: ['amos', 'capitulos', 'libro']
+  },
+  {
+    id: 'amo-011',
+    type: 'multiple-choice',
+    question: '¿Qué promete restaurar Dios al final del libro de Amós?',
+    options: ['El templo', 'El tabernáculo caído de David', 'El arca', 'Jerusalén'],
+    correctAnswer: 1,
+    explanation: 'En aquel día yo levantaré el tabernáculo caído de David.',
+    reference: 'Amós 9:11',
+    difficulty: 'medio',
+    category: 'amos',
+    tags: ['amos', 'tabernaculo', 'david']
+  },
+  {
+    id: 'amo-012',
+    type: 'multiple-choice',
+    question: '¿Qué relación especial tenía Israel con Dios según Amós 3:2?',
+    options: ['Eran sus siervos', 'Fueron elegidos de todas las familias', 'Eran los más fuertes', 'Eran los más sabios'],
+    correctAnswer: 1,
+    explanation: 'A vosotros solamente he conocido de todas las familias de la tierra.',
+    reference: 'Amós 3:2',
+    difficulty: 'medio',
+    category: 'amos',
+    tags: ['amos', 'eleccion', 'israel']
+  }
+];
+
+// ABDÍAS - 8 preguntas
+export const abdiasQuestions: QuizQuestion[] = [
+  {
+    id: 'abd-001',
+    type: 'multiple-choice',
+    question: '¿Contra qué nación profetiza Abdías?',
+    options: ['Moab', 'Edom', 'Asiria', 'Babilonia'],
+    correctAnswer: 1,
+    explanation: 'Abdías profetiza contra Edom, descendientes de Esaú.',
+    reference: 'Abdías 1:1',
+    difficulty: 'facil',
+    category: 'abdias',
+    tags: ['abdias', 'edom', 'profecia']
+  },
+  {
+    id: 'abd-002',
+    type: 'multiple-choice',
+    question: '¿Quién era el antepasado de los edomitas?',
+    options: ['Jacob', 'Esaú', 'Ismael', 'Lot'],
+    correctAnswer: 1,
+    explanation: 'Edom desciende de Esaú, el hermano de Jacob.',
+    reference: 'Génesis 36:1',
+    difficulty: 'facil',
+    category: 'abdias',
+    tags: ['abdias', 'esau', 'edom']
+  },
+  {
+    id: 'abd-003',
+    type: 'multiple-choice',
+    question: '¿Dónde habitaban los edomitas según Abdías?',
+    options: ['En valles', 'En las hendiduras de las peñas', 'En ciudades', 'En el desierto'],
+    correctAnswer: 1,
+    explanation: 'Tú que moras en las hendiduras de las peñas, en tu satisfacción.',
+    reference: 'Abdías 1:3',
+    difficulty: 'medio',
+    category: 'abdias',
+    tags: ['abdias', 'penas', 'habitacion']
+  },
+  {
+    id: 'abd-004',
+    type: 'multiple-choice',
+    question: '¿Cuál era el pecado de Edom contra su hermano Jacob?',
+    options: ['Le robaron', 'Se alegraron en su desgracia', 'Le invadieron', 'Le adoraron'],
+    correctAnswer: 1,
+    explanation: 'No debiste haberte alegrado del día de tu hermano, en el día de su desgracia.',
+    reference: 'Abdías 1:12',
+    difficulty: 'facil',
+    category: 'abdias',
+    tags: ['abdias', 'pecado', 'jacob']
+  },
+  {
+    id: 'abd-005',
+    type: 'multiple-choice',
+    question: '¿Cuántos versículos tiene Abdías?',
+    options: ['15 versículos', '21 versículos', '25 versículos', '30 versículos'],
+    correctAnswer: 1,
+    explanation: 'Abdías tiene solo 21 versículos, siendo el libro más corto del AT.',
+    reference: 'Abdías',
+    difficulty: 'medio',
+    category: 'abdias',
+    tags: ['abdias', 'versiculos', 'libro']
+  },
+  {
+    id: 'abd-006',
+    type: 'multiple-choice',
+    question: '¿Qué dice Abdías que como hicieron a otros, les será hecho?',
+    options: ['Bendición', 'Su pago volverá sobre su cabeza', 'Paz', 'Prosperidad'],
+    correctAnswer: 1,
+    explanation: 'Como tú hiciste se hará contigo; tu recompensa volverá sobre tu cabeza.',
+    reference: 'Abdías 1:15',
+    difficulty: 'facil',
+    category: 'abdias',
+    tags: ['abdias', 'juicio', 'recompensa']
+  },
+  {
+    id: 'abd-007',
+    type: 'multiple-choice',
+    question: '¿Quiénes poseerán el monte de Esaú según Abdías?',
+    options: ['Los asirios', 'Los del monte de Sion', 'Los babilonios', 'Los egipcios'],
+    correctAnswer: 1,
+    explanation: 'Y subirán salvadores al monte de Sion para juzgar al monte de Esaú.',
+    reference: 'Abdías 1:21',
+    difficulty: 'medio',
+    category: 'abdias',
+    tags: ['abdias', 'sion', 'esau']
+  },
+  {
+    id: 'abd-008',
+    type: 'multiple-choice',
+    question: '¿A quién pertenecerá el reino según Abdías?',
+    options: ['A Israel', 'A Jehová', 'A David', 'A los profetas'],
+    correctAnswer: 1,
+    explanation: 'Y el reino será de Jehová.',
+    reference: 'Abdías 1:21',
+    difficulty: 'facil',
+    category: 'abdias',
+    tags: ['abdias', 'reino', 'jehova']
+  }
+];
+
+// JONÁS - 12 preguntas
+export const jonasQuestions: QuizQuestion[] = [
+  {
+    id: 'jon-001',
+    type: 'multiple-choice',
+    question: '¿A qué ciudad fue enviado Jonás a predicar?',
+    options: ['Babilonia', 'Nínive', 'Damasco', 'Tarsis'],
+    correctAnswer: 1,
+    explanation: 'Jehová le dijo: Levántate y ve a Nínive.',
+    reference: 'Jonás 1:2',
+    difficulty: 'facil',
+    category: 'jonas',
+    tags: ['jonas', 'ninive', 'mision']
+  },
+  {
+    id: 'jon-002',
+    type: 'multiple-choice',
+    question: '¿A dónde huyó Jonás en lugar de ir a Nínive?',
+    options: ['A Egipto', 'A Tarsis', 'A Damasco', 'A Jope'],
+    correctAnswer: 1,
+    explanation: 'Jonás se levantó para huir a Tarsis.',
+    reference: 'Jonás 1:3',
+    difficulty: 'facil',
+    category: 'jonas',
+    tags: ['jonas', 'tarsis', 'huida']
+  },
+  {
+    id: 'jon-003',
+    type: 'multiple-choice',
+    question: '¿Qué envió Dios al mar mientras Jonás huía?',
+    options: ['Un monstruo', 'Una gran tempestad', 'Un tsunami', 'Fuego'],
+    correctAnswer: 1,
+    explanation: 'Jehová hizo levantar un gran viento en el mar.',
+    reference: 'Jonás 1:4',
+    difficulty: 'facil',
+    category: 'jonas',
+    tags: ['jonas', 'tempestad', 'mar']
+  },
+  {
+    id: 'jon-004',
+    type: 'multiple-choice',
+    question: '¿Qué hacía Jonás durante la tempestad?',
+    options: ['Oraba', 'Dormía', 'Lloraba', 'Ayudaba'],
+    correctAnswer: 1,
+    explanation: 'Jonás había bajado al interior de la nave, y se había echado a dormir.',
+    reference: 'Jonás 1:5',
+    difficulty: 'facil',
+    category: 'jonas',
+    tags: ['jonas', 'dormir', 'tempestad']
+  },
+  {
+    id: 'jon-005',
+    type: 'multiple-choice',
+    question: '¿Cómo descubrieron los marineros que Jonás era el culpable?',
+    options: ['Jonás confesó', 'Echaron suertes', 'Un ángel les dijo', 'Lo vieron orando'],
+    correctAnswer: 1,
+    explanation: 'Echaron suertes, y la suerte cayó sobre Jonás.',
+    reference: 'Jonás 1:7',
+    difficulty: 'facil',
+    category: 'jonas',
+    tags: ['jonas', 'suertes', 'marineros']
+  },
+  {
+    id: 'jon-006',
+    type: 'multiple-choice',
+    question: '¿Qué animal tragó a Jonás?',
+    options: ['Una ballena', 'Un gran pez', 'Un tiburón', 'Un leviatán'],
+    correctAnswer: 1,
+    explanation: 'Jehová tenía preparado un gran pez que tragase a Jonás.',
+    reference: 'Jonás 1:17',
+    difficulty: 'facil',
+    category: 'jonas',
+    tags: ['jonas', 'pez', 'tragado']
+  },
+  {
+    id: 'jon-007',
+    type: 'multiple-choice',
+    question: '¿Cuántos días estuvo Jonás en el vientre del pez?',
+    options: ['Un día', 'Dos días', 'Tres días y tres noches', 'Siete días'],
+    correctAnswer: 2,
+    explanation: 'Estuvo Jonás en el vientre del pez tres días y tres noches.',
+    reference: 'Jonás 1:17',
+    difficulty: 'facil',
+    category: 'jonas',
+    tags: ['jonas', 'tres dias', 'pez']
+  },
+  {
+    id: 'jon-008',
+    type: 'multiple-choice',
+    question: '¿Qué mensaje predicó Jonás en Nínive?',
+    options: ['Dios los ama', 'De aquí a 40 días Nínive será destruida', 'Arrepiéntanse y crean', 'El Mesías viene'],
+    correctAnswer: 1,
+    explanation: 'De aquí a cuarenta días Nínive será destruida.',
+    reference: 'Jonás 3:4',
+    difficulty: 'facil',
+    category: 'jonas',
+    tags: ['jonas', 'predicacion', 'cuarenta dias']
+  },
+  {
+    id: 'jon-009',
+    type: 'multiple-choice',
+    question: '¿Cómo respondieron los ninivitas al mensaje de Jonás?',
+    options: ['Lo rechazaron', 'Se arrepintieron', 'Lo mataron', 'Lo ignoraron'],
+    correctAnswer: 1,
+    explanation: 'Los hombres de Nínive creyeron a Dios y ayunaron.',
+    reference: 'Jonás 3:5',
+    difficulty: 'facil',
+    category: 'jonas',
+    tags: ['jonas', 'arrepentimiento', 'ninive']
+  },
+  {
+    id: 'jon-010',
+    type: 'multiple-choice',
+    question: '¿Qué hizo crecer Dios para dar sombra a Jonás?',
+    options: ['Un árbol', 'Una calabacera', 'Una vid', 'Una higuera'],
+    correctAnswer: 1,
+    explanation: 'Jehová Dios preparó una calabacera.',
+    reference: 'Jonás 4:6',
+    difficulty: 'facil',
+    category: 'jonas',
+    tags: ['jonas', 'calabacera', 'sombra']
+  },
+  {
+    id: 'jon-011',
+    type: 'multiple-choice',
+    question: '¿Qué destruyó la calabacera?',
+    options: ['El sol', 'Un gusano', 'El viento', 'El fuego'],
+    correctAnswer: 1,
+    explanation: 'Dios preparó un gusano que hirió la calabacera.',
+    reference: 'Jonás 4:7',
+    difficulty: 'facil',
+    category: 'jonas',
+    tags: ['jonas', 'gusano', 'calabacera']
+  },
+  {
+    id: 'jon-012',
+    type: 'multiple-choice',
+    question: '¿Cuántas personas había en Nínive según el final del libro?',
+    options: ['60,000', '100,000', 'Más de 120,000', 'Un millón'],
+    correctAnswer: 2,
+    explanation: 'Hay más de ciento veinte mil personas que no saben distinguir entre su derecha y su izquierda.',
+    reference: 'Jonás 4:11',
+    difficulty: 'medio',
+    category: 'jonas',
+    tags: ['jonas', 'ninive', 'poblacion']
+  }
+];
+
+// MIQUEAS - 10 preguntas
+export const miqueasQuestions: QuizQuestion[] = [
+  {
+    id: 'miq-001',
+    type: 'multiple-choice',
+    question: '¿De dónde era el profeta Miqueas?',
+    options: ['Jerusalén', 'Moreset', 'Samaria', 'Belén'],
+    correctAnswer: 1,
+    explanation: 'Miqueas de Moreset profetizó en los días de Jotam, Acaz y Ezequías.',
+    reference: 'Miqueas 1:1',
+    difficulty: 'facil',
+    category: 'miqueas',
+    tags: ['miqueas', 'moreset', 'origen']
+  },
+  {
+    id: 'miq-002',
+    type: 'multiple-choice',
+    question: '¿De qué ciudad profetizó Miqueas que saldría el gobernador de Israel?',
+    options: ['Jerusalén', 'Nazaret', 'Belén Efrata', 'Hebrón'],
+    correctAnswer: 2,
+    explanation: 'Pero tú, Belén Efrata... de ti me saldrá el que será Señor en Israel.',
+    reference: 'Miqueas 5:2',
+    difficulty: 'facil',
+    category: 'miqueas',
+    tags: ['miqueas', 'belen', 'mesias']
+  },
+  {
+    id: 'miq-003',
+    type: 'multiple-choice',
+    question: '¿Qué tres cosas pide Jehová según Miqueas 6:8?',
+    options: ['Fe, esperanza y amor', 'Hacer justicia, amar misericordia y humillarte', 'Orar, ayunar y dar', 'Creer, obedecer y servir'],
+    correctAnswer: 1,
+    explanation: 'Hacer justicia, amar misericordia, y humillarte ante tu Dios.',
+    reference: 'Miqueas 6:8',
+    difficulty: 'facil',
+    category: 'miqueas',
+    tags: ['miqueas', 'justicia', 'misericordia']
+  },
+  {
+    id: 'miq-004',
+    type: 'multiple-choice',
+    question: '¿Qué convertirán las naciones en podaderas según Miqueas?',
+    options: ['Las espadas', 'Las lanzas', 'Los arcos', 'Los escudos'],
+    correctAnswer: 1,
+    explanation: 'Volverán sus espadas en rejas de arado, y sus lanzas en hoces.',
+    reference: 'Miqueas 4:3',
+    difficulty: 'medio',
+    category: 'miqueas',
+    tags: ['miqueas', 'paz', 'lanzas']
+  },
+  {
+    id: 'miq-005',
+    type: 'multiple-choice',
+    question: '¿Qué promete Dios arrojar en las profundidades del mar?',
+    options: ['A los enemigos', 'Todos nuestros pecados', 'A Satanás', 'Las maldiciones'],
+    correctAnswer: 1,
+    explanation: 'Él volverá a tener misericordia y sepultará nuestras iniquidades en lo profundo del mar.',
+    reference: 'Miqueas 7:19',
+    difficulty: 'facil',
+    category: 'miqueas',
+    tags: ['miqueas', 'perdon', 'pecados']
+  },
+  {
+    id: 'miq-006',
+    type: 'multiple-choice',
+    question: '¿Contra qué ciudades profetiza Miqueas principalmente?',
+    options: ['Jerusalén y Babilonia', 'Samaria y Jerusalén', 'Nínive y Babilonia', 'Damasco y Tiro'],
+    correctAnswer: 1,
+    explanation: 'Miqueas profetiza contra Samaria y Jerusalén.',
+    reference: 'Miqueas 1:1',
+    difficulty: 'facil',
+    category: 'miqueas',
+    tags: ['miqueas', 'samaria', 'jerusalen']
+  },
+  {
+    id: 'miq-007',
+    type: 'multiple-choice',
+    question: '¿Cuántos capítulos tiene el libro de Miqueas?',
+    options: ['5 capítulos', '7 capítulos', '9 capítulos', '12 capítulos'],
+    correctAnswer: 1,
+    explanation: 'Miqueas tiene 7 capítulos.',
+    reference: 'Miqueas',
+    difficulty: 'facil',
+    category: 'miqueas',
+    tags: ['miqueas', 'capitulos', 'libro']
+  },
+  {
+    id: 'miq-008',
+    type: 'multiple-choice',
+    question: '¿De dónde dice Miqueas que saldrán los orígenes del gobernante prometido?',
+    options: ['Del presente', 'Desde el principio, desde los días de la eternidad', 'De David', 'Del templo'],
+    correctAnswer: 1,
+    explanation: 'Sus salidas son desde el principio, desde los días de la eternidad.',
+    reference: 'Miqueas 5:2',
+    difficulty: 'medio',
+    category: 'miqueas',
+    tags: ['miqueas', 'eternidad', 'mesias']
+  },
+  {
+    id: 'miq-009',
+    type: 'multiple-choice',
+    question: '¿Qué dice Miqueas sobre los enemigos del hombre?',
+    options: ['Serán destruidos', 'Los de su casa', 'Huirán', 'Se arrepentirán'],
+    correctAnswer: 1,
+    explanation: 'Los enemigos del hombre son los de su casa.',
+    reference: 'Miqueas 7:6',
+    difficulty: 'facil',
+    category: 'miqueas',
+    tags: ['miqueas', 'enemigos', 'casa']
+  },
+  {
+    id: 'miq-010',
+    type: 'multiple-choice',
+    question: '¿Qué Dios es como el Señor según Miqueas 7:18?',
+    options: ['Todos los dioses', 'Ninguno', 'Los dioses de Egipto', 'Baal'],
+    correctAnswer: 1,
+    explanation: '¿Qué Dios como tú, que perdona la maldad?',
+    reference: 'Miqueas 7:18',
+    difficulty: 'facil',
+    category: 'miqueas',
+    tags: ['miqueas', 'perdon', 'incomparable']
+  }
+];
+
+// NAHÚM - 8 preguntas
+export const nahumQuestions: QuizQuestion[] = [
+  {
+    id: 'nah-001',
+    type: 'multiple-choice',
+    question: '¿Contra qué ciudad profetiza Nahúm?',
+    options: ['Babilonia', 'Nínive', 'Damasco', 'Tiro'],
+    correctAnswer: 1,
+    explanation: 'Profecía sobre Nínive. Libro de la visión de Nahúm.',
+    reference: 'Nahúm 1:1',
+    difficulty: 'facil',
+    category: 'nahum',
+    tags: ['nahum', 'ninive', 'profecia']
+  },
+  {
+    id: 'nah-002',
+    type: 'multiple-choice',
+    question: '¿De dónde era Nahúm?',
+    options: ['Jerusalén', 'Elcos', 'Samaria', 'Betel'],
+    correctAnswer: 1,
+    explanation: 'Libro de la visión de Nahúm de Elcos.',
+    reference: 'Nahúm 1:1',
+    difficulty: 'medio',
+    category: 'nahum',
+    tags: ['nahum', 'elcos', 'origen']
+  },
+  {
+    id: 'nah-003',
+    type: 'multiple-choice',
+    question: '¿Cómo describe Nahúm a Jehová al principio de su libro?',
+    options: ['Misericordioso', 'Celoso y vengador', 'Paciente', 'Alegre'],
+    correctAnswer: 1,
+    explanation: 'Jehová es Dios celoso y vengador.',
+    reference: 'Nahúm 1:2',
+    difficulty: 'facil',
+    category: 'nahum',
+    tags: ['nahum', 'jehova', 'vengador']
+  },
+  {
+    id: 'nah-004',
+    type: 'multiple-choice',
+    question: '¿Qué imperio gobernaba Nínive cuando Nahúm profetizó?',
+    options: ['Babilonia', 'Asiria', 'Persia', 'Egipto'],
+    correctAnswer: 1,
+    explanation: 'Nínive era la capital del imperio asirio.',
+    reference: 'Nahúm 3:18',
+    difficulty: 'facil',
+    category: 'nahum',
+    tags: ['nahum', 'asiria', 'ninive']
+  },
+  {
+    id: 'nah-005',
+    type: 'multiple-choice',
+    question: '¿Qué dice Nahúm 1:7 que es Jehová en el día de la angustia?',
+    options: ['Juez', 'Bueno, fortaleza', 'Guerrero', 'Vengador'],
+    correctAnswer: 1,
+    explanation: 'Jehová es bueno, fortaleza en el día de la angustia.',
+    reference: 'Nahúm 1:7',
+    difficulty: 'facil',
+    category: 'nahum',
+    tags: ['nahum', 'fortaleza', 'bueno']
+  },
+  {
+    id: 'nah-006',
+    type: 'multiple-choice',
+    question: '¿Con qué compara Nahúm a los ninivitas que huyen?',
+    options: ['Ovejas', 'Langostas que huyen cuando sale el sol', 'Leones', 'Águilas'],
+    correctAnswer: 1,
+    explanation: 'Como langostas que cuando sale el sol se van.',
+    reference: 'Nahúm 3:17',
+    difficulty: 'medio',
+    category: 'nahum',
+    tags: ['nahum', 'langostas', 'huir']
+  },
+  {
+    id: 'nah-007',
+    type: 'multiple-choice',
+    question: '¿Cuántos capítulos tiene el libro de Nahúm?',
+    options: ['2 capítulos', '3 capítulos', '4 capítulos', '5 capítulos'],
+    correctAnswer: 1,
+    explanation: 'Nahúm tiene 3 capítulos.',
+    reference: 'Nahúm',
+    difficulty: 'facil',
+    category: 'nahum',
+    tags: ['nahum', 'capitulos', 'libro']
+  },
+  {
+    id: 'nah-008',
+    type: 'multiple-choice',
+    question: '¿Cómo describe Nahúm los pies del mensajero que anuncia paz?',
+    options: ['Rápidos', 'Hermosos', 'Fuertes', 'Santos'],
+    correctAnswer: 1,
+    explanation: 'He aquí sobre los montes los pies del que trae buenas nuevas.',
+    reference: 'Nahúm 1:15',
+    difficulty: 'medio',
+    category: 'nahum',
+    tags: ['nahum', 'mensajero', 'paz']
+  }
+];
+
+// HABACUC - 10 preguntas
+export const habacucQuestions: QuizQuestion[] = [
+  {
+    id: 'hab-001',
+    type: 'multiple-choice',
+    question: '¿Qué pregunta Habacuc a Dios al principio de su libro?',
+    options: ['¿Por qué me bendices?', '¿Hasta cuándo clamaré sin que escuches?', '¿Cuándo vendrá el Mesías?', '¿Por qué amas a Israel?'],
+    correctAnswer: 1,
+    explanation: '¿Hasta cuándo, oh Jehová, clamaré, y no oirás?',
+    reference: 'Habacuc 1:2',
+    difficulty: 'facil',
+    category: 'habacuc',
+    tags: ['habacuc', 'pregunta', 'clamor']
+  },
+  {
+    id: 'hab-002',
+    type: 'multiple-choice',
+    question: '¿Qué nación usaría Dios para castigar a Judá según Habacuc?',
+    options: ['Asiria', 'Los caldeos (babilonios)', 'Egipto', 'Persia'],
+    correctAnswer: 1,
+    explanation: 'He aquí yo levanto a los caldeos.',
+    reference: 'Habacuc 1:6',
+    difficulty: 'facil',
+    category: 'habacuc',
+    tags: ['habacuc', 'caldeos', 'juicio']
+  },
+  {
+    id: 'hab-003',
+    type: 'multiple-choice',
+    question: '¿Cómo vivirá el justo según Habacuc 2:4?',
+    options: ['Por sus obras', 'Por su fe', 'Por sus sacrificios', 'Por su sabiduría'],
+    correctAnswer: 1,
+    explanation: 'Mas el justo por su fe vivirá.',
+    reference: 'Habacuc 2:4',
+    difficulty: 'facil',
+    category: 'habacuc',
+    tags: ['habacuc', 'fe', 'justo']
+  },
+  {
+    id: 'hab-004',
+    type: 'multiple-choice',
+    question: '¿Qué debe hacer toda la tierra ante Jehová según Habacuc?',
+    options: ['Cantar', 'Callar', 'Danzar', 'Llorar'],
+    correctAnswer: 1,
+    explanation: 'Jehová está en su santo templo; calle delante de él toda la tierra.',
+    reference: 'Habacuc 2:20',
+    difficulty: 'facil',
+    category: 'habacuc',
+    tags: ['habacuc', 'silencio', 'templo']
+  },
+  {
+    id: 'hab-005',
+    type: 'multiple-choice',
+    question: '¿Qué llenará la tierra según Habacuc?',
+    options: ['Gloria', 'El conocimiento de la gloria de Jehová', 'Paz', 'Justicia'],
+    correctAnswer: 1,
+    explanation: 'La tierra será llena del conocimiento de la gloria de Jehová.',
+    reference: 'Habacuc 2:14',
+    difficulty: 'facil',
+    category: 'habacuc',
+    tags: ['habacuc', 'gloria', 'conocimiento']
+  },
+  {
+    id: 'hab-006',
+    type: 'multiple-choice',
+    question: '¿Qué pide Habacuc a Dios que avive en medio de los tiempos?',
+    options: ['La esperanza', 'Su obra', 'La fe', 'El amor'],
+    correctAnswer: 1,
+    explanation: 'Oh Jehová, aviva tu obra en medio de los tiempos.',
+    reference: 'Habacuc 3:2',
+    difficulty: 'facil',
+    category: 'habacuc',
+    tags: ['habacuc', 'avivamiento', 'obra']
+  },
+  {
+    id: 'hab-007',
+    type: 'multiple-choice',
+    question: '¿Qué dice Habacuc que hará aunque la higuera no florezca?',
+    options: ['Llorar', 'Me alegraré en Jehová', 'Callar', 'Huir'],
+    correctAnswer: 1,
+    explanation: 'Con todo, yo me alegraré en Jehová.',
+    reference: 'Habacuc 3:18',
+    difficulty: 'facil',
+    category: 'habacuc',
+    tags: ['habacuc', 'gozo', 'fe']
+  },
+  {
+    id: 'hab-008',
+    type: 'multiple-choice',
+    question: '¿A qué compara Habacuc sus pies al final del libro?',
+    options: ['A los del león', 'Como de ciervas', 'A las águilas', 'A los caballos'],
+    correctAnswer: 1,
+    explanation: 'Jehová el Señor es mi fortaleza, el cual hace mis pies como de ciervas.',
+    reference: 'Habacuc 3:19',
+    difficulty: 'facil',
+    category: 'habacuc',
+    tags: ['habacuc', 'ciervas', 'pies']
+  },
+  {
+    id: 'hab-009',
+    type: 'multiple-choice',
+    question: '¿Cuántos capítulos tiene el libro de Habacuc?',
+    options: ['2 capítulos', '3 capítulos', '4 capítulos', '5 capítulos'],
+    correctAnswer: 1,
+    explanation: 'Habacuc tiene 3 capítulos.',
+    reference: 'Habacuc',
+    difficulty: 'facil',
+    category: 'habacuc',
+    tags: ['habacuc', 'capitulos', 'libro']
+  },
+  {
+    id: 'hab-010',
+    type: 'multiple-choice',
+    question: '¿Dónde dice Habacuc que se parará para ver qué le responderá Dios?',
+    options: ['En el templo', 'Sobre la atalaya', 'En el monte', 'Junto al río'],
+    correctAnswer: 1,
+    explanation: 'Sobre mi guarda estaré, y sobre la fortaleza afirmaré el pie.',
+    reference: 'Habacuc 2:1',
+    difficulty: 'medio',
+    category: 'habacuc',
+    tags: ['habacuc', 'atalaya', 'esperar']
+  }
+];
+
+// SOFONÍAS - 8 preguntas
+export const sofoniasQuestions: QuizQuestion[] = [
+  {
+    id: 'sof-001',
+    type: 'multiple-choice',
+    question: '¿En qué reinado profetizó Sofonías?',
+    options: ['Manasés', 'Josías', 'Sedequías', 'Ezequías'],
+    correctAnswer: 1,
+    explanation: 'En los días de Josías hijo de Amón, rey de Judá.',
+    reference: 'Sofonías 1:1',
+    difficulty: 'medio',
+    category: 'sofonias',
+    tags: ['sofonias', 'josias', 'reinado']
+  },
+  {
+    id: 'sof-002',
+    type: 'multiple-choice',
+    question: '¿Qué día anuncia principalmente Sofonías?',
+    options: ['El día de reposo', 'El día de Jehová', 'El día de fiesta', 'El día del perdón'],
+    correctAnswer: 1,
+    explanation: 'Cercano está el día grande de Jehová.',
+    reference: 'Sofonías 1:14',
+    difficulty: 'facil',
+    category: 'sofonias',
+    tags: ['sofonias', 'dia', 'jehova']
+  },
+  {
+    id: 'sof-003',
+    type: 'multiple-choice',
+    question: '¿Cómo describe Sofonías el día de Jehová?',
+    options: ['Día de gozo', 'Día de ira', 'Día de paz', 'Día de victoria'],
+    correctAnswer: 1,
+    explanation: 'Día de ira aquel día, día de angustia y de aprieto.',
+    reference: 'Sofonías 1:15',
+    difficulty: 'facil',
+    category: 'sofonias',
+    tags: ['sofonias', 'ira', 'juicio']
+  },
+  {
+    id: 'sof-004',
+    type: 'multiple-choice',
+    question: '¿Qué dice Sofonías que Jehová está en medio de Israel?',
+    options: ['Un juez severo', 'Poderoso, él salvará', 'Un guerrero', 'Un rey'],
+    correctAnswer: 1,
+    explanation: 'Jehová está en medio de ti, poderoso, él salvará.',
+    reference: 'Sofonías 3:17',
+    difficulty: 'facil',
+    category: 'sofonias',
+    tags: ['sofonias', 'salvacion', 'poderoso']
+  },
+  {
+    id: 'sof-005',
+    type: 'multiple-choice',
+    question: '¿Qué hará Dios sobre su pueblo con cantos según Sofonías?',
+    options: ['Juzgar', 'Se gozará', 'Llorar', 'Recordar'],
+    correctAnswer: 1,
+    explanation: 'Se gozará sobre ti con alegría, callará de amor, se regocijará sobre ti con cánticos.',
+    reference: 'Sofonías 3:17',
+    difficulty: 'facil',
+    category: 'sofonias',
+    tags: ['sofonias', 'gozo', 'canticos']
+  },
+  {
+    id: 'sof-006',
+    type: 'multiple-choice',
+    question: '¿Cuántos capítulos tiene Sofonías?',
+    options: ['2 capítulos', '3 capítulos', '4 capítulos', '5 capítulos'],
+    correctAnswer: 1,
+    explanation: 'Sofonías tiene 3 capítulos.',
+    reference: 'Sofonías',
+    difficulty: 'facil',
+    category: 'sofonias',
+    tags: ['sofonias', 'capitulos', 'libro']
+  },
+  {
+    id: 'sof-007',
+    type: 'multiple-choice',
+    question: '¿A quiénes exhorta Sofonías a buscar a Jehová?',
+    options: ['A los ricos', 'A los mansos de la tierra', 'A los reyes', 'A los sacerdotes'],
+    correctAnswer: 1,
+    explanation: 'Buscad a Jehová todos los mansos de la tierra.',
+    reference: 'Sofonías 2:3',
+    difficulty: 'medio',
+    category: 'sofonias',
+    tags: ['sofonias', 'mansos', 'buscar']
+  },
+  {
+    id: 'sof-008',
+    type: 'multiple-choice',
+    question: '¿Qué ciudades serán destruidas según Sofonías 2?',
+    options: ['Solo Jerusalén', 'Gaza, Ascalón, Asdod, Ecrón', 'Babilonia y Nínive', 'Damasco y Tiro'],
+    correctAnswer: 1,
+    explanation: 'Gaza será desamparada, y Ascalón asolada.',
+    reference: 'Sofonías 2:4',
+    difficulty: 'medio',
+    category: 'sofonias',
+    tags: ['sofonias', 'filisteos', 'juicio']
+  }
+];
+
+// HAGEO - 8 preguntas
+export const hageoQuestions: QuizQuestion[] = [
+  {
+    id: 'hag-001',
+    type: 'multiple-choice',
+    question: '¿Qué exhortaba Hageo al pueblo a reconstruir?',
+    options: ['Los muros', 'El templo', 'Las casas', 'El palacio'],
+    correctAnswer: 1,
+    explanation: 'Hageo exhortó al pueblo a reconstruir el templo de Jehová.',
+    reference: 'Hageo 1:8',
+    difficulty: 'facil',
+    category: 'hageo',
+    tags: ['hageo', 'templo', 'reconstruccion']
+  },
+  {
+    id: 'hag-002',
+    type: 'multiple-choice',
+    question: '¿Quién era el gobernador cuando profetizó Hageo?',
+    options: ['Nehemías', 'Zorobabel', 'Esdras', 'Ciro'],
+    correctAnswer: 1,
+    explanation: 'A Zorobabel hijo de Salatiel, gobernador de Judá.',
+    reference: 'Hageo 1:1',
+    difficulty: 'facil',
+    category: 'hageo',
+    tags: ['hageo', 'zorobabel', 'gobernador']
+  },
+  {
+    id: 'hag-003',
+    type: 'multiple-choice',
+    question: '¿Qué decía el pueblo sobre el tiempo de edificar la casa de Jehová?',
+    options: ['Es tiempo', 'No ha llegado el tiempo', 'Es muy tarde', 'Es muy pronto'],
+    correctAnswer: 1,
+    explanation: 'No ha llegado aún el tiempo de que la casa de Jehová sea reedificada.',
+    reference: 'Hageo 1:2',
+    difficulty: 'facil',
+    category: 'hageo',
+    tags: ['hageo', 'excusa', 'tiempo']
+  },
+  {
+    id: 'hag-004',
+    type: 'multiple-choice',
+    question: '¿Qué problema económico describe Hageo que tenía el pueblo?',
+    options: ['Abundancia', 'Sembráis mucho y recogéis poco', 'Prosperidad', 'No trabajaban'],
+    correctAnswer: 1,
+    explanation: 'Sembráis mucho, y recogéis poco; coméis, y no os saciáis.',
+    reference: 'Hageo 1:6',
+    difficulty: 'facil',
+    category: 'hageo',
+    tags: ['hageo', 'economia', 'maldicion']
+  },
+  {
+    id: 'hag-005',
+    type: 'multiple-choice',
+    question: '¿Quién era el sumo sacerdote junto a Zorobabel?',
+    options: ['Esdras', 'Josué hijo de Josadac', 'Nehemías', 'Aarón'],
+    correctAnswer: 1,
+    explanation: 'A Josué hijo de Josadac, sumo sacerdote.',
+    reference: 'Hageo 1:1',
+    difficulty: 'medio',
+    category: 'hageo',
+    tags: ['hageo', 'josue', 'sacerdote']
+  },
+  {
+    id: 'hag-006',
+    type: 'multiple-choice',
+    question: '¿Qué promete Dios sobre la gloria del segundo templo?',
+    options: ['Será menor', 'Será mayor que la del primero', 'Será igual', 'No tendrá gloria'],
+    correctAnswer: 1,
+    explanation: 'La gloria postrera de esta casa será mayor que la primera.',
+    reference: 'Hageo 2:9',
+    difficulty: 'facil',
+    category: 'hageo',
+    tags: ['hageo', 'gloria', 'templo']
+  },
+  {
+    id: 'hag-007',
+    type: 'multiple-choice',
+    question: '¿Cuántos capítulos tiene el libro de Hageo?',
+    options: ['1 capítulo', '2 capítulos', '3 capítulos', '4 capítulos'],
+    correctAnswer: 1,
+    explanation: 'Hageo tiene 2 capítulos.',
+    reference: 'Hageo',
+    difficulty: 'facil',
+    category: 'hageo',
+    tags: ['hageo', 'capitulos', 'libro']
+  },
+  {
+    id: 'hag-008',
+    type: 'multiple-choice',
+    question: '¿Cómo llama Dios a Zorobabel al final del libro?',
+    options: ['Mi rey', 'Mi siervo, como anillo de sellar', 'Mi profeta', 'Mi hijo'],
+    correctAnswer: 1,
+    explanation: 'Te pondré como anillo de sellar; porque yo te escogí.',
+    reference: 'Hageo 2:23',
+    difficulty: 'medio',
+    category: 'hageo',
+    tags: ['hageo', 'zorobabel', 'anillo']
+  }
+];
+
+// ZACARÍAS - 12 preguntas
+export const zacariasQuestions: QuizQuestion[] = [
+  {
+    id: 'zac-001',
+    type: 'multiple-choice',
+    question: '¿Cuántas visiones nocturnas tuvo Zacarías?',
+    options: ['5 visiones', '8 visiones', '10 visiones', '12 visiones'],
+    correctAnswer: 1,
+    explanation: 'Zacarías tuvo 8 visiones nocturnas en los capítulos 1-6.',
+    reference: 'Zacarías 1-6',
+    difficulty: 'medio',
+    category: 'zacarias',
+    tags: ['zacarias', 'visiones', 'ocho']
+  },
+  {
+    id: 'zac-002',
+    type: 'multiple-choice',
+    question: '¿Qué vio Zacarías entre los mirtos en su primera visión?',
+    options: ['Ángeles', 'Un varón que cabalgaba un caballo alazán', 'Un ejército', 'El templo'],
+    correctAnswer: 1,
+    explanation: 'Vi de noche, y he aquí un varón que cabalgaba sobre un caballo alazán.',
+    reference: 'Zacarías 1:8',
+    difficulty: 'medio',
+    category: 'zacarias',
+    tags: ['zacarias', 'vision', 'caballo']
+  },
+  {
+    id: 'zac-003',
+    type: 'multiple-choice',
+    question: '¿Sobre qué animal entra el rey a Jerusalén según Zacarías 9:9?',
+    options: ['Un caballo', 'Un asno, un pollino', 'Un camello', 'Un buey'],
+    correctAnswer: 1,
+    explanation: 'He aquí tu rey vendrá a ti, justo y salvador, humilde, cabalgando sobre un asno.',
+    reference: 'Zacarías 9:9',
+    difficulty: 'facil',
+    category: 'zacarias',
+    tags: ['zacarias', 'mesias', 'asno']
+  },
+  {
+    id: 'zac-004',
+    type: 'multiple-choice',
+    question: '¿Por cuántas piezas de plata fue apreciado el pastor según Zacarías?',
+    options: ['20 piezas', '30 piezas', '40 piezas', '50 piezas'],
+    correctAnswer: 1,
+    explanation: 'Y pesaron por mi salario treinta piezas de plata.',
+    reference: 'Zacarías 11:12',
+    difficulty: 'facil',
+    category: 'zacarias',
+    tags: ['zacarias', 'plata', 'profecia']
+  },
+  {
+    id: 'zac-005',
+    type: 'multiple-choice',
+    question: '¿A quién mirarán aquellos que traspasaron según Zacarías 12:10?',
+    options: ['A los profetas', 'A mí, a quien traspasaron', 'A los reyes', 'Al templo'],
+    correctAnswer: 1,
+    explanation: 'Y mirarán a mí, a quien traspasaron, y llorarán.',
+    reference: 'Zacarías 12:10',
+    difficulty: 'facil',
+    category: 'zacarias',
+    tags: ['zacarias', 'traspasado', 'mesias']
+  },
+  {
+    id: 'zac-006',
+    type: 'multiple-choice',
+    question: '¿Qué se abrirá para el pecado según Zacarías 13:1?',
+    options: ['El cielo', 'Un manantial', 'El templo', 'Un río'],
+    correctAnswer: 1,
+    explanation: 'En aquel tiempo habrá un manantial abierto para la casa de David para el pecado.',
+    reference: 'Zacarías 13:1',
+    difficulty: 'medio',
+    category: 'zacarias',
+    tags: ['zacarias', 'manantial', 'perdon']
+  },
+  {
+    id: 'zac-007',
+    type: 'multiple-choice',
+    question: '¿A qué monte se partirá cuando pose los pies del Señor según Zacarías?',
+    options: ['Monte Sinaí', 'Monte de los Olivos', 'Monte Carmelo', 'Monte Sion'],
+    correctAnswer: 1,
+    explanation: 'Y se afirmarán sus pies sobre el monte de los Olivos; y el monte se partirá.',
+    reference: 'Zacarías 14:4',
+    difficulty: 'facil',
+    category: 'zacarias',
+    tags: ['zacarias', 'olivos', 'segunda venida']
+  },
+  {
+    id: 'zac-008',
+    type: 'multiple-choice',
+    question: '¿Qué dice Zacarías que no será por fuerza ni por poder?',
+    options: ['La guerra', 'Sino por mi Espíritu', 'La victoria', 'El reino'],
+    correctAnswer: 1,
+    explanation: 'No con ejército, ni con fuerza, sino con mi Espíritu.',
+    reference: 'Zacarías 4:6',
+    difficulty: 'facil',
+    category: 'zacarias',
+    tags: ['zacarias', 'espiritu', 'poder']
+  },
+  {
+    id: 'zac-009',
+    type: 'multiple-choice',
+    question: '¿Qué vio Zacarías que tenía siete ojos?',
+    options: ['Un ángel', 'Una piedra', 'Un querubín', 'El candelero'],
+    correctAnswer: 1,
+    explanation: 'Sobre esta satisfecha piedra hay siete ojos.',
+    reference: 'Zacarías 3:9',
+    difficulty: 'medio',
+    category: 'zacarias',
+    tags: ['zacarias', 'piedra', 'ojos']
+  },
+  {
+    id: 'zac-010',
+    type: 'multiple-choice',
+    question: '¿Cuántos capítulos tiene el libro de Zacarías?',
+    options: ['10 capítulos', '12 capítulos', '14 capítulos', '16 capítulos'],
+    correctAnswer: 2,
+    explanation: 'Zacarías tiene 14 capítulos.',
+    reference: 'Zacarías',
+    difficulty: 'facil',
+    category: 'zacarias',
+    tags: ['zacarias', 'capitulos', 'libro']
+  },
+  {
+    id: 'zac-011',
+    type: 'multiple-choice',
+    question: '¿Qué pasará con las naciones que atacaron a Jerusalén según Zacarías 14?',
+    options: ['Prosperarán', 'Subirán a adorar a Jehová', 'Desaparecerán', 'Serán bendecidas'],
+    correctAnswer: 1,
+    explanation: 'Todos los que sobrevivieren subirán de año en año a adorar al Rey.',
+    reference: 'Zacarías 14:16',
+    difficulty: 'medio',
+    category: 'zacarias',
+    tags: ['zacarias', 'naciones', 'adoracion']
+  },
+  {
+    id: 'zac-012',
+    type: 'multiple-choice',
+    question: '¿Qué fiesta celebrarán las naciones según Zacarías 14?',
+    options: ['Pascua', 'Pentecostés', 'Tabernáculos', 'Expiación'],
+    correctAnswer: 2,
+    explanation: 'Subirán para adorar al Rey y celebrar la fiesta de los tabernáculos.',
+    reference: 'Zacarías 14:16',
+    difficulty: 'medio',
+    category: 'zacarias',
+    tags: ['zacarias', 'tabernaculos', 'fiesta']
+  }
+];
+
+// MALAQUÍAS - 10 preguntas
+export const malaquiasQuestions: QuizQuestion[] = [
+  {
+    id: 'mal-001',
+    type: 'multiple-choice',
+    question: '¿Qué significa el nombre Malaquías?',
+    options: ['Dios es grande', 'Mi mensajero', 'Dios salva', 'Jehová recuerda'],
+    correctAnswer: 1,
+    explanation: 'Malaquías significa "mi mensajero".',
+    reference: 'Malaquías 1:1',
+    difficulty: 'facil',
+    category: 'malaquias',
+    tags: ['malaquias', 'nombre', 'significado']
+  },
+  {
+    id: 'mal-002',
+    type: 'multiple-choice',
+    question: '¿Qué acusa Dios al pueblo de robar según Malaquías?',
+    options: ['Ofrendas', 'Los diezmos y las ofrendas', 'El templo', 'Los sacrificios'],
+    correctAnswer: 1,
+    explanation: 'En vuestros diezmos y ofrendas. ¿Robará el hombre a Dios?',
+    reference: 'Malaquías 3:8',
+    difficulty: 'facil',
+    category: 'malaquias',
+    tags: ['malaquias', 'diezmos', 'robo']
+  },
+  {
+    id: 'mal-003',
+    type: 'multiple-choice',
+    question: '¿Qué promete Dios abrir si traen los diezmos al alfolí?',
+    options: ['Las puertas', 'Las ventanas de los cielos', 'El templo', 'Los corazones'],
+    correctAnswer: 1,
+    explanation: 'Abriré las ventanas de los cielos, y derramaré sobre vosotros bendición.',
+    reference: 'Malaquías 3:10',
+    difficulty: 'facil',
+    category: 'malaquias',
+    tags: ['malaquias', 'ventanas', 'bendicion']
+  },
+  {
+    id: 'mal-004',
+    type: 'multiple-choice',
+    question: '¿Qué profeta vendrá antes del día de Jehová según Malaquías?',
+    options: ['Moisés', 'Elías', 'Samuel', 'Isaías'],
+    correctAnswer: 1,
+    explanation: 'He aquí, yo os envío el profeta Elías, antes que venga el día de Jehová.',
+    reference: 'Malaquías 4:5',
+    difficulty: 'facil',
+    category: 'malaquias',
+    tags: ['malaquias', 'elias', 'profecia']
+  },
+  {
+    id: 'mal-005',
+    type: 'multiple-choice',
+    question: '¿Qué dice Malaquías que Dios aborrece?',
+    options: ['El pecado', 'El divorcio', 'La mentira', 'La idolatría'],
+    correctAnswer: 1,
+    explanation: 'Porque Jehová Dios de Israel ha dicho que él aborrece el repudio.',
+    reference: 'Malaquías 2:16',
+    difficulty: 'facil',
+    category: 'malaquias',
+    tags: ['malaquias', 'divorcio', 'matrimonio']
+  },
+  {
+    id: 'mal-006',
+    type: 'multiple-choice',
+    question: '¿Cómo llama Malaquías al Sol que nacerá con salvación?',
+    options: ['Sol de gloria', 'Sol de justicia', 'Sol de paz', 'Sol de vida'],
+    correctAnswer: 1,
+    explanation: 'Nacerá el Sol de justicia, y en sus alas traerá salvación.',
+    reference: 'Malaquías 4:2',
+    difficulty: 'facil',
+    category: 'malaquias',
+    tags: ['malaquias', 'sol', 'justicia']
+  },
+  {
+    id: 'mal-007',
+    type: 'multiple-choice',
+    question: '¿Qué afirma Dios sobre sí mismo en Malaquías 3:6?',
+    options: ['Soy amor', 'Yo Jehová no cambio', 'Soy todopoderoso', 'Soy santo'],
+    correctAnswer: 1,
+    explanation: 'Porque yo Jehová no cambio; por esto, hijos de Jacob, no habéis sido consumidos.',
+    reference: 'Malaquías 3:6',
+    difficulty: 'facil',
+    category: 'malaquias',
+    tags: ['malaquias', 'inmutable', 'jehova']
+  },
+  {
+    id: 'mal-008',
+    type: 'multiple-choice',
+    question: '¿Qué escribió Dios para los que le temen según Malaquías?',
+    options: ['Un pacto', 'Un libro de memoria', 'Una ley', 'Un mandamiento'],
+    correctAnswer: 1,
+    explanation: 'Fue escrito libro de memoria delante de él para los que temen a Jehová.',
+    reference: 'Malaquías 3:16',
+    difficulty: 'medio',
+    category: 'malaquias',
+    tags: ['malaquias', 'libro', 'memoria']
+  },
+  {
+    id: 'mal-009',
+    type: 'multiple-choice',
+    question: '¿Cuántos capítulos tiene el libro de Malaquías?',
+    options: ['2 capítulos', '3 capítulos', '4 capítulos', '5 capítulos'],
+    correctAnswer: 2,
+    explanation: 'Malaquías tiene 4 capítulos.',
+    reference: 'Malaquías',
+    difficulty: 'facil',
+    category: 'malaquias',
+    tags: ['malaquias', 'capitulos', 'libro']
+  },
+  {
+    id: 'mal-010',
+    type: 'multiple-choice',
+    question: '¿Qué volvería Elías según Malaquías 4:6?',
+    options: ['La paz a Israel', 'El corazón de los padres hacia los hijos', 'El templo a su gloria', 'La ley a Moisés'],
+    correctAnswer: 1,
+    explanation: 'Él hará volver el corazón de los padres hacia los hijos.',
+    reference: 'Malaquías 4:6',
+    difficulty: 'medio',
+    category: 'malaquias',
+    tags: ['malaquias', 'elias', 'corazones']
+  }
+];
+
 // Exportar todas las preguntas organizadas
 export const allQuestions: Record<string, QuizQuestion[]> = {
   genesis: genesisQuestions,
@@ -12045,6 +13533,19 @@ export const allQuestions: Record<string, QuizQuestion[]> = {
   lamentaciones: lamentacionesQuestions,
   ezequiel: ezequielQuestions,
   daniel: danielQuestions,
+  // Profetas Menores
+  oseas: oseasQuestions,
+  joel: joelQuestions,
+  amos: amosQuestions,
+  abdias: abdiasQuestions,
+  jonas: jonasQuestions,
+  miqueas: miqueasQuestions,
+  nahum: nahumQuestions,
+  habacuc: habacucQuestions,
+  sofonias: sofoniasQuestions,
+  hageo: hageoQuestions,
+  zacarias: zacariasQuestions,
+  malaquias: malaquiasQuestions,
   // Nuevo Testamento
   mateo: mateoQuestions,
   juan: juanQuestions,
