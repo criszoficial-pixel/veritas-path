@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Share2, Bookmark, BookmarkCheck, Image } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
@@ -6,6 +6,7 @@ import { getDailyVerseByDate } from '@/data/dailyVerses';
 import { useBookmarks } from '@/hooks/useBookmarks';
 import { toast } from 'sonner';
 import { ShareVerseDialog } from '@/components/share/ShareVerseDialog';
+import { Skeleton } from '@/components/ui/skeleton';
 
 const topicBackgrounds: Record<string, string> = {
   'confianza': 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80',
@@ -28,10 +29,18 @@ const defaultBackground = 'https://images.unsplash.com/photo-1506905925346-21bda
 
 export const DailyVerseCard = () => {
   const [shareDialogOpen, setShareDialogOpen] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
   const navigate = useNavigate();
   const dailyVerse = getDailyVerseByDate();
   const backgroundImage = topicBackgrounds[dailyVerse.topic] || defaultBackground;
   const { toggleVerseBookmark, checkBookmarked } = useBookmarks();
+
+  useEffect(() => {
+    setImageLoaded(false);
+    const img = new window.Image();
+    img.src = backgroundImage;
+    img.onload = () => setImageLoaded(true);
+  }, [backgroundImage]);
 
   const isVerseBookmarked = checkBookmarked(
     dailyVerse.bookSlug,
@@ -79,9 +88,15 @@ export const DailyVerseCard = () => {
     navigate(`/leer/${encodeURIComponent(bookName)}/${dailyVerse.chapter}?v=${verseNumber}`);
   };
 
+  if (!imageLoaded) {
+    return (
+      <Skeleton className="rounded-2xl h-[280px] w-full" />
+    );
+  }
+
   return (
     <div 
-      className="relative overflow-hidden rounded-2xl p-6 text-white shadow-card bg-cover bg-center"
+      className="relative overflow-hidden rounded-2xl p-6 text-white shadow-card bg-cover bg-center animate-fade-in"
       style={{ 
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), url("${backgroundImage}")`
       }}
