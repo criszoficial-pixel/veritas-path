@@ -9,6 +9,7 @@ import { useBookmarks } from '@/hooks/useBookmarks';
 import { getNotesCount } from '@/services/userDataService';
 import { getUserStats } from '@/services/quizService';
 import { DoveIcon } from '@/components/icons/DoveIcon';
+import crownIcon from '@/assets/crown.png';
 
 const Perfil = () => {
   const navigate = useNavigate();
@@ -76,7 +77,7 @@ const Perfil = () => {
         <section className="space-y-4">
           <h3 className="text-lg font-semibold text-foreground">Actividad Semanal</h3>
           <div className="flex justify-between gap-2">
-            {dayLabels.map((day, index) => {
+                {dayLabels.map((day, index) => {
               const isActive = weeklyActivity[index];
               const isToday = index === todayIndex;
               return (
@@ -84,11 +85,16 @@ const Perfil = () => {
                   <div
                     className={cn(
                       'w-10 h-10 rounded-lg flex items-center justify-center text-sm font-medium',
-                      isToday ? 'bg-primary text-primary-foreground' :
-                      isActive ? 'bg-spirit/20 text-spirit' : 'bg-secondary text-muted-foreground'
+                      isToday && isActive ? 'bg-amber-100 dark:bg-amber-900/30 ring-2 ring-primary' :
+                      isToday ? 'ring-2 ring-primary bg-secondary' :
+                      isActive ? 'bg-amber-100 dark:bg-amber-900/30' : 'bg-secondary'
                     )}
                   >
-                    {isActive && <DoveIcon size={16} animated={false} />}
+                    {isActive ? (
+                      <img src={crownIcon} alt="Activo" className="w-6 h-6" />
+                    ) : (
+                      <span className="text-muted-foreground">{day}</span>
+                    )}
                   </div>
                   <span className="text-xs text-muted-foreground">{day}</span>
                 </div>
