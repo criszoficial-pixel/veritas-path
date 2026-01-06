@@ -79,7 +79,34 @@ export const quizCategories: QuizCategory[] = [
     icon: '🔥',
     color: 'hsl(25, 95%, 53%)',
     type: 'libro',
-    questionCount: 12
+    questionCount: 32
+  },
+  {
+    id: 'levitico',
+    title: 'Levítico',
+    description: 'Leyes de santidad, sacrificios y fiestas de Israel',
+    icon: '📜',
+    color: 'hsl(280, 60%, 45%)',
+    type: 'libro',
+    questionCount: 28
+  },
+  {
+    id: 'numeros',
+    title: 'Números',
+    description: 'El pueblo en el desierto, censos y rebeliones',
+    icon: '🏕️',
+    color: 'hsl(35, 80%, 45%)',
+    type: 'libro',
+    questionCount: 28
+  },
+  {
+    id: 'deuteronomio',
+    title: 'Deuteronomio',
+    description: 'Segunda ley, discursos finales de Moisés',
+    icon: '📋',
+    color: 'hsl(180, 60%, 40%)',
+    type: 'libro',
+    questionCount: 28
   },
   {
     id: 'salmos',
@@ -460,6 +487,44 @@ export const achievements: Achievement[] = [
     icon: '🔮',
     condition: (stats) => stats.quizzesByCategory['profecias'] >= 1,
     points: 100
+  },
+  // Logros del Pentateuco
+  {
+    id: 'conocedor-levitico',
+    title: 'Conocedor de Levítico',
+    description: 'Domina las leyes de santidad',
+    icon: '📜',
+    condition: (stats) => stats.quizzesByCategory['levitico'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-numeros',
+    title: 'Conocedor de Números',
+    description: 'Conoce la travesía en el desierto',
+    icon: '🏕️',
+    condition: (stats) => stats.quizzesByCategory['numeros'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-deuteronomio',
+    title: 'Conocedor de Deuteronomio',
+    description: 'Domina los discursos de Moisés',
+    icon: '📋',
+    condition: (stats) => stats.quizzesByCategory['deuteronomio'] >= 1,
+    points: 100
+  },
+  {
+    id: 'pentateuco-completo',
+    title: 'Maestro del Pentateuco',
+    description: 'Completa quizzes de los 5 libros de Moisés',
+    icon: '📚',
+    condition: (stats) => 
+      stats.quizzesByCategory['genesis'] >= 1 &&
+      stats.quizzesByCategory['exodo'] >= 1 &&
+      stats.quizzesByCategory['levitico'] >= 1 &&
+      stats.quizzesByCategory['numeros'] >= 1 &&
+      stats.quizzesByCategory['deuteronomio'] >= 1,
+    points: 500
   }
 ];
 
