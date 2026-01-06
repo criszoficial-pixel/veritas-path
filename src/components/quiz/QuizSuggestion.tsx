@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom';
-import { Brain, ChevronRight, Sparkles } from 'lucide-react';
+import { Brain, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 
 interface QuizSuggestionProps {
   bookId: string;
   bookName: string;
-  chapter?: number;
 }
 
 // Mapeo de nombres de libros a IDs de categorías de quiz disponibles
@@ -24,7 +23,7 @@ const bookToQuizCategory: Record<string, string> = {
   'apocalipsis': 'apocalipsis'
 };
 
-export const QuizSuggestion = ({ bookId, bookName, chapter }: QuizSuggestionProps) => {
+export const QuizSuggestion = ({ bookId, bookName }: QuizSuggestionProps) => {
   const normalizedBookId = bookId.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   const quizCategoryId = bookToQuizCategory[normalizedBookId];
   
@@ -40,15 +39,11 @@ export const QuizSuggestion = ({ bookId, bookName, chapter }: QuizSuggestionProp
           <Brain className="h-6 w-6" />
         </div>
         <div className="flex-1">
-          <div className="flex items-center gap-2 mb-1">
-            <h3 className="font-semibold text-foreground">
-              ¿Terminaste de leer?
-            </h3>
-            <Sparkles className="h-4 w-4 text-yellow-500" />
-          </div>
+          <h3 className="font-semibold text-foreground mb-1">
+            ¿Terminaste de leer?
+          </h3>
           <p className="text-sm text-muted-foreground mb-4">
-            Pon a prueba tu conocimiento sobre {bookName}
-            {chapter && ` capítulo ${chapter}`}
+            Pon a prueba tu conocimiento sobre el libro de {bookName}
           </p>
           <Button asChild size="sm" className="gap-2">
             <Link to={`/quizzes/jugar/${quizCategoryId}`}>
