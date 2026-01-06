@@ -246,6 +246,115 @@ export const quizCategories: QuizCategory[] = [
     type: 'libro',
     questionCount: 35
   },
+  // Profetas Menores
+  {
+    id: 'oseas',
+    title: 'Oseas',
+    description: 'Amor fiel de Dios a un pueblo infiel',
+    icon: '💑',
+    color: 'hsl(350, 70%, 50%)',
+    type: 'libro',
+    questionCount: 12
+  },
+  {
+    id: 'joel',
+    title: 'Joel',
+    description: 'El día del Señor y el derramamiento del Espíritu',
+    icon: '🦗',
+    color: 'hsl(120, 60%, 35%)',
+    type: 'libro',
+    questionCount: 10
+  },
+  {
+    id: 'amos',
+    title: 'Amós',
+    description: 'Justicia social y juicio contra las naciones',
+    icon: '⚖️',
+    color: 'hsl(200, 70%, 40%)',
+    type: 'libro',
+    questionCount: 12
+  },
+  {
+    id: 'abdias',
+    title: 'Abdías',
+    description: 'Juicio contra Edom',
+    icon: '⛰️',
+    color: 'hsl(30, 60%, 45%)',
+    type: 'libro',
+    questionCount: 8
+  },
+  {
+    id: 'jonas',
+    title: 'Jonás',
+    description: 'El profeta desobediente y la misericordia de Dios',
+    icon: '🐋',
+    color: 'hsl(200, 80%, 45%)',
+    type: 'libro',
+    questionCount: 12
+  },
+  {
+    id: 'miqueas',
+    title: 'Miqueas',
+    description: 'Justicia, misericordia y la promesa del Mesías',
+    icon: '🏘️',
+    color: 'hsl(160, 60%, 40%)',
+    type: 'libro',
+    questionCount: 10
+  },
+  {
+    id: 'nahum',
+    title: 'Nahúm',
+    description: 'La caída de Nínive',
+    icon: '🏚️',
+    color: 'hsl(0, 60%, 40%)',
+    type: 'libro',
+    questionCount: 8
+  },
+  {
+    id: 'habacuc',
+    title: 'Habacuc',
+    description: 'El justo por la fe vivirá',
+    icon: '❓',
+    color: 'hsl(270, 60%, 45%)',
+    type: 'libro',
+    questionCount: 10
+  },
+  {
+    id: 'sofonias',
+    title: 'Sofonías',
+    description: 'El día del Señor y la restauración',
+    icon: '🌑',
+    color: 'hsl(240, 50%, 35%)',
+    type: 'libro',
+    questionCount: 8
+  },
+  {
+    id: 'hageo',
+    title: 'Hageo',
+    description: 'Reconstrucción del templo',
+    icon: '🏗️',
+    color: 'hsl(45, 70%, 45%)',
+    type: 'libro',
+    questionCount: 8
+  },
+  {
+    id: 'zacarias',
+    title: 'Zacarías',
+    description: 'Visiones mesiánicas y el rey humilde',
+    icon: '🐴',
+    color: 'hsl(180, 65%, 40%)',
+    type: 'libro',
+    questionCount: 12
+  },
+  {
+    id: 'malaquias',
+    title: 'Malaquías',
+    description: 'Llamado al arrepentimiento y promesa del Mesías',
+    icon: '☀️',
+    color: 'hsl(40, 90%, 50%)',
+    type: 'libro',
+    questionCount: 10
+  },
   // Por Libro - NT
   {
     id: 'mateo',
@@ -809,6 +918,123 @@ export const achievements: Achievement[] = [
       stats.quizzesByCategory['ezequiel'] >= 1 &&
       stats.quizzesByCategory['daniel'] >= 1,
     points: 750
+  },
+  // Logros de Profetas Menores
+  {
+    id: 'conocedor-oseas',
+    title: 'Amante Fiel',
+    description: 'Comprende el amor de Dios en Oseas',
+    icon: '💑',
+    condition: (stats) => stats.quizzesByCategory['oseas'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-joel',
+    title: 'Profeta del Espíritu',
+    description: 'Conoce las profecías de Joel',
+    icon: '🦗',
+    condition: (stats) => stats.quizzesByCategory['joel'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-amos',
+    title: 'Defensor de Justicia',
+    description: 'Domina el mensaje de Amós',
+    icon: '⚖️',
+    condition: (stats) => stats.quizzesByCategory['amos'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-abdias',
+    title: 'Juez de Edom',
+    description: 'Conoce la profecía de Abdías',
+    icon: '⛰️',
+    condition: (stats) => stats.quizzesByCategory['abdias'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-jonas',
+    title: 'Misionero Reluctante',
+    description: 'Comprende la historia de Jonás',
+    icon: '🐋',
+    condition: (stats) => stats.quizzesByCategory['jonas'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-miqueas',
+    title: 'Profeta de Belén',
+    description: 'Conoce las profecías de Miqueas',
+    icon: '🏘️',
+    condition: (stats) => stats.quizzesByCategory['miqueas'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-nahum',
+    title: 'Testigo de Nínive',
+    description: 'Domina el juicio de Nahúm',
+    icon: '🏚️',
+    condition: (stats) => stats.quizzesByCategory['nahum'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-habacuc',
+    title: 'Justo por Fe',
+    description: 'Comprende las preguntas de Habacuc',
+    icon: '❓',
+    condition: (stats) => stats.quizzesByCategory['habacuc'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-sofonias',
+    title: 'Vigía del Día',
+    description: 'Conoce el día del Señor en Sofonías',
+    icon: '🌑',
+    condition: (stats) => stats.quizzesByCategory['sofonias'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-hageo',
+    title: 'Constructor del Templo',
+    description: 'Domina el mensaje de Hageo',
+    icon: '🏗️',
+    condition: (stats) => stats.quizzesByCategory['hageo'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-zacarias',
+    title: 'Visionario Mesiánico',
+    description: 'Conoce las visiones de Zacarías',
+    icon: '🐴',
+    condition: (stats) => stats.quizzesByCategory['zacarias'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-malaquias',
+    title: 'Mensajero Final',
+    description: 'Domina el último profeta del AT',
+    icon: '☀️',
+    condition: (stats) => stats.quizzesByCategory['malaquias'] >= 1,
+    points: 100
+  },
+  {
+    id: 'profetas-menores-completo',
+    title: 'Los Doce Profetas',
+    description: 'Completa quizzes de todos los profetas menores',
+    icon: '📜',
+    condition: (stats) => 
+      stats.quizzesByCategory['oseas'] >= 1 &&
+      stats.quizzesByCategory['joel'] >= 1 &&
+      stats.quizzesByCategory['amos'] >= 1 &&
+      stats.quizzesByCategory['abdias'] >= 1 &&
+      stats.quizzesByCategory['jonas'] >= 1 &&
+      stats.quizzesByCategory['miqueas'] >= 1 &&
+      stats.quizzesByCategory['nahum'] >= 1 &&
+      stats.quizzesByCategory['habacuc'] >= 1 &&
+      stats.quizzesByCategory['sofonias'] >= 1 &&
+      stats.quizzesByCategory['hageo'] >= 1 &&
+      stats.quizzesByCategory['zacarias'] >= 1 &&
+      stats.quizzesByCategory['malaquias'] >= 1,
+    points: 1000
   }
 ];
 
