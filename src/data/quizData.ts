@@ -165,6 +165,15 @@ export const quizCategories: QuizCategory[] = [
   },
   // Libros Poéticos
   {
+    id: 'job',
+    title: 'Job',
+    description: 'El sufrimiento del justo y la soberanía de Dios',
+    icon: '⚖️',
+    color: 'hsl(220, 60%, 45%)',
+    type: 'libro',
+    questionCount: 30
+  },
+  {
     id: 'salmos',
     title: 'Salmos',
     description: 'Poesía, alabanza y sabiduría del rey David',
@@ -172,6 +181,24 @@ export const quizCategories: QuizCategory[] = [
     color: 'hsl(262, 83%, 58%)',
     type: 'libro',
     questionCount: 10
+  },
+  {
+    id: 'eclesiastes',
+    title: 'Eclesiastés',
+    description: 'Reflexiones sobre el sentido de la vida',
+    icon: '🌅',
+    color: 'hsl(35, 70%, 50%)',
+    type: 'libro',
+    questionCount: 25
+  },
+  {
+    id: 'cantares',
+    title: 'Cantares',
+    description: 'El cántico de amor de Salomón',
+    icon: '🌹',
+    color: 'hsl(350, 80%, 55%)',
+    type: 'libro',
+    questionCount: 20
   },
   // Por Libro - NT
   {
@@ -643,6 +670,44 @@ export const achievements: Achievement[] = [
       stats.quizzesByCategory['samuel'] >= 1 &&
       stats.quizzesByCategory['reyes'] >= 1 &&
       stats.quizzesByCategory['cronicas'] >= 1,
+    points: 750
+  },
+  // Logros de Libros Poéticos
+  {
+    id: 'conocedor-job',
+    title: 'Paciente como Job',
+    description: 'Domina el libro del sufrimiento y la fe',
+    icon: '⚖️',
+    condition: (stats) => stats.quizzesByCategory['job'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-eclesiastes',
+    title: 'Filósofo Sabio',
+    description: 'Reflexiona con el Predicador',
+    icon: '🌅',
+    condition: (stats) => stats.quizzesByCategory['eclesiastes'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-cantares',
+    title: 'Romántico Bíblico',
+    description: 'Conoce el cantar de los cantares',
+    icon: '🌹',
+    condition: (stats) => stats.quizzesByCategory['cantares'] >= 1,
+    points: 100
+  },
+  {
+    id: 'poeticos-completo',
+    title: 'Poeta de Israel',
+    description: 'Completa quizzes de todos los libros poéticos',
+    icon: '🎭',
+    condition: (stats) => 
+      stats.quizzesByCategory['job'] >= 1 &&
+      stats.quizzesByCategory['salmos'] >= 1 &&
+      stats.quizzesByCategory['proverbios'] >= 1 &&
+      stats.quizzesByCategory['eclesiastes'] >= 1 &&
+      stats.quizzesByCategory['cantares'] >= 1,
     points: 750
   }
 ];
