@@ -179,21 +179,6 @@ const Aprender = () => {
               Un plan estructurado te ayuda a mantener la disciplina espiritual.
             </p>
             
-            {/* Objective card */}
-            <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-              <div className="flex items-start gap-3">
-                <div className="p-2 bg-white/20 rounded-lg">
-                  <Target className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="font-semibold text-sm mb-1">Nuestro Objetivo</p>
-                  <p className="text-xs leading-relaxed opacity-90">
-                    Desarrolla un hábito de lectura bíblica que transforme tu vida espiritual día a día.
-                  </p>
-                </div>
-              </div>
-            </div>
-            
             {/* Stats */}
             <div className="flex flex-wrap gap-4 pt-2">
               <div className="flex items-center gap-2 text-xs">
