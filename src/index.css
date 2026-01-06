@@ -6,122 +6,123 @@
 
 @layer base {
   :root {
-    /* Warm, spiritual palette */
-    --background: 40 33% 98%;
-    --foreground: 222 47% 11%;
+    /* Navy & Teal palette - #0C2B4E, #1A3D64, #1D546C, #F4F4F4 */
+    --background: 0 0% 96%;
+    --foreground: 212 73% 12%;
 
-    --card: 40 33% 99%;
-    --card-foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 212 73% 12%;
 
-    --popover: 40 33% 99%;
-    --popover-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 212 73% 12%;
 
-    /* Deep faith blue */
-    --primary: 217 71% 35%;
-    --primary-foreground: 40 33% 98%;
+    /* Primary: Navy #0C2B4E */
+    --primary: 212 73% 18%;
+    --primary-foreground: 0 0% 96%;
 
-    /* Warm cream */
-    --secondary: 40 33% 94%;
-    --secondary-foreground: 222 47% 11%;
+    /* Secondary: Light gray-blue */
+    --secondary: 210 20% 92%;
+    --secondary-foreground: 212 73% 18%;
 
-    --muted: 40 20% 92%;
-    --muted-foreground: 220 15% 45%;
+    --muted: 210 15% 90%;
+    --muted-foreground: 212 40% 40%;
 
-    /* Divine gold accent */
-    --accent: 43 74% 49%;
-    --accent-foreground: 222 47% 11%;
+    /* Accent: Teal #1D546C */
+    --accent: 198 58% 27%;
+    --accent-foreground: 0 0% 96%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 40 33% 98%;
+    --destructive-foreground: 0 0% 96%;
 
-    --border: 40 20% 88%;
-    --input: 40 20% 88%;
-    --ring: 217 71% 35%;
+    --border: 210 15% 85%;
+    --input: 210 15% 85%;
+    --ring: 212 73% 18%;
 
     --radius: 0.75rem;
 
     /* Custom spiritual colors */
-    --hope-blue: 217 71% 35%;
-    --hope-blue-light: 217 71% 50%;
-    --wisdom-gold: 43 74% 49%;
-    --wisdom-gold-light: 43 74% 65%;
-    --peace-cream: 40 33% 96%;
-    --faith-navy: 222 47% 11%;
-    --spirit-green: 152 48% 42%;
+    --hope-blue: 212 59% 25%;
+    --hope-blue-light: 212 50% 40%;
+    --wisdom-gold: 198 58% 27%;
+    --wisdom-gold-light: 198 50% 45%;
+    --peace-cream: 0 0% 96%;
+    --faith-navy: 212 73% 18%;
+    --spirit-green: 198 58% 35%;
 
     /* Gradients */
-    --gradient-divine: linear-gradient(135deg, hsl(217 71% 35%) 0%, hsl(217 71% 25%) 100%);
-    --gradient-sunrise: linear-gradient(180deg, hsl(40 33% 98%) 0%, hsl(43 50% 92%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(43 74% 49%) 0%, hsl(43 74% 60%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(217 71% 25%) 0%, hsl(217 71% 15%) 100%);
+    --gradient-divine: linear-gradient(135deg, hsl(212 73% 18%) 0%, hsl(212 73% 12%) 100%);
+    --gradient-sunrise: linear-gradient(180deg, hsl(0 0% 96%) 0%, hsl(210 20% 92%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(198 58% 27%) 0%, hsl(198 50% 40%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(212 73% 18%) 0%, hsl(212 73% 12%) 100%);
 
     /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(217 71% 35% / 0.1);
-    --shadow-card: 0 8px 32px -8px hsl(217 71% 35% / 0.12);
-    --shadow-glow: 0 0 40px hsl(43 74% 49% / 0.2);
+    --shadow-soft: 0 4px 20px -4px hsl(212 73% 18% / 0.1);
+    --shadow-card: 0 8px 32px -8px hsl(212 73% 18% / 0.12);
+    --shadow-glow: 0 0 40px hsl(198 58% 27% / 0.2);
 
     /* Fonts */
     --font-scripture: 'Crimson Text', Georgia, serif;
     --font-ui: 'Plus Jakarta Sans', system-ui, sans-serif;
 
     /* Sidebar */
-    --sidebar-background: 40 33% 97%;
-    --sidebar-foreground: 222 47% 11%;
-    --sidebar-primary: 217 71% 35%;
-    --sidebar-primary-foreground: 40 33% 98%;
-    --sidebar-accent: 40 33% 94%;
-    --sidebar-accent-foreground: 222 47% 11%;
-    --sidebar-border: 40 20% 88%;
-    --sidebar-ring: 217 71% 35%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 212 73% 12%;
+    --sidebar-primary: 212 73% 18%;
+    --sidebar-primary-foreground: 0 0% 96%;
+    --sidebar-accent: 210 20% 92%;
+    --sidebar-accent-foreground: 212 73% 12%;
+    --sidebar-border: 210 15% 85%;
+    --sidebar-ring: 212 73% 18%;
   }
 
   .dark {
-    --background: 222 47% 8%;
-    --foreground: 40 33% 96%;
+    --background: 212 73% 8%;
+    --foreground: 0 0% 96%;
 
-    --card: 222 47% 10%;
-    --card-foreground: 40 33% 96%;
+    --card: 212 70% 12%;
+    --card-foreground: 0 0% 96%;
 
-    --popover: 222 47% 10%;
-    --popover-foreground: 40 33% 96%;
+    --popover: 212 70% 12%;
+    --popover-foreground: 0 0% 96%;
 
-    --primary: 217 71% 55%;
-    --primary-foreground: 222 47% 8%;
+    --primary: 198 58% 45%;
+    --primary-foreground: 212 73% 8%;
 
-    --secondary: 222 30% 18%;
-    --secondary-foreground: 40 33% 96%;
+    --secondary: 212 50% 20%;
+    --secondary-foreground: 0 0% 96%;
 
-    --muted: 222 30% 18%;
-    --muted-foreground: 40 20% 65%;
+    --muted: 212 50% 18%;
+    --muted-foreground: 210 20% 65%;
 
-    --accent: 43 74% 55%;
-    --accent-foreground: 222 47% 8%;
+    --accent: 198 58% 50%;
+    --accent-foreground: 212 73% 8%;
 
     --destructive: 0 62% 45%;
-    --destructive-foreground: 40 33% 96%;
+    --destructive-foreground: 0 0% 96%;
 
-    --border: 222 30% 20%;
-    --input: 222 30% 20%;
-    --ring: 217 71% 55%;
+    --border: 212 40% 22%;
+    --input: 212 40% 22%;
+    --ring: 198 58% 45%;
 
-    --hope-blue: 217 71% 55%;
-    --hope-blue-light: 217 71% 65%;
-    --wisdom-gold: 43 74% 55%;
-    --wisdom-gold-light: 43 74% 70%;
-    --peace-cream: 222 30% 15%;
-    --faith-navy: 40 33% 96%;
+    --hope-blue: 212 59% 40%;
+    --hope-blue-light: 212 50% 55%;
+    --wisdom-gold: 198 58% 50%;
+    --wisdom-gold-light: 198 50% 60%;
+    --peace-cream: 212 50% 15%;
+    --faith-navy: 0 0% 96%;
+    --spirit-green: 198 58% 45%;
 
-    --gradient-divine: linear-gradient(135deg, hsl(217 71% 45%) 0%, hsl(217 71% 35%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(222 47% 10%) 0%, hsl(222 47% 6%) 100%);
+    --gradient-divine: linear-gradient(135deg, hsl(198 58% 40%) 0%, hsl(198 58% 30%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(212 73% 12%) 0%, hsl(212 73% 6%) 100%);
 
-    --sidebar-background: 222 47% 10%;
-    --sidebar-foreground: 40 33% 96%;
-    --sidebar-primary: 217 71% 55%;
-    --sidebar-primary-foreground: 222 47% 8%;
-    --sidebar-accent: 222 30% 18%;
-    --sidebar-accent-foreground: 40 33% 96%;
-    --sidebar-border: 222 30% 20%;
-    --sidebar-ring: 217 71% 55%;
+    --sidebar-background: 212 70% 10%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 198 58% 45%;
+    --sidebar-primary-foreground: 212 73% 8%;
+    --sidebar-accent: 212 50% 18%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 212 40% 22%;
+    --sidebar-ring: 198 58% 45%;
   }
 }
 
@@ -205,10 +206,10 @@
 
   @keyframes glow {
     0%, 100% { 
-      box-shadow: 0 0 20px hsl(43 74% 49% / 0.2);
+      box-shadow: 0 0 20px hsl(198 58% 27% / 0.2);
     }
     50% { 
-      box-shadow: 0 0 40px hsl(43 74% 49% / 0.4);
+      box-shadow: 0 0 40px hsl(198 58% 27% / 0.4);
     }
   }
 
