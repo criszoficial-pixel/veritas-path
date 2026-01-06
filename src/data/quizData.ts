@@ -145,6 +145,24 @@ export const quizCategories: QuizCategory[] = [
     type: 'libro',
     questionCount: 35
   },
+  {
+    id: 'reyes',
+    title: '1-2 Reyes',
+    description: 'Los reyes de Israel y Judá, desde Salomón hasta el exilio',
+    icon: '🏛️',
+    color: 'hsl(45, 80%, 40%)',
+    type: 'libro',
+    questionCount: 35
+  },
+  {
+    id: 'cronicas',
+    title: '1-2 Crónicas',
+    description: 'Historia paralela de los reyes con énfasis en el templo',
+    icon: '📖',
+    color: 'hsl(200, 65%, 45%)',
+    type: 'libro',
+    questionCount: 35
+  },
   // Libros Poéticos
   {
     id: 'salmos',
@@ -598,16 +616,34 @@ export const achievements: Achievement[] = [
     points: 100
   },
   {
+    id: 'conocedor-reyes',
+    title: 'Conocedor de Reyes',
+    description: 'Domina la historia de los reyes de Israel y Judá',
+    icon: '🏛️',
+    condition: (stats) => stats.quizzesByCategory['reyes'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-cronicas',
+    title: 'Cronista Real',
+    description: 'Conoce las crónicas del reino',
+    icon: '📖',
+    condition: (stats) => stats.quizzesByCategory['cronicas'] >= 1,
+    points: 100
+  },
+  {
     id: 'historicos-completo',
     title: 'Historiador de Israel',
-    description: 'Completa quizzes de Josué, Jueces, Rut y Samuel',
+    description: 'Completa quizzes de todos los libros históricos',
     icon: '📜',
     condition: (stats) => 
       stats.quizzesByCategory['josue'] >= 1 &&
       stats.quizzesByCategory['jueces'] >= 1 &&
       stats.quizzesByCategory['rut'] >= 1 &&
-      stats.quizzesByCategory['samuel'] >= 1,
-    points: 500
+      stats.quizzesByCategory['samuel'] >= 1 &&
+      stats.quizzesByCategory['reyes'] >= 1 &&
+      stats.quizzesByCategory['cronicas'] >= 1,
+    points: 750
   }
 ];
 
