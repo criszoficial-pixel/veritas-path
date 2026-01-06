@@ -112,13 +112,15 @@ export const QuestionCard = ({
         )}
 
         {!isAnswered && (
-          <Button 
-            onClick={onConfirm}
-            disabled={selectedAnswer === null}
-            size="lg"
-          >
-            Confirmar Respuesta
-          </Button>
+          <div className="flex justify-center">
+            <Button 
+              onClick={onConfirm}
+              disabled={selectedAnswer === null}
+              size="lg"
+            >
+              Confirmar Respuesta
+            </Button>
+          </div>
         )}
       </CardContent>
     </Card>

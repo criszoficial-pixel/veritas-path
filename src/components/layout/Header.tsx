@@ -1,4 +1,5 @@
 import { Search, Bell, ChevronLeft } from 'lucide-react';
+import doveIcon from '@/assets/dove.png';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 
@@ -26,9 +27,7 @@ export const Header = ({
               <ChevronLeft className="h-5 w-5" />
             </Button>
           ) : (
-            <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-scripture text-lg font-bold">✝</span>
-            </div>
+            <img src={doveIcon} alt="Shalom" className="h-8 w-8" />
           )}
           <h1 className="text-xl font-semibold text-foreground">{title}</h1>
         </div>

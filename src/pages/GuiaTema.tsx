@@ -127,7 +127,7 @@ const GuiaTema = () => {
         </section>
 
         {/* Back Button */}
-        <div className="pt-4">
+        <div className="pt-4 text-center">
           <Button
             variant="outline"
             onClick={() => navigate('/guia')}
