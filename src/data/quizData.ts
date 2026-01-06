@@ -62,13 +62,13 @@ export interface Achievement {
 }
 
 export const quizCategories: QuizCategory[] = [
-  // Por Libro - AT
+  // Por Libro - AT (Pentateuco - Azul marino oscuro)
   {
     id: 'genesis',
     title: 'Génesis',
     description: 'El libro de los orígenes: creación, patriarcas y José',
     icon: '🌍',
-    color: 'hsl(142, 76%, 36%)',
+    color: 'hsl(212, 73%, 18%)',
     type: 'libro',
     questionCount: 15
   },
@@ -77,7 +77,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Éxodo',
     description: 'Moisés, las plagas y la liberación de Israel',
     icon: '🔥',
-    color: 'hsl(25, 95%, 53%)',
+    color: 'hsl(212, 73%, 20%)',
     type: 'libro',
     questionCount: 32
   },
@@ -86,7 +86,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Levítico',
     description: 'Leyes de santidad, sacrificios y fiestas de Israel',
     icon: '📜',
-    color: 'hsl(280, 60%, 45%)',
+    color: 'hsl(212, 73%, 22%)',
     type: 'libro',
     questionCount: 28
   },
@@ -95,7 +95,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Números',
     description: 'El pueblo en el desierto, censos y rebeliones',
     icon: '🏕️',
-    color: 'hsl(35, 80%, 45%)',
+    color: 'hsl(212, 73%, 24%)',
     type: 'libro',
     questionCount: 28
   },
@@ -104,17 +104,17 @@ export const quizCategories: QuizCategory[] = [
     title: 'Deuteronomio',
     description: 'Segunda ley, discursos finales de Moisés',
     icon: '📋',
-    color: 'hsl(180, 60%, 40%)',
+    color: 'hsl(212, 73%, 26%)',
     type: 'libro',
     questionCount: 28
   },
-  // Libros Históricos
+  // Libros Históricos - Azul marino medio
   {
     id: 'josue',
     title: 'Josué',
     description: 'La conquista de Canaán y división de la tierra',
     icon: '⚔️',
-    color: 'hsl(0, 70%, 50%)',
+    color: 'hsl(212, 59%, 25%)',
     type: 'libro',
     questionCount: 28
   },
@@ -123,7 +123,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Jueces',
     description: 'Los libertadores de Israel antes de los reyes',
     icon: '🛡️',
-    color: 'hsl(30, 75%, 45%)',
+    color: 'hsl(212, 59%, 28%)',
     type: 'libro',
     questionCount: 28
   },
@@ -132,7 +132,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Rut',
     description: 'Historia de lealtad y redención',
     icon: '🌾',
-    color: 'hsl(45, 85%, 50%)',
+    color: 'hsl(212, 59%, 31%)',
     type: 'libro',
     questionCount: 20
   },
@@ -141,7 +141,7 @@ export const quizCategories: QuizCategory[] = [
     title: '1-2 Samuel',
     description: 'De Samuel a David: nacimiento de la monarquía',
     icon: '👑',
-    color: 'hsl(280, 65%, 50%)',
+    color: 'hsl(212, 59%, 34%)',
     type: 'libro',
     questionCount: 35
   },
@@ -150,7 +150,7 @@ export const quizCategories: QuizCategory[] = [
     title: '1-2 Reyes',
     description: 'Los reyes de Israel y Judá, desde Salomón hasta el exilio',
     icon: '🏛️',
-    color: 'hsl(45, 80%, 40%)',
+    color: 'hsl(212, 59%, 37%)',
     type: 'libro',
     questionCount: 35
   },
@@ -159,17 +159,17 @@ export const quizCategories: QuizCategory[] = [
     title: '1-2 Crónicas',
     description: 'Historia paralela de los reyes con énfasis en el templo',
     icon: '📖',
-    color: 'hsl(200, 65%, 45%)',
+    color: 'hsl(212, 59%, 40%)',
     type: 'libro',
     questionCount: 35
   },
-  // Libros Poéticos
+  // Libros Poéticos - Teal oscuro
   {
     id: 'job',
     title: 'Job',
     description: 'El sufrimiento del justo y la soberanía de Dios',
     icon: '⚖️',
-    color: 'hsl(220, 60%, 45%)',
+    color: 'hsl(198, 58%, 27%)',
     type: 'libro',
     questionCount: 30
   },
@@ -178,7 +178,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Salmos',
     description: 'Poesía, alabanza y sabiduría del rey David',
     icon: '🎵',
-    color: 'hsl(262, 83%, 58%)',
+    color: 'hsl(198, 58%, 30%)',
     type: 'libro',
     questionCount: 10
   },
@@ -187,7 +187,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Eclesiastés',
     description: 'Reflexiones sobre el sentido de la vida',
     icon: '🌅',
-    color: 'hsl(35, 70%, 50%)',
+    color: 'hsl(198, 58%, 33%)',
     type: 'libro',
     questionCount: 25
   },
@@ -196,17 +196,17 @@ export const quizCategories: QuizCategory[] = [
     title: 'Cantares',
     description: 'El cántico de amor de Salomón',
     icon: '🌹',
-    color: 'hsl(350, 80%, 55%)',
+    color: 'hsl(198, 58%, 36%)',
     type: 'libro',
     questionCount: 20
   },
-  // Profetas Mayores
+  // Profetas Mayores - Azul marino claro
   {
     id: 'isaias',
     title: 'Isaías',
     description: 'El profeta mesiánico: juicio y esperanza',
     icon: '🔥',
-    color: 'hsl(0, 75%, 45%)',
+    color: 'hsl(212, 50%, 30%)',
     type: 'libro',
     questionCount: 35
   },
@@ -215,7 +215,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Jeremías',
     description: 'El profeta llorón y la caída de Jerusalén',
     icon: '😢',
-    color: 'hsl(220, 70%, 45%)',
+    color: 'hsl(212, 50%, 33%)',
     type: 'libro',
     questionCount: 35
   },
@@ -224,7 +224,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Lamentaciones',
     description: 'Lamentos por la destrucción de Jerusalén',
     icon: '💔',
-    color: 'hsl(260, 60%, 40%)',
+    color: 'hsl(212, 50%, 36%)',
     type: 'libro',
     questionCount: 20
   },
@@ -233,7 +233,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Ezequiel',
     description: 'Visiones del profeta en el exilio',
     icon: '👁️',
-    color: 'hsl(180, 70%, 40%)',
+    color: 'hsl(212, 50%, 39%)',
     type: 'libro',
     questionCount: 35
   },
@@ -242,17 +242,17 @@ export const quizCategories: QuizCategory[] = [
     title: 'Daniel',
     description: 'Sueños, profecías y fidelidad en Babilonia',
     icon: '🦁',
-    color: 'hsl(45, 90%, 45%)',
+    color: 'hsl(212, 50%, 42%)',
     type: 'libro',
     questionCount: 35
   },
-  // Profetas Menores
+  // Profetas Menores - Teal medio
   {
     id: 'oseas',
     title: 'Oseas',
     description: 'Amor fiel de Dios a un pueblo infiel',
     icon: '💑',
-    color: 'hsl(350, 70%, 50%)',
+    color: 'hsl(198, 50%, 35%)',
     type: 'libro',
     questionCount: 12
   },
@@ -261,7 +261,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Joel',
     description: 'El día del Señor y el derramamiento del Espíritu',
     icon: '🦗',
-    color: 'hsl(120, 60%, 35%)',
+    color: 'hsl(198, 50%, 37%)',
     type: 'libro',
     questionCount: 10
   },
@@ -270,7 +270,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Amós',
     description: 'Justicia social y juicio contra las naciones',
     icon: '⚖️',
-    color: 'hsl(200, 70%, 40%)',
+    color: 'hsl(198, 50%, 39%)',
     type: 'libro',
     questionCount: 12
   },
@@ -279,7 +279,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Abdías',
     description: 'Juicio contra Edom',
     icon: '⛰️',
-    color: 'hsl(30, 60%, 45%)',
+    color: 'hsl(198, 50%, 41%)',
     type: 'libro',
     questionCount: 8
   },
@@ -288,7 +288,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Jonás',
     description: 'El profeta desobediente y la misericordia de Dios',
     icon: '🐋',
-    color: 'hsl(200, 80%, 45%)',
+    color: 'hsl(198, 50%, 43%)',
     type: 'libro',
     questionCount: 12
   },
@@ -297,7 +297,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Miqueas',
     description: 'Justicia, misericordia y la promesa del Mesías',
     icon: '🏘️',
-    color: 'hsl(160, 60%, 40%)',
+    color: 'hsl(198, 50%, 45%)',
     type: 'libro',
     questionCount: 10
   },
@@ -306,7 +306,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Nahúm',
     description: 'La caída de Nínive',
     icon: '🏚️',
-    color: 'hsl(0, 60%, 40%)',
+    color: 'hsl(198, 50%, 47%)',
     type: 'libro',
     questionCount: 8
   },
@@ -315,7 +315,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Habacuc',
     description: 'El justo por la fe vivirá',
     icon: '❓',
-    color: 'hsl(270, 60%, 45%)',
+    color: 'hsl(198, 50%, 49%)',
     type: 'libro',
     questionCount: 10
   },
@@ -324,7 +324,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Sofonías',
     description: 'El día del Señor y la restauración',
     icon: '🌑',
-    color: 'hsl(240, 50%, 35%)',
+    color: 'hsl(198, 50%, 51%)',
     type: 'libro',
     questionCount: 8
   },
@@ -333,7 +333,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Hageo',
     description: 'Reconstrucción del templo',
     icon: '🏗️',
-    color: 'hsl(45, 70%, 45%)',
+    color: 'hsl(198, 50%, 53%)',
     type: 'libro',
     questionCount: 8
   },
@@ -342,7 +342,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Zacarías',
     description: 'Visiones mesiánicas y el rey humilde',
     icon: '🐴',
-    color: 'hsl(180, 65%, 40%)',
+    color: 'hsl(198, 50%, 55%)',
     type: 'libro',
     questionCount: 12
   },
@@ -351,17 +351,17 @@ export const quizCategories: QuizCategory[] = [
     title: 'Malaquías',
     description: 'Llamado al arrepentimiento y promesa del Mesías',
     icon: '☀️',
-    color: 'hsl(40, 90%, 50%)',
+    color: 'hsl(198, 50%, 57%)',
     type: 'libro',
     questionCount: 10
   },
-  // Por Libro - NT
+  // Por Libro - NT - Teal claro
   {
     id: 'mateo',
     title: 'Mateo',
     description: 'El Evangelio del Rey: vida y enseñanzas de Jesús',
     icon: '👑',
-    color: 'hsl(221, 83%, 53%)',
+    color: 'hsl(198, 45%, 45%)',
     type: 'libro',
     questionCount: 12
   },
@@ -370,17 +370,17 @@ export const quizCategories: QuizCategory[] = [
     title: 'Juan',
     description: 'El Evangelio del amor: señales y discursos de Jesús',
     icon: '🕊️',
-    color: 'hsl(199, 89%, 48%)',
+    color: 'hsl(198, 45%, 50%)',
     type: 'libro',
     questionCount: 10
   },
-  // Personajes
+  // Personajes - Azul marino medio
   {
     id: 'abraham',
     title: 'Abraham',
     description: 'El padre de la fe y su caminar con Dios',
     icon: '⭐',
-    color: 'hsl(45, 93%, 47%)',
+    color: 'hsl(212, 59%, 28%)',
     type: 'personaje',
     questionCount: 8
   },
@@ -389,7 +389,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Moisés',
     description: 'El libertador de Israel y dador de la ley',
     icon: '📜',
-    color: 'hsl(16, 85%, 56%)',
+    color: 'hsl(212, 59%, 32%)',
     type: 'personaje',
     questionCount: 10
   },
@@ -398,7 +398,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'David',
     description: 'El pastor que se convirtió en rey',
     icon: '🎯',
-    color: 'hsl(340, 82%, 52%)',
+    color: 'hsl(212, 59%, 36%)',
     type: 'personaje',
     questionCount: 10
   },
@@ -407,7 +407,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Jesús',
     description: 'La vida, muerte y resurrección del Mesías',
     icon: '✝️',
-    color: 'hsl(0, 84%, 60%)',
+    color: 'hsl(212, 59%, 40%)',
     type: 'personaje',
     questionCount: 15
   },
@@ -416,17 +416,17 @@ export const quizCategories: QuizCategory[] = [
     title: 'Pablo',
     description: 'El apóstol a los gentiles y sus viajes misioneros',
     icon: '✉️',
-    color: 'hsl(271, 76%, 53%)',
+    color: 'hsl(212, 59%, 44%)',
     type: 'personaje',
     questionCount: 10
   },
-  // Eventos
+  // Eventos - Teal oscuro
   {
     id: 'creacion',
     title: 'La Creación',
     description: 'Los primeros días del mundo según Génesis',
     icon: '🌅',
-    color: 'hsl(173, 80%, 40%)',
+    color: 'hsl(198, 58%, 28%)',
     type: 'evento',
     questionCount: 8
   },
@@ -435,7 +435,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'El Diluvio',
     description: 'Noé, el arca y el nuevo comienzo',
     icon: '🌊',
-    color: 'hsl(201, 96%, 32%)',
+    color: 'hsl(198, 58%, 32%)',
     type: 'evento',
     questionCount: 8
   },
@@ -444,7 +444,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'El Éxodo',
     description: 'La salida de Egipto y el cruce del Mar Rojo',
     icon: '🏃',
-    color: 'hsl(32, 98%, 50%)',
+    color: 'hsl(198, 58%, 36%)',
     type: 'evento',
     questionCount: 10
   },
@@ -453,27 +453,27 @@ export const quizCategories: QuizCategory[] = [
     title: 'Crucifixión y Resurrección',
     description: 'La semana santa y la victoria sobre la muerte',
     icon: '🌟',
-    color: 'hsl(47, 96%, 53%)',
+    color: 'hsl(198, 58%, 40%)',
     type: 'evento',
     questionCount: 12
   },
-  // Versículos
+  // Versículos - Azul marino
   {
     id: 'versiculos-famosos',
     title: 'Versículos Famosos',
     description: 'Completa y reconoce los versículos más conocidos',
     icon: '📖',
-    color: 'hsl(280, 87%, 38%)',
+    color: 'hsl(212, 65%, 28%)',
     type: 'versiculo',
     questionCount: 15
   },
-  // Nuevas categorías temáticas
+  // Categorías temáticas - Azul marino
   {
     id: 'mandamientos',
     title: 'Los 10 Mandamientos',
     description: 'La ley de Dios dada en el monte Sinaí',
     icon: '📋',
-    color: 'hsl(45, 93%, 47%)',
+    color: 'hsl(212, 65%, 32%)',
     type: 'tema',
     questionCount: 15
   },
@@ -482,7 +482,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Los 12 Apóstoles',
     description: 'Los discípulos elegidos por Jesús',
     icon: '👥',
-    color: 'hsl(200, 75%, 45%)',
+    color: 'hsl(212, 65%, 36%)',
     type: 'personaje',
     questionCount: 15
   },
@@ -492,7 +492,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Proverbios',
     description: 'Sabiduría y consejos del rey Salomón',
     icon: '💡',
-    color: 'hsl(35, 92%, 50%)',
+    color: 'hsl(198, 58%, 39%)',
     type: 'libro',
     questionCount: 15
   },
@@ -501,7 +501,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Apocalipsis',
     description: 'Visiones del fin, las 7 iglesias y la Nueva Jerusalén',
     icon: '🔮',
-    color: 'hsl(280, 70%, 50%)',
+    color: 'hsl(212, 50%, 45%)',
     type: 'libro',
     questionCount: 15
   },
@@ -510,7 +510,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Hechos',
     description: 'La iglesia primitiva, Pentecostés y los viajes de Pablo',
     icon: '🔥',
-    color: 'hsl(15, 85%, 50%)',
+    color: 'hsl(198, 45%, 42%)',
     type: 'libro',
     questionCount: 15
   },
@@ -519,17 +519,17 @@ export const quizCategories: QuizCategory[] = [
     title: 'Romanos',
     description: 'Justificación por fe y doctrina de la salvación',
     icon: '⚖️',
-    color: 'hsl(220, 70%, 50%)',
+    color: 'hsl(198, 45%, 46%)',
     type: 'libro',
     questionCount: 12
   },
-  // Nuevas categorías temáticas
+  // Categorías temáticas adicionales
   {
     id: 'milagros-jesus',
     title: 'Milagros de Jesús',
     description: 'Las obras sobrenaturales del Mesías',
     icon: '✨',
-    color: 'hsl(280, 80%, 55%)',
+    color: 'hsl(198, 55%, 38%)',
     type: 'tema',
     questionCount: 12
   },
@@ -538,7 +538,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Las Parábolas',
     description: 'Historias con enseñanzas profundas de Jesús',
     icon: '📚',
-    color: 'hsl(160, 70%, 40%)',
+    color: 'hsl(198, 55%, 42%)',
     type: 'tema',
     questionCount: 12
   },
@@ -547,7 +547,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Mujeres de la Biblia',
     description: 'Heroínas de fe a través de las Escrituras',
     icon: '👑',
-    color: 'hsl(330, 80%, 50%)',
+    color: 'hsl(212, 55%, 38%)',
     type: 'personaje',
     questionCount: 10
   },
@@ -556,7 +556,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Reyes de Israel',
     description: 'Los monarcas del pueblo de Dios',
     icon: '🏰',
-    color: 'hsl(45, 90%, 45%)',
+    color: 'hsl(212, 55%, 42%)',
     type: 'personaje',
     questionCount: 10
   },
@@ -565,7 +565,7 @@ export const quizCategories: QuizCategory[] = [
     title: 'Profecías Mesiánicas',
     description: 'Predicciones cumplidas en Cristo',
     icon: '🔮',
-    color: 'hsl(200, 80%, 45%)',
+    color: 'hsl(198, 55%, 46%)',
     type: 'tema',
     questionCount: 10
   }
