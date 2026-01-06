@@ -108,6 +108,44 @@ export const quizCategories: QuizCategory[] = [
     type: 'libro',
     questionCount: 28
   },
+  // Libros Históricos
+  {
+    id: 'josue',
+    title: 'Josué',
+    description: 'La conquista de Canaán y división de la tierra',
+    icon: '⚔️',
+    color: 'hsl(0, 70%, 50%)',
+    type: 'libro',
+    questionCount: 28
+  },
+  {
+    id: 'jueces',
+    title: 'Jueces',
+    description: 'Los libertadores de Israel antes de los reyes',
+    icon: '🛡️',
+    color: 'hsl(30, 75%, 45%)',
+    type: 'libro',
+    questionCount: 28
+  },
+  {
+    id: 'rut',
+    title: 'Rut',
+    description: 'Historia de lealtad y redención',
+    icon: '🌾',
+    color: 'hsl(45, 85%, 50%)',
+    type: 'libro',
+    questionCount: 20
+  },
+  {
+    id: 'samuel',
+    title: '1-2 Samuel',
+    description: 'De Samuel a David: nacimiento de la monarquía',
+    icon: '👑',
+    color: 'hsl(280, 65%, 50%)',
+    type: 'libro',
+    questionCount: 35
+  },
+  // Libros Poéticos
   {
     id: 'salmos',
     title: 'Salmos',
@@ -524,6 +562,51 @@ export const achievements: Achievement[] = [
       stats.quizzesByCategory['levitico'] >= 1 &&
       stats.quizzesByCategory['numeros'] >= 1 &&
       stats.quizzesByCategory['deuteronomio'] >= 1,
+    points: 500
+  },
+  // Logros de Libros Históricos
+  {
+    id: 'conocedor-josue',
+    title: 'Conquistador',
+    description: 'Domina la conquista de Canaán',
+    icon: '⚔️',
+    condition: (stats) => stats.quizzesByCategory['josue'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-jueces',
+    title: 'Conocedor de Jueces',
+    description: 'Conoce a los libertadores de Israel',
+    icon: '🛡️',
+    condition: (stats) => stats.quizzesByCategory['jueces'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-rut',
+    title: 'Conocedor de Rut',
+    description: 'Comprende la historia de Rut',
+    icon: '🌾',
+    condition: (stats) => stats.quizzesByCategory['rut'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-samuel',
+    title: 'Conocedor de Samuel',
+    description: 'Domina la historia de Samuel y David',
+    icon: '👑',
+    condition: (stats) => stats.quizzesByCategory['samuel'] >= 1,
+    points: 100
+  },
+  {
+    id: 'historicos-completo',
+    title: 'Historiador de Israel',
+    description: 'Completa quizzes de Josué, Jueces, Rut y Samuel',
+    icon: '📜',
+    condition: (stats) => 
+      stats.quizzesByCategory['josue'] >= 1 &&
+      stats.quizzesByCategory['jueces'] >= 1 &&
+      stats.quizzesByCategory['rut'] >= 1 &&
+      stats.quizzesByCategory['samuel'] >= 1,
     points: 500
   }
 ];
