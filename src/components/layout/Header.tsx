@@ -8,22 +8,32 @@ interface HeaderProps {
   showSearch?: boolean;
   showNotifications?: boolean;
   showBack?: boolean;
+  onBack?: () => void;
 }
 
 export const Header = ({ 
   title = 'Shalom', 
   showSearch = true, 
   showNotifications = true,
-  showBack = false 
+  showBack = false,
+  onBack
 }: HeaderProps) => {
   const navigate = useNavigate();
+
+  const handleBack = () => {
+    if (onBack) {
+      onBack();
+    } else {
+      navigate(-1);
+    }
+  };
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur-lg">
       <div className="container flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-3">
           {showBack ? (
-            <Button variant="ghost" size="icon" onClick={() => navigate(-1)}>
+            <Button variant="ghost" size="icon" onClick={handleBack}>
               <ChevronLeft className="h-5 w-5" />
             </Button>
           ) : (
