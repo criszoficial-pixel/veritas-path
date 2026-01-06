@@ -108,27 +108,21 @@ export const DailyVerseCard = () => {
           "{dailyVerse.verse}"
         </blockquote>
 
-        <p className="text-sm font-medium text-primary-foreground/90 mb-4">
+        <button 
+          onClick={handleReadMore}
+          className="text-sm font-medium text-primary-foreground/90 mb-4 hover:underline cursor-pointer transition-all text-left"
+        >
           — {dailyVerse.reference}
-        </p>
+        </button>
 
-        <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm mb-4">
-          <p className="text-sm leading-relaxed text-primary-foreground/90">
-            <span className="font-semibold">Reflexión: </span>
-            {dailyVerse.reflection}
-          </p>
-        </div>
-
-        <div className="text-center">
-          <Button
-            variant="secondary"
-            size="sm"
-            onClick={handleReadMore}
-          >
-            <BookOpen className="h-4 w-4 mr-2" />
-            Leer capítulo completo
-          </Button>
-        </div>
+        <Button
+          variant="secondary"
+          size="sm"
+          onClick={handleReadMore}
+        >
+          <BookOpen className="h-4 w-4 mr-2" />
+          Leer capítulo completo
+        </Button>
       </div>
 
       <ShareVerseDialog
