@@ -171,7 +171,7 @@ const QuizJugar = () => {
                     </div>
                   )}
 
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col items-center gap-3">
                     <Button onClick={resetQuiz} className="gap-2">
                       <RotateCcw className="h-4 w-4" />
                       Intentar de Nuevo

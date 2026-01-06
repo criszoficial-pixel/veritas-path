@@ -119,14 +119,16 @@ export const DailyVerseCard = () => {
           </p>
         </div>
 
-        <Button
-          variant="secondary"
-          size="sm"
-          onClick={handleReadMore}
-        >
-          <BookOpen className="h-4 w-4 mr-2" />
-          Leer capítulo completo
-        </Button>
+        <div className="text-center">
+          <Button
+            variant="secondary"
+            size="sm"
+            onClick={handleReadMore}
+          >
+            <BookOpen className="h-4 w-4 mr-2" />
+            Leer capítulo completo
+          </Button>
+        </div>
       </div>
 
       <ShareVerseDialog

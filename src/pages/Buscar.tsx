@@ -162,10 +162,12 @@ const Buscar = () => {
           )}
 
           {searchMode === 'reference' && (
-            <Button onClick={handleReferenceSearch}>
-              <Search className="h-4 w-4 mr-2" />
-              Buscar
-            </Button>
+            <div className="flex justify-center">
+              <Button onClick={handleReferenceSearch}>
+                <Search className="h-4 w-4 mr-2" />
+                Buscar
+              </Button>
+            </div>
           )}
           
           {error && (
