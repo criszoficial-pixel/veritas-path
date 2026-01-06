@@ -162,7 +162,7 @@ const Aprender = () => {
               <button
                 key={plan.id}
                 onClick={() => startPlan(plan)}
-                className="w-full text-left p-4 rounded-xl bg-card border border-border hover:bg-accent transition-colors"
+                className="group w-full text-left p-4 rounded-xl bg-card border border-border hover:bg-accent transition-colors"
               >
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -170,21 +170,21 @@ const Aprender = () => {
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center justify-between gap-2">
-                      <h3 className="font-semibold text-foreground">{plan.title}</h3>
-                      <span className="text-xs text-muted-foreground flex-shrink-0">{plan.duration}</span>
+                      <h3 className="font-semibold text-foreground group-hover:text-accent-foreground">{plan.title}</h3>
+                      <span className="text-xs text-muted-foreground group-hover:text-accent-foreground/70 flex-shrink-0">{plan.duration}</span>
                     </div>
-                    <p className="text-sm text-muted-foreground mt-1">{plan.description}</p>
+                    <p className="text-sm text-muted-foreground group-hover:text-accent-foreground/80 mt-1">{plan.description}</p>
                     {hasStarted && (
                       <div className="mt-3 space-y-1">
                         <div className="flex items-center justify-between text-xs">
-                          <span className="text-muted-foreground">Progreso</span>
-                          <span className="text-primary font-medium">{progress}%</span>
+                          <span className="text-muted-foreground group-hover:text-accent-foreground/70">Progreso</span>
+                          <span className="text-primary group-hover:text-accent-foreground font-medium">{progress}%</span>
                         </div>
                         <Progress value={progress} className="h-1.5" />
                       </div>
                     )}
                   </div>
-                  <ChevronRight className="h-5 w-5 text-muted-foreground flex-shrink-0 self-center" />
+                  <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-accent-foreground flex-shrink-0 self-center" />
                 </div>
               </button>
             );

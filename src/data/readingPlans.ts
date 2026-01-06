@@ -163,6 +163,51 @@ const johnGospelSchedule: ReadingPlanDay[] = Array.from({ length: 21 }, (_, i) =
   readings: [{ bookSlug: 'juan', chapter: i + 1 }],
 }));
 
+// Gospels (Matthew, Mark, Luke, John) - 89 chapters in 60 days
+const gospelsBooks = [
+  { slug: 'mateo', chapters: 28 },
+  { slug: 'marcos', chapters: 16 },
+  { slug: 'lucas', chapters: 24 },
+  { slug: 'juan', chapters: 21 },
+];
+const gospelsSchedule = generateFlexibleSchedule(gospelsBooks, 60);
+
+// Paul's Letters - 87 chapters in 45 days
+const paulLettersBooks = [
+  { slug: 'romanos', chapters: 16 },
+  { slug: '1-corintios', chapters: 16 },
+  { slug: '2-corintios', chapters: 13 },
+  { slug: 'galatas', chapters: 6 },
+  { slug: 'efesios', chapters: 6 },
+  { slug: 'filipenses', chapters: 4 },
+  { slug: 'colosenses', chapters: 4 },
+  { slug: '1-tesalonicenses', chapters: 5 },
+  { slug: '2-tesalonicenses', chapters: 3 },
+  { slug: '1-timoteo', chapters: 6 },
+  { slug: '2-timoteo', chapters: 4 },
+  { slug: 'tito', chapters: 3 },
+  { slug: 'filemon', chapters: 1 },
+];
+const paulLettersSchedule = generateFlexibleSchedule(paulLettersBooks, 45);
+
+// Genesis to Exodus - 90 chapters in 30 days
+const genesisExodusBooks = [
+  { slug: 'genesis', chapters: 50 },
+  { slug: 'exodo', chapters: 40 },
+];
+const genesisExodusSchedule = generateFlexibleSchedule(genesisExodusBooks, 30);
+
+// Sermon on the Mount - Matthew 5, 6, 7 with reflection days
+const sermonMountSchedule: ReadingPlanDay[] = [
+  { day: 1, readings: [{ bookSlug: 'mateo', chapter: 5 }] },
+  { day: 2, readings: [{ bookSlug: 'mateo', chapter: 5 }] },
+  { day: 3, readings: [{ bookSlug: 'mateo', chapter: 6 }] },
+  { day: 4, readings: [{ bookSlug: 'mateo', chapter: 6 }] },
+  { day: 5, readings: [{ bookSlug: 'mateo', chapter: 7 }] },
+  { day: 6, readings: [{ bookSlug: 'mateo', chapter: 7 }] },
+  { day: 7, readings: [{ bookSlug: 'mateo', chapter: 5 }, { bookSlug: 'mateo', chapter: 6 }, { bookSlug: 'mateo', chapter: 7 }] },
+];
+
 export const readingPlans: ReadingPlan[] = [
   {
     id: 'bible-1-year',
@@ -199,6 +244,42 @@ export const readingPlans: ReadingPlan[] = [
     totalDays: 21,
     icon: 'heart',
     schedule: johnGospelSchedule,
+  },
+  {
+    id: 'gospels',
+    title: 'Los 4 Evangelios',
+    description: 'Conoce la vida de Jesús desde 4 perspectivas diferentes',
+    duration: '60 días',
+    totalDays: 60,
+    icon: 'book',
+    schedule: gospelsSchedule,
+  },
+  {
+    id: 'paul-letters',
+    title: 'Cartas de Pablo',
+    description: 'Toda la enseñanza del apóstol Pablo a las iglesias',
+    duration: '45 días',
+    totalDays: 45,
+    icon: 'calendar',
+    schedule: paulLettersSchedule,
+  },
+  {
+    id: 'genesis-exodus',
+    title: 'Génesis a Éxodo',
+    description: 'Desde la creación hasta la liberación de Israel',
+    duration: '30 días',
+    totalDays: 30,
+    icon: 'star',
+    schedule: genesisExodusSchedule,
+  },
+  {
+    id: 'sermon-mount',
+    title: 'Sermón del Monte',
+    description: 'Las enseñanzas fundamentales de Jesús en Mateo 5-7',
+    duration: '7 días',
+    totalDays: 7,
+    icon: 'heart',
+    schedule: sermonMountSchedule,
   },
 ];
 
