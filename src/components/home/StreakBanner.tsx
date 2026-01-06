@@ -1,18 +1,10 @@
 import { Flame, Target, Sparkles } from 'lucide-react';
 import { useUserProgress } from '@/hooks/useUserProgress';
-import { Progress } from '@/components/ui/progress';
 import { cn } from '@/lib/utils';
-
-const milestones = [3, 7, 14, 30, 60, 100];
 
 export const StreakBanner = () => {
   const { stats } = useUserProgress();
   const currentStreak = stats.currentStreak;
-  
-  // Find next milestone
-  const nextMilestone = milestones.find(m => m > currentStreak) || milestones[milestones.length - 1];
-  const previousMilestone = milestones.filter(m => m <= currentStreak).pop() || 0;
-  const progressToNext = ((currentStreak - previousMilestone) / (nextMilestone - previousMilestone)) * 100;
 
   if (currentStreak === 0) {
     return (
@@ -81,18 +73,6 @@ export const StreakBanner = () => {
               <span className="text-sm text-muted-foreground">
                 {currentStreak === 1 ? 'día' : 'días'} consecutivos
               </span>
-            </div>
-            
-            {/* Progress to next milestone */}
-            <div className="mt-2 space-y-1">
-              <div className="flex justify-between text-xs text-muted-foreground">
-                <span>Próxima meta</span>
-                <span className="font-medium">{nextMilestone} días</span>
-              </div>
-              <Progress 
-                value={progressToNext} 
-                className="h-2"
-              />
             </div>
           </div>
           
