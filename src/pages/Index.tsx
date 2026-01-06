@@ -1,38 +1,49 @@
+import { useState, useCallback } from 'react';
 import { Header } from '@/components/layout/Header';
 import { BottomNav } from '@/components/layout/BottomNav';
-import { DailyVerseCard } from '@/components/home/DailyVerseCard';
-import { QuickActions } from '@/components/home/QuickActions';
+import { HeroSection } from '@/components/home/HeroSection';
+import { StreakBanner } from '@/components/home/StreakBanner';
 import { ProgressStats } from '@/components/home/ProgressStats';
+import { QuickActions } from '@/components/home/QuickActions';
+import { WelcomeModal } from '@/components/home/WelcomeModal';
 
 const Index = () => {
+  const [, forceUpdate] = useState({});
+  
+  const handleWelcomeComplete = useCallback(() => {
+    forceUpdate({});
+  }, []);
+
   return (
     <div className="min-h-screen bg-background pb-24">
       <Header />
       
-      <main className="container px-4 py-6 space-y-8">
-        {/* Welcome Section */}
-        <section className="animate-fade-in">
-          <p className="text-muted-foreground mb-1">Bienvenido de vuelta</p>
-          <h2 className="text-2xl font-bold text-foreground">Que la paz esté contigo ✨</h2>
+      <main className="container px-4 py-6 space-y-6">
+        {/* Hero Section with verse + greeting */}
+        <section>
+          <HeroSection />
         </section>
 
-        {/* Daily Verse */}
-        <section className="animate-slide-up" style={{ animationDelay: '0.1s' }}>
-          <DailyVerseCard />
+        {/* Streak Banner */}
+        <section>
+          <StreakBanner />
         </section>
 
         {/* Progress Stats */}
-        <section className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
+        <section>
           <ProgressStats />
         </section>
 
         {/* Quick Actions */}
-        <section className="animate-slide-up" style={{ animationDelay: '0.3s' }}>
+        <section>
           <QuickActions />
         </section>
       </main>
 
       <BottomNav />
+      
+      {/* Welcome Modal for first-time users */}
+      <WelcomeModal onComplete={handleWelcomeComplete} />
     </div>
   );
 };
