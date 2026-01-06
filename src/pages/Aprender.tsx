@@ -4,7 +4,7 @@ import { Header } from '@/components/layout/Header';
 import { BottomNav } from '@/components/layout/BottomNav';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
-import { BookOpen, Calendar, Star, Heart, ChevronRight, Check, RotateCcw } from 'lucide-react';
+import { BookOpen, Calendar, Star, Heart, ChevronRight, Check, RotateCcw, Sparkles, Target, Flame, BookMarked } from 'lucide-react';
 import { readingPlans, type ReadingPlan } from '@/data/readingPlans';
 import { isPlanChapterCompleted, resetAllPlanProgress } from '@/services/userDataService';
 import { cn } from '@/lib/utils';
@@ -153,13 +153,71 @@ const Aprender = () => {
       <Header title="Aprender" />
       
       <main className="container px-4 py-6 space-y-8">
-        {/* Intro */}
-        <section className="text-center space-y-2">
-          <h2 className="text-xl font-bold text-foreground">Planes de Lectura</h2>
-          <p className="text-muted-foreground text-sm">
-            Elige un plan y lee la Biblia de forma organizada
-          </p>
+        {/* Inspiring Banner */}
+        <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-primary/90 to-primary/80 p-6 text-primary-foreground">
+          {/* Decorative elements */}
+          <div className="absolute top-4 right-4 opacity-20">
+            <BookMarked className="h-24 w-24" />
+          </div>
+          <div className="absolute -bottom-2 -left-2 opacity-10">
+            <Sparkles className="h-16 w-16" />
+          </div>
+          
+          {/* Main content */}
+          <div className="relative z-10 space-y-4">
+            <div className="flex items-center gap-2">
+              <Sparkles className="h-5 w-5" />
+              <span className="text-sm font-medium uppercase tracking-wide opacity-90">Planes de Lectura</span>
+            </div>
+            
+            <h2 className="text-2xl font-bold leading-tight">
+              Transforma tu Vida con la Palabra
+            </h2>
+            
+            <p className="text-sm leading-relaxed opacity-90 max-w-md">
+              La lectura diaria de la Biblia fortalece tu fe, renueva tu mente y te acerca más a Dios. 
+              Un plan estructurado te ayuda a mantener la disciplina espiritual.
+            </p>
+            
+            {/* Objective card */}
+            <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="flex items-start gap-3">
+                <div className="p-2 bg-white/20 rounded-lg">
+                  <Target className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="font-semibold text-sm mb-1">Nuestro Objetivo</p>
+                  <p className="text-xs leading-relaxed opacity-90">
+                    Desarrolla un hábito de lectura bíblica que transforme tu vida espiritual día a día.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Stats */}
+            <div className="flex flex-wrap gap-4 pt-2">
+              <div className="flex items-center gap-2 text-xs">
+                <BookOpen className="h-4 w-4 opacity-80" />
+                <span className="opacity-90">{readingPlans.length} planes disponibles</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs">
+                <Calendar className="h-4 w-4 opacity-80" />
+                <span className="opacity-90">De 21 a 365 días</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs">
+                <Flame className="h-4 w-4 opacity-80" />
+                <span className="opacity-90">Lectura guiada</span>
+              </div>
+            </div>
+          </div>
         </section>
+
+        {/* Section subtitle */}
+        <div className="text-center">
+          <p className="text-muted-foreground text-sm font-medium">
+            Elige tu plan y comienza hoy
+          </p>
+        </div>
 
         {/* Plans List */}
         <section className="space-y-4">
