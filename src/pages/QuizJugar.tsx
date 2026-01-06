@@ -172,14 +172,14 @@ const QuizJugar = () => {
                   )}
 
                   <div className="flex flex-col gap-3">
-                    <Button onClick={resetQuiz} className="w-full gap-2">
+                    <Button onClick={resetQuiz} className="gap-2">
                       <RotateCcw className="h-4 w-4" />
                       Intentar de Nuevo
                     </Button>
                     <Button 
                       variant="outline" 
                       onClick={() => navigate('/quizzes')}
-                      className="w-full gap-2"
+                      className="gap-2"
                     >
                       <Home className="h-4 w-4" />
                       Más Quizzes

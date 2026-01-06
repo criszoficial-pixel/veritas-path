@@ -122,7 +122,6 @@ export const DailyVerseCard = () => {
         <Button
           variant="secondary"
           size="sm"
-          className="w-full"
           onClick={handleReadMore}
         >
           <BookOpen className="h-4 w-4 mr-2" />

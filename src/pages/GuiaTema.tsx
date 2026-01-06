@@ -130,7 +130,6 @@ const GuiaTema = () => {
         <div className="pt-4">
           <Button
             variant="outline"
-            className="w-full"
             onClick={() => navigate('/guia')}
           >
             <ChevronLeft className="h-4 w-4 mr-2" />
