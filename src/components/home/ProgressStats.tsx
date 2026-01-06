@@ -1,4 +1,4 @@
-import { Flame, BookOpen, Trophy, Clock } from 'lucide-react';
+import { CheckCircle2, BookOpen, Trophy, Clock } from 'lucide-react';
 import { useUserProgress } from '@/hooks/useUserProgress';
 
 export const ProgressStats = () => {
@@ -6,10 +6,10 @@ export const ProgressStats = () => {
 
   const displayStats = [
     { 
-      icon: Flame, 
+      icon: CheckCircle2, 
       value: stats.currentStreak > 0 ? stats.currentStreak.toString() : '0', 
       label: 'Días de racha', 
-      color: 'text-orange-500' 
+      color: 'text-emerald-500' 
     },
     { 
       icon: BookOpen, 
