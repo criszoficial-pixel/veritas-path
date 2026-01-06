@@ -9,7 +9,7 @@ import { toast } from 'sonner';
 const topicBackgrounds: Record<string, string> = {
   'confianza': 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80',
   'fe': 'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=800&q=80',
-  'amor': 'https://images.unsplash.com/photo-1518173946687-a4c036bc2c0c?auto=format&fit=crop&w=800&q=80',
+  'amor': 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=80',
   'fortaleza': 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80',
   'paz': 'https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=80',
   'esperanza': 'https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?auto=format&fit=crop&w=800&q=80',
@@ -37,6 +37,11 @@ export const HeroSection = () => {
     const img = new window.Image();
     img.src = backgroundImage;
     img.onload = () => setImageLoaded(true);
+    img.onerror = () => {
+      const fallbackImg = new window.Image();
+      fallbackImg.src = defaultBackground;
+      fallbackImg.onload = () => setImageLoaded(true);
+    };
   }, [backgroundImage]);
 
   const isVerseBookmarked = checkBookmarked(
