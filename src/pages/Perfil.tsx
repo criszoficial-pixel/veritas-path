@@ -2,12 +2,13 @@ import { useNavigate } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
 import { BottomNav } from '@/components/layout/BottomNav';
 import { Button } from '@/components/ui/button';
-import { User, BookOpen, Trophy, CheckCircle2, Clock, Settings, Heart, Bookmark, History, ChevronRight, StickyNote, Brain } from 'lucide-react';
+import { User, BookOpen, Trophy, Clock, Settings, Heart, Bookmark, History, ChevronRight, StickyNote, Brain } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useUserProgress } from '@/hooks/useUserProgress';
 import { useBookmarks } from '@/hooks/useBookmarks';
 import { getNotesCount } from '@/services/userDataService';
 import { getUserStats } from '@/services/quizService';
+import { DoveIcon } from '@/components/icons/DoveIcon';
 
 const Perfil = () => {
   const navigate = useNavigate();
@@ -22,10 +23,10 @@ const Perfil = () => {
   const todayIndex = today === 0 ? 6 : today - 1;
 
   const displayStats = [
-    { label: 'Capítulos Leídos', value: stats.chaptersRead.toString(), icon: BookOpen },
-    { label: 'Libros Explorados', value: uniqueBooks.toString(), icon: Trophy },
-    { label: 'Días de Racha', value: stats.currentStreak.toString(), icon: CheckCircle2 },
-    { label: 'Tiempo Total', value: readingTime, icon: Clock },
+    { label: 'Capítulos Leídos', value: stats.chaptersRead.toString(), icon: BookOpen, customIcon: null },
+    { label: 'Libros Explorados', value: uniqueBooks.toString(), icon: Trophy, customIcon: null },
+    { label: 'Días de Racha', value: stats.currentStreak.toString(), icon: null, customIcon: <DoveIcon size={20} animated={true} /> },
+    { label: 'Tiempo Total', value: readingTime, icon: Clock, customIcon: null },
   ];
 
   const menuItems = [
@@ -64,7 +65,7 @@ const Perfil = () => {
         <section className="grid grid-cols-2 gap-3">
           {displayStats.map((stat) => (
             <div key={stat.label} className="rounded-xl bg-card p-4 border border-border/50">
-              <stat.icon className="h-5 w-5 text-primary mb-2" />
+              {stat.customIcon ? stat.customIcon : stat.icon && <stat.icon className="h-5 w-5 text-primary mb-2" />}
               <p className="text-2xl font-bold text-foreground">{stat.value}</p>
               <p className="text-xs text-muted-foreground">{stat.label}</p>
             </div>
@@ -87,7 +88,7 @@ const Perfil = () => {
                       isActive ? 'bg-spirit/20 text-spirit' : 'bg-secondary text-muted-foreground'
                     )}
                   >
-                    {isActive && <CheckCircle2 className="h-4 w-4" />}
+                    {isActive && <DoveIcon size={16} animated={false} />}
                   </div>
                   <span className="text-xs text-muted-foreground">{day}</span>
                 </div>
