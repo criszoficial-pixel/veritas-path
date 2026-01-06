@@ -1,5 +1,15 @@
 // Reading plans data
 
+// Import AI-generated cover images
+import bibleYearImg from '@/assets/plans/bible-1-year.jpg';
+import nt90Img from '@/assets/plans/nt-90-days.jpg';
+import psalmsProverbsImg from '@/assets/plans/psalms-proverbs.jpg';
+import johnGospelImg from '@/assets/plans/john-gospel.jpg';
+import gospelsImg from '@/assets/plans/gospels.jpg';
+import paulLettersImg from '@/assets/plans/paul-letters.jpg';
+import genesisExodusImg from '@/assets/plans/genesis-exodus.jpg';
+import sermonMountImg from '@/assets/plans/sermon-mount.jpg';
+
 export interface ReadingPlanDay {
   day: number;
   readings: { bookSlug: string; chapter: number }[];
@@ -217,7 +227,7 @@ export const readingPlans: ReadingPlan[] = [
     duration: '365 días',
     totalDays: 365,
     icon: 'book',
-    coverImage: 'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=640&h=360&fit=crop',
+    coverImage: bibleYearImg,
     schedule: bibleIn1YearSchedule,
   },
   {
@@ -227,7 +237,7 @@ export const readingPlans: ReadingPlan[] = [
     duration: '90 días',
     totalDays: 90,
     icon: 'calendar',
-    coverImage: 'https://images.unsplash.com/photo-1507692049790-de58290a4334?w=640&h=360&fit=crop',
+    coverImage: nt90Img,
     schedule: ntIn90DaysSchedule,
   },
   {
@@ -237,7 +247,7 @@ export const readingPlans: ReadingPlan[] = [
     duration: '30 días',
     totalDays: 30,
     icon: 'star',
-    coverImage: 'https://images.unsplash.com/photo-1490730141103-6cac27abb37f?w=640&h=360&fit=crop',
+    coverImage: psalmsProverbsImg,
     schedule: psalmsProverbsSchedule,
   },
   {
@@ -247,7 +257,7 @@ export const readingPlans: ReadingPlan[] = [
     duration: '21 días',
     totalDays: 21,
     icon: 'heart',
-    coverImage: 'https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=640&h=360&fit=crop',
+    coverImage: johnGospelImg,
     schedule: johnGospelSchedule,
   },
   {
@@ -257,7 +267,7 @@ export const readingPlans: ReadingPlan[] = [
     duration: '60 días',
     totalDays: 60,
     icon: 'book',
-    coverImage: 'https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=640&h=360&fit=crop',
+    coverImage: gospelsImg,
     schedule: gospelsSchedule,
   },
   {
@@ -267,7 +277,7 @@ export const readingPlans: ReadingPlan[] = [
     duration: '45 días',
     totalDays: 45,
     icon: 'calendar',
-    coverImage: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=640&h=360&fit=crop',
+    coverImage: paulLettersImg,
     schedule: paulLettersSchedule,
   },
   {
@@ -277,7 +287,7 @@ export const readingPlans: ReadingPlan[] = [
     duration: '30 días',
     totalDays: 30,
     icon: 'star',
-    coverImage: 'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=640&h=360&fit=crop',
+    coverImage: genesisExodusImg,
     schedule: genesisExodusSchedule,
   },
   {
@@ -287,7 +297,7 @@ export const readingPlans: ReadingPlan[] = [
     duration: '7 días',
     totalDays: 7,
     icon: 'heart',
-    coverImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=640&h=360&fit=crop',
+    coverImage: sermonMountImg,
     schedule: sermonMountSchedule,
   },
 ];
