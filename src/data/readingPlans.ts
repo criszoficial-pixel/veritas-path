@@ -217,7 +217,7 @@ export const readingPlans: ReadingPlan[] = [
     duration: '365 días',
     totalDays: 365,
     icon: 'book',
-    coverImage: 'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=400&h=600&fit=crop',
+    coverImage: 'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=640&h=360&fit=crop',
     schedule: bibleIn1YearSchedule,
   },
   {
@@ -227,7 +227,7 @@ export const readingPlans: ReadingPlan[] = [
     duration: '90 días',
     totalDays: 90,
     icon: 'calendar',
-    coverImage: 'https://images.unsplash.com/photo-1507692049790-de58290a4334?w=400&h=600&fit=crop',
+    coverImage: 'https://images.unsplash.com/photo-1507692049790-de58290a4334?w=640&h=360&fit=crop',
     schedule: ntIn90DaysSchedule,
   },
   {
@@ -237,7 +237,7 @@ export const readingPlans: ReadingPlan[] = [
     duration: '30 días',
     totalDays: 30,
     icon: 'star',
-    coverImage: 'https://images.unsplash.com/photo-1490730141103-6cac27abb37f?w=400&h=600&fit=crop',
+    coverImage: 'https://images.unsplash.com/photo-1490730141103-6cac27abb37f?w=640&h=360&fit=crop',
     schedule: psalmsProverbsSchedule,
   },
   {
@@ -247,7 +247,7 @@ export const readingPlans: ReadingPlan[] = [
     duration: '21 días',
     totalDays: 21,
     icon: 'heart',
-    coverImage: 'https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=400&h=600&fit=crop',
+    coverImage: 'https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=640&h=360&fit=crop',
     schedule: johnGospelSchedule,
   },
   {
@@ -257,7 +257,7 @@ export const readingPlans: ReadingPlan[] = [
     duration: '60 días',
     totalDays: 60,
     icon: 'book',
-    coverImage: 'https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=400&h=600&fit=crop',
+    coverImage: 'https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=640&h=360&fit=crop',
     schedule: gospelsSchedule,
   },
   {
@@ -267,7 +267,7 @@ export const readingPlans: ReadingPlan[] = [
     duration: '45 días',
     totalDays: 45,
     icon: 'calendar',
-    coverImage: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&h=600&fit=crop',
+    coverImage: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=640&h=360&fit=crop',
     schedule: paulLettersSchedule,
   },
   {
@@ -277,7 +277,7 @@ export const readingPlans: ReadingPlan[] = [
     duration: '30 días',
     totalDays: 30,
     icon: 'star',
-    coverImage: 'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400&h=600&fit=crop',
+    coverImage: 'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=640&h=360&fit=crop',
     schedule: genesisExodusSchedule,
   },
   {
@@ -287,7 +287,7 @@ export const readingPlans: ReadingPlan[] = [
     duration: '7 días',
     totalDays: 7,
     icon: 'heart',
-    coverImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&h=600&fit=crop',
+    coverImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=640&h=360&fit=crop',
     schedule: sermonMountSchedule,
   },
 ];

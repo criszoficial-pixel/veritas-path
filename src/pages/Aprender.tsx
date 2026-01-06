@@ -4,10 +4,11 @@ import { Header } from '@/components/layout/Header';
 import { BottomNav } from '@/components/layout/BottomNav';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
-import { BookOpen, Calendar, Star, Heart, ChevronRight, Check } from 'lucide-react';
+import { BookOpen, Calendar, Star, Heart, ChevronRight, Check, RotateCcw } from 'lucide-react';
 import { readingPlans, type ReadingPlan } from '@/data/readingPlans';
-import { isPlanChapterCompleted } from '@/services/userDataService';
+import { isPlanChapterCompleted, resetAllPlanProgress } from '@/services/userDataService';
 import { cn } from '@/lib/utils';
+import { toast } from 'sonner';
 
 const iconMap = {
   book: BookOpen,
@@ -162,7 +163,7 @@ const Aprender = () => {
 
         {/* Plans List */}
         <section className="space-y-4">
-          {readingPlans.map((plan) => {
+        {readingPlans.map((plan) => {
             const progress = calculatePlanProgress(plan);
             const hasStarted = progress > 0;
             
@@ -170,11 +171,11 @@ const Aprender = () => {
               <button
                 key={plan.id}
                 onClick={() => startPlan(plan)}
-                className="group w-full text-left p-3 rounded-xl bg-card border border-border hover:bg-accent transition-colors overflow-hidden"
+                className="group w-full text-left rounded-xl bg-card border border-border hover:border-primary/30 transition-all overflow-hidden"
               >
-                <div className="flex gap-4">
-                  {/* Cover Image */}
-                  <div className="w-20 h-28 rounded-lg overflow-hidden flex-shrink-0">
+                <div className="flex">
+                  {/* Cover Image 16:9 a la izquierda */}
+                  <div className="w-36 md:w-44 aspect-video flex-shrink-0 overflow-hidden">
                     <img 
                       src={plan.coverImage}
                       alt={plan.title}
@@ -182,42 +183,71 @@ const Aprender = () => {
                     />
                   </div>
                   
-                  {/* Plan Info */}
-                  <div className="flex-1 min-w-0 flex flex-col justify-between py-1">
+                  {/* Plan Info a la derecha */}
+                  <div className="flex-1 min-w-0 p-4 flex flex-col justify-between">
                     <div>
-                      <h3 className="font-semibold text-foreground group-hover:text-accent-foreground line-clamp-1">
+                      <h3 className="font-semibold text-foreground line-clamp-1">
                         {plan.title}
                       </h3>
-                      <p className="text-sm text-muted-foreground group-hover:text-accent-foreground/80 mt-1 line-clamp-2">
+                      <p className="text-sm text-muted-foreground mt-1 line-clamp-2">
                         {plan.description}
                       </p>
                     </div>
                     
-                    <div className="space-y-2 mt-2">
+                    <div className="space-y-2 mt-3">
                       {/* Duration */}
-                      <div className="flex items-center gap-2 text-xs text-muted-foreground group-hover:text-accent-foreground/70">
+                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
                         <Calendar className="h-3.5 w-3.5" />
                         <span>{plan.duration}</span>
                       </div>
                       
                       {/* Progress */}
-                      {hasStarted && (
-                        <div className="space-y-1">
-                          <Progress value={progress} className="h-1.5" />
-                          <span className="text-xs text-primary group-hover:text-accent-foreground font-medium">
+                      <div className="space-y-1">
+                        <Progress value={progress} className="h-1.5" />
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs font-medium text-muted-foreground">
                             {progress}% completado
                           </span>
+                          {/* Estado */}
+                          <div className="flex items-center gap-1.5 text-xs">
+                            {hasStarted ? (
+                              <>
+                                <div className="w-2 h-2 rounded-full bg-green-500" />
+                                <span className="text-green-600">En progreso</span>
+                              </>
+                            ) : (
+                              <>
+                                <div className="w-2 h-2 rounded-full bg-muted-foreground/40" />
+                                <span className="text-muted-foreground">Sin iniciar</span>
+                              </>
+                            )}
+                          </div>
                         </div>
-                      )}
+                      </div>
                     </div>
                   </div>
-                  
-                  <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-accent-foreground flex-shrink-0 self-center" />
                 </div>
               </button>
             );
           })}
         </section>
+
+        {/* Reset All Plans */}
+        <div className="flex justify-center pt-4">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => {
+              resetAllPlanProgress();
+              forceUpdate({});
+              toast.success('Todos los planes han sido reiniciados');
+            }}
+            className="text-xs text-muted-foreground hover:text-destructive"
+          >
+            <RotateCcw className="h-3.5 w-3.5 mr-1.5" />
+            Reiniciar todos los planes
+          </Button>
+        </div>
       </main>
 
       <BottomNav />
