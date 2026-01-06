@@ -200,6 +200,52 @@ export const quizCategories: QuizCategory[] = [
     type: 'libro',
     questionCount: 20
   },
+  // Profetas Mayores
+  {
+    id: 'isaias',
+    title: 'Isaías',
+    description: 'El profeta mesiánico: juicio y esperanza',
+    icon: '🔥',
+    color: 'hsl(0, 75%, 45%)',
+    type: 'libro',
+    questionCount: 35
+  },
+  {
+    id: 'jeremias',
+    title: 'Jeremías',
+    description: 'El profeta llorón y la caída de Jerusalén',
+    icon: '😢',
+    color: 'hsl(220, 70%, 45%)',
+    type: 'libro',
+    questionCount: 35
+  },
+  {
+    id: 'lamentaciones',
+    title: 'Lamentaciones',
+    description: 'Lamentos por la destrucción de Jerusalén',
+    icon: '💔',
+    color: 'hsl(260, 60%, 40%)',
+    type: 'libro',
+    questionCount: 20
+  },
+  {
+    id: 'ezequiel',
+    title: 'Ezequiel',
+    description: 'Visiones del profeta en el exilio',
+    icon: '👁️',
+    color: 'hsl(180, 70%, 40%)',
+    type: 'libro',
+    questionCount: 35
+  },
+  {
+    id: 'daniel',
+    title: 'Daniel',
+    description: 'Sueños, profecías y fidelidad en Babilonia',
+    icon: '🦁',
+    color: 'hsl(45, 90%, 45%)',
+    type: 'libro',
+    questionCount: 35
+  },
   // Por Libro - NT
   {
     id: 'mateo',
@@ -708,6 +754,60 @@ export const achievements: Achievement[] = [
       stats.quizzesByCategory['proverbios'] >= 1 &&
       stats.quizzesByCategory['eclesiastes'] >= 1 &&
       stats.quizzesByCategory['cantares'] >= 1,
+    points: 750
+  },
+  // Logros de Profetas Mayores
+  {
+    id: 'conocedor-isaias',
+    title: 'Profeta Mesiánico',
+    description: 'Domina las profecías de Isaías',
+    icon: '🔥',
+    condition: (stats) => stats.quizzesByCategory['isaias'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-jeremias',
+    title: 'Profeta Llorón',
+    description: 'Comprende el mensaje de Jeremías',
+    icon: '😢',
+    condition: (stats) => stats.quizzesByCategory['jeremias'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-lamentaciones',
+    title: 'Compasivo',
+    description: 'Reflexiona sobre las Lamentaciones',
+    icon: '💔',
+    condition: (stats) => stats.quizzesByCategory['lamentaciones'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-ezequiel',
+    title: 'Visionario',
+    description: 'Conoce las visiones de Ezequiel',
+    icon: '👁️',
+    condition: (stats) => stats.quizzesByCategory['ezequiel'] >= 1,
+    points: 100
+  },
+  {
+    id: 'conocedor-daniel',
+    title: 'Fiel en Babilonia',
+    description: 'Domina el libro de Daniel',
+    icon: '🦁',
+    condition: (stats) => stats.quizzesByCategory['daniel'] >= 1,
+    points: 100
+  },
+  {
+    id: 'profetas-mayores-completo',
+    title: 'Voz de los Profetas',
+    description: 'Completa quizzes de todos los profetas mayores',
+    icon: '📢',
+    condition: (stats) => 
+      stats.quizzesByCategory['isaias'] >= 1 &&
+      stats.quizzesByCategory['jeremias'] >= 1 &&
+      stats.quizzesByCategory['lamentaciones'] >= 1 &&
+      stats.quizzesByCategory['ezequiel'] >= 1 &&
+      stats.quizzesByCategory['daniel'] >= 1,
     points: 750
   }
 ];
