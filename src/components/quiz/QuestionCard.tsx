@@ -115,7 +115,6 @@ export const QuestionCard = ({
           <Button 
             onClick={onConfirm}
             disabled={selectedAnswer === null}
-            className="w-full"
             size="lg"
           >
             Confirmar Respuesta

@@ -126,7 +126,7 @@ const Aprender = () => {
           </section>
 
           {/* Back to Plans */}
-          <Button variant="outline" onClick={() => setSelectedPlan(null)} className="w-full">
+          <Button variant="outline" onClick={() => setSelectedPlan(null)}>
             Ver todos los planes
           </Button>
         </main>

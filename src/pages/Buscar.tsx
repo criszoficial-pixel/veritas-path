@@ -162,7 +162,7 @@ const Buscar = () => {
           )}
 
           {searchMode === 'reference' && (
-            <Button onClick={handleReferenceSearch} className="w-full">
+            <Button onClick={handleReferenceSearch}>
               <Search className="h-4 w-4 mr-2" />
               Buscar
             </Button>
