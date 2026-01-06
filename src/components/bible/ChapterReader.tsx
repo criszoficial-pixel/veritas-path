@@ -413,12 +413,11 @@ export const ChapterReader = ({ collectionSlug: propCollectionSlug }: ChapterRea
             })}
           </div>
           
-          {/* Quiz suggestion after reading */}
-          {currentBook && chapterData && (
+          {/* Quiz suggestion only at the end of the book */}
+          {currentBook && chapterData && currentChapter === currentBook.chapters && (
             <QuizSuggestion 
               bookId={currentBook.slug}
               bookName={chapterData.book}
-              chapter={currentChapter}
             />
           )}
         </article>

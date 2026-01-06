@@ -2,7 +2,7 @@ import { QuizQuestion } from './quizData';
 
 export type { QuizQuestion };
 
-// GÉNESIS - 15 preguntas
+// GÉNESIS - 35 preguntas
 export const genesisQuestions: QuizQuestion[] = [
   {
     id: 'gen-001',
@@ -183,6 +183,256 @@ export const genesisQuestions: QuizQuestion[] = [
     difficulty: 'facil',
     category: 'genesis',
     tags: ['abel', 'profesion']
+  },
+  // Preguntas adicionales - Capítulo 1
+  {
+    id: 'gen-016',
+    type: 'multiple-choice',
+    question: '¿Qué creó Dios el primer día?',
+    options: ['El sol y la luna', 'La luz', 'Los animales', 'El hombre'],
+    correctAnswer: 1,
+    explanation: 'El primer día Dios dijo: Sea la luz, y fue la luz.',
+    reference: 'Génesis 1:3-5',
+    difficulty: 'facil',
+    category: 'genesis',
+    tags: ['creacion', 'luz', 'dia']
+  },
+  {
+    id: 'gen-017',
+    type: 'multiple-choice',
+    question: '¿Qué día creó Dios al hombre?',
+    options: ['El quinto día', 'El sexto día', 'El séptimo día', 'El cuarto día'],
+    correctAnswer: 1,
+    explanation: 'Dios creó al hombre el sexto día, como corona de la creación.',
+    reference: 'Génesis 1:26-31',
+    difficulty: 'facil',
+    category: 'genesis',
+    tags: ['creacion', 'hombre', 'dia']
+  },
+  // Capítulo 3 - La caída
+  {
+    id: 'gen-018',
+    type: 'multiple-choice',
+    question: '¿Qué animal engañó a Eva en el huerto?',
+    options: ['Un león', 'Una serpiente', 'Un águila', 'Un lobo'],
+    correctAnswer: 1,
+    explanation: 'La serpiente era el más astuto de los animales y engañó a Eva.',
+    reference: 'Génesis 3:1',
+    difficulty: 'facil',
+    category: 'genesis',
+    tags: ['serpiente', 'caida', 'eva']
+  },
+  {
+    id: 'gen-019',
+    type: 'multiple-choice',
+    question: '¿Qué hicieron Adán y Eva después de pecar?',
+    options: ['Huyeron del huerto', 'Se escondieron de Dios', 'Pidieron perdón', 'Culparon a la serpiente'],
+    correctAnswer: 1,
+    explanation: 'Adán y Eva se escondieron entre los árboles al oír la voz de Dios.',
+    reference: 'Génesis 3:8',
+    difficulty: 'facil',
+    category: 'genesis',
+    tags: ['caida', 'pecado', 'esconderse']
+  },
+  // Capítulo 6-8 - El diluvio
+  {
+    id: 'gen-020',
+    type: 'multiple-choice',
+    question: '¿Cuántos días y noches llovió durante el diluvio?',
+    options: ['7 días', '40 días', '100 días', '150 días'],
+    correctAnswer: 1,
+    explanation: 'Llovió sobre la tierra 40 días y 40 noches.',
+    reference: 'Génesis 7:12',
+    difficulty: 'facil',
+    category: 'genesis',
+    tags: ['diluvio', 'lluvia', 'noe']
+  },
+  {
+    id: 'gen-021',
+    type: 'multiple-choice',
+    question: '¿Qué ave envió Noé primero desde el arca?',
+    options: ['Una paloma', 'Un cuervo', 'Un águila', 'Una golondrina'],
+    correctAnswer: 1,
+    explanation: 'Noé envió primero un cuervo que iba y volvía.',
+    reference: 'Génesis 8:7',
+    difficulty: 'medio',
+    category: 'genesis',
+    tags: ['noe', 'arca', 'cuervo']
+  },
+  {
+    id: 'gen-022',
+    type: 'multiple-choice',
+    question: '¿Qué trajo la paloma a Noé la segunda vez?',
+    options: ['Una rama de olivo', 'Una flor', 'Una fruta', 'Nada'],
+    correctAnswer: 0,
+    explanation: 'La paloma volvió con una hoja de olivo en el pico.',
+    reference: 'Génesis 8:11',
+    difficulty: 'facil',
+    category: 'genesis',
+    tags: ['noe', 'paloma', 'olivo']
+  },
+  // Capítulo 11 - Torre de Babel
+  {
+    id: 'gen-023',
+    type: 'multiple-choice',
+    question: '¿Por qué Dios confundió las lenguas en Babel?',
+    options: ['Por adorar ídolos', 'Por construir una torre hasta el cielo', 'Por desobedecer a Noé', 'Por no ofrecer sacrificios'],
+    correctAnswer: 1,
+    explanation: 'Los hombres querían hacerse un nombre construyendo una torre hasta el cielo.',
+    reference: 'Génesis 11:4-7',
+    difficulty: 'facil',
+    category: 'genesis',
+    tags: ['babel', 'lenguas', 'torre']
+  },
+  {
+    id: 'gen-024',
+    type: 'multiple-choice',
+    question: '¿Qué significa el nombre Babel?',
+    options: ['Ciudad grande', 'Confusión', 'Torre alta', 'Puerta del cielo'],
+    correctAnswer: 1,
+    explanation: 'Babel significa confusión, porque allí Dios confundió las lenguas.',
+    reference: 'Génesis 11:9',
+    difficulty: 'medio',
+    category: 'genesis',
+    tags: ['babel', 'nombre', 'significado']
+  },
+  // Capítulo 12 - Llamado de Abraham
+  {
+    id: 'gen-025',
+    type: 'multiple-choice',
+    question: '¿De dónde salió Abraham cuando Dios lo llamó?',
+    options: ['De Egipto', 'De Canaán', 'De Ur de los Caldeos', 'De Betel'],
+    correctAnswer: 2,
+    explanation: 'Abraham salió de Ur de los Caldeos hacia la tierra prometida.',
+    reference: 'Génesis 11:31',
+    difficulty: 'medio',
+    category: 'genesis',
+    tags: ['abraham', 'llamado', 'ur']
+  },
+  {
+    id: 'gen-026',
+    type: 'multiple-choice',
+    question: '¿Cuántos años tenía Abraham cuando salió de Harán?',
+    options: ['65 años', '75 años', '85 años', '99 años'],
+    correctAnswer: 1,
+    explanation: 'Abraham tenía 75 años cuando salió de Harán.',
+    reference: 'Génesis 12:4',
+    difficulty: 'medio',
+    category: 'genesis',
+    tags: ['abraham', 'edad', 'haran']
+  },
+  // Capítulo 22 - Sacrificio de Isaac
+  {
+    id: 'gen-027',
+    type: 'multiple-choice',
+    question: '¿En qué monte Dios probó a Abraham?',
+    options: ['Monte Sinaí', 'Monte Moriah', 'Monte Carmelo', 'Monte Hermón'],
+    correctAnswer: 1,
+    explanation: 'Dios probó a Abraham en el monte Moriah.',
+    reference: 'Génesis 22:2',
+    difficulty: 'medio',
+    category: 'genesis',
+    tags: ['abraham', 'isaac', 'moriah']
+  },
+  {
+    id: 'gen-028',
+    type: 'multiple-choice',
+    question: '¿Qué animal proveyó Dios en lugar de Isaac?',
+    options: ['Una oveja', 'Un carnero', 'Un toro', 'Una paloma'],
+    correctAnswer: 1,
+    explanation: 'Abraham vio un carnero trabado por los cuernos en un zarzal.',
+    reference: 'Génesis 22:13',
+    difficulty: 'facil',
+    category: 'genesis',
+    tags: ['abraham', 'isaac', 'carnero']
+  },
+  // Capítulo 24 - Rebeca
+  {
+    id: 'gen-029',
+    type: 'multiple-choice',
+    question: '¿Quién fue a buscar esposa para Isaac?',
+    options: ['Abraham', 'Un siervo de Abraham', 'Lot', 'Ismael'],
+    correctAnswer: 1,
+    explanation: 'El siervo más antiguo de Abraham fue enviado a buscar esposa para Isaac.',
+    reference: 'Génesis 24:2-4',
+    difficulty: 'medio',
+    category: 'genesis',
+    tags: ['isaac', 'rebeca', 'siervo']
+  },
+  {
+    id: 'gen-030',
+    type: 'multiple-choice',
+    question: '¿Qué señal pidió el siervo para reconocer a la esposa de Isaac?',
+    options: ['Que le diera de beber', 'Que le diera de beber y a sus camellos', 'Que fuera hermosa', 'Que llevara un velo'],
+    correctAnswer: 1,
+    explanation: 'El siervo pidió que la joven le diera de beber a él y a sus camellos.',
+    reference: 'Génesis 24:14',
+    difficulty: 'medio',
+    category: 'genesis',
+    tags: ['rebeca', 'señal', 'camellos']
+  },
+  // Capítulo 25 y 27 - Esaú y Jacob
+  {
+    id: 'gen-031',
+    type: 'multiple-choice',
+    question: '¿Por qué vendió Esaú su primogenitura?',
+    options: ['Por dinero', 'Por un plato de lentejas', 'Por tierras', 'Por ganado'],
+    correctAnswer: 1,
+    explanation: 'Esaú vendió su primogenitura a Jacob por un guiso de lentejas.',
+    reference: 'Génesis 25:33-34',
+    difficulty: 'facil',
+    category: 'genesis',
+    tags: ['esau', 'jacob', 'primogenitura']
+  },
+  {
+    id: 'gen-032',
+    type: 'multiple-choice',
+    question: '¿Quién ayudó a Jacob a engañar a Isaac?',
+    options: ['Esaú', 'Rebeca', 'Labán', 'Raquel'],
+    correctAnswer: 1,
+    explanation: 'Rebeca planeó el engaño para que Jacob recibiera la bendición.',
+    reference: 'Génesis 27:6-17',
+    difficulty: 'facil',
+    category: 'genesis',
+    tags: ['jacob', 'rebeca', 'bendicion']
+  },
+  // Capítulo 28 - Sueño de Jacob
+  {
+    id: 'gen-033',
+    type: 'multiple-choice',
+    question: '¿Qué vio Jacob en su sueño en Betel?',
+    options: ['Un río de agua', 'Una escalera al cielo', 'Un árbol grande', 'Una ciudad de oro'],
+    correctAnswer: 1,
+    explanation: 'Jacob soñó con una escalera que llegaba al cielo con ángeles subiendo y bajando.',
+    reference: 'Génesis 28:12',
+    difficulty: 'facil',
+    category: 'genesis',
+    tags: ['jacob', 'sueno', 'escalera']
+  },
+  // Capítulo 39-41 - José en Egipto
+  {
+    id: 'gen-034',
+    type: 'multiple-choice',
+    question: '¿Por qué fue José encarcelado en Egipto?',
+    options: ['Por robar', 'Por una falsa acusación de la esposa de Potifar', 'Por matar a alguien', 'Por desobedecer al faraón'],
+    correctAnswer: 1,
+    explanation: 'La esposa de Potifar lo acusó falsamente de intentar forzarla.',
+    reference: 'Génesis 39:17-20',
+    difficulty: 'medio',
+    category: 'genesis',
+    tags: ['jose', 'potifar', 'carcel']
+  },
+  {
+    id: 'gen-035',
+    type: 'multiple-choice',
+    question: '¿Qué don tenía José que lo hizo famoso en Egipto?',
+    options: ['Cantar', 'Interpretar sueños', 'Curar enfermos', 'Predecir el clima'],
+    correctAnswer: 1,
+    explanation: 'José podía interpretar sueños por el poder de Dios.',
+    reference: 'Génesis 41:15-16',
+    difficulty: 'facil',
+    category: 'genesis',
+    tags: ['jose', 'suenos', 'don']
   }
 ];
 
