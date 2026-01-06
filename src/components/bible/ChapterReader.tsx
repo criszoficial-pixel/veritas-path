@@ -16,7 +16,7 @@ import { VerseSelectionBar } from './VerseSelectionBar';
 import { QuizSuggestion } from '@/components/quiz/QuizSuggestion';
 import { cn } from '@/lib/utils';
 import { fetchBibleMetadata, fetchChapter, findBookByName, findBookBySlug, bookNameToSlug } from '@/services/bibleDataService';
-import { trackChapterRead, getPreferences, updatePreferences } from '@/services/userDataService';
+import { trackChapterRead, getPreferences, updatePreferences, markPlanChapterRead } from '@/services/userDataService';
 import { toast } from 'sonner';
 import type { ChapterAudioData, VerseSyncData } from '@/types/audio';
 import type { BibleMetadata, ChapterData, VerseData, BookInfo } from '@/types/bible';
@@ -55,6 +55,7 @@ export const ChapterReader = ({ collectionSlug: propCollectionSlug }: ChapterRea
 
   const currentChapter = parseInt(chapter || '1');
   const targetVerse = searchParams.get('v');
+  const planId = searchParams.get('plan');
 
   const audioPlayer = useAudioPlayer({
     onEnded: () => {
@@ -217,11 +218,16 @@ export const ChapterReader = ({ collectionSlug: propCollectionSlug }: ChapterRea
   useEffect(() => {
     if (chapterData && currentBook) {
       const timer = setTimeout(() => {
+        // Always track in general history
         trackChapterRead(currentBook.slug, chapterData.book, currentChapter);
+        // If reading from a plan, also track for that plan
+        if (planId) {
+          markPlanChapterRead(planId, currentBook.slug, currentChapter);
+        }
       }, 5000); // Track after 5 seconds of reading
       return () => clearTimeout(timer);
     }
-  }, [chapterData, currentBook, currentChapter]);
+  }, [chapterData, currentBook, currentChapter, planId]);
 
   // Scroll to target verse from URL parameter
   useEffect(() => {

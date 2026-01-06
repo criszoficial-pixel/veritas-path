@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { BookOpen, Calendar, Star, Heart, ChevronRight, Check } from 'lucide-react';
 import { readingPlans, type ReadingPlan } from '@/data/readingPlans';
-import { getReadingHistory } from '@/services/userDataService';
+import { isPlanChapterCompleted } from '@/services/userDataService';
 import { cn } from '@/lib/utils';
 
 const iconMap = {
@@ -19,9 +19,7 @@ const iconMap = {
 const Aprender = () => {
   const navigate = useNavigate();
   const [selectedPlan, setSelectedPlan] = useState<ReadingPlan | null>(null);
-  
-  // Get user's reading history to calculate progress
-  const history = useMemo(() => getReadingHistory(100), []);
+  const [, forceUpdate] = useState({});
   
   const calculatePlanProgress = (plan: ReadingPlan) => {
     let completedReadings = 0;
@@ -30,10 +28,9 @@ const Aprender = () => {
     for (const day of plan.schedule) {
       for (const reading of day.readings) {
         totalReadings++;
-        const hasRead = history.some(
-          h => h.bookSlug === reading.bookSlug && h.chapter === reading.chapter
-        );
-        if (hasRead) completedReadings++;
+        if (isPlanChapterCompleted(plan.id, reading.bookSlug, reading.chapter)) {
+          completedReadings++;
+        }
       }
     }
     
@@ -86,14 +83,12 @@ const Aprender = () => {
             <h2 className="text-lg font-semibold">Lectura de hoy - Día {todayReadings.day}</h2>
             <div className="space-y-2">
               {todayReadings.readings.map((reading, idx) => {
-                const isCompleted = history.some(
-                  h => h.bookSlug === reading.bookSlug && h.chapter === reading.chapter
-                );
+                const isCompleted = isPlanChapterCompleted(selectedPlan.id, reading.bookSlug, reading.chapter);
                 
                 return (
                   <button
                     key={`${reading.bookSlug}-${reading.chapter}-${idx}`}
-                    onClick={() => navigate(`/leer/${reading.bookSlug}/${reading.chapter}`)}
+                    onClick={() => navigate(`/leer/${reading.bookSlug}/${reading.chapter}?plan=${selectedPlan.id}`)}
                     className={cn(
                       'flex items-center justify-between w-full p-4 rounded-xl border transition-colors',
                       isCompleted 

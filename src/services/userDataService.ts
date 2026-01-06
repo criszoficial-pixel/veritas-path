@@ -35,6 +35,12 @@ export interface UserPreferences {
   languageCode: string;
 }
 
+export interface PlanProgress {
+  planId: string;
+  completedReadings: { bookSlug: string; chapter: number; timestamp: number }[];
+  startedAt: number;
+}
+
 export interface VerseNote {
   id: string;
   bookSlug: string;
@@ -59,6 +65,7 @@ interface UserData {
   stats: UserStats;
   preferences: UserPreferences;
   lastReading: ReadingProgress | null;
+  planProgress: Record<string, PlanProgress>;
 }
 
 const STORAGE_KEY = 'shalom_user_data';
@@ -82,6 +89,7 @@ const defaultUserData: UserData = {
     languageCode: 'es',
   },
   lastReading: null,
+  planProgress: {},
 };
 
 // Get all user data
@@ -428,4 +436,59 @@ export function clearSearchHistory(): void {
   const data = getUserData();
   data.searchHistory = [];
   saveUserData(data);
+}
+
+// ============= PLAN PROGRESS FUNCTIONS =============
+
+// Get progress for a specific plan
+export function getPlanProgress(planId: string): PlanProgress | null {
+  const data = getUserData();
+  return data.planProgress[planId] || null;
+}
+
+// Mark a chapter as read for a specific plan
+export function markPlanChapterRead(planId: string, bookSlug: string, chapter: number): void {
+  const data = getUserData();
+  
+  if (!data.planProgress[planId]) {
+    data.planProgress[planId] = {
+      planId,
+      completedReadings: [],
+      startedAt: Date.now(),
+    };
+  }
+  
+  // Avoid duplicates
+  const exists = data.planProgress[planId].completedReadings.some(
+    r => r.bookSlug === bookSlug && r.chapter === chapter
+  );
+  
+  if (!exists) {
+    data.planProgress[planId].completedReadings.push({
+      bookSlug,
+      chapter,
+      timestamp: Date.now(),
+    });
+  }
+  
+  saveUserData(data);
+}
+
+// Check if a chapter is completed for a specific plan
+export function isPlanChapterCompleted(planId: string, bookSlug: string, chapter: number): boolean {
+  const data = getUserData();
+  const progress = data.planProgress[planId];
+  if (!progress) return false;
+  
+  return progress.completedReadings.some(
+    r => r.bookSlug === bookSlug && r.chapter === chapter
+  );
+}
+
+// Calculate progress percentage for a plan
+export function calculatePlanProgressPercent(planId: string, totalReadings: number): number {
+  const progress = getPlanProgress(planId);
+  if (!progress || totalReadings === 0) return 0;
+  
+  return Math.round((progress.completedReadings.length / totalReadings) * 100);
 }
