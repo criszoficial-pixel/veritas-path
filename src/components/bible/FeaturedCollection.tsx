@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Star, ArrowRight, BookOpen } from 'lucide-react';
+import { Star, ArrowRight, BookOpen, ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import type { BibleCollection } from '@/types/collections';
 
@@ -8,6 +9,10 @@ interface FeaturedCollectionProps {
 }
 
 export function FeaturedCollection({ collection }: FeaturedCollectionProps) {
+  const [showFullSummary, setShowFullSummary] = useState(false);
+  const summaryPreview = collection.summary?.slice(0, 120);
+  const hasMoreSummary = collection.summary && collection.summary.length > 120;
+
   return (
     <div className="mb-8">
       <div className="flex items-center gap-2 mb-3">
@@ -48,9 +53,28 @@ export function FeaturedCollection({ collection }: FeaturedCollectionProps) {
                 <p className="text-sm text-muted-foreground mb-2">
                   {collection.subtitle}
                 </p>
-                <p className="text-sm text-foreground/80 hidden md:block">
-                  {collection.benefit}
-                </p>
+                {collection.summary && (
+                  <div className="hidden md:block">
+                    <p className="text-sm text-foreground/80">
+                      {showFullSummary ? collection.summary : `${summaryPreview}${hasMoreSummary ? '...' : ''}`}
+                    </p>
+                    {hasMoreSummary && (
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setShowFullSummary(!showFullSummary);
+                        }}
+                        className="inline-flex items-center gap-1 text-xs text-primary hover:underline mt-1"
+                      >
+                        {showFullSummary ? (
+                          <>Ver menos <ChevronUp className="w-3 h-3" /></>
+                        ) : (
+                          <>Ver más <ChevronDown className="w-3 h-3" /></>
+                        )}
+                      </button>
+                    )}
+                  </div>
+                )}
               </div>
               
               <div className="hidden md:block flex-shrink-0">
