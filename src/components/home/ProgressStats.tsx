@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { BookOpen, Trophy, Clock } from 'lucide-react';
 import { useUserProgress } from '@/hooks/useUserProgress';
-import { DoveIcon } from '@/components/icons/DoveIcon';
 import { cn } from '@/lib/utils';
 
 // Animated counter hook
@@ -34,8 +33,7 @@ const useCountUp = (end: number, duration: number = 1000) => {
 };
 
 interface StatCardProps {
-  icon?: React.ComponentType<{ className?: string }>;
-  customIcon?: React.ReactNode;
+  icon: React.ComponentType<{ className?: string }>;
   value: string | number;
   label: string;
   color: string;
@@ -43,7 +41,7 @@ interface StatCardProps {
   isNumeric?: boolean;
 }
 
-const StatCard = ({ icon: Icon, customIcon, value, label, color, delay, isNumeric = false }: StatCardProps) => {
+const StatCard = ({ icon: Icon, value, label, color, delay, isNumeric = false }: StatCardProps) => {
   const numericValue = typeof value === 'number' ? value : parseInt(value) || 0;
   const animatedValue = useCountUp(isNumeric ? numericValue : 0, 800);
   const [isPressed, setIsPressed] = useState(false);
@@ -62,7 +60,7 @@ const StatCard = ({ icon: Icon, customIcon, value, label, color, delay, isNumeri
       onPointerUp={() => setIsPressed(false)}
       onPointerLeave={() => setIsPressed(false)}
     >
-      {customIcon ? customIcon : Icon && <Icon className={`h-5 w-5 ${color}`} />}
+      <Icon className={`h-5 w-5 ${color}`} />
       <span className="text-xl font-bold text-foreground tabular-nums">
         {isNumeric ? animatedValue : value}
       </span>
@@ -76,16 +74,7 @@ export const ProgressStats = () => {
 
   const displayStats = [
     { 
-      icon: undefined, 
-      customIcon: <DoveIcon size={20} animated={true} />,
-      value: stats.currentStreak, 
-      label: 'Racha', 
-      color: '',
-      isNumeric: true,
-    },
-    { 
       icon: BookOpen, 
-      customIcon: undefined,
       value: stats.chaptersRead, 
       label: 'Capítulos', 
       color: 'text-primary',
@@ -93,7 +82,6 @@ export const ProgressStats = () => {
     },
     { 
       icon: Trophy, 
-      customIcon: undefined,
       value: uniqueBooks, 
       label: 'Libros', 
       color: 'text-accent',
@@ -101,7 +89,6 @@ export const ProgressStats = () => {
     },
     { 
       icon: Clock, 
-      customIcon: undefined,
       value: readingTime || '0m', 
       label: 'Tiempo', 
       color: 'text-spirit',
@@ -112,12 +99,11 @@ export const ProgressStats = () => {
   return (
     <div className="space-y-4 animate-fade-in">
       <h2 className="text-lg font-semibold text-foreground px-1">Tu Progreso</h2>
-      <div className="grid grid-cols-4 gap-2">
+      <div className="grid grid-cols-3 gap-2">
         {displayStats.map((stat, index) => (
           <StatCard
             key={stat.label}
             icon={stat.icon}
-            customIcon={stat.customIcon}
             value={stat.value}
             label={stat.label}
             color={stat.color}
