@@ -20,7 +20,7 @@ export function CollectionProgressHeader({ collection, progress }: CollectionPro
     <div 
       className="relative rounded-xl p-6 mb-6 overflow-hidden"
       style={{
-        background: `linear-gradient(135deg, hsl(${collection.coverColor}) 0%, hsl(${collection.coverColor} / 0.8) 100%)`,
+        background: `linear-gradient(145deg, hsl(${collection.coverColor}) 0%, hsl(${collection.coverColor} / 0.7) 50%, hsl(${collection.coverColor} / 0.5) 100%)`,
       }}
     >
       {/* Decorative elements */}
@@ -32,13 +32,7 @@ export function CollectionProgressHeader({ collection, progress }: CollectionPro
       />
       
       {isCompleted && (
-        <div 
-          className="absolute top-4 right-4 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium"
-          style={{
-            background: `hsl(${collection.accentColor} / 0.2)`,
-            color: `hsl(${collection.accentColor})`,
-          }}
-        >
+        <div className="absolute top-4 right-4 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-white/20 text-white">
           <CheckCircle2 className="w-3.5 h-3.5" />
           Completado
         </div>
@@ -55,23 +49,26 @@ export function CollectionProgressHeader({ collection, progress }: CollectionPro
       </Button>
       
       <h1 
-        className="text-2xl md:text-3xl font-bold font-scripture"
-        style={{ color: `hsl(${collection.accentColor})` }}
+        className="text-2xl md:text-3xl font-bold font-scripture text-white"
       >
         {collection.title}
       </h1>
-      <p 
-        className="text-sm md:text-base opacity-80 mt-1"
-        style={{ color: `hsl(${collection.accentColor})` }}
-      >
+      <p className="text-sm md:text-base text-white/80 mt-1">
         {collection.subtitle}
       </p>
       
+      {/* Collection summary */}
+      {collection.summary && (
+        <p className="text-xs md:text-sm text-white/70 mt-3 leading-relaxed max-w-2xl">
+          {collection.summary}
+        </p>
+      )}
+      
       {/* Progress section */}
       <div className="mt-5 space-y-3">
-        <div className="flex items-center justify-between text-xs" style={{ color: `hsl(${collection.accentColor})` }}>
-          <span className="opacity-70">{progress.percentage}% completado</span>
-          <span className="opacity-70">
+        <div className="flex items-center justify-between text-xs text-white/80">
+          <span>{progress.percentage}% completado</span>
+          <span>
             {progress.booksCompleted} de {progress.totalBooks} libros
           </span>
         </div>
@@ -84,12 +81,9 @@ export function CollectionProgressHeader({ collection, progress }: CollectionPro
           } as React.CSSProperties}
         />
         
-        <div 
-          className="flex items-center gap-2 text-sm mt-3"
-          style={{ color: `hsl(${collection.accentColor})` }}
-        >
-          <BookOpen className="w-4 h-4 opacity-70" />
-          <span className="opacity-90">{motivationalMessage}</span>
+        <div className="flex items-center gap-2 text-sm mt-3 text-white/90">
+          <BookOpen className="w-4 h-4" />
+          <span>{motivationalMessage}</span>
         </div>
       </div>
     </div>
