@@ -93,12 +93,10 @@ export function BookCardWithProgress({
             <ChevronRight className="w-5 h-5 flex-shrink-0 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
           </div>
           
-          {/* Short description */}
-          {summary && (
-            <p className="text-xs text-muted-foreground mt-0.5 line-clamp-1">
-              {summary.shortDescription}
-            </p>
-          )}
+          {/* Chapters count */}
+          <p className="text-xs text-muted-foreground mt-0.5">
+            {book.chapters} capítulos
+          </p>
           
           {/* Status */}
           <div className="flex items-center gap-1.5 mt-2">
@@ -106,12 +104,6 @@ export function BookCardWithProgress({
             <span className={`text-xs ${status.colorClass}`}>
               {status.label}
             </span>
-            
-            {progress.isStarted && progress.lastReadChapter && !progress.isCompleted && (
-              <span className="text-xs text-muted-foreground ml-2">
-                · Último: Cap. {progress.lastReadChapter}
-              </span>
-            )}
           </div>
           
           {/* Progress bar (only if started) */}

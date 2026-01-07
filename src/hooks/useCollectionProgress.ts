@@ -113,5 +113,5 @@ export function getMotivationalMessage(progress: CollectionProgress, collectionT
     return `¡Buen progreso! Has leído ${chaptersRead} capítulos de ${collectionTitle}`;
   }
   
-  return `¡Buen inicio! Has completado ${booksCompleted} de ${totalBooks} libros`;
+  return `¡Buen inicio! Llevas ${chaptersRead} capítulos leídos`;
 }
