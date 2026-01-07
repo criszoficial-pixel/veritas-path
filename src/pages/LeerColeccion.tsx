@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { Header } from '@/components/layout/Header';
@@ -6,9 +6,15 @@ import { BottomNav } from '@/components/layout/BottomNav';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, BookOpen, ChevronRight } from 'lucide-react';
+import { ArrowLeft, BookOpen } from 'lucide-react';
+import { CollectionProgressHeader } from '@/components/bible/CollectionProgressHeader';
+import { ContinueReading } from '@/components/bible/ContinueReading';
+import { BookCardWithProgress } from '@/components/bible/BookCardWithProgress';
+import { useCollectionProgress } from '@/hooks/useCollectionProgress';
+import { getMultipleBooksProgress } from '@/hooks/useBookProgress';
 import type { CollectionsData, BibleCollection } from '@/types/collections';
 import type { BibleMetadata, BookInfo } from '@/types/bible';
+import type { BookSummaries } from '@/types/bookSummary';
 
 async function fetchCollections(): Promise<CollectionsData> {
   const response = await fetch('/bible/collections.json');
@@ -22,10 +28,17 @@ async function fetchBibleMetadata(path: string): Promise<BibleMetadata> {
   return response.json();
 }
 
+async function fetchBookSummaries(): Promise<BookSummaries> {
+  const response = await fetch('/bible/es/book-summaries.json');
+  if (!response.ok) throw new Error('Failed to load book summaries');
+  return response.json();
+}
+
 const LeerColeccion = () => {
   const { collectionSlug } = useParams<{ collectionSlug: string }>();
   const navigate = useNavigate();
   const [testament, setTestament] = useState<'AT' | 'NT'>('AT');
+  const [booksProgress, setBooksProgress] = useState<Record<string, ReturnType<typeof getMultipleBooksProgress>[string]>>({});
 
   // Fetch collections
   const { data: collectionsData, isLoading: loadingCollections } = useQuery({
@@ -45,8 +58,14 @@ const LeerColeccion = () => {
     enabled: !!collection?.metadataPath,
   });
 
+  // Fetch book summaries
+  const { data: bookSummaries } = useQuery({
+    queryKey: ['book-summaries'],
+    queryFn: fetchBookSummaries,
+  });
+
   // Filter books based on collection type
-  const filteredBooks = useMemo(() => {
+  const allCollectionBooks = useMemo(() => {
     if (!metadata) return [];
     
     let books = metadata.books;
@@ -56,13 +75,31 @@ const LeerColeccion = () => {
       books = books.filter(book => collection.booksFilter!.includes(book.id));
     }
     
+    return books;
+  }, [metadata, collection]);
+
+  // For display (filtered by testament if full bible)
+  const filteredBooks = useMemo(() => {
+    if (!allCollectionBooks.length) return [];
+    
     // For full bible, filter by testament
     if (collection?.type === 'full-bible') {
-      books = books.filter(book => book.testament === testament);
+      return allCollectionBooks.filter(book => book.testament === testament);
     }
     
-    return books;
-  }, [metadata, collection, testament]);
+    return allCollectionBooks;
+  }, [allCollectionBooks, collection, testament]);
+
+  // Calculate collection progress
+  const collectionProgress = useCollectionProgress(allCollectionBooks);
+
+  // Update books progress when collection books change
+  useEffect(() => {
+    if (allCollectionBooks.length > 0) {
+      const progress = getMultipleBooksProgress(allCollectionBooks);
+      setBooksProgress(progress);
+    }
+  }, [allCollectionBooks]);
 
   const isLoading = loadingCollections || loadingMetadata;
 
@@ -71,11 +108,12 @@ const LeerColeccion = () => {
       <div className="min-h-screen bg-background pb-24">
         <Header title="Cargando..." />
         <main className="container px-4 py-6 space-y-6">
-          <Skeleton className="h-32 w-full rounded-xl" />
-          <Skeleton className="h-10 w-64 mx-auto" />
+          <Skeleton className="h-40 w-full rounded-xl" />
+          <Skeleton className="h-20 w-full rounded-xl" />
+          <Skeleton className="h-10 w-48" />
           <div className="space-y-3">
             {[1, 2, 3, 4, 5].map((i) => (
-              <Skeleton key={i} className="h-16 w-full rounded-lg" />
+              <Skeleton key={i} className="h-24 w-full rounded-lg" />
             ))}
           </div>
         </main>
@@ -106,50 +144,18 @@ const LeerColeccion = () => {
       <Header title={collection.title} />
       
       <main className="container px-4 py-6">
-        {/* Collection header */}
-        <div 
-          className="relative rounded-xl p-6 mb-6 overflow-hidden"
-          style={{
-            background: `linear-gradient(135deg, hsl(${collection.coverColor}) 0%, hsl(${collection.coverColor} / 0.8) 100%)`,
-          }}
-        >
-          {/* Decorative elements */}
-          <div 
-            className="absolute top-4 right-4 w-24 h-24 rounded-full opacity-10"
-            style={{
-              background: `hsl(${collection.accentColor})`,
-            }}
-          />
-          
-          <Button 
-            variant="ghost" 
-            size="sm"
-            onClick={() => navigate('/leer')}
-            className="mb-4 -ml-2 text-white/80 hover:text-white hover:bg-white/10"
-          >
-            <ArrowLeft className="w-4 h-4 mr-1" />
-            Biblioteca
-          </Button>
-          
-          <h1 
-            className="text-2xl md:text-3xl font-bold font-scripture"
-            style={{ color: `hsl(${collection.accentColor})` }}
-          >
-            {collection.title}
-          </h1>
-          <p 
-            className="text-sm md:text-base opacity-80 mt-1"
-            style={{ color: `hsl(${collection.accentColor})` }}
-          >
-            {collection.subtitle}
-          </p>
-          <p 
-            className="text-xs opacity-60 mt-2"
-            style={{ color: `hsl(${collection.accentColor})` }}
-          >
-            {collection.description}
-          </p>
-        </div>
+        {/* Collection header with progress */}
+        <CollectionProgressHeader 
+          collection={collection} 
+          progress={collectionProgress} 
+        />
+
+        {/* Continue reading section */}
+        <ContinueReading 
+          collectionSlug={collection.slug}
+          progress={collectionProgress}
+          accentColor={collection.accentColor}
+        />
 
         {/* Testament tabs (only for full bible) */}
         {collection.type === 'full-bible' && (
@@ -165,15 +171,33 @@ const LeerColeccion = () => {
           </Tabs>
         )}
 
-        {/* Books list */}
+        {/* Section title */}
+        <h2 className="text-sm font-medium text-muted-foreground mb-3 flex items-center gap-2">
+          <BookOpen className="w-4 h-4" />
+          {collection.type === 'full-bible' 
+            ? `Libros del ${testament === 'AT' ? 'Antiguo' : 'Nuevo'} Testamento`
+            : 'Tu progreso en esta colección'
+          }
+        </h2>
+
+        {/* Books list with progress */}
         <div className="space-y-2">
           {filteredBooks.map((book, index) => (
-            <BookCard 
+            <BookCardWithProgress 
               key={book.id} 
               book={book} 
               collectionSlug={collection.slug}
               index={index}
               accentColor={collection.accentColor}
+              progress={booksProgress[book.slug] || {
+                chaptersRead: 0,
+                totalChapters: book.chapters,
+                percentage: 0,
+                lastReadChapter: null,
+                isStarted: false,
+                isCompleted: false,
+              }}
+              summary={bookSummaries?.[book.slug]}
             />
           ))}
         </div>
@@ -190,49 +214,5 @@ const LeerColeccion = () => {
     </div>
   );
 };
-
-interface BookCardProps {
-  book: BookInfo;
-  collectionSlug: string;
-  index: number;
-  accentColor: string;
-}
-
-function BookCard({ book, collectionSlug, index, accentColor }: BookCardProps) {
-  return (
-    <Link
-      to={`/leer/${collectionSlug}/${book.slug}/1`}
-      className="group flex items-center gap-4 p-4 rounded-xl bg-card border border-border/50 hover:border-primary/30 hover:shadow-md transition-all duration-300 opacity-0 animate-fade-in"
-      style={{
-        animationDelay: `${index * 50}ms`,
-        animationFillMode: 'forwards',
-      }}
-    >
-      {/* Book number indicator */}
-      <div 
-        className="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center font-semibold text-sm"
-        style={{
-          background: `hsl(${accentColor} / 0.15)`,
-          color: `hsl(${accentColor})`,
-        }}
-      >
-        {book.id}
-      </div>
-      
-      {/* Book info */}
-      <div className="flex-1 min-w-0">
-        <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors truncate">
-          {book.name}
-        </h3>
-        <p className="text-xs text-muted-foreground">
-          {book.chapters} {book.chapters === 1 ? 'capítulo' : 'capítulos'}
-        </p>
-      </div>
-      
-      {/* Arrow */}
-      <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
-    </Link>
-  );
-}
 
 export default LeerColeccion;
