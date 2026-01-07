@@ -44,19 +44,9 @@ export function CoverGallery() {
   }
 
   return (
-    <div className="space-y-8">
-      {/* Header */}
-      <div className="text-center space-y-2">
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground font-scripture">
-          Biblioteca Sagrada
-        </h2>
-        <p className="text-muted-foreground text-sm md:text-base">
-          Selecciona una colección para comenzar tu lectura
-        </p>
-      </div>
-
+    <div className="space-y-6">
       {/* Cover gallery grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 px-2 md:px-0">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
         {data.collections.map((collection, index) => (
           <BookCover 
             key={collection.id} 
