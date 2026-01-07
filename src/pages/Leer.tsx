@@ -19,12 +19,12 @@ const Leer = () => {
         <LeerHero onScrollToContent={handleScrollToGallery} />
         
         <div ref={galleryRef} className="pt-4">
-          <div className="text-center mb-6">
-            <h2 className="text-xl font-semibold text-foreground mb-2">
-              Colecciones Disponibles
+          <div className="mb-6">
+            <h2 className="text-xl font-semibold text-foreground mb-1">
+              Tu Biblioteca Personal
             </h2>
             <p className="text-sm text-muted-foreground">
-              Selecciona una colección para comenzar tu lectura
+              Cada colección está organizada para acompañarte en tu vida espiritual
             </p>
           </div>
           <CoverGallery />

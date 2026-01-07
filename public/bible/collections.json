@@ -6,12 +6,16 @@
       "title": "Santa Biblia",
       "subtitle": "Reina Valera 1960",
       "description": "La versión más leída en español",
+      "benefit": "El texto completo de las Escrituras para tu estudio profundo",
       "coverColor": "220 60% 20%",
       "accentColor": "45 80% 55%",
       "language": "es",
       "metadataPath": "/bible/es/metadata.json",
       "type": "full-bible",
-      "icon": "cross"
+      "icon": "cross",
+      "bookCount": 66,
+      "badge": "Completa",
+      "featured": true
     },
     {
       "id": "tora",
@@ -19,13 +23,16 @@
       "title": "Torá",
       "subtitle": "Los Cinco Libros de Moisés",
       "description": "Pentateuco: Génesis a Deuteronomio",
+      "benefit": "Conoce los orígenes y la ley de Dios",
       "coverColor": "35 45% 25%",
       "accentColor": "45 70% 65%",
       "language": "es",
       "metadataPath": "/bible/es/metadata.json",
       "booksFilter": [1, 2, 3, 4, 5],
       "type": "collection",
-      "icon": "scroll"
+      "icon": "scroll",
+      "bookCount": 5,
+      "badge": "Esencial"
     },
     {
       "id": "evangelios",
@@ -33,13 +40,16 @@
       "title": "Los Evangelios",
       "subtitle": "La Vida de Jesús",
       "description": "Mateo, Marcos, Lucas y Juan",
+      "benefit": "Descubre la vida y enseñanzas de Jesús",
       "coverColor": "0 50% 30%",
       "accentColor": "45 85% 60%",
       "language": "es",
       "metadataPath": "/bible/es/metadata.json",
       "booksFilter": [40, 41, 42, 43],
       "type": "collection",
-      "icon": "heart"
+      "icon": "heart",
+      "bookCount": 4,
+      "badge": "Recomendado"
     },
     {
       "id": "salmos-proverbios",
@@ -47,13 +57,16 @@
       "title": "Sabiduría",
       "subtitle": "Salmos y Proverbios",
       "description": "Poesía y sabiduría bíblica",
+      "benefit": "Encuentra guía práctica para tu vida diaria",
       "coverColor": "270 40% 25%",
       "accentColor": "45 75% 60%",
       "language": "es",
       "metadataPath": "/bible/es/metadata.json",
       "booksFilter": [19, 20, 21],
       "type": "collection",
-      "icon": "sparkles"
+      "icon": "sparkles",
+      "bookCount": 3,
+      "badge": "Inspirador"
     }
   ]
 }
