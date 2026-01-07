@@ -5,6 +5,7 @@ export interface BibleCollection {
   subtitle: string;
   description: string;
   benefit?: string;
+  summary?: string;
   coverColor: string;
   accentColor: string;
   language: string;

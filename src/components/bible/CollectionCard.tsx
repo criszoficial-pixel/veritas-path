@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Cross, ScrollText, Heart, Sparkles, BookOpen } from 'lucide-react';
 import type { BibleCollection } from '@/types/collections';
+import { CollectionInfoDialog } from './CollectionInfoDialog';
 
 interface CollectionCardProps {
   collection: BibleCollection;
@@ -93,8 +94,9 @@ export function CollectionCard({ collection, index }: CollectionCardProps) {
         <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2">
           {collection.benefit || collection.description}
         </p>
-        <div className="flex items-center gap-2 text-[11px] text-muted-foreground/70">
+        <div className="flex items-center justify-between text-[11px] text-muted-foreground/70">
           <span>{collection.bookCount} libros</span>
+          {collection.summary && <CollectionInfoDialog collection={collection} />}
         </div>
       </div>
     </Link>
