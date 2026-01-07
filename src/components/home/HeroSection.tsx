@@ -5,6 +5,12 @@ import { useNavigate } from 'react-router-dom';
 import { getDailyVerseByDate } from '@/data/dailyVerses';
 import { useBookmarks } from '@/hooks/useBookmarks';
 import { toast } from 'sonner';
+import { CategorySelectDialog } from '@/components/bookmarks/CategorySelectDialog';
+import { 
+  getBookmarkCategories, 
+  addBookmarkCategory,
+  addBookmarkWithCategory,
+} from '@/services/userDataService';
 
 const topicBackgrounds: Record<string, string> = {
   'confianza': 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80',
@@ -27,10 +33,11 @@ const defaultBackground = 'https://images.unsplash.com/photo-1506905925346-21bda
 
 export const HeroSection = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [showCategoryDialog, setShowCategoryDialog] = useState(false);
   const navigate = useNavigate();
   const dailyVerse = getDailyVerseByDate();
   const backgroundImage = topicBackgrounds[dailyVerse.topic] || defaultBackground;
-  const { toggleVerseBookmark, checkBookmarked } = useBookmarks();
+  const { toggleVerseBookmark, checkBookmarked, refresh } = useBookmarks();
 
   useEffect(() => {
     setImageLoaded(false);
@@ -51,19 +58,45 @@ export const HeroSection = () => {
   );
 
   const handleBookmark = () => {
-    const wasAdded = toggleVerseBookmark(
-      dailyVerse.bookSlug,
-      dailyVerse.reference.split(' ')[0],
-      dailyVerse.chapter,
-      dailyVerse.verseNumbers[0],
-      dailyVerse.verse
+    if (isVerseBookmarked) {
+      // If already bookmarked, remove it
+      toggleVerseBookmark(
+        dailyVerse.bookSlug,
+        dailyVerse.reference.split(' ')[0],
+        dailyVerse.chapter,
+        dailyVerse.verseNumbers[0],
+        dailyVerse.verse
+      );
+      toast.info('Marcador eliminado');
+    } else {
+      // Open category dialog to save
+      setShowCategoryDialog(true);
+    }
+  };
+
+  const handleSaveWithCategory = (categoryId: string) => {
+    const categories = getBookmarkCategories();
+    const category = categories.find(c => c.id === categoryId);
+    
+    addBookmarkWithCategory(
+      {
+        bookSlug: dailyVerse.bookSlug,
+        bookName: dailyVerse.reference.split(' ')[0],
+        chapter: dailyVerse.chapter,
+        verseNumber: dailyVerse.verseNumbers[0],
+        verseText: dailyVerse.verse,
+        reference: dailyVerse.reference,
+      },
+      categoryId
     );
     
-    if (wasAdded) {
-      toast.success('Versiculo guardado');
-    } else {
-      toast.info('Marcador eliminado');
-    }
+    refresh();
+    toast.success(`Guardado en ${category?.name || 'categoría'}`);
+  };
+
+  const handleCreateCategory = (name: string): string => {
+    const newCategory = addBookmarkCategory(name);
+    return newCategory.id;
   };
 
   const handleShare = async () => {
@@ -128,12 +161,6 @@ export const HeroSection = () => {
             - {dailyVerse.reference}
           </p>
           
-          {/* Reflection */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-            <p className="text-sm text-white/90 leading-relaxed">
-              {dailyVerse.reflection}
-            </p>
-          </div>
         </div>
         
         {/* Actions */}
@@ -173,6 +200,15 @@ export const HeroSection = () => {
           </Button>
         </div>
       </div>
+
+      {/* Category Select Dialog */}
+      <CategorySelectDialog
+        isOpen={showCategoryDialog}
+        onClose={() => setShowCategoryDialog(false)}
+        categories={getBookmarkCategories()}
+        onSelectCategory={handleSaveWithCategory}
+        onCreateCategory={handleCreateCategory}
+      />
     </div>
   );
 };
