@@ -11,8 +11,10 @@ export interface TopicVerse {
 export interface TopicCategory {
   id: string;
   name: string;
-  icon: string;
+  lucideIcon: string;
+  image: string;
   description: string;
+  extendedDescription: string;
   verses: TopicVerse[];
 }
 
@@ -21,8 +23,10 @@ export const versesByTopic: Record<string, TopicCategory> = {
   ansiedad: {
     id: 'ansiedad',
     name: 'Ansiedad y Preocupación',
-    icon: '😰',
+    lucideIcon: 'AlertCircle',
+    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80',
     description: 'Versículos para cuando te sientes ansioso o preocupado',
+    extendedDescription: 'La ansiedad puede sentirse abrumadora, pero no tienes que enfrentarla solo. Dios nos invita a depositar nuestras cargas en Él y encontrar descanso en Su presencia. Estos versículos te recordarán que Su paz está disponible para ti en todo momento.',
     verses: [
       {
         reference: 'Filipenses 4:6-7',
@@ -71,8 +75,10 @@ export const versesByTopic: Record<string, TopicCategory> = {
   paz: {
     id: 'paz',
     name: 'Paz Interior',
-    icon: '🕊️',
+    lucideIcon: 'Heart',
+    image: 'https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?w=1200&q=80',
     description: 'Versículos para encontrar paz en medio de las tormentas',
+    extendedDescription: 'La paz que Dios ofrece no depende de nuestras circunstancias. Es una paz profunda que guarda nuestro corazón y mente incluso en los momentos más difíciles. Descubre cómo descansar en la presencia de Dios y experimentar Su shalom.',
     verses: [
       {
         reference: 'Juan 14:27',
@@ -121,8 +127,10 @@ export const versesByTopic: Record<string, TopicCategory> = {
   tristeza: {
     id: 'tristeza',
     name: 'Tristeza y Depresión',
-    icon: '😢',
+    lucideIcon: 'CloudRain',
+    image: 'https://images.unsplash.com/photo-1499678329028-101435549a4e?w=1200&q=80',
     description: 'Consuelo para momentos de tristeza profunda',
+    extendedDescription: 'En los valles más oscuros, Dios camina a nuestro lado. Él es cercano a los quebrantados de corazón y ofrece consuelo que trasciende nuestras circunstancias. Estos versículos te recordarán que la alegría viene después del llanto.',
     verses: [
       {
         reference: 'Salmos 34:18',
@@ -171,8 +179,10 @@ export const versesByTopic: Record<string, TopicCategory> = {
   enojo: {
     id: 'enojo',
     name: 'Enojo y Frustración',
-    icon: '😤',
+    lucideIcon: 'Flame',
+    image: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1200&q=80',
     description: 'Guía bíblica para manejar el enojo',
+    extendedDescription: 'El enojo es una emoción humana, pero Dios nos llama a manejarlo con sabiduría. La Escritura nos enseña a ser lentos para airarnos y rápidos para escuchar. Aprende a canalizar tus emociones de manera que honre a Dios y proteja tus relaciones.',
     verses: [
       {
         reference: 'Efesios 4:26-27',
@@ -214,8 +224,10 @@ export const versesByTopic: Record<string, TopicCategory> = {
   gratitud: {
     id: 'gratitud',
     name: 'Gratitud',
-    icon: '🙏',
+    lucideIcon: 'Sun',
+    image: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1200&q=80',
     description: 'Versículos para cultivar un corazón agradecido',
+    extendedDescription: 'La gratitud transforma nuestra perspectiva y nos acerca a Dios. Cuando elegimos agradecer, incluso en circunstancias difíciles, nuestro corazón se llena de gozo. Estos versículos te ayudarán a desarrollar un espíritu de agradecimiento constante.',
     verses: [
       {
         reference: '1 Tesalonicenses 5:18',
@@ -251,8 +263,10 @@ export const versesByTopic: Record<string, TopicCategory> = {
   perdida: {
     id: 'perdida',
     name: 'Pérdida y Duelo',
-    icon: '💔',
+    lucideIcon: 'Cloud',
+    image: 'https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=1200&q=80',
     description: 'Consuelo para quienes atraviesan una pérdida',
+    extendedDescription: 'El duelo es un proceso profundo y personal. En medio del dolor, Dios promete caminar contigo. Él es el Padre de misericordias y el Dios de toda consolación. Estos versículos ofrecen esperanza eterna y la certeza de Su presencia en el valle.',
     verses: [
       {
         reference: 'Salmos 23:4',
@@ -294,8 +308,10 @@ export const versesByTopic: Record<string, TopicCategory> = {
   enfermedad: {
     id: 'enfermedad',
     name: 'Enfermedad',
-    icon: '🏥',
+    lucideIcon: 'HeartPulse',
+    image: 'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1200&q=80',
     description: 'Versículos de esperanza para tiempos de enfermedad',
+    extendedDescription: 'En tiempos de enfermedad, Dios es nuestro sanador y consolador. Aunque el cuerpo pueda debilitarse, Su gracia es suficiente y Su poder se perfecciona en nuestra debilidad. Encuentra fortaleza y esperanza en estas promesas de restauración.',
     verses: [
       {
         reference: 'Salmos 103:2-3',
@@ -337,8 +353,10 @@ export const versesByTopic: Record<string, TopicCategory> = {
   trabajo: {
     id: 'trabajo',
     name: 'Trabajo y Finanzas',
-    icon: '💼',
+    lucideIcon: 'Briefcase',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80',
     description: 'Guía bíblica para el trabajo y las finanzas',
+    extendedDescription: 'Dios se interesa por cada área de tu vida, incluyendo tu trabajo y finanzas. Él promete proveer para tus necesidades cuando buscas primero Su reino. Estos versículos te guiarán a trabajar con integridad y confiar en Su provisión.',
     verses: [
       {
         reference: 'Colosenses 3:23',
@@ -380,8 +398,10 @@ export const versesByTopic: Record<string, TopicCategory> = {
   conflictos: {
     id: 'conflictos',
     name: 'Conflictos y Relaciones',
-    icon: '🤝',
+    lucideIcon: 'Users',
+    image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80',
     description: 'Sabiduría para resolver conflictos',
+    extendedDescription: 'Las relaciones pueden ser complicadas, pero Dios nos da sabiduría para navegar los conflictos con gracia. Ser pacificadores es un llamado divino que refleja el corazón de Cristo. Descubre principios bíblicos para restaurar y fortalecer tus relaciones.',
     verses: [
       {
         reference: 'Mateo 5:9',
@@ -424,8 +444,10 @@ export const versesByTopic: Record<string, TopicCategory> = {
   perdon: {
     id: 'perdon',
     name: 'Perdón',
-    icon: '🙏',
+    lucideIcon: 'HeartHandshake',
+    image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=80',
     description: 'Versículos sobre el perdón de Dios y perdonar a otros',
+    extendedDescription: 'El perdón es uno de los actos más poderosos de liberación espiritual. Perdonar no significa olvidar o justificar el daño, sino elegir la paz sobre el rencor. La Biblia nos enseña que fuimos perdonados para poder perdonar a otros.',
     verses: [
       {
         reference: '1 Juan 1:9',
@@ -474,8 +496,10 @@ export const versesByTopic: Record<string, TopicCategory> = {
   fortaleza: {
     id: 'fortaleza',
     name: 'Fortaleza',
-    icon: '💪',
+    lucideIcon: 'Shield',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80',
     description: 'Versículos para encontrar fuerza en Dios',
+    extendedDescription: 'Cuando te sientes débil, Dios es tu fortaleza. Su poder se perfecciona en nuestra debilidad, y en Él podemos hacer todas las cosas. Estos versículos te recordarán que no dependes de tu propia fuerza, sino del poder infinito de Dios.',
     verses: [
       {
         reference: 'Filipenses 4:13',
@@ -524,8 +548,10 @@ export const versesByTopic: Record<string, TopicCategory> = {
   direccion: {
     id: 'direccion',
     name: 'Dirección y Guía',
-    icon: '🧭',
+    lucideIcon: 'Compass',
+    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80',
     description: 'Versículos para cuando necesitas dirección',
+    extendedDescription: 'En los cruces de caminos de la vida, Dios promete guiarte. Su Palabra es lámpara a tus pies y lumbrera a tu camino. Cuando confías en Él con todo tu corazón, Él endereza tus sendas y te muestra el camino que debes seguir.',
     verses: [
       {
         reference: 'Proverbios 3:5-6',
@@ -567,8 +593,10 @@ export const versesByTopic: Record<string, TopicCategory> = {
   fe: {
     id: 'fe',
     name: 'Fe y Confianza',
-    icon: '✨',
+    lucideIcon: 'Sparkles',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=80',
     description: 'Versículos para fortalecer tu fe',
+    extendedDescription: 'La fe es la certeza de lo que esperamos y la convicción de lo que no vemos. Es el fundamento de nuestra relación con Dios y la llave que abre las puertas de lo imposible. Fortalece tu fe con estas poderosas promesas de la Escritura.',
     verses: [
       {
         reference: 'Hebreos 11:1',
@@ -610,8 +638,10 @@ export const versesByTopic: Record<string, TopicCategory> = {
   tentacion: {
     id: 'tentacion',
     name: 'Tentaciones',
-    icon: '🛡️',
+    lucideIcon: 'ShieldAlert',
+    image: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1200&q=80',
     description: 'Versículos para resistir la tentación',
+    extendedDescription: 'La tentación es parte de la vida, pero Dios siempre provee una salida. Jesús mismo fue tentado y venció, mostrando que es posible resistir. Con la armadura de Dios y Su Palabra, puedes mantenerte firme ante cualquier tentación.',
     verses: [
       {
         reference: '1 Corintios 10:13',
@@ -653,8 +683,10 @@ export const versesByTopic: Record<string, TopicCategory> = {
   proteccion: {
     id: 'proteccion',
     name: 'Protección',
-    icon: '🛡️',
+    lucideIcon: 'ShieldCheck',
+    image: 'https://images.unsplash.com/photo-1507400492013-162706c8c05e?w=1200&q=80',
     description: 'Versículos sobre la protección de Dios',
+    extendedDescription: 'Dios es tu refugio y fortaleza, tu pronto auxilio en las tribulaciones. Bajo Sus alas encontrarás protección, y Su fidelidad te rodeará como un escudo. Descansa en la seguridad de que el Todopoderoso vela por ti día y noche.',
     verses: [
       {
         reference: 'Salmos 91:1-2',
@@ -696,8 +728,10 @@ export const versesByTopic: Record<string, TopicCategory> = {
   esperanza: {
     id: 'esperanza',
     name: 'Esperanza',
-    icon: '🌅',
+    lucideIcon: 'Sunrise',
+    image: 'https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?w=1200&q=80',
     description: 'Versículos que traen esperanza',
+    extendedDescription: 'La esperanza en Dios es un ancla firme para el alma. Cuando todo parece oscuro, Sus promesas iluminan el camino. Él tiene planes de bienestar para ti, no de mal, para darte un futuro y una esperanza que no decepciona.',
     verses: [
       {
         reference: 'Jeremías 29:11',
@@ -738,6 +772,26 @@ export const versesByTopic: Record<string, TopicCategory> = {
   },
 };
 
+// Icon map for dynamic rendering
+export const topicIconMap: Record<string, string> = {
+  ansiedad: 'AlertCircle',
+  paz: 'Heart',
+  tristeza: 'CloudRain',
+  enojo: 'Flame',
+  gratitud: 'Sun',
+  perdida: 'Cloud',
+  enfermedad: 'HeartPulse',
+  trabajo: 'Briefcase',
+  conflictos: 'Users',
+  perdon: 'HeartHandshake',
+  fortaleza: 'Shield',
+  direccion: 'Compass',
+  fe: 'Sparkles',
+  tentacion: 'ShieldAlert',
+  proteccion: 'ShieldCheck',
+  esperanza: 'Sunrise',
+};
+
 // Get topic by ID
 export function getTopicById(topicId: string): TopicCategory | undefined {
   return versesByTopic[topicId];
@@ -759,10 +813,10 @@ export function getTopicsByCategory(category: 'emociones' | 'situaciones' | 'esp
   return categoryMap[category]?.map(id => versesByTopic[id]).filter(Boolean) || [];
 }
 
-// Quick access topics for home page
+// Quick access topics for home page (now with lucide icon names)
 export const quickAccessTopics = [
-  { id: 'ansiedad', label: 'Estoy ansioso', icon: '😰' },
-  { id: 'paz', label: 'Necesito paz', icon: '🕊️' },
-  { id: 'perdon', label: 'Busco perdón', icon: '🙏' },
-  { id: 'fortaleza', label: 'Necesito fortaleza', icon: '💪' },
+  { id: 'ansiedad', label: 'Estoy ansioso', lucideIcon: 'AlertCircle' },
+  { id: 'paz', label: 'Necesito paz', lucideIcon: 'Heart' },
+  { id: 'perdon', label: 'Busco perdón', lucideIcon: 'HeartHandshake' },
+  { id: 'fortaleza', label: 'Necesito fortaleza', lucideIcon: 'Shield' },
 ];
