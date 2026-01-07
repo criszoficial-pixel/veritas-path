@@ -4,15 +4,22 @@ import {
   addBookmark,
   removeBookmark,
   isBookmarked,
+  getBookmarkCategories,
+  addBookmarkCategory,
+  getBookmarksByCategory,
+  addBookmarkWithCategory,
   type Bookmark,
+  type BookmarkCategory,
 } from '@/services/userDataService';
 
 export function useBookmarks() {
   const [bookmarks, setBookmarks] = useState<Bookmark[]>(getBookmarks());
+  const [categories, setCategories] = useState<BookmarkCategory[]>(getBookmarkCategories());
 
-  // Refresh bookmarks from localStorage
+  // Refresh bookmarks and categories from localStorage
   const refresh = useCallback(() => {
     setBookmarks(getBookmarks());
+    setCategories(getBookmarkCategories());
   }, []);
 
   // Add a new bookmark
@@ -103,6 +110,7 @@ export function useBookmarks() {
 
   return {
     bookmarks,
+    categories,
     add,
     remove,
     checkBookmarked,
@@ -110,5 +118,15 @@ export function useBookmarks() {
     toggleVerseBookmark,
     refresh,
     count: bookmarks.length,
+    addWithCategory: (bookmark: Omit<Bookmark, 'id' | 'timestamp'>, categoryId: string) => {
+      addBookmarkWithCategory(bookmark, categoryId);
+      refresh();
+    },
+    createCategory: (name: string, color?: string) => {
+      const cat = addBookmarkCategory(name, color);
+      refresh();
+      return cat;
+    },
+    getByCategory: (categoryId: string) => getBookmarksByCategory(categoryId),
   };
 }

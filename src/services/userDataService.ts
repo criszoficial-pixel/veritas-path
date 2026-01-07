@@ -1,5 +1,12 @@
 // User data persistence service using localStorage
 
+export interface BookmarkCategory {
+  id: string;
+  name: string;
+  color: string;
+  createdAt: number;
+}
+
 export interface ReadingProgress {
   bookSlug: string;
   bookName: string;
@@ -18,6 +25,7 @@ export interface Bookmark {
   reference: string;
   timestamp: number;
   note?: string;
+  categoryId?: string;
 }
 
 export interface UserStats {
@@ -57,9 +65,16 @@ export interface VerseNote {
   verseNumber?: number;
 }
 
+const DEFAULT_CATEGORIES: BookmarkCategory[] = [
+  { id: 'favorites', name: 'Favoritos', color: 'hsl(45, 93%, 47%)', createdAt: 0 },
+  { id: 'study', name: 'Para estudiar', color: 'hsl(217, 91%, 60%)', createdAt: 0 },
+  { id: 'promises', name: 'Promesas', color: 'hsl(142, 71%, 45%)', createdAt: 0 },
+];
+
 interface UserData {
   history: ReadingProgress[];
   bookmarks: Bookmark[];
+  bookmarkCategories: BookmarkCategory[];
   notes: VerseNote[];
   searchHistory: string[];
   stats: UserStats;
@@ -73,6 +88,7 @@ const STORAGE_KEY = 'shalom_user_data';
 const defaultUserData: UserData = {
   history: [],
   bookmarks: [],
+  bookmarkCategories: [...DEFAULT_CATEGORIES],
   notes: [],
   searchHistory: [],
   stats: {
@@ -505,4 +521,92 @@ export function resetAllPlanProgress(): void {
       localStorage.removeItem(key);
     }
   });
+}
+
+// ============= BOOKMARK CATEGORIES FUNCTIONS =============
+
+// Get all bookmark categories
+export function getBookmarkCategories(): BookmarkCategory[] {
+  const data = getUserData();
+  // Ensure default categories exist
+  if (!data.bookmarkCategories || data.bookmarkCategories.length === 0) {
+    data.bookmarkCategories = [...DEFAULT_CATEGORIES];
+    saveUserData(data);
+  }
+  return data.bookmarkCategories;
+}
+
+// Add a new bookmark category
+export function addBookmarkCategory(name: string, color: string = 'hsl(262, 83%, 58%)'): BookmarkCategory {
+  const data = getUserData();
+  
+  const newCategory: BookmarkCategory = {
+    id: `cat-${Date.now()}`,
+    name,
+    color,
+    createdAt: Date.now(),
+  };
+  
+  if (!data.bookmarkCategories) {
+    data.bookmarkCategories = [...DEFAULT_CATEGORIES];
+  }
+  
+  data.bookmarkCategories.push(newCategory);
+  saveUserData(data);
+  
+  return newCategory;
+}
+
+// Delete a bookmark category
+export function deleteBookmarkCategory(categoryId: string): void {
+  const data = getUserData();
+  // Don't allow deleting default categories
+  if (['favorites', 'study', 'promises'].includes(categoryId)) return;
+  
+  data.bookmarkCategories = data.bookmarkCategories.filter(c => c.id !== categoryId);
+  // Also remove categoryId from bookmarks that had this category
+  data.bookmarks = data.bookmarks.map(b => 
+    b.categoryId === categoryId ? { ...b, categoryId: undefined } : b
+  );
+  saveUserData(data);
+}
+
+// Get bookmarks by category
+export function getBookmarksByCategory(categoryId: string): Bookmark[] {
+  const data = getUserData();
+  return data.bookmarks.filter(b => b.categoryId === categoryId);
+}
+
+// Add bookmark with category
+export function addBookmarkWithCategory(
+  bookmark: Omit<Bookmark, 'id' | 'timestamp'>,
+  categoryId: string
+): Bookmark {
+  const data = getUserData();
+  
+  // Check if already bookmarked
+  const existing = data.bookmarks.find(
+    b => b.bookSlug === bookmark.bookSlug && 
+        b.chapter === bookmark.chapter && 
+        b.verseNumber === bookmark.verseNumber
+  );
+  
+  if (existing) {
+    // Update the category of existing bookmark
+    existing.categoryId = categoryId;
+    saveUserData(data);
+    return existing;
+  }
+  
+  const newBookmark: Bookmark = {
+    ...bookmark,
+    id: `${bookmark.bookSlug}-${bookmark.chapter}-${bookmark.verseNumber || 'all'}-${Date.now()}`,
+    timestamp: Date.now(),
+    categoryId,
+  };
+  
+  data.bookmarks.unshift(newBookmark);
+  saveUserData(data);
+  
+  return newBookmark;
 }
