@@ -1,14 +1,15 @@
-import { useState, useMemo } from 'react';
+import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
 import { BottomNav } from '@/components/layout/BottomNav';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
-import { BookOpen, Calendar, Star, Heart, ChevronRight, Check, RotateCcw, Sparkles, Target, Flame, BookMarked } from 'lucide-react';
+import { BookOpen, Calendar, Star, Heart, ChevronRight, Check, RotateCcw } from 'lucide-react';
 import { readingPlans, type ReadingPlan } from '@/data/readingPlans';
 import { isPlanChapterCompleted, resetAllPlanProgress } from '@/services/userDataService';
 import { cn } from '@/lib/utils';
 import { toast } from 'sonner';
+import { AprenderHero } from '@/components/aprender/AprenderHero';
 
 const iconMap = {
   book: BookOpen,
@@ -21,6 +22,7 @@ const Aprender = () => {
   const navigate = useNavigate();
   const [selectedPlan, setSelectedPlan] = useState<ReadingPlan | null>(null);
   const [, forceUpdate] = useState({});
+  const plansRef = useRef<HTMLDivElement>(null);
   
   const calculatePlanProgress = (plan: ReadingPlan) => {
     let completedReadings = 0;
@@ -59,6 +61,10 @@ const Aprender = () => {
       localStorage.setItem(startKey, new Date().toISOString());
     }
     setSelectedPlan(plan);
+  };
+
+  const handleScrollToPlans = () => {
+    plansRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   if (selectedPlan) {
@@ -153,54 +159,15 @@ const Aprender = () => {
       <Header title="Aprender" />
       
       <main className="container px-4 py-6 space-y-8">
-        {/* Inspiring Banner */}
-        <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-primary/90 to-primary/80 p-6 text-primary-foreground">
-          {/* Decorative elements */}
-          <div className="absolute top-4 right-4 opacity-20">
-            <BookMarked className="h-24 w-24" />
-          </div>
-          <div className="absolute -bottom-2 -left-2 opacity-10">
-            <Sparkles className="h-16 w-16" />
-          </div>
-          
-          {/* Main content */}
-          <div className="relative z-10 space-y-4">
-            <div className="flex items-center gap-2">
-              <Sparkles className="h-5 w-5" />
-              <span className="text-sm font-medium uppercase tracking-wide opacity-90">Planes de Lectura</span>
-            </div>
-            
-            <h2 className="text-2xl font-bold leading-tight">
-              Transforma tu Vida con la Palabra
-            </h2>
-            
-            <p className="text-sm leading-relaxed opacity-90 max-w-md">
-              La lectura diaria de la Biblia fortalece tu fe, renueva tu mente y te acerca más a Dios. 
-              Un plan estructurado te ayuda a mantener la disciplina espiritual.
-            </p>
-            
-            {/* Stats */}
-            <div className="flex flex-wrap gap-4 pt-2">
-              <div className="flex items-center gap-2 text-xs">
-                <BookOpen className="h-4 w-4 opacity-80" />
-                <span className="opacity-90">{readingPlans.length} planes disponibles</span>
-              </div>
-              <div className="flex items-center gap-2 text-xs">
-                <Calendar className="h-4 w-4 opacity-80" />
-                <span className="opacity-90">De 21 a 365 días</span>
-              </div>
-              <div className="flex items-center gap-2 text-xs">
-                <Flame className="h-4 w-4 opacity-80" />
-                <span className="opacity-90">Lectura guiada</span>
-              </div>
-            </div>
-          </div>
-        </section>
+        <AprenderHero onScrollToContent={handleScrollToPlans} />
 
-        {/* Section subtitle */}
-        <div className="text-center">
-          <p className="text-muted-foreground text-sm font-medium">
-            Elige tu plan y comienza hoy
+        {/* Section Title */}
+        <div ref={plansRef} className="text-center">
+          <h2 className="text-xl font-semibold text-foreground mb-2">
+            Planes Disponibles
+          </h2>
+          <p className="text-muted-foreground text-sm">
+            Elige el que mejor se adapte a tu tiempo y objetivos
           </p>
         </div>
 
