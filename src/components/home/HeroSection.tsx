@@ -10,6 +10,9 @@ import {
   getBookmarkCategories, 
   addBookmarkCategory,
   addBookmarkWithCategory,
+  updateBookmarkCategory,
+  deleteBookmarkCategory,
+  isDefaultCategory,
 } from '@/services/userDataService';
 
 const topicBackgrounds: Record<string, string> = {
@@ -94,9 +97,17 @@ export const HeroSection = () => {
     toast.success(`Guardado en ${category?.name || 'categoría'}`);
   };
 
-  const handleCreateCategory = (name: string): string => {
-    const newCategory = addBookmarkCategory(name);
+  const handleCreateCategory = (name: string, color: string): string => {
+    const newCategory = addBookmarkCategory(name, color);
     return newCategory.id;
+  };
+
+  const handleUpdateCategory = (id: string, name: string, color: string) => {
+    updateBookmarkCategory(id, { name, color });
+  };
+
+  const handleDeleteCategory = (id: string) => {
+    deleteBookmarkCategory(id);
   };
 
   const handleShare = async () => {
@@ -208,6 +219,9 @@ export const HeroSection = () => {
         categories={getBookmarkCategories()}
         onSelectCategory={handleSaveWithCategory}
         onCreateCategory={handleCreateCategory}
+        onUpdateCategory={handleUpdateCategory}
+        onDeleteCategory={handleDeleteCategory}
+        isProtected={isDefaultCategory}
       />
     </div>
   );

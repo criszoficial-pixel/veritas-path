@@ -8,6 +8,9 @@ import {
   addBookmarkCategory,
   getBookmarksByCategory,
   addBookmarkWithCategory,
+  updateBookmarkCategory,
+  deleteBookmarkCategory,
+  isDefaultCategory,
   type Bookmark,
   type BookmarkCategory,
 } from '@/services/userDataService';
@@ -127,6 +130,15 @@ export function useBookmarks() {
       refresh();
       return cat;
     },
+    updateCategory: (id: string, name: string, color: string) => {
+      updateBookmarkCategory(id, { name, color });
+      refresh();
+    },
+    deleteCategory: (id: string) => {
+      deleteBookmarkCategory(id);
+      refresh();
+    },
+    isProtectedCategory: isDefaultCategory,
     getByCategory: (categoryId: string) => getBookmarksByCategory(categoryId),
   };
 }

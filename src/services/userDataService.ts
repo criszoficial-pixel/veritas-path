@@ -610,3 +610,27 @@ export function addBookmarkWithCategory(
   
   return newBookmark;
 }
+
+// Update a bookmark category
+export function updateBookmarkCategory(
+  categoryId: string,
+  updates: { name?: string; color?: string }
+): BookmarkCategory | null {
+  const data = getUserData();
+  const categoryIndex = data.bookmarkCategories.findIndex(c => c.id === categoryId);
+  
+  if (categoryIndex === -1) return null;
+  
+  data.bookmarkCategories[categoryIndex] = {
+    ...data.bookmarkCategories[categoryIndex],
+    ...updates,
+  };
+  
+  saveUserData(data);
+  return data.bookmarkCategories[categoryIndex];
+}
+
+// Check if category is a default (protected) category
+export function isDefaultCategory(categoryId: string): boolean {
+  return ['favorites', 'study', 'promises'].includes(categoryId);
+}
