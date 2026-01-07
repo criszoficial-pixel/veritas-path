@@ -2,7 +2,6 @@ import { useState, useCallback } from 'react';
 import { Header } from '@/components/layout/Header';
 import { BottomNav } from '@/components/layout/BottomNav';
 import { HeroSection } from '@/components/home/HeroSection';
-import { ActivityTracker } from '@/components/home/ActivityTracker';
 import { ProgressStats } from '@/components/home/ProgressStats';
 import { QuickActions } from '@/components/home/QuickActions';
 import { WelcomeModal } from '@/components/home/WelcomeModal';
@@ -22,11 +21,6 @@ const Index = () => {
         {/* Hero Section with verse + greeting */}
         <section>
           <HeroSection />
-        </section>
-
-        {/* Activity Tracker - Streak + Weekly Calendar */}
-        <section>
-          <ActivityTracker />
         </section>
 
         {/* Progress Stats */}
