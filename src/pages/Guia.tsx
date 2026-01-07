@@ -20,9 +20,15 @@ const Guia = () => {
       <main className="container px-4 py-6">
         <GuiaHero onScrollToContent={handleScrollToContent} />
         
-        <div ref={contentRef}>
+        <div ref={contentRef} className="space-y-8">
           <EmotionPicker />
+          
+          <div className="border-t border-border/50" />
+          
           <SituationList />
+          
+          <div className="border-t border-border/50" />
+          
           <SpiritualNeeds />
         </div>
       </main>
