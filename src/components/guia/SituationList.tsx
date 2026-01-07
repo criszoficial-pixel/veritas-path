@@ -37,9 +37,12 @@ export const SituationList = () => {
 
   return (
     <section className="mb-8">
-      <h2 className="text-lg font-semibold text-foreground mb-4">
+      <h2 className="text-lg font-semibold text-foreground mb-2">
         ¿Qué situación atraviesas?
       </h2>
+      <p className="text-sm text-muted-foreground mb-4">
+        La vida presenta desafíos únicos. Encuentra guía bíblica específica para lo que estás enfrentando.
+      </p>
       <div className="space-y-3">
         {situations.map((situation) => (
           <button
