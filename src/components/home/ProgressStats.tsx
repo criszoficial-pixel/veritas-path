@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-import { BookOpen, Trophy, Clock } from 'lucide-react';
+import { BookOpen, Trophy, Clock, ClipboardCheck } from 'lucide-react';
 import { useUserProgress } from '@/hooks/useUserProgress';
+import { getUserStats } from '@/services/quizService';
 import { cn } from '@/lib/utils';
 
 // Animated counter hook
@@ -71,6 +72,7 @@ const StatCard = ({ icon: Icon, value, label, color, delay, isNumeric = false }:
 
 export const ProgressStats = () => {
   const { stats, readingTime, uniqueBooks } = useUserProgress();
+  const quizStats = getUserStats();
 
   const displayStats = [
     { 
@@ -88,6 +90,13 @@ export const ProgressStats = () => {
       isNumeric: true,
     },
     { 
+      icon: ClipboardCheck, 
+      value: quizStats.totalQuizzes, 
+      label: 'Tests', 
+      color: 'text-green-500',
+      isNumeric: true,
+    },
+    { 
       icon: Clock, 
       value: readingTime || '0m', 
       label: 'Tiempo', 
@@ -99,7 +108,7 @@ export const ProgressStats = () => {
   return (
     <div className="space-y-4 animate-fade-in">
       <h2 className="text-lg font-semibold text-foreground px-1">Tu Progreso</h2>
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-4 gap-2">
         {displayStats.map((stat, index) => (
           <StatCard
             key={stat.label}
