@@ -1,0 +1,332 @@
+{
+  "genesis": {
+    "shortDescription": "El libro de los orígenes",
+    "summary": "Génesis narra la creación del universo, la caída del hombre, el diluvio de Noé, y las historias de los patriarcas: Abraham, Isaac, Jacob y José. Establece los fundamentos de la fe.",
+    "themes": ["Creación", "Pecado", "Promesa", "Fe"]
+  },
+  "exodo": {
+    "shortDescription": "La liberación de Israel",
+    "summary": "Relata la esclavitud de Israel en Egipto, el llamado de Moisés, las diez plagas, el cruce del Mar Rojo, y la entrega de la Ley en el Sinaí. Es la historia de redención por excelencia.",
+    "themes": ["Liberación", "Pacto", "Ley", "Adoración"]
+  },
+  "levitico": {
+    "shortDescription": "Manual de santidad",
+    "summary": "Contiene las leyes ceremoniales y rituales para la adoración. Enseña sobre sacrificios, pureza ritual, fiestas sagradas y cómo un pueblo santo debe vivir ante un Dios santo.",
+    "themes": ["Santidad", "Sacrificio", "Pureza", "Adoración"]
+  },
+  "numeros": {
+    "shortDescription": "El viaje por el desierto",
+    "summary": "Documenta los 40 años de Israel en el desierto, desde el Sinaí hasta las fronteras de Canaán. Incluye censos, rebeliones, y la fidelidad de Dios a pesar de la infidelidad del pueblo.",
+    "themes": ["Peregrinaje", "Fidelidad", "Disciplina", "Provisión"]
+  },
+  "deuteronomio": {
+    "shortDescription": "La renovación del pacto",
+    "summary": "Moisés recapitula la Ley antes de que Israel entre a la Tierra Prometida. Es un llamado a amar a Dios con todo el corazón y a obedecer sus mandamientos.",
+    "themes": ["Pacto", "Obediencia", "Amor", "Herencia"]
+  },
+  "josue": {
+    "shortDescription": "Conquista de la tierra prometida",
+    "summary": "Narra la conquista de Canaán bajo el liderazgo de Josué, la división de la tierra entre las tribus, y el llamado a servir fielmente al Señor.",
+    "themes": ["Conquista", "Fe", "Obediencia", "Herencia"]
+  },
+  "jueces": {
+    "shortDescription": "Ciclos de pecado y liberación",
+    "summary": "Describe el período entre Josué y los reyes, cuando Israel caía repetidamente en idolatría y Dios levantaba jueces para liberarlos de sus opresores.",
+    "themes": ["Pecado", "Arrepentimiento", "Liberación", "Liderazgo"]
+  },
+  "rut": {
+    "shortDescription": "Historia de amor y redención",
+    "summary": "Una moabita viuda muestra lealtad excepcional a su suegra Noemí y encuentra redención a través de Booz. Es ancestro del rey David y de Jesús.",
+    "themes": ["Lealtad", "Redención", "Providencia", "Amor"]
+  },
+  "1-samuel": {
+    "shortDescription": "Del último juez al primer rey",
+    "summary": "Cuenta la historia de Samuel, el último juez, y la transición a la monarquía con Saúl, el primer rey de Israel, y el ascenso del joven David.",
+    "themes": ["Liderazgo", "Obediencia", "Unción", "Transición"]
+  },
+  "2-samuel": {
+    "shortDescription": "El reinado de David",
+    "summary": "Narra el reinado de David sobre Israel, sus victorias militares, su pecado con Betsabé, y las consecuencias familiares que siguieron.",
+    "themes": ["Reino", "Pecado", "Gracia", "Consecuencias"]
+  },
+  "1-reyes": {
+    "shortDescription": "De Salomón a la división",
+    "summary": "Comienza con la gloria de Salomón y la construcción del templo, pero termina con la división del reino y el inicio de la idolatría en Israel.",
+    "themes": ["Sabiduría", "Templo", "División", "Profecía"]
+  },
+  "2-reyes": {
+    "shortDescription": "La caída de los reinos",
+    "summary": "Continúa la historia de los reinos divididos hasta su caída: Israel ante Asiria y Judá ante Babilonia. Los profetas advierten pero el pueblo no escucha.",
+    "themes": ["Juicio", "Profecía", "Exilio", "Arrepentimiento"]
+  },
+  "1-cronicas": {
+    "shortDescription": "Genealogías y el reino de David",
+    "summary": "Presenta genealogías desde Adán y recuenta el reinado de David con énfasis en la adoración, el templo y las promesas davídicas.",
+    "themes": ["Adoración", "Linaje", "Templo", "Promesa"]
+  },
+  "2-cronicas": {
+    "shortDescription": "Los reyes de Judá",
+    "summary": "Narra la historia del reino del sur desde Salomón hasta el exilio, enfocándose en el templo, los avivamientos y la fidelidad al pacto.",
+    "themes": ["Templo", "Avivamiento", "Fidelidad", "Juicio"]
+  },
+  "esdras": {
+    "shortDescription": "Regreso y reconstrucción",
+    "summary": "Documenta el regreso de los exiliados de Babilonia y la reconstrucción del templo bajo Zorobabel, y las reformas espirituales de Esdras.",
+    "themes": ["Restauración", "Adoración", "Reforma", "Fidelidad"]
+  },
+  "nehemias": {
+    "shortDescription": "Reconstrucción de los muros",
+    "summary": "Narra cómo Nehemías lideró la reconstrucción de los muros de Jerusalén y las reformas sociales y espirituales que implementó.",
+    "themes": ["Liderazgo", "Oración", "Trabajo", "Reforma"]
+  },
+  "ester": {
+    "shortDescription": "Providencia divina oculta",
+    "summary": "Una joven judía se convierte en reina de Persia y salva a su pueblo del genocidio. Aunque no menciona a Dios, su providencia es evidente.",
+    "themes": ["Providencia", "Valor", "Identidad", "Liberación"]
+  },
+  "job": {
+    "shortDescription": "El sufrimiento del justo",
+    "summary": "Explora el misterio del sufrimiento a través de Job, un hombre justo que pierde todo. Sus amigos fallan en consolarlo, pero Dios finalmente responde.",
+    "themes": ["Sufrimiento", "Fe", "Soberanía", "Restauración"]
+  },
+  "salmos": {
+    "shortDescription": "El himnario de Israel",
+    "summary": "Colección de 150 poemas y canciones que expresan toda la gama de emociones humanas: alabanza, lamento, acción de gracias, y súplica ante Dios.",
+    "themes": ["Alabanza", "Oración", "Lamento", "Adoración"]
+  },
+  "proverbios": {
+    "shortDescription": "Sabiduría para la vida",
+    "summary": "Colección de dichos sabios que enseñan cómo vivir con prudencia, justicia, y temor del Señor. El principio de la sabiduría es temer a Dios.",
+    "themes": ["Sabiduría", "Prudencia", "Justicia", "Temor de Dios"]
+  },
+  "eclesiastes": {
+    "shortDescription": "El sentido de la vida",
+    "summary": "El Predicador reflexiona sobre el significado de la vida y concluye que sin Dios, todo es vanidad. Solo temer a Dios da propósito verdadero.",
+    "themes": ["Vanidad", "Sabiduría", "Propósito", "Temor de Dios"]
+  },
+  "cantares": {
+    "shortDescription": "Poema de amor",
+    "summary": "Un poema que celebra el amor romántico entre un esposo y su esposa. También se interpreta como alegoría del amor entre Dios y su pueblo.",
+    "themes": ["Amor", "Belleza", "Intimidad", "Compromiso"]
+  },
+  "isaias": {
+    "shortDescription": "El profeta del Mesías",
+    "summary": "Profetiza juicio sobre Israel y las naciones, pero también la venida del Mesías sufriente y el futuro reino de paz. Es citado frecuentemente en el NT.",
+    "themes": ["Juicio", "Mesías", "Salvación", "Esperanza"]
+  },
+  "jeremias": {
+    "shortDescription": "El profeta llorón",
+    "summary": "Jeremías advierte a Judá sobre el juicio inminente de Babilonia, sufre persecución, pero también profetiza el nuevo pacto que Dios establecerá.",
+    "themes": ["Juicio", "Arrepentimiento", "Nuevo Pacto", "Fidelidad"]
+  },
+  "lamentaciones": {
+    "shortDescription": "Llanto por Jerusalén",
+    "summary": "Cinco poemas de lamento por la destrucción de Jerusalén. En medio del dolor, el autor encuentra esperanza en la fidelidad de Dios.",
+    "themes": ["Lamento", "Juicio", "Esperanza", "Fidelidad"]
+  },
+  "ezequiel": {
+    "shortDescription": "Visiones del exilio",
+    "summary": "Profeta entre los exiliados en Babilonia, Ezequiel tiene visiones dramáticas del juicio y la restauración futura, incluyendo el valle de huesos secos.",
+    "themes": ["Gloria de Dios", "Juicio", "Restauración", "Templo"]
+  },
+  "daniel": {
+    "shortDescription": "Fe en tierra extranjera",
+    "summary": "Daniel y sus amigos mantienen su fe en Babilonia. El libro incluye historias de fidelidad y visiones apocalípticas sobre el futuro de los reinos.",
+    "themes": ["Fidelidad", "Soberanía", "Profecía", "Perseverancia"]
+  },
+  "oseas": {
+    "shortDescription": "Amor fiel a pesar de todo",
+    "summary": "Dios ordena a Oseas casarse con una mujer infiel como imagen del amor de Dios por Israel infiel. Un mensaje de juicio pero también de restauración.",
+    "themes": ["Amor", "Infidelidad", "Juicio", "Restauración"]
+  },
+  "joel": {
+    "shortDescription": "El Día del Señor",
+    "summary": "Una plaga de langostas simboliza el juicio venidero. Joel llama al arrepentimiento y promete el derramamiento del Espíritu sobre toda carne.",
+    "themes": ["Juicio", "Arrepentimiento", "Espíritu", "Restauración"]
+  },
+  "amos": {
+    "shortDescription": "Justicia social",
+    "summary": "Un pastor de ovejas profetiza contra la injusticia social y religiosa de Israel. Dios demanda justicia, no rituales vacíos.",
+    "themes": ["Justicia", "Juicio", "Hipocresía", "Arrepentimiento"]
+  },
+  "abdias": {
+    "shortDescription": "Juicio contra Edom",
+    "summary": "El libro más corto del AT pronuncia juicio contra Edom por su orgullo y hostilidad hacia Israel, el pueblo hermano.",
+    "themes": ["Juicio", "Orgullo", "Justicia", "Reino de Dios"]
+  },
+  "jonas": {
+    "shortDescription": "El profeta renuente",
+    "summary": "Jonás huye de su misión a Nínive, es tragado por un gran pez, y finalmente predica arrepentimiento. Revela el amor de Dios por todas las naciones.",
+    "themes": ["Misión", "Arrepentimiento", "Gracia", "Obediencia"]
+  },
+  "miqueas": {
+    "shortDescription": "Justicia y misericordia",
+    "summary": "Profetiza juicio pero también esperanza, incluyendo la profecía del nacimiento del Mesías en Belén. Define la verdadera religión: justicia, misericordia, humildad.",
+    "themes": ["Justicia", "Misericordia", "Mesías", "Humildad"]
+  },
+  "nahum": {
+    "shortDescription": "La caída de Nínive",
+    "summary": "Profetiza la destrucción de Nínive, la capital asiria. Dios es paciente pero no dejará sin castigo a los opresores de su pueblo.",
+    "themes": ["Juicio", "Justicia", "Soberanía", "Consuelo"]
+  },
+  "habacuc": {
+    "shortDescription": "Fe en medio de la injusticia",
+    "summary": "El profeta cuestiona a Dios sobre la injusticia y recibe respuesta: el justo vivirá por su fe. Termina con un himno de confianza.",
+    "themes": ["Fe", "Justicia", "Soberanía", "Adoración"]
+  },
+  "sofonias": {
+    "shortDescription": "El gran día del Señor",
+    "summary": "Advierte sobre el juicio inminente pero promete que Dios salvará a un remanente humilde. El Señor se gozará sobre su pueblo con cánticos.",
+    "themes": ["Juicio", "Remanente", "Gozo", "Restauración"]
+  },
+  "hageo": {
+    "shortDescription": "Reconstruyan el templo",
+    "summary": "Después del exilio, Hageo urge al pueblo a priorizar la reconstrucción del templo de Dios sobre sus propias casas.",
+    "themes": ["Prioridades", "Templo", "Obediencia", "Bendición"]
+  },
+  "zacarias": {
+    "shortDescription": "Visiones de restauración",
+    "summary": "Ocho visiones nocturnas y profecías mesiánicas que animan al pueblo en la reconstrucción del templo y apuntan al futuro reino de Dios.",
+    "themes": ["Mesías", "Restauración", "Visiones", "Esperanza"]
+  },
+  "malaquias": {
+    "shortDescription": "Llamado final del AT",
+    "summary": "El último profeta del AT confronta la apatía espiritual del pueblo y anuncia la venida del mensajero que preparará el camino del Señor.",
+    "themes": ["Fidelidad", "Adoración", "Juicio", "Esperanza"]
+  },
+  "mateo": {
+    "shortDescription": "Jesús, el Rey de Israel",
+    "summary": "Presenta a Jesús como el Mesías prometido, cumplimiento de las profecías del AT. Enfatiza su enseñanza, especialmente el Sermón del Monte.",
+    "themes": ["Mesías", "Reino", "Cumplimiento", "Discipulado"]
+  },
+  "marcos": {
+    "shortDescription": "Jesús, el Siervo sufriente",
+    "summary": "El evangelio más breve y dinámico. Presenta a Jesús como el Siervo de Dios que vino a dar su vida en rescate por muchos.",
+    "themes": ["Servicio", "Poder", "Sufrimiento", "Discipulado"]
+  },
+  "lucas": {
+    "shortDescription": "Jesús, Salvador de todos",
+    "summary": "El evangelio más completo, escrito por un médico. Enfatiza la compasión de Jesús por los marginados: pobres, mujeres, pecadores, gentiles.",
+    "themes": ["Compasión", "Salvación", "Gozo", "Espíritu Santo"]
+  },
+  "juan": {
+    "shortDescription": "Jesús, el Hijo de Dios",
+    "summary": "Un evangelio teológico que revela la divinidad de Jesús a través de siete señales y siete declaraciones 'Yo soy'. Escrito para que creamos.",
+    "themes": ["Divinidad", "Fe", "Vida eterna", "Amor"]
+  },
+  "hechos": {
+    "shortDescription": "El nacimiento de la Iglesia",
+    "summary": "Continúa la historia de Lucas narrando la venida del Espíritu Santo, el crecimiento de la iglesia primitiva, y los viajes misioneros de Pablo.",
+    "themes": ["Espíritu Santo", "Misión", "Iglesia", "Testimonio"]
+  },
+  "romanos": {
+    "shortDescription": "El evangelio explicado",
+    "summary": "La carta teológica más completa de Pablo. Explica la justificación por fe, la vida en el Espíritu, y el plan de Dios para judíos y gentiles.",
+    "themes": ["Justificación", "Gracia", "Fe", "Espíritu"]
+  },
+  "1-corintios": {
+    "shortDescription": "Unidad y santidad en la iglesia",
+    "summary": "Pablo aborda problemas en la iglesia de Corinto: divisiones, inmoralidad, dones espirituales, y la resurrección. El amor es el camino supremo.",
+    "themes": ["Unidad", "Santidad", "Amor", "Resurrección"]
+  },
+  "2-corintios": {
+    "shortDescription": "Debilidad y poder de Dios",
+    "summary": "Pablo defiende su ministerio apostólico y enseña que el poder de Dios se perfecciona en nuestra debilidad. Un llamado a la reconciliación.",
+    "themes": ["Ministerio", "Debilidad", "Consuelo", "Generosidad"]
+  },
+  "galatas": {
+    "shortDescription": "Libertad en Cristo",
+    "summary": "Pablo defiende el evangelio de la gracia contra los que exigían circuncisión. Somos justificados por fe, no por obras de la ley.",
+    "themes": ["Gracia", "Fe", "Libertad", "Espíritu"]
+  },
+  "efesios": {
+    "shortDescription": "En Cristo y en la Iglesia",
+    "summary": "Explora las riquezas espirituales en Cristo, la unidad de judíos y gentiles en la iglesia, y cómo vivir dignamente del llamamiento.",
+    "themes": ["Unidad", "Iglesia", "Gracia", "Vida nueva"]
+  },
+  "filipenses": {
+    "shortDescription": "Gozo en Cristo",
+    "summary": "Carta de gozo escrita desde la prisión. Pablo exhorta a la humildad siguiendo el ejemplo de Cristo y a regocijarse siempre en el Señor.",
+    "themes": ["Gozo", "Humildad", "Contentamiento", "Unidad"]
+  },
+  "colosenses": {
+    "shortDescription": "La supremacía de Cristo",
+    "summary": "Combate falsas enseñanzas afirmando que Cristo es supremo sobre toda la creación. En él habita toda la plenitud de la Deidad.",
+    "themes": ["Supremacía de Cristo", "Plenitud", "Vida nueva", "Verdad"]
+  },
+  "1-tesalonicenses": {
+    "shortDescription": "Esperando el regreso de Cristo",
+    "summary": "Pablo anima a una iglesia joven sobre la segunda venida de Cristo y les exhorta a vivir vidas santas mientras esperan.",
+    "themes": ["Segunda venida", "Santidad", "Esperanza", "Fe"]
+  },
+  "2-tesalonicenses": {
+    "shortDescription": "El día del Señor",
+    "summary": "Aclara malentendidos sobre la segunda venida y exhorta a los creyentes a trabajar mientras esperan el regreso del Señor.",
+    "themes": ["Segunda venida", "Trabajo", "Fidelidad", "Juicio"]
+  },
+  "1-timoteo": {
+    "shortDescription": "Instrucciones pastorales",
+    "summary": "Pablo instruye a su joven discípulo sobre el liderazgo de la iglesia, la sana doctrina, y cómo ser ejemplo de los creyentes.",
+    "themes": ["Liderazgo", "Doctrina", "Piedad", "Servicio"]
+  },
+  "2-timoteo": {
+    "shortDescription": "El último encargo de Pablo",
+    "summary": "Escrita desde prisión antes de su muerte, Pablo anima a Timoteo a perseverar en el ministerio y guardar el buen depósito de la fe.",
+    "themes": ["Perseverancia", "Fidelidad", "Sufrimiento", "Palabra"]
+  },
+  "tito": {
+    "shortDescription": "Orden en la iglesia",
+    "summary": "Pablo instruye a Tito sobre cómo establecer orden en las iglesias de Creta, incluyendo requisitos para líderes y vida piadosa.",
+    "themes": ["Liderazgo", "Buenas obras", "Gracia", "Orden"]
+  },
+  "filemon": {
+    "shortDescription": "Reconciliación y perdón",
+    "summary": "Pablo intercede por Onésimo, un esclavo fugitivo convertido, pidiéndole a Filemón que lo reciba como hermano en Cristo.",
+    "themes": ["Perdón", "Reconciliación", "Amor", "Igualdad"]
+  },
+  "hebreos": {
+    "shortDescription": "La superioridad de Cristo",
+    "summary": "Demuestra que Cristo es superior a los ángeles, Moisés, el sacerdocio levítico y los sacrificios. Él es nuestro sumo sacerdote perfecto.",
+    "themes": ["Superioridad", "Fe", "Sacerdocio", "Perseverancia"]
+  },
+  "santiago": {
+    "shortDescription": "Fe que actúa",
+    "summary": "Una carta práctica que enseña que la fe genuina se demuestra en acciones. Aborda el control de la lengua, la sabiduría y la oración.",
+    "themes": ["Obras", "Pruebas", "Sabiduría", "Oración"]
+  },
+  "1-pedro": {
+    "shortDescription": "Esperanza en el sufrimiento",
+    "summary": "Anima a los creyentes que sufren persecución a mantener la esperanza en la salvación futura y a vivir como pueblo santo de Dios.",
+    "themes": ["Sufrimiento", "Esperanza", "Santidad", "Gracia"]
+  },
+  "2-pedro": {
+    "shortDescription": "Crecimiento y vigilancia",
+    "summary": "Advierte contra falsos maestros y recuerda que el día del Señor vendrá. Exhorta a crecer en gracia y conocimiento de Cristo.",
+    "themes": ["Falsos maestros", "Segunda venida", "Crecimiento", "Verdad"]
+  },
+  "1-juan": {
+    "shortDescription": "Comunión con Dios",
+    "summary": "Escrita para dar seguridad de salvación. Enfatiza caminar en la luz, amar a los hermanos, y permanecer en la verdad contra el error.",
+    "themes": ["Amor", "Verdad", "Comunión", "Seguridad"]
+  },
+  "2-juan": {
+    "shortDescription": "Verdad y amor",
+    "summary": "Breve carta que advierte contra falsos maestros y enfatiza caminar en verdad y amor, sin dar acogida a los engañadores.",
+    "themes": ["Verdad", "Amor", "Discernimiento", "Obediencia"]
+  },
+  "3-juan": {
+    "shortDescription": "Hospitalidad y liderazgo",
+    "summary": "Elogia a Gayo por su hospitalidad a los misioneros y advierte contra Diótrefes, quien ama tener el primer lugar.",
+    "themes": ["Hospitalidad", "Liderazgo", "Verdad", "Servicio"]
+  },
+  "judas": {
+    "shortDescription": "Contender por la fe",
+    "summary": "Una advertencia urgente contra falsos maestros que se infiltran en la iglesia. Exhorta a contender ardientemente por la fe.",
+    "themes": ["Apostasía", "Fidelidad", "Juicio", "Perseverancia"]
+  },
+  "apocalipsis": {
+    "shortDescription": "La victoria final",
+    "summary": "Visión profética del triunfo final de Cristo sobre el mal. Incluye mensajes a siete iglesias y revela el destino eterno de la humanidad.",
+    "themes": ["Victoria", "Juicio", "Adoración", "Eternidad"]
+  }
+}
