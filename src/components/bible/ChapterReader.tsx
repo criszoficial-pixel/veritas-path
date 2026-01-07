@@ -452,12 +452,12 @@ export const ChapterReader = ({ collectionSlug: propCollectionSlug }: ChapterRea
 
       <div className="fixed bottom-20 left-0 right-0 z-30">
         <div className="container px-4">
-          <div className="flex items-center justify-between bg-card/95 backdrop-blur-lg rounded-2xl p-2 shadow-card border border-border">
-            <Button variant="ghost" onClick={goToPrevChapter} disabled={currentChapter <= 1} className="flex items-center gap-2">
+          <div className="flex items-center justify-between bg-primary rounded-2xl p-2 shadow-lg">
+            <Button variant="ghost" onClick={goToPrevChapter} disabled={currentChapter <= 1} className="flex items-center gap-2 text-primary-foreground hover:bg-white/10 hover:text-primary-foreground disabled:text-primary-foreground/40">
               <ChevronLeft className="h-4 w-4" /><span className="hidden sm:inline">{t('reader.previous')}</span>
             </Button>
-            <span className="text-sm font-medium text-muted-foreground">{currentChapter} / {currentBook?.chapters}</span>
-            <Button variant="ghost" onClick={goToNextChapter} disabled={!currentBook || currentChapter >= currentBook.chapters} className="flex items-center gap-2">
+            <span className="text-sm font-medium text-primary-foreground/80">{currentChapter} / {currentBook?.chapters}</span>
+            <Button variant="ghost" onClick={goToNextChapter} disabled={!currentBook || currentChapter >= currentBook.chapters} className="flex items-center gap-2 text-primary-foreground hover:bg-white/10 hover:text-primary-foreground disabled:text-primary-foreground/40">
               <span className="hidden sm:inline">{t('reader.next')}</span><ChevronRight className="h-4 w-4" />
             </Button>
           </div>
