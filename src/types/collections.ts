@@ -4,6 +4,7 @@ export interface BibleCollection {
   title: string;
   subtitle: string;
   description: string;
+  benefit?: string;
   coverColor: string;
   accentColor: string;
   language: string;
@@ -11,6 +12,9 @@ export interface BibleCollection {
   type: 'full-bible' | 'collection';
   booksFilter?: number[];
   icon: 'cross' | 'scroll' | 'heart' | 'sparkles' | 'book';
+  bookCount?: number;
+  badge?: string;
+  featured?: boolean;
 }
 
 export interface CollectionsData {

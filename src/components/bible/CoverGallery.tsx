@@ -1,7 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
-import { BookCover } from './BookCover';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Library } from 'lucide-react';
+import { FeaturedCollection } from './FeaturedCollection';
+import { CollectionCard } from './CollectionCard';
+import { BeginnerTip } from './BeginnerTip';
 import type { CollectionsData } from '@/types/collections';
 
 async function fetchCollections(): Promise<CollectionsData> {
@@ -21,13 +23,13 @@ export function CoverGallery() {
   if (isLoading) {
     return (
       <div className="space-y-8">
-        <div className="text-center space-y-2">
-          <Skeleton className="h-8 w-64 mx-auto" />
-          <Skeleton className="h-5 w-48 mx-auto" />
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
-          {[1, 2, 3, 4].map((i) => (
-            <Skeleton key={i} className="aspect-[3/4] rounded-lg" />
+        <Skeleton className="h-24 w-full rounded-xl" />
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          {[1, 2, 3].map((i) => (
+            <div key={i} className="space-y-3">
+              <Skeleton className="aspect-[3/4] rounded-lg" />
+              <Skeleton className="h-4 w-3/4" />
+            </div>
           ))}
         </div>
       </div>
@@ -43,23 +45,42 @@ export function CoverGallery() {
     );
   }
 
-  return (
-    <div className="space-y-6">
-      {/* Cover gallery grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
-        {data.collections.map((collection, index) => (
-          <BookCover 
-            key={collection.id} 
-            collection={collection} 
-            index={index} 
-          />
-        ))}
-      </div>
+  const featuredCollection = data.collections.find(c => c.featured);
+  const thematicCollections = data.collections.filter(c => !c.featured);
 
-      {/* Footer note */}
-      <p className="text-center text-xs text-muted-foreground pt-4">
-        Más colecciones próximamente
-      </p>
+  return (
+    <div className="space-y-8">
+      {/* Featured Collection */}
+      {featuredCollection && (
+        <FeaturedCollection collection={featuredCollection} />
+      )}
+
+      {/* Thematic Collections */}
+      {thematicCollections.length > 0 && (
+        <div>
+          <div className="mb-4">
+            <h3 className="text-base font-semibold text-foreground mb-1">
+              Colecciones Temáticas
+            </h3>
+            <p className="text-xs text-muted-foreground">
+              Para profundizar en temas específicos
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
+            {thematicCollections.map((collection, index) => (
+              <CollectionCard 
+                key={collection.id} 
+                collection={collection} 
+                index={index} 
+              />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Beginner Tip */}
+      <BeginnerTip />
     </div>
   );
 }
