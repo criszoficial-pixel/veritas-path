@@ -7,8 +7,9 @@ import {
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Plus, Folder, Check } from 'lucide-react';
+import { Plus, Folder, Check, Settings } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { CategoryManageDialog } from './CategoryManageDialog';
 
 interface Category {
   id: string;
@@ -21,7 +22,10 @@ interface CategorySelectDialogProps {
   onClose: () => void;
   categories: Category[];
   onSelectCategory: (categoryId: string) => void;
-  onCreateCategory: (name: string) => string;
+  onCreateCategory: (name: string, color: string) => string;
+  onUpdateCategory?: (id: string, name: string, color: string) => void;
+  onDeleteCategory?: (id: string) => void;
+  isProtected?: (id: string) => boolean;
 }
 
 const colorOptions = [
@@ -38,15 +42,19 @@ export function CategorySelectDialog({
   categories,
   onSelectCategory,
   onCreateCategory,
+  onUpdateCategory,
+  onDeleteCategory,
+  isProtected,
 }: CategorySelectDialogProps) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [isCreating, setIsCreating] = useState(false);
   const [newCategoryName, setNewCategoryName] = useState('');
   const [selectedColor, setSelectedColor] = useState(colorOptions[0].value);
+  const [showManageDialog, setShowManageDialog] = useState(false);
 
   const handleSave = () => {
     if (isCreating && newCategoryName.trim()) {
-      const newId = onCreateCategory(newCategoryName.trim());
+      const newId = onCreateCategory(newCategoryName.trim(), selectedColor);
       onSelectCategory(newId);
     } else if (selectedId) {
       onSelectCategory(selectedId);
@@ -63,95 +71,120 @@ export function CategorySelectDialog({
   };
 
   return (
-    <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-md">
-        <DialogHeader>
-          <DialogTitle className="flex items-center gap-2">
-            <Folder className="w-5 h-5 text-primary" />
-            Guardar en...
-          </DialogTitle>
-        </DialogHeader>
+    <>
+      <Dialog open={isOpen} onOpenChange={handleClose}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2">
+              <Folder className="w-5 h-5 text-primary" />
+              Guardar en...
+            </DialogTitle>
+          </DialogHeader>
 
-        <div className="space-y-3 py-2">
-          {/* Existing categories */}
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => {
-                setSelectedId(category.id);
-                setIsCreating(false);
-              }}
-              className={cn(
-                'w-full flex items-center gap-3 p-3 rounded-xl border transition-all',
-                selectedId === category.id && !isCreating
-                  ? 'border-primary bg-primary/5'
-                  : 'border-border hover:border-primary/50 hover:bg-muted/50'
-              )}
-            >
-              <div
-                className="w-4 h-4 rounded-full flex-shrink-0"
-                style={{ backgroundColor: category.color }}
-              />
-              <span className="font-medium text-left flex-1">{category.name}</span>
-              {selectedId === category.id && !isCreating && (
-                <Check className="w-5 h-5 text-primary" />
-              )}
-            </button>
-          ))}
+          <div className="space-y-3 py-2">
+            {/* Existing categories */}
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => {
+                  setSelectedId(category.id);
+                  setIsCreating(false);
+                }}
+                className={cn(
+                  'w-full flex items-center gap-3 p-3 rounded-xl border transition-all',
+                  selectedId === category.id && !isCreating
+                    ? 'border-primary bg-primary/5'
+                    : 'border-border hover:border-primary/50 hover:bg-muted/50'
+                )}
+              >
+                <div
+                  className="w-4 h-4 rounded-full flex-shrink-0"
+                  style={{ backgroundColor: category.color }}
+                />
+                <span className="font-medium text-left flex-1">{category.name}</span>
+                {selectedId === category.id && !isCreating && (
+                  <Check className="w-5 h-5 text-primary" />
+                )}
+              </button>
+            ))}
 
-          {/* Create new category */}
-          {!isCreating ? (
-            <button
-              onClick={() => {
-                setIsCreating(true);
-                setSelectedId(null);
-              }}
-              className="w-full flex items-center gap-3 p-3 rounded-xl border border-dashed border-border hover:border-primary/50 hover:bg-muted/50 transition-all"
-            >
-              <Plus className="w-5 h-5 text-muted-foreground" />
-              <span className="text-muted-foreground">Crear nueva categoría</span>
-            </button>
-          ) : (
-            <div className="space-y-3 p-3 rounded-xl border border-primary bg-primary/5">
-              <Input
-                placeholder="Nombre de la categoría"
-                value={newCategoryName}
-                onChange={(e) => setNewCategoryName(e.target.value)}
-                autoFocus
-              />
-              <div className="flex gap-2">
-                {colorOptions.map((color) => (
-                  <button
-                    key={color.value}
-                    onClick={() => setSelectedColor(color.value)}
-                    className={cn(
-                      'w-8 h-8 rounded-full transition-all',
-                      selectedColor === color.value
-                        ? 'ring-2 ring-primary ring-offset-2 ring-offset-background'
-                        : 'hover:scale-110'
-                    )}
-                    style={{ backgroundColor: color.value }}
-                    title={color.name}
-                  />
-                ))}
+            {/* Create new category */}
+            {!isCreating ? (
+              <button
+                onClick={() => {
+                  setIsCreating(true);
+                  setSelectedId(null);
+                }}
+                className="w-full flex items-center gap-3 p-3 rounded-xl border border-dashed border-border hover:border-primary/50 hover:bg-muted/50 transition-all"
+              >
+                <Plus className="w-5 h-5 text-muted-foreground" />
+                <span className="text-muted-foreground">Crear nueva categoría</span>
+              </button>
+            ) : (
+              <div className="space-y-3 p-3 rounded-xl border border-primary bg-primary/5">
+                <Input
+                  placeholder="Nombre de la categoría"
+                  value={newCategoryName}
+                  onChange={(e) => setNewCategoryName(e.target.value)}
+                  autoFocus
+                />
+                <div className="flex gap-2">
+                  {colorOptions.map((color) => (
+                    <button
+                      key={color.value}
+                      onClick={() => setSelectedColor(color.value)}
+                      className={cn(
+                        'w-8 h-8 rounded-full transition-all',
+                        selectedColor === color.value
+                          ? 'ring-2 ring-primary ring-offset-2 ring-offset-background'
+                          : 'hover:scale-110'
+                      )}
+                      style={{ backgroundColor: color.value }}
+                      title={color.name}
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
-        </div>
+            )}
 
-        <div className="flex gap-2 pt-2">
-          <Button variant="outline" onClick={handleClose} className="flex-1">
-            Cancelar
-          </Button>
-          <Button
-            onClick={handleSave}
-            disabled={!selectedId && (!isCreating || !newCategoryName.trim())}
-            className="flex-1"
-          >
-            Guardar
-          </Button>
-        </div>
-      </DialogContent>
-    </Dialog>
+            {/* Manage categories button */}
+            {onUpdateCategory && onDeleteCategory && isProtected && (
+              <button
+                onClick={() => setShowManageDialog(true)}
+                className="w-full flex items-center gap-3 p-3 rounded-xl border border-border hover:border-primary/50 hover:bg-muted/50 transition-all text-muted-foreground"
+              >
+                <Settings className="w-5 h-5" />
+                <span>Gestionar categorías</span>
+              </button>
+            )}
+          </div>
+
+          <div className="flex gap-2 pt-2">
+            <Button variant="outline" onClick={handleClose} className="flex-1">
+              Cancelar
+            </Button>
+            <Button
+              onClick={handleSave}
+              disabled={!selectedId && (!isCreating || !newCategoryName.trim())}
+              className="flex-1"
+            >
+              Guardar
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* Manage categories dialog */}
+      {onUpdateCategory && onDeleteCategory && isProtected && (
+        <CategoryManageDialog
+          isOpen={showManageDialog}
+          onClose={() => setShowManageDialog(false)}
+          categories={categories}
+          onUpdate={onUpdateCategory}
+          onDelete={onDeleteCategory}
+          isProtected={isProtected}
+        />
+      )}
+    </>
   );
 }
